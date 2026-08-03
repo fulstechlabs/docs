@@ -1,0 +1,213 @@
+site_name: Fulstech Documentation
+site_description: Documentation for Fulstech Jira and Confluence apps
+site_url: https://docs.fulstech.io/
+repo_url: https://github.com/fulstechlabs/docs
+repo_name: fulstechlabs/docs
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; Fulstech
+
+theme:
+  name: material
+  language: en
+  features:
+    - content.code.copy
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fulstechlabs
+    - icon: material/lifebuoy
+      link: https://fulstech.atlassian.net/servicedesk/customer/portals
+
+nav:
+  - "Home": index.md
+  - "Markdown":
+    - "Overview": markdown.md
+    - "Markdown Editor for Jira (Markin)":
+      - "Overview": markdown/markin-markdown-editor-for-jira.md
+      - "Jira Cloud":
+        - "Overview": markdown/markin-markdown-editor-for-jira/jira-cloud.md
+        - "Overview": markdown/markin-markdown-editor-for-jira/jira-cloud/overview.md
+        - "Create a Markdown-enabled Custom Field": markdown/markin-markdown-editor-for-jira/jira-cloud/create-a-markdown-enabled-custom-field.md
+        - "Markdown Syntax": markdown/markin-markdown-editor-for-jira/jira-cloud/markdown-syntax.md
+        - "Support": markdown/markin-markdown-editor-for-jira/jira-cloud/support.md
+      - "Jira Data Center and Jira Server":
+        - "Overview": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server.md
+        - "Overview": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/overview.md
+        - "Create a Markdown-enabled Field": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/create-a-markdown-enabled-custom-field.md
+        - "Markdown Syntax": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/markdown-syntax.md
+        - "Migrate to Jira Cloud": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/migrate-to-jira-cloud.md
+        - "Support": markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/support.md
+    - "Markdown for Confluence":
+      - "Overview": markdown/markdown-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": markdown/markdown-for-confluence/confluence-cloud.md
+        - "Overview": markdown/markdown-for-confluence/confluence-cloud/overview.md
+        - "Usage": markdown/markdown-for-confluence/confluence-cloud/usage.md
+        - "Support": markdown/markdown-for-confluence/confluence-cloud/support.md
+  - "LaTeX":
+    - "Overview": latex.md
+    - "LaTeX for Jira - Math Editor":
+      - "Overview": latex/latex-for-jira.md
+      - "Jira Cloud":
+        - "Overview": latex/latex-for-jira/jira-cloud.md
+        - "Overview": latex/latex-for-jira/jira-cloud/overview.md
+        - "Usage (with browser extension)": latex/latex-for-jira/jira-cloud/usage-with-browser-extension.md
+        - "Usage (without browser extension)": latex/latex-for-jira/jira-cloud/usage.md
+        - "Support": latex/latex-for-jira/jira-cloud/support.md
+      - "Jira Data Center and Jira Server":
+        - "Overview": latex/latex-for-jira/jira-data-center-and-jira-server.md
+        - "Overview": latex/latex-for-jira/jira-data-center-and-jira-server/overview.md
+        - "Usage": latex/latex-for-jira/jira-data-center-and-jira-server/usage.md
+        - "Support": latex/latex-for-jira/jira-data-center-and-jira-server/support.md
+    - "LaTeX for Confluence with Math Editor and Plotting":
+      - "Overview": latex/latex-beautiful-math-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": latex/latex-beautiful-math-for-confluence/confluence-cloud.md
+        - "Overview": latex/latex-beautiful-math-for-confluence/confluence-cloud/overview.md
+        - "Usage": latex/latex-beautiful-math-for-confluence/confluence-cloud/usage.md
+        - "Migrate from Confluence Server and Confluence Data Center": latex/latex-beautiful-math-for-confluence/confluence-cloud/migrate-from-confluence-server-and-confluence-data-center.md
+        - "Support": latex/latex-beautiful-math-for-confluence/confluence-cloud/support.md
+      - "Confluence Data Center and Confluence Server":
+        - "Overview": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server.md
+        - "Overview": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/overview.md
+        - "Usage (from version 4.0.0)": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage.md
+        - "How to install TeX Live": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live.md
+        - "Migrate to Confluence Cloud": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/migrate-to-confluence-cloud.md
+        - "Troubleshooting \"Unknown macro\" error": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/troubleshooting-unknown-macro-error.md
+        - "Support": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/support.md
+        - "(Deprecated) Usage (for version older than 4.0.0)": latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage-pre-400.md
+  - "Whiteboarding and Diagramming":
+    - "Overview": whiteboarding-and-diagramming.md
+    - "Mermaid UML Diagrams and Graphviz Diagrams for Jira":
+      - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira.md
+      - "Jira Cloud":
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud.md
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/support.md
+      - "Jira Data Center and Jira Server":
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server.md
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/overview.md
+        - "Usage": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/usage.md
+        - "Announcement of the Data Center version": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/announcement-of-the-data-center-version.md
+        - "Support": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/support.md
+    - "Excalidraw for Jira":
+      - "Overview": whiteboarding-and-diagramming/excalidraw-for-jira.md
+      - "Jira Cloud":
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud.md
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/support.md
+    - "Excalidraw for Confluence - with Mermaid, PlantUML, and Graphviz":
+      - "Overview": whiteboarding-and-diagramming/excalidraw-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud.md
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support.md
+      - "Confluence Data Center and Confluence Server":
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server.md
+        - "Overview": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/overview.md
+        - "Usage": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/usage.md
+        - "Support": whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/support.md
+    - "PlantUML, Mermaid UML, Graphviz: UML Diagrams for Confluence":
+      - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud.md
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/support.md
+      - "Confluence Data Center and Confluence Server":
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server.md
+        - "Overview": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/overview.md
+        - "Usage": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/usage.md
+        - "Support": whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/support.md
+    - "Mind Mapping for Confluence":
+      - "Overview": whiteboarding-and-diagramming/mind-mapping-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud.md
+        - "Overview": whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/support.md
+    - "User Flow (Wireflow) for Confluence":
+      - "Overview": whiteboarding-and-diagramming/user-flow-wireflow-for-confluence.md
+      - "Confluence Cloud":
+        - "Overview": whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud.md
+        - "Overview": whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/overview.md
+        - "Usage": whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/usage.md
+        - "Support": whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/support.md
+  - "Custom Fields":
+    - "Overview": custom-fields.md
+    - "Table Custom Field for Jira Cloud":
+      - "Overview": custom-fields/table-custom-field-for-jira-cloud.md
+      - "Overview": custom-fields/table-custom-field-for-jira-cloud/overview.md
+      - "Usage": custom-fields/table-custom-field-for-jira-cloud/usage.md
+      - "Support": custom-fields/table-custom-field-for-jira-cloud/support.md
+    - "JEditor-compatible custom field for Jira Cloud":
+      - "Overview": custom-fields/jeditor-compatible-custom-field-for-jira-cloud.md
+      - "Jira Cloud":
+        - "Overview": custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud.md
+        - "Overview": custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview.md
+        - "Create a JEditor-compatible Custom Field": custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/create-a-markdown-enabled-custom-field.md
+        - "Migrate to Jira Cloud": custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/migrate-to-jira-cloud.md
+        - "Support": custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/support.md
+    - "Checklist for Jira Server":
+      - "Overview": custom-fields/checklist-for-jira-server.md
+      - "Overview": custom-fields/checklist-for-jira-server/overview.md
+      - "Usage": custom-fields/checklist-for-jira-server/usage.md
+      - "Support": custom-fields/checklist-for-jira-server/support.md
+  - "Security Policy": security-policy.md
+  - "Privacy Policy": privacy-policy.md
+  - "End User License Agreement": end-user-license-agreement.md
+  - "Service Level Agreement (SLA)": service-level-agreement-sla.md
+  - "Archived Apps":
+    - "Overview": archived-apps.md
+    - "Better font for Jira Server":
+      - "Overview": archived-apps/better-font-for-jira-server.md
+      - "Overview": archived-apps/better-font-for-jira-server/overview.md
+      - "Usage": archived-apps/better-font-for-jira-server/usage.md
+      - "Support": archived-apps/better-font-for-jira-server/support.md
