@@ -1,0 +1,5 @@
+.venv/
+site/
+.imported-docs/
+.working-materials/
+__pycache__/
