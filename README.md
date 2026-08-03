@@ -2,7 +2,7 @@
 
 Source for the Fulstech product documentation site.
 
-- Production: <https://docs.fulstech.io>
+- Production: <https://docs.fulstech.com>
 - Temporary GitHub Pages URL: <https://fulstechlabs.github.io/docs/>
 - Legacy GitBook: <https://fulstech.gitbook.io/docs>
 
