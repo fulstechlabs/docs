@@ -43,6 +43,7 @@ python scripts/audit_migration.py \
   --output migration-audit.json
 ```
 
-The public audit covers the complete published inventory exposed by both the
-GitBook sitemap and Markdown index. Hidden or unpublished GitBook content must
-be inventoried separately through Git Sync or the authenticated GitBook API.
+The public audit covers the complete published inventory exposed by the
+GitBook sitemap, Markdown index, and every chunk of the paginated
+`llms-full.txt` export. Hidden or unpublished GitBook content must be
+inventoried separately through Git Sync or the authenticated GitBook API.

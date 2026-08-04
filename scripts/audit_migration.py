@@ -34,6 +34,7 @@ from import_gitbook import (
 
 
 MARKDOWN_URL = re.compile(r"https://fulstech\.gitbook\.io/docs/[^)\s]+\.md")
+NEXT_LLMS_PAGE = re.compile(r"\[Next Page\]\(([^)]+)\)")
 ASSET_PATH = re.compile(r"(?:(?:\.\./)*)assets/([A-Za-z0-9_-]+)(?:\.[A-Za-z0-9]+)")
 SOURCE_ASSET = re.compile(r"/files/([A-Za-z0-9_-]+)")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
@@ -105,6 +106,32 @@ def external_urls(value: str) -> list[str]:
     prose, _ = split_fenced_markdown(value)
     prose = re.sub(r"!\[[^]]*\]\([^)]+\)", "", prose)
     return sorted({url.rstrip(".,") for url in URL.findall(prose) if not url.startswith(SOURCE)})
+
+
+def fetch_llms_full_pages() -> list[str]:
+    """Fetch every page of GitBook's paginated full-space Markdown export."""
+    url = SOURCE + "/llms-full.txt"
+    pages: list[str] = []
+    seen: set[str] = set()
+    while url not in seen:
+        seen.add(url)
+        content = fetch_text(url)
+        pages.append(content)
+        match = NEXT_LLMS_PAGE.search(content)
+        if not match:
+            break
+        url = urljoin(SOURCE + "/", match.group(1))
+        if not url.startswith(SOURCE + "/llms-full.txt/"):
+            raise ValueError(f"Unexpected llms-full continuation URL: {url}")
+    return pages
+
+
+def llms_full_titles(pages: list[str]) -> list[str]:
+    titles: list[str] = []
+    for page in pages:
+        prose, _ = split_fenced_markdown(page)
+        titles.extend(line[2:].strip() for line in prose.splitlines() if line.startswith("# "))
+    return titles
 
 
 def expected_page(url: str, source: str, valid_paths: set[str]) -> str:
@@ -194,6 +221,8 @@ def rendered_facts(url: str, content_tag: str) -> dict[str, object]:
 def audit(live_base: str | None) -> dict[str, object]:
     llms = fetch_text(SOURCE + "/llms.txt")
     urls = list(dict.fromkeys(MARKDOWN_URL.findall(llms)))
+    full_export_pages = fetch_llms_full_pages()
+    full_export_titles = llms_full_titles(full_export_pages)
     sitemap = ET.fromstring(fetch_text(SOURCE + "/sitemap-pages.xml"))
     sitemap_urls = {
         (element.text or "").rstrip("/")
@@ -204,6 +233,7 @@ def audit(live_base: str | None) -> dict[str, object]:
         sources = list(pool.map(fetch_text, urls))
 
     page_data = list(zip(urls, sources, strict=True))
+    expected_full_export_titles = [page_title(source) for source in sources]
     valid_paths = {str(page_path(url)) for url in urls}
     expected_paths = {Path(path) for path in valid_paths}
     actual_paths = {path.relative_to(DOCS) for path in DOCS.rglob("*.md")}
@@ -356,6 +386,14 @@ def audit(live_base: str | None) -> dict[str, object]:
         "navigation_mismatch": actual_nav != expected_nav,
         "sitemap_only_urls": sorted(sitemap_urls - markdown_published_urls),
         "markdown_only_urls": sorted(markdown_published_urls - sitemap_urls),
+        "llms_full_title_order_mismatch": (
+            {
+                "expected_from_llms": expected_full_export_titles,
+                "actual_from_llms_full": full_export_titles,
+            }
+            if full_export_titles != expected_full_export_titles
+            else {}
+        ),
     }
     if live:
         failures["live_unavailable"] = live["unavailable"]
@@ -363,7 +401,13 @@ def audit(live_base: str | None) -> dict[str, object]:
 
     return {
         "source": SOURCE,
-        "pages": {"gitbook_markdown": len(urls), "gitbook_sitemap": len(sitemap_urls), "github": len(actual_paths)},
+        "pages": {
+            "gitbook_markdown": len(urls),
+            "gitbook_sitemap": len(sitemap_urls),
+            "gitbook_llms_full": len(full_export_titles),
+            "gitbook_llms_full_chunks": len(full_export_pages),
+            "github": len(actual_paths),
+        },
         "assets": {"gitbook_references": len(expected_assets), "github": len(actual_asset_files)},
         "gitbook_block_counts": dict(sorted(source_block_counts.items())),
         "failures": failures,
