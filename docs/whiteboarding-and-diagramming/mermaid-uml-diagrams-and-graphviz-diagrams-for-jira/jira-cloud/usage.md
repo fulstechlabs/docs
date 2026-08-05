@@ -10,17 +10,17 @@ The first step is to add the custom field **UML text** to issue types and projec
 
 Navigate to the **Custom fields** page.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-7e926d1490e4a36b.png)
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-1.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-bfd05a7f64382c75.png)
 
 Search for the custom field **UML text** and add it to screens.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-2.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-b0a191fcf0984cab.png)
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-3.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-8d5bb2f308486cd8.png)
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-4.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-3534dd1ba03d23c8.png)
 
 ### Add the **UML** panel to the issue screen
 
@@ -30,31 +30,31 @@ On an issue view, click on the “three dots” icon and select **UML Diagrams**
 
 Click on **Project settings** on the left sidebar.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-1.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-99523016357c1eee.png)
 
 On the **Project settings** page, click on **Apps** on the left sidebar.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-3.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-f475cc2761077474.png)
 
 Click on **App fields** on the left sidebar and enable **Mermaid UML for Jira Cloud.**
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-4.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-fda5b389cff74146.png)
 
 Go back to the **Project settings** page, click on **Issue types** on the left sidebar.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-2.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-a14893461410b900.png)
 
 Drag the **UML text** field from the right sidebar and drop it into the **Description fields** area.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-5.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-04cc620f563068cf.png)
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/09/image-6.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-cbf1db6580561180.png)
 
 ## Add Mermaid UML graphs to an issue
 
 Click on the **Edit** button.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-6.png?w=842)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-e613d4580ef97061.png)
 
 **Please do not edit the custom field itself. Whenever you want to add or modify graphs, please use the app’s Edit button.**
 
@@ -90,11 +90,11 @@ Future task2               :         des4, after des3, 5d
 {uml}
 ```
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-7.png?w=856)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-c5ca908d85136345.png)
 
 After that, click **Save**.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-8.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-2a34e9ff33930f35.png)
 
 ## Examples
 

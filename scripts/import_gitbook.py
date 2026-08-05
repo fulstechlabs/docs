@@ -82,6 +82,10 @@ def original_asset_url(proxy_url: str) -> str:
     return values[0] if values else proxy_url
 
 
+def external_asset_key(url: str) -> str:
+    return "external-" + hashlib.sha256(url.encode()).hexdigest()[:16]
+
+
 def visible_image_targets(markdown: str) -> list[str]:
     without_code = re.sub(r"```.*?```", "", markdown, flags=re.DOTALL)
     pattern = re.compile(
@@ -229,7 +233,7 @@ def main() -> None:
         markdown_values = list(pool.map(fetch_text, urls))
 
     page_data = list(zip(urls, markdown_values, strict=True))
-    image_pages = [(url, text) for url, text in page_data if "/files/" in text]
+    image_pages = [(url, text) for url, text in page_data if visible_image_targets(text)]
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as pool:
         html_values = list(pool.map(lambda item: fetch_text(item[0][:-3]), image_pages))
 
@@ -252,6 +256,10 @@ def main() -> None:
                 used.add(matches[0])
             if "gitbook.io" in target and "~gitbook/image" in target:
                 key = "remote-" + hashlib.sha256(normalized.encode()).hexdigest()[:16]
+                remote_keys[target] = key
+                asset_sources[key] = normalized
+            elif urlparse(normalized).scheme in {"http", "https"}:
+                key = external_asset_key(normalized)
                 remote_keys[target] = key
                 asset_sources[key] = normalized
 
