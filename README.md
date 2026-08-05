@@ -9,14 +9,23 @@ Source for the Fulstech product documentation site.
 ## Local development
 
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements.txt
-mkdocs serve
+npm install
+npm run dev
 ```
 
-The committed `docs/` tree is a snapshot imported from the legacy GitBook. To
-refresh it while the legacy site remains available:
+To verify the same `/docs` base path used by GitHub Pages:
+
+```bash
+DOCS_SITE_URL=https://fulstechlabs.github.io DOCS_BASE_PATH=/docs npm run build
+DOCS_BASE_PATH=/docs npm run audit:build
+```
+
+The site is built with [Astro Starlight](https://starlight.astro.build/) and
+uses Starlight's default Pagefind search. Production output is generated in
+`dist/`.
+
+The committed `src/content/docs/` tree is a snapshot imported from the legacy
+GitBook. To refresh it while the legacy site remains available:
 
 ```bash
 python scripts/import_gitbook.py
@@ -24,8 +33,9 @@ python scripts/import_gitbook.py
 
 The import is deterministic and fails if it cannot map every GitBook image to
 the rendered source asset. It also downloads externally hosted content images
-into `docs/assets/`, so the published site does not depend on third-party image
-hotlinks.
+into `src/content/docs/assets/`, adds Starlight frontmatter, and regenerates
+`src/sidebar.json`, so the published site does not depend on third-party image
+hotlinks or a manually maintained navigation inventory.
 
 ## Migration audit
 

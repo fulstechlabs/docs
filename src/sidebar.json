@@ -1,0 +1,630 @@
+[
+  {
+    "label": "Home",
+    "slug": "index"
+  },
+  {
+    "label": "Markdown",
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "markdown"
+      },
+      {
+        "label": "Markdown Editor for Jira (Markin)",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "markdown/markin-markdown-editor-for-jira"
+          },
+          {
+            "label": "Jira Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/overview"
+              },
+              {
+                "label": "Create a Markdown-enabled Custom Field",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/create-a-markdown-enabled-custom-field"
+              },
+              {
+                "label": "Markdown Syntax",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/markdown-syntax"
+              },
+              {
+                "label": "Support",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Jira Data Center and Jira Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/overview"
+              },
+              {
+                "label": "Create a Markdown-enabled Field",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/create-a-markdown-enabled-custom-field"
+              },
+              {
+                "label": "Markdown Syntax",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/markdown-syntax"
+              },
+              {
+                "label": "Migrate to Jira Cloud",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/migrate-to-jira-cloud"
+              },
+              {
+                "label": "Support",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Markdown for Confluence",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "markdown/markdown-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/support"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "LaTeX",
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "latex"
+      },
+      {
+        "label": "LaTeX for Jira - Math Editor",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "latex/latex-for-jira"
+          },
+          {
+            "label": "Jira Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "latex/latex-for-jira/jira-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "latex/latex-for-jira/jira-cloud/overview"
+              },
+              {
+                "label": "Usage (with browser extension)",
+                "slug": "latex/latex-for-jira/jira-cloud/usage-with-browser-extension"
+              },
+              {
+                "label": "Usage (without browser extension)",
+                "slug": "latex/latex-for-jira/jira-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "latex/latex-for-jira/jira-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Jira Data Center and Jira Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "latex/latex-for-jira/jira-data-center-and-jira-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "latex/latex-for-jira/jira-data-center-and-jira-server/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "latex/latex-for-jira/jira-data-center-and-jira-server/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "latex/latex-for-jira/jira-data-center-and-jira-server/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "LaTeX for Confluence with Math Editor and Plotting",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "latex/latex-beautiful-math-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Migrate from Confluence Server and Confluence Data Center",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/migrate-from-confluence-server-and-confluence-data-center"
+              },
+              {
+                "label": "Support",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Confluence Data Center and Confluence Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/overview"
+              },
+              {
+                "label": "Usage (from version 4.0.0)",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage"
+              },
+              {
+                "label": "How to install TeX Live",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live"
+              },
+              {
+                "label": "Migrate to Confluence Cloud",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/migrate-to-confluence-cloud"
+              },
+              {
+                "label": "Troubleshooting \"Unknown macro\" error",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/troubleshooting-unknown-macro-error"
+              },
+              {
+                "label": "Support",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/support"
+              },
+              {
+                "label": "(Deprecated) Usage (for version older than 4.0.0)",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage-pre-400"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Whiteboarding and Diagramming",
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "whiteboarding-and-diagramming"
+      },
+      {
+        "label": "Mermaid UML Diagrams and Graphviz Diagrams for Jira",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira"
+          },
+          {
+            "label": "Jira Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Jira Data Center and Jira Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/usage"
+              },
+              {
+                "label": "Announcement of the Data Center version",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/announcement-of-the-data-center-version"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Excalidraw for Jira",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/excalidraw-for-jira"
+          },
+          {
+            "label": "Jira Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Excalidraw for Confluence - with Mermaid, PlantUML, and Graphviz",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Confluence Data Center and Confluence Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "PlantUML, Mermaid UML, Graphviz: UML Diagrams for Confluence",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/support"
+              }
+            ]
+          },
+          {
+            "label": "Confluence Data Center and Confluence Server",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Mind Mapping for Confluence",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "User Flow (Wireflow) for Confluence",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence"
+          },
+          {
+            "label": "Confluence Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/overview"
+              },
+              {
+                "label": "Usage",
+                "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/usage"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/support"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Custom Fields",
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "custom-fields"
+      },
+      {
+        "label": "Table Custom Field for Jira Cloud",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "custom-fields/table-custom-field-for-jira-cloud"
+          },
+          {
+            "label": "Overview",
+            "slug": "custom-fields/table-custom-field-for-jira-cloud/overview"
+          },
+          {
+            "label": "Usage",
+            "slug": "custom-fields/table-custom-field-for-jira-cloud/usage"
+          },
+          {
+            "label": "Support",
+            "slug": "custom-fields/table-custom-field-for-jira-cloud/support"
+          }
+        ]
+      },
+      {
+        "label": "JEditor-compatible custom field for Jira Cloud",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud"
+          },
+          {
+            "label": "Jira Cloud",
+            "items": [
+              {
+                "label": "Overview",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud"
+              },
+              {
+                "label": "Overview",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview"
+              },
+              {
+                "label": "Create a JEditor-compatible Custom Field",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/create-a-markdown-enabled-custom-field"
+              },
+              {
+                "label": "Migrate to Jira Cloud",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/migrate-to-jira-cloud"
+              },
+              {
+                "label": "Support",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/support"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Checklist for Jira Server",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "custom-fields/checklist-for-jira-server"
+          },
+          {
+            "label": "Overview",
+            "slug": "custom-fields/checklist-for-jira-server/overview"
+          },
+          {
+            "label": "Usage",
+            "slug": "custom-fields/checklist-for-jira-server/usage"
+          },
+          {
+            "label": "Support",
+            "slug": "custom-fields/checklist-for-jira-server/support"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Security Policy",
+    "slug": "security-policy"
+  },
+  {
+    "label": "Privacy Policy",
+    "slug": "privacy-policy"
+  },
+  {
+    "label": "End User License Agreement",
+    "slug": "end-user-license-agreement"
+  },
+  {
+    "label": "Service Level Agreement (SLA)",
+    "slug": "service-level-agreement-sla"
+  },
+  {
+    "label": "Archived Apps",
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "archived-apps"
+      },
+      {
+        "label": "Better font for Jira Server",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "archived-apps/better-font-for-jira-server"
+          },
+          {
+            "label": "Overview",
+            "slug": "archived-apps/better-font-for-jira-server/overview"
+          },
+          {
+            "label": "Usage",
+            "slug": "archived-apps/better-font-for-jira-server/usage"
+          },
+          {
+            "label": "Support",
+            "slug": "archived-apps/better-font-for-jira-server/support"
+          }
+        ]
+      }
+    ]
+  }
+]

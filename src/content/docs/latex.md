@@ -1,0 +1,28 @@
+---
+title: "LaTeX"
+---
+
+- [LaTeX for Jira - Math Editor](latex-for-jira/)
+- [Jira Cloud](latex-for-jira/jira-cloud/)
+- [Overview](latex-for-jira/jira-cloud/overview/)
+- [Usage (with browser extension)](latex-for-jira/jira-cloud/usage-with-browser-extension/)
+- [Usage (without browser extension)](latex-for-jira/jira-cloud/usage/)
+- [Support](latex-for-jira/jira-cloud/support/)
+- [Jira Data Center and Jira Server](latex-for-jira/jira-data-center-and-jira-server/)
+- [Overview](latex-for-jira/jira-data-center-and-jira-server/overview/)
+- [Usage](latex-for-jira/jira-data-center-and-jira-server/usage/)
+- [Support](latex-for-jira/jira-data-center-and-jira-server/support/)
+- [LaTeX for Confluence with Math Editor and Plotting](latex-beautiful-math-for-confluence/)
+- [Confluence Cloud](latex-beautiful-math-for-confluence/confluence-cloud/)
+- [Overview](latex-beautiful-math-for-confluence/confluence-cloud/overview/)
+- [Usage](latex-beautiful-math-for-confluence/confluence-cloud/usage/)
+- [Migrate from Confluence Server and Confluence Data Center](latex-beautiful-math-for-confluence/confluence-cloud/migrate-from-confluence-server-and-confluence-data-center/)
+- [Support](latex-beautiful-math-for-confluence/confluence-cloud/support/)
+- [Confluence Data Center and Confluence Server](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/)
+- [Overview](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/overview/)
+- [Usage (from version 4.0.0)](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage/)
+- [How to install TeX Live](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live/)
+- [Migrate to Confluence Cloud](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/migrate-to-confluence-cloud/)
+- [Troubleshooting "Unknown macro" error](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/troubleshooting-unknown-macro-error/)
+- [Support](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/support/)
+- [(Deprecated) Usage (for version older than 4.0.0)](latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage-pre-400/)

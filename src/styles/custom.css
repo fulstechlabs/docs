@@ -1,0 +1,21 @@
+:root {
+  --sl-color-accent-low: #172554;
+  --sl-color-accent: #4051b5;
+  --sl-color-accent-high: #dbeafe;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --sl-color-accent-low: #dbeafe;
+    --sl-color-accent: #4051b5;
+    --sl-color-accent-high: #172554;
+  }
+}
+
+.sl-markdown-content img {
+  border-radius: 0.5rem;
+}
+
+.site-title {
+  font-weight: 600;
+}

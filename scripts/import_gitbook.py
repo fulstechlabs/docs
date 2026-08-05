@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import the public Fulstech GitBook into the local MkDocs source tree."""
+"""Import the public Fulstech GitBook into the Astro Starlight source tree."""
 
 from __future__ import annotations
 
@@ -11,6 +11,7 @@ import json
 import mimetypes
 import os
 from pathlib import Path, PurePosixPath
+import posixpath
 import re
 import shutil
 import time
@@ -20,7 +21,7 @@ from urllib.request import Request, urlopen
 
 SOURCE = "https://fulstech.gitbook.io/docs"
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / "docs"
+DOCS = ROOT / "src" / "content" / "docs"
 ASSETS = DOCS / "assets"
 USER_AGENT = "Fulstech GitBook migration/1.0"
 
@@ -70,10 +71,25 @@ def page_path(url: str) -> PurePosixPath:
 
 
 def page_title(markdown: str) -> str:
+    frontmatter = re.match(r'^---\n(.*?)\n---\n', markdown, re.DOTALL)
+    if frontmatter:
+        match = re.search(r'^title:\s*(.+?)\s*$', frontmatter.group(1), re.MULTILINE)
+        if match:
+            value = match.group(1).strip()
+            if value.startswith('"'):
+                return json.loads(value)
+            return value
     match = re.search(r"^#\s+(.+?)\s*$", markdown, re.MULTILINE)
     if not match:
         raise ValueError("page has no level-one heading")
     return re.sub(r"[*_`]", "", match.group(1)).strip()
+
+
+def starlight_page(markdown: str) -> str:
+    """Move the page H1 into Starlight's required title frontmatter."""
+    title = page_title(markdown)
+    body = re.sub(r"^#\s+.+?\s*\n", "", markdown, count=1, flags=re.MULTILINE).lstrip()
+    return f"---\ntitle: {json.dumps(title, ensure_ascii=False)}\n---\n\n{body}"
 
 
 def original_asset_url(proxy_url: str) -> str:
@@ -134,7 +150,27 @@ def transform_links(
         target = match.group("target")
         normalized = internal_target(target)
         if normalized is None:
-            return match.group(0)
+            parsed = urlparse(target)
+            if (
+                match.group("prefix").startswith("!")
+                or parsed.scheme
+                or parsed.netloc
+                or target.startswith("#")
+            ):
+                return match.group(0)
+            raw_path, marker, fragment = target.partition("#")
+            if not raw_path.endswith(".md"):
+                return match.group(0)
+            relative_source = posixpath.normpath(str(current.parent / raw_path))
+            root_source = posixpath.normpath(raw_path.lstrip("/"))
+            if relative_source in valid_paths:
+                normalized = relative_source
+            elif root_source in valid_paths:
+                normalized = root_source
+            else:
+                normalized = raw_path
+            if marker:
+                normalized += "#" + fragment
         path, marker, fragment = normalized.partition("#")
         if fragment == "create-a-new-custom-field-of-type-text-field-multi-line":
             fragment = "create-a-new-custom-field"
@@ -142,7 +178,17 @@ def transform_links(
             candidates = [candidate for candidate in valid_paths if candidate.endswith("/" + path)]
             if len(candidates) == 1:
                 path = candidates[0]
-        relative = os.path.relpath(path, start=str(current.parent))
+        target_route = str(PurePosixPath(path).with_suffix(""))
+        if target_route == "index":
+            target_route = "."
+        current_route = str(current.with_suffix(""))
+        if current_route == "index":
+            current_route = "."
+        relative = posixpath.relpath(target_route, start=current_route)
+        if relative == ".":
+            relative = "./"
+        else:
+            relative += "/"
         if marker:
             relative += "#" + fragment
         return match.group("prefix") + relative + match.group("suffix")
@@ -188,7 +234,7 @@ def transform_gitbook(markdown: str) -> str:
     return "\n".join(line.rstrip() for line in markdown.strip().splitlines()) + "\n"
 
 
-def yaml_nav(pages: list[tuple[PurePosixPath, str]]) -> str:
+def sidebar_data(pages: list[tuple[PurePosixPath, str]]) -> list[dict[str, object]]:
     tree: dict[str, object] = {}
     for path, title in pages:
         parts = list(path.with_suffix("").parts)
@@ -199,9 +245,10 @@ def yaml_nav(pages: list[tuple[PurePosixPath, str]]) -> str:
             node = node.setdefault(part, {})  # type: ignore[assignment]
         node["__page__"] = (title, str(path))
 
-    lines = ["nav:", '  - "Home": index.md']
+    items: list[dict[str, object]] = [{"label": "Home", "slug": "index"}]
 
-    def emit(nodes: dict[str, object], indent: int) -> None:
+    def emit(nodes: dict[str, object]) -> list[dict[str, object]]:
+        output: list[dict[str, object]] = []
         for key, value in nodes.items():
             if key == "__page__":
                 continue
@@ -210,17 +257,20 @@ def yaml_nav(pages: list[tuple[PurePosixPath, str]]) -> str:
             page = child.get("__page__")
             nested = [item for item in child if item != "__page__"]
             label = page[0] if page else key.replace("-", " ").title()
-            prefix = " " * indent + "- " + json.dumps(label) + ":"
             if page and not nested:
-                lines.append(prefix + " " + page[1])
+                output.append({"label": label, "slug": str(PurePosixPath(page[1]).with_suffix(""))})
             else:
-                lines.append(prefix)
+                children: list[dict[str, object]] = []
                 if page:
-                    lines.append(" " * (indent + 2) + '- "Overview": ' + page[1])
-                emit(child, indent + 2)
+                    children.append(
+                        {"label": "Overview", "slug": str(PurePosixPath(page[1]).with_suffix(""))}
+                    )
+                children.extend(emit(child))
+                output.append({"label": label, "items": children})
+        return output
 
-    emit(tree, 2)
-    return "\n".join(lines) + "\n"
+    items.extend(emit(tree))
+    return items
 
 
 def main() -> None:
@@ -328,20 +378,20 @@ def main() -> None:
                     remote,
                     os.path.relpath(str(asset), start=str(destination.parent)),
                 )
+        output = starlight_page(output)
         target = temp_docs / destination
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(output, encoding="utf-8")
         nav_pages.append((destination, page_title(output)))
 
-    stylesheet = DOCS / "stylesheets" / "extra.css"
-    (temp_docs / "stylesheets").mkdir()
-    shutil.copy2(stylesheet, temp_docs / "stylesheets" / "extra.css")
     shutil.rmtree(DOCS)
     temp_docs.rename(DOCS)
 
-    config = ROOT / "mkdocs.yml"
-    base_config = re.sub(r"\nnav:\n.*\Z", "\n", config.read_text(encoding="utf-8"), flags=re.DOTALL)
-    config.write_text(base_config.rstrip() + "\n\n" + yaml_nav(nav_pages), encoding="utf-8")
+    sidebar = ROOT / "src" / "sidebar.json"
+    sidebar.write_text(
+        json.dumps(sidebar_data(nav_pages), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print(f"Imported {len(page_data)} pages and {len(downloaded)} assets")
 
 
