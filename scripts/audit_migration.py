@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the committed MkDocs source against the published GitBook space."""
+"""Audit the committed Starlight source against the published GitBook space."""
 
 from __future__ import annotations
 
@@ -26,11 +26,12 @@ from import_gitbook import (
     fetch_text,
     page_path,
     page_title,
+    sidebar_data,
+    starlight_page,
     original_asset_url,
     transform_gitbook,
     transform_links,
     visible_image_targets,
-    yaml_nav,
 )
 
 
@@ -92,7 +93,11 @@ def split_fenced_markdown(value: str) -> tuple[str, list[tuple[str, str]]]:
 
 def markdown_headings(value: str) -> list[tuple[int, str]]:
     prose, _ = split_fenced_markdown(value)
-    return [(len(level), title.strip()) for level, title in HEADING.findall(prose)]
+    headings = [(len(level), title.strip()) for level, title in HEADING.findall(prose)]
+    frontmatter = re.match(r'^---\n.*?\n---\n', prose, re.DOTALL)
+    if frontmatter:
+        headings.insert(0, (1, page_title(prose)))
+    return headings
 
 
 def rendered_heading_label(value: str) -> str:
@@ -100,7 +105,9 @@ def rendered_heading_label(value: str) -> str:
     value = re.sub(r"\[([^]]+)\]\([^)]+\)", r"\1", value)
     value = re.sub(r"\\([\\`*{}\[\]()#+.!_>~-])", r"\1", value)
     value = re.sub(r"[*_`~]", "", value)
-    return " ".join(html.unescape(value).split())
+    return " ".join(html.unescape(value).split()).translate(
+        str.maketrans({"’": "'", "‘": "'", "“": '"', "”": '"'})
+    )
 
 
 def markdown_code_blocks(value: str) -> list[tuple[str, str]]:
@@ -143,7 +150,7 @@ def llms_full_titles(pages: list[str]) -> list[str]:
 def expected_page(url: str, source: str, valid_paths: set[str]) -> str:
     destination = page_path(url)
     transformed = transform_gitbook(source)
-    return transform_links(transformed, destination, valid_paths)
+    return starlight_page(transform_links(transformed, destination, valid_paths))
 
 
 def target_url(base: str, destination: PurePosixPath) -> str:
@@ -191,7 +198,7 @@ class RenderedFacts(HTMLParser):
 
     def handle_endtag(self, tag: str) -> None:
         if self.in_content and tag == self.heading_tag:
-            text = " ".join("".join(self.heading_parts).replace("¶", "").split())
+            text = rendered_heading_label("".join(self.heading_parts).replace("¶", ""))
             self.headings.append((int(tag[1]), text))
             self.heading_tag = None
             self.heading_parts = []
@@ -314,9 +321,8 @@ def audit(live_base: str | None) -> dict[str, object]:
             if not target.is_file():
                 broken_local_assets.append(f"{page.relative_to(DOCS)} -> {relative}")
 
-    config = (ROOT / "mkdocs.yml").read_text(encoding="utf-8")
-    actual_nav = "nav:\n" + config.split("\nnav:\n", 1)[1] if "\nnav:\n" in config else ""
-    expected_nav = yaml_nav(nav_pages)
+    actual_nav = json.loads((ROOT / "src" / "sidebar.json").read_text(encoding="utf-8"))
+    expected_nav = sidebar_data(nav_pages)
 
     live: dict[str, object] | None = None
     if live_base:
@@ -324,7 +330,7 @@ def audit(live_base: str | None) -> dict[str, object]:
         target_rendered_urls = [target_url(live_base, page_path(url)) for url in urls]
         with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
             source_facts = list(pool.map(lambda item: rendered_facts(item, "main"), source_rendered_urls))
-            target_facts = list(pool.map(lambda item: rendered_facts(item, "article"), target_rendered_urls))
+            target_facts = list(pool.map(lambda item: rendered_facts(item, "main"), target_rendered_urls))
         unavailable = [
             {"source": source, "target": target}
             for source, target in zip(source_facts, target_facts, strict=True)

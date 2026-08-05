@@ -1,5 +1,7 @@
 .venv/
-site/
+dist/
+.astro/
+node_modules/
 .imported-docs/
 .working-materials/
 __pycache__/
