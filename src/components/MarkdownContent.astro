@@ -1,0 +1,15 @@
+---
+import '@astrojs/starlight/style/markdown.css';
+import Home from './Home.astro';
+
+const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
+---
+
+{isHome ? (
+  <div class="docs-home">
+    <Home />
+    <div hidden data-pagefind-ignore><slot /></div>
+  </div>
+) : (
+  <div class="sl-markdown-content"><slot /></div>
+)}
