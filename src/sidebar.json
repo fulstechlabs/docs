@@ -40,7 +40,8 @@
                 "label": "Support",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Jira Data Center and Jira Server",
@@ -69,9 +70,11 @@
                 "label": "Support",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "Markdown for Confluence",
@@ -99,11 +102,14 @@
                 "label": "Support",
                 "slug": "markdown/markdown-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       }
-    ]
+    ],
+    "collapsed": true
   },
   {
     "label": "LaTeX",
@@ -142,7 +148,8 @@
                 "label": "Support",
                 "slug": "latex/latex-for-jira/jira-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Jira Data Center and Jira Server",
@@ -163,9 +170,11 @@
                 "label": "Support",
                 "slug": "latex/latex-for-jira/jira-data-center-and-jira-server/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "LaTeX for Confluence with Math Editor and Plotting",
@@ -197,7 +206,8 @@
                 "label": "Support",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Confluence Data Center and Confluence Server",
@@ -234,11 +244,14 @@
                 "label": "(Deprecated) Usage (for version older than 4.0.0)",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/usage-pre-400"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       }
-    ]
+    ],
+    "collapsed": true
   },
   {
     "label": "Whiteboarding and Diagramming",
@@ -273,7 +286,8 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Jira Data Center and Jira Server",
@@ -298,9 +312,11 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "Excalidraw for Jira",
@@ -328,9 +344,11 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "Excalidraw for Confluence - with Mermaid, PlantUML, and Graphviz",
@@ -358,7 +376,8 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Confluence Data Center and Confluence Server",
@@ -379,9 +398,11 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "PlantUML, Mermaid UML, Graphviz: UML Diagrams for Confluence",
@@ -409,7 +430,8 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           },
           {
             "label": "Confluence Data Center and Confluence Server",
@@ -430,9 +452,11 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "Mind Mapping for Confluence",
@@ -460,9 +484,11 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "User Flow (Wireflow) for Confluence",
@@ -490,11 +516,14 @@
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       }
-    ]
+    ],
+    "collapsed": true
   },
   {
     "label": "Custom Fields",
@@ -522,7 +551,8 @@
             "label": "Support",
             "slug": "custom-fields/table-custom-field-for-jira-cloud/support"
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "JEditor-compatible custom field for Jira Cloud",
@@ -554,9 +584,11 @@
                 "label": "Support",
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/support"
               }
-            ]
+            ],
+            "collapsed": true
           }
-        ]
+        ],
+        "collapsed": true
       },
       {
         "label": "Checklist for Jira Server",
@@ -577,9 +609,11 @@
             "label": "Support",
             "slug": "custom-fields/checklist-for-jira-server/support"
           }
-        ]
+        ],
+        "collapsed": true
       }
-    ]
+    ],
+    "collapsed": true
   },
   {
     "label": "Security Policy",
@@ -623,8 +657,10 @@
             "label": "Support",
             "slug": "archived-apps/better-font-for-jira-server/support"
           }
-        ]
+        ],
+        "collapsed": true
       }
-    ]
+    ],
+    "collapsed": true
   }
 ]

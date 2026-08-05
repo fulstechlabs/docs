@@ -1,0 +1,57 @@
+---
+import config from 'virtual:starlight/user-config';
+import Search from '@astrojs/starlight/components/Search.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+import BrandMark from './BrandMark.astro';
+
+const { siteTitleHref } = Astro.locals.starlightRoute;
+const base = import.meta.env.BASE_URL;
+const baseWithSlash = base.endsWith('/') ? base : `${base}/`;
+const docsHref = (path = '') => `${baseWithSlash}${path}`.replace(/\/+/g, '/');
+const shouldRenderSearch = config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="ft-header">
+  <a class="ft-brand" href={siteTitleHref} aria-label="Fulstech Docs home">
+    <BrandMark />
+    <span>Fulstech <b>Docs</b></span>
+  </a>
+  <div class="ft-header-search print:hidden">{shouldRenderSearch && <Search />}</div>
+  <nav class="ft-nav print:hidden" aria-label="Utility">
+    <a href={docsHref('markdown/')}>Products</a>
+    <a href={docsHref('markdown/markin-markdown-editor-for-jira/jira-cloud/overview/')}>Guides</a>
+    <a href="https://fulstech.atlassian.net/servicedesk/customer/portals">Support</a>
+    <a class="ft-github" href="https://github.com/fulstechlabs" aria-label="Fulstech on GitHub">
+      GitHub
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M6 14 14 6m-6 0h6v6" /></svg>
+    </a>
+    <ThemeSelect />
+  </nav>
+</div>
+
+<style>
+  @layer starlight.core {
+    .ft-header { height: 100%; display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(16rem, 34rem) 1fr; align-items: center; gap: 1.5rem; }
+    .ft-brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--sl-color-white); text-decoration: none; font-size: 1.25rem; font-weight: 700; letter-spacing: -.025em; width: max-content; }
+    .ft-brand b { color: var(--ft-blue); font-weight: 750; }
+    .ft-header-search { min-width: 0; }
+    .ft-header-search :global(site-search button[data-open-modal]) { max-width: none; }
+    .ft-nav { display: flex; align-items: center; justify-content: flex-end; gap: 1.75rem; min-width: 0; }
+    .ft-nav > a { color: var(--sl-color-gray-1); text-decoration: none; font-size: .9rem; font-weight: 550; white-space: nowrap; }
+    .ft-nav > a:hover { color: var(--ft-blue); }
+    .ft-github { display: inline-flex; gap: .3rem; align-items: center; }
+    .ft-github svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.7; }
+
+    @media (max-width: 74rem) {
+      .ft-header { grid-template-columns: minmax(11rem, 15rem) 1fr auto; }
+      .ft-nav > a { display: none; }
+      .ft-nav { gap: .5rem; }
+    }
+    @media (max-width: 49.99rem) {
+      .ft-header { grid-template-columns: 1fr auto; gap: .75rem; }
+      .ft-brand { font-size: 1.05rem; }
+      .ft-header-search { justify-self: end; }
+      .ft-nav { display: none; }
+    }
+  }
+</style>

@@ -266,7 +266,7 @@ def sidebar_data(pages: list[tuple[PurePosixPath, str]]) -> list[dict[str, objec
                         {"label": "Overview", "slug": str(PurePosixPath(page[1]).with_suffix(""))}
                     )
                 children.extend(emit(child))
-                output.append({"label": label, "items": children})
+                output.append({"label": label, "items": children, "collapsed": True})
         return output
 
     items.extend(emit(tree))

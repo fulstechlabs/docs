@@ -10,7 +10,7 @@ export default defineConfig({
   base,
   integrations: [
     starlight({
-      title: 'Fulstech Documentation',
+      title: 'Fulstech Docs',
       description: 'Documentation for Fulstech Jira and Confluence apps',
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],
@@ -33,6 +33,11 @@ export default defineConfig({
           href: 'https://github.com/fulstechlabs',
         },
       ],
+      components: {
+        Header: './src/components/Header.astro',
+        MarkdownContent: './src/components/MarkdownContent.astro',
+        PageTitle: './src/components/PageTitle.astro',
+      },
       sidebar,
     }),
   ],
