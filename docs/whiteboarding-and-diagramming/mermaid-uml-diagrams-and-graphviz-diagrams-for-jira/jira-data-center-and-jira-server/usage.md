@@ -28,11 +28,11 @@ sequenceDiagram
 
 **For Jira 7+, the macros have to be used in Text mode and not Visual mode**.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/06/image-1.png?w=985)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-53b4a6a03e7d7940.png)
 
 All Mermaid UML content will be rendered as below.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/06/image-2.png?w=927)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-9a44987ce0f8df77.png)
 
 ## Graphviz Diagrams
 
@@ -55,11 +55,11 @@ graph {
 
 **For Jira 7+, the macros have to be used in Text mode and not Visual mode**.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2017/09/jira-graphviz-21.png)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-0d78c334a911ec10.png)
 
 All Graphviz content will be rendered as below.
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2017/09/jira-graphviz-3.png)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-027160122c7e45f5.png)
 
 ## Examples
 

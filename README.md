@@ -23,7 +23,9 @@ python scripts/import_gitbook.py
 ```
 
 The import is deterministic and fails if it cannot map every GitBook image to
-the rendered source asset.
+the rendered source asset. It also downloads externally hosted content images
+into `docs/assets/`, so the published site does not depend on third-party image
+hotlinks.
 
 ## Migration audit
 
@@ -47,3 +49,4 @@ The public audit covers the complete published inventory exposed by the
 GitBook sitemap, Markdown index, and every chunk of the paginated
 `llms-full.txt` export. Hidden or unpublished GitBook content must be
 inventoried separately through Git Sync or the authenticated GitBook API.
+The audit also fails if a visible content image remains externally hosted.

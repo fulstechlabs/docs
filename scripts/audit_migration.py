@@ -22,6 +22,7 @@ from import_gitbook import (
     DOCS,
     ROOT,
     SOURCE,
+    external_asset_key,
     fetch_text,
     page_path,
     page_title,
@@ -36,10 +37,11 @@ from import_gitbook import (
 MARKDOWN_URL = re.compile(r"https://fulstech\.gitbook\.io/docs/[^)\s]+\.md")
 NEXT_LLMS_PAGE = re.compile(r"\[Next Page\]\(([^)]+)\)")
 ASSET_PATH = re.compile(r"(?:(?:\.\./)*)assets/([A-Za-z0-9_-]+)(?:\.[A-Za-z0-9]+)")
-SOURCE_ASSET = re.compile(r"/files/([A-Za-z0-9_-]+)")
 HEADING = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 URL = re.compile(r"https?://[^\s)\]>\"]+")
-REMOTE_IMAGE = re.compile(r"https://fulstech\.gitbook\.io/~gitbook/image\?[^)\s]+")
+REMOTE_MARKDOWN_IMAGE = re.compile(
+    r"(?P<prefix>!\[[^]]*\]\()(?P<url>https?://[^)\s]+)(?P<suffix>[^)]*\))"
+)
 GITBOOK_BLOCK = re.compile(
     r"{%\s+(hint|endhint|tabs|endtabs|tab|endtab|embed|endembed|content-ref|endcontent-ref)\b"
 )
@@ -47,11 +49,15 @@ GITBOOK_BLOCK = re.compile(
 
 def normalize_markdown(value: str) -> str:
     def replace_remote(match: re.Match[str]) -> str:
-        normalized = original_asset_url(match.group(0).replace("\\&", "&"))
-        key = "remote-" + hashlib.sha256(normalized.encode()).hexdigest()[:16]
-        return f"/files/{key}"
+        target = match.group("url")
+        normalized = original_asset_url(target.replace("\\&", "&"))
+        if "gitbook.io" in target and "~gitbook/image" in target:
+            key = "remote-" + hashlib.sha256(normalized.encode()).hexdigest()[:16]
+        else:
+            key = external_asset_key(normalized)
+        return match.group("prefix") + f"/files/{key}" + match.group("suffix")
 
-    value = REMOTE_IMAGE.sub(replace_remote, value)
+    value = REMOTE_MARKDOWN_IMAGE.sub(replace_remote, value)
     value = ASSET_PATH.sub(lambda match: f"/files/{match.group(1)}", value)
     value = "\n".join(line.rstrip() for line in value.splitlines()).strip() + "\n"
     return re.sub(r"\n{3,}", "\n\n", value)
@@ -245,6 +251,7 @@ def audit(live_base: str | None) -> dict[str, object]:
     heading_mismatches: list[str] = []
     code_mismatches: list[str] = []
     external_link_mismatches: list[str] = []
+    external_image_references: dict[str, list[str]] = {}
     unresolved_blocks: dict[str, list[str]] = {}
     source_block_counts: Counter[str] = Counter()
     expected_assets: set[str] = set()
@@ -254,10 +261,18 @@ def audit(live_base: str | None) -> dict[str, object]:
         destination = page_path(url)
         path = DOCS / destination
         source_block_counts.update(GITBOOK_BLOCK.findall(source))
-        expected_assets.update(SOURCE_ASSET.findall(source))
-        for remote in REMOTE_IMAGE.findall(source):
-            normalized = original_asset_url(remote.replace("\\&", "&"))
-            expected_assets.add("remote-" + hashlib.sha256(normalized.encode()).hexdigest()[:16])
+        transformed_source = transform_gitbook(source)
+        for target in visible_image_targets(transformed_source):
+            if target.startswith("/files/"):
+                expected_assets.add(target.removeprefix("/files/"))
+            elif target.startswith(("http://", "https://")):
+                normalized = original_asset_url(target.replace("\\&", "&"))
+                if "gitbook.io" in target and "~gitbook/image" in target:
+                    expected_assets.add(
+                        "remote-" + hashlib.sha256(normalized.encode()).hexdigest()[:16]
+                    )
+                else:
+                    expected_assets.add(external_asset_key(normalized))
         if not path.exists():
             continue
         expected = expected_page(url, source, valid_paths)
@@ -274,6 +289,13 @@ def audit(live_base: str | None) -> dict[str, object]:
             code_mismatches.append(label)
         if external_urls(expected) != external_urls(actual):
             external_link_mismatches.append(label)
+        external_images = sorted(
+            target
+            for target in visible_image_targets(actual)
+            if target.startswith(("http://", "https://"))
+        )
+        if external_images:
+            external_image_references[label] = external_images
         remaining = sorted(set(GITBOOK_BLOCK.findall(actual)))
         if remaining:
             unresolved_blocks[label] = remaining
@@ -379,6 +401,7 @@ def audit(live_base: str | None) -> dict[str, object]:
         "heading_mismatches": heading_mismatches,
         "code_mismatches": code_mismatches,
         "external_link_mismatches": external_link_mismatches,
+        "external_image_references": external_image_references,
         "unresolved_gitbook_blocks": unresolved_blocks,
         "missing_assets": missing_assets,
         "extra_assets": extra_assets,

@@ -12,8 +12,8 @@ To use Markin for system fields, follow the instruction at \[<https://confluence
 
 Hover on a field, the link to the Settings page will be shown at the bottom.
 
-![Markdown for Jira](https://fulstech.files.wordpress.com/2019/11/markin-server-settings-1.png)
+![Markdown for Jira](../../../assets/external-ab6819e1184bc813.png)
 
 You can then configure how Markin renders the Markdown content.
 
-![Markdown for Jira](https://fulstech.files.wordpress.com/2019/11/markin-server-settings-2.png)
+![Markdown for Jira](../../../assets/external-aacfe675a9dde026.png)

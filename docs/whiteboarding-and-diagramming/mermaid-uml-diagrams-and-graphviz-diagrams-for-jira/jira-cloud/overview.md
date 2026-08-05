@@ -15,4 +15,4 @@ This is the only add-on for rendering Mermaid UML diagrams inside Jira Cloud. Me
 
 You can install the app by following the instructions at [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1223053/mermaid-uml-diagrams-for-jira-cloud?hosting=cloud\&tab=installation).
 
-![Mermaid UML Diagrams and Graphviz Diagrams for Jira](https://fulstech.files.wordpress.com/2020/07/image-8.png?w=1024)
+![Mermaid UML Diagrams and Graphviz Diagrams for Jira](../../../assets/external-2a34e9ff33930f35.png)
