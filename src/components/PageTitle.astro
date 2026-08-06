@@ -24,7 +24,7 @@ const trail = isHome ? [] : (findTrail(route.sidebar as NavEntry[]) || []);
       <nav class="ft-breadcrumbs" aria-label="Breadcrumb">
         {trail.map((item, index) => (
           <>
-            {index > 0 && <span aria-hidden="true">/</span>}
+            {index > 0 && <span class="separator" aria-hidden="true">›</span>}
             {item.href && index < trail.length - 1 ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
           </>
         ))}
@@ -36,9 +36,10 @@ const trail = isHome ? [] : (findTrail(route.sidebar as NavEntry[]) || []);
 
 <style>
   @layer starlight.core {
-    .ft-breadcrumbs { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--sl-color-gray-3); font-size: .78rem; font-weight: 550; margin-bottom: 1.1rem; }
+    .ft-breadcrumbs { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; color: var(--sl-color-gray-3); font-size: .8125rem; line-height: 1.45; font-weight: 550; margin-bottom: 1rem; }
     .ft-breadcrumbs a { color: var(--sl-color-gray-2); text-decoration: none; }
     .ft-breadcrumbs a:hover { color: var(--ft-blue); }
-    h1 { margin: 0; max-width: 48rem; font-size: clamp(2.1rem, 3.4vw, 2.75rem); line-height: 1.1; letter-spacing: -.04em; font-weight: 750; color: var(--sl-color-white); }
+    .ft-breadcrumbs .separator { color: var(--sl-color-gray-4); font-size: 1rem; }
+    h1 { margin: 0; max-width: 48rem; font-size: clamp(2rem, 3vw, 2.5rem); line-height: 1.12; letter-spacing: -.038em; font-weight: 750; color: var(--sl-color-white); }
   }
 </style>

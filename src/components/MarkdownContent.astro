@@ -3,6 +3,14 @@ import '@astrojs/starlight/style/markdown.css';
 import Home from './Home.astro';
 
 const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
+const title = Astro.locals.starlightRoute.entry.data.title;
+const pageKind = title === 'Overview'
+  ? 'overview'
+  : title === 'Support'
+    ? 'support'
+    : ['Security Policy', 'Privacy Policy', 'End User License Agreement', 'Service Level Agreement (SLA)'].includes(title)
+      ? 'legal'
+      : 'article';
 ---
 
 {isHome ? (
@@ -11,6 +19,5 @@ const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
     <div hidden data-pagefind-ignore><slot /></div>
   </div>
 ) : (
-  <div class="sl-markdown-content"><slot /></div>
+  <div class:list={['sl-markdown-content', `ft-page-${pageKind}`]} data-page-kind={pageKind}><slot /></div>
 )}
-
