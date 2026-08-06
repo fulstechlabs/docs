@@ -1,0 +1,118 @@
+---
+const base = import.meta.env.BASE_URL;
+const baseWithSlash = base.endsWith('/') ? base : `${base}/`;
+const href = (path = '') => `${baseWithSlash}${path}`.replace(/\/+/g, '/');
+
+const popular = [
+  { icon: '↗', title: 'Getting started', text: 'Set up your Fulstech app quickly.', href: 'markdown/markin-markdown-editor-for-jira/jira-cloud/overview/' },
+  { icon: '⇧', title: 'Migration', text: 'Move apps and data with confidence.', href: 'latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/migrate-to-confluence-cloud/' },
+  { icon: '⌁', title: 'Troubleshooting', text: 'Resolve common issues and errors.', href: 'latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/troubleshooting-unknown-macro-error/' },
+  { icon: '◡', title: 'Support', text: 'Get help from our support team.', href: 'https://fulstech.atlassian.net/servicedesk/customer/portals' },
+];
+
+const appGroups = [
+  {
+    title: 'Jira apps',
+    apps: [
+      ['Markdown Editor for Jira (Markin)', 'markdown/markin-markdown-editor-for-jira/'],
+      ['LaTeX for Jira — Math Editor', 'latex/latex-for-jira/'],
+      ['Table Custom Field for Jira Cloud', 'custom-fields/table-custom-field-for-jira-cloud/'],
+      ['Mermaid UML and Graphviz Diagrams for Jira', 'whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/'],
+      ['Excalidraw for Jira', 'whiteboarding-and-diagramming/excalidraw-for-jira/'],
+      ['Checklist for Jira Server', 'custom-fields/checklist-for-jira-server/'],
+      ['Better font for Jira Server', 'archived-apps/better-font-for-jira-server/'],
+    ],
+  },
+  {
+    title: 'Confluence apps',
+    apps: [
+      ['Markdown for Confluence', 'markdown/markdown-for-confluence/'],
+      ['Excalidraw for Confluence', 'whiteboarding-and-diagramming/excalidraw-for-confluence/'],
+      ['Mind Mapping for Confluence', 'whiteboarding-and-diagramming/mind-mapping-for-confluence/'],
+      ['LaTeX for Confluence', 'latex/latex-beautiful-math-for-confluence/'],
+      ['PlantUML, Mermaid UML and Graphviz for Confluence', 'whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/'],
+      ['User Flow (Wireflow) for Confluence', 'whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/'],
+    ],
+  },
+];
+---
+
+<section class="ft-home-hero">
+  <div class="ft-home-copy">
+    <span class="eyebrow">FULSTECH DOCUMENTATION</span>
+    <h1>Documentation for<br /><span>Fulstech apps</span></h1>
+    <p>Practical guides for Jira and Confluence apps, from first setup to advanced workflows.</p>
+    <div class="hero-actions">
+      <a class="primary-cta" href={href('markdown/markin-markdown-editor-for-jira/jira-cloud/overview/')}>Getting started <span>→</span></a>
+      <a class="secondary-cta" href="#products">Explore products</a>
+    </div>
+  </div>
+  <div class="ft-hero-art" aria-hidden="true">
+    <span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span>
+    <svg viewBox="0 0 520 350">
+      <path class="connector" d="M102 110h57q22 0 22 22v22m177-60h54m-68 170h70M137 267h51" />
+      <rect class="window" x="176" y="55" width="190" height="238" rx="12" />
+      <path class="line" d="M176 91h190M200 121h140M200 149h78M200 213h139M200 240h110M200 266h132" />
+      <circle class="dot" cx="198" cy="74" r="4" /><circle class="dot" cx="213" cy="74" r="4" /><circle class="dot" cx="228" cy="74" r="4" />
+      <rect class="tile" x="200" y="166" width="58" height="34" rx="5" />
+      <path class="mountain" d="m207 193 13-14 10 9 8-7 13 12" />
+      <rect class="mini" x="45" y="70" width="70" height="72" rx="10" />
+      <path class="mini-line" d="M65 91h31M65 106h31M65 121h20" />
+      <rect class="mini" x="406" y="105" width="62" height="64" rx="10" />
+      <path class="code" d="m431 125-9 10 9 10m12-20 9 10-9 10" />
+      <rect class="mini" x="72" y="235" width="72" height="66" rx="10" />
+      <circle class="node" cx="108" cy="252" r="5" /><circle class="node" cx="91" cy="281" r="5" /><circle class="node" cx="125" cy="281" r="5" />
+      <path class="code" d="M108 257v12M91 274h34" />
+      <rect class="mini" x="410" y="225" width="60" height="67" rx="10" />
+      <circle class="node" cx="430" cy="246" r="7" /><path class="code" d="M419 275c2-11 21-11 23 0m8-30h8m-4-4v8" />
+    </svg>
+  </div>
+</section>
+
+<section class="product-grid" id="products" aria-label="Product documentation">
+  <a class="product-card jira" href={href('markdown/markin-markdown-editor-for-jira/')}>
+    <span class="product-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6h12v10h10v12H30v14H18V28H8V16h10z" /></svg></span>
+    <span class="product-info"><span class="product-title">Jira Apps</span><span class="product-description">Extend and customize Jira with focused apps for every team.</span><span class="pills"><span>Cloud</span><span>Data Center</span></span></span>
+    <span class="card-link">Explore products&nbsp; →</span>
+  </a>
+  <a class="product-card confluence" href={href('markdown/markdown-for-confluence/')}>
+    <span class="product-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 5h15l9 9v29H13zM28 5v10h9" /></svg></span>
+    <span class="product-info"><span class="product-title">Confluence Apps</span><span class="product-description">Improve collaboration and documentation in Confluence.</span><span class="pills"><span>Cloud</span><span>Data Center</span></span></span>
+    <span class="card-link">Explore products&nbsp; →</span>
+  </a>
+</section>
+
+<section class="popular-guides">
+  <div class="section-heading"><div><span class="eyebrow">LEARN AND BUILD</span><h2>Popular guides</h2></div><a href={href('markdown/')}>View all guides →</a></div>
+  <div class="guide-grid">
+    {popular.map((item) => (
+      <a class="guide-card" href={item.href.startsWith('http') ? item.href : href(item.href)}>
+        <span class="guide-icon">{item.icon}</span><span><b>{item.title}</b><small>{item.text}</small></span><span class="guide-arrow">→</span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<section class="app-directory" aria-labelledby="all-apps-heading">
+  <div class="section-heading">
+    <div><span class="eyebrow">COMPLETE PRODUCT DIRECTORY</span><h2 id="all-apps-heading">All Fulstech apps</h2></div>
+  </div>
+  <div class="app-directory-grid">
+    {appGroups.map((group) => (
+      <section class="app-group">
+        <h3>{group.title}</h3>
+        <div>
+          {group.apps.map(([title, path]) => (
+            <a href={href(path)}><span>{title}</span><span aria-hidden="true">→</span></a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>
+
+<section class="trusted">
+  <span>Trusted by teams at</span>
+  <div><b>Apple</b><b>Amazon</b><b>Intel</b><b>IBM</b><b>HP</b><b>Samsung</b><b>Twilio</b><b>SpaceX</b><b>CERN</b><b>Airbus</b></div>
+</section>
+
