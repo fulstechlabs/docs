@@ -1,0 +1,50 @@
+---
+import EditLink from '@astrojs/starlight/components/EditLink.astro';
+
+const route = Astro.locals.starlightRoute;
+const isHome = route.entry.data.title === 'Home';
+
+type TrailItem = { label: string; href?: string };
+type NavEntry = { type: 'link'; label: string; href: string; isCurrent?: boolean } | { type: 'group'; label: string; entries: NavEntry[] };
+
+function findTrail(entries: NavEntry[], trail: TrailItem[] = []): TrailItem[] | undefined {
+  for (const entry of entries) {
+    if (entry.type === 'link' && entry.isCurrent) return [...trail, { label: entry.label, href: entry.href }];
+    if (entry.type === 'group') {
+      const nested = findTrail(entry.entries, [...trail, { label: entry.label }]);
+      if (nested) return nested;
+    }
+  }
+}
+
+const trail = isHome ? [] : (findTrail(route.sidebar as NavEntry[]) || []);
+---
+
+{!isHome && (
+  <div class="ft-page-heading">
+    {trail.length > 1 && (
+      <nav class="ft-breadcrumbs" aria-label="Breadcrumb">
+        {trail.map((item, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">/</span>}
+            {item.href && index < trail.length - 1 ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
+          </>
+        ))}
+      </nav>
+    )}
+    <h1 id="_top">{route.entry.data.title}</h1>
+    <div class="ft-edit-link"><EditLink /></div>
+  </div>
+)}
+
+<style>
+  @layer starlight.core {
+    .ft-breadcrumbs { display: flex; flex-wrap: wrap; gap: .45rem; color: var(--sl-color-gray-3); font-size: .78rem; font-weight: 550; margin-bottom: 1.1rem; }
+    .ft-breadcrumbs a { color: var(--sl-color-gray-2); text-decoration: none; }
+    .ft-breadcrumbs a:hover { color: var(--ft-blue); }
+    h1 { margin: 0; max-width: 48rem; font-size: clamp(2.15rem, 4vw, 3.15rem); line-height: 1.06; letter-spacing: -.045em; font-weight: 760; color: var(--sl-color-white); }
+    .ft-edit-link { margin-top: 1.15rem; font-size: .85rem; font-weight: 600; }
+    .ft-edit-link :global(a) { color: var(--ft-blue); }
+  }
+</style>
+

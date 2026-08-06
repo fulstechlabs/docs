@@ -22,6 +22,7 @@ export default defineConfig({
       title: 'Fulstech Docs',
       description: 'Documentation for Fulstech Jira and Confluence apps',
       favicon: '/favicon.svg',
+      customCss: ['./src/styles/custom.css'],
       expressiveCode: {
         shiki: {
           langs: [
@@ -33,6 +34,7 @@ export default defineConfig({
       editLink: {
         baseUrl: 'https://github.com/fulstechlabs/docs/edit/main/',
       },
+      lastUpdated: true,
       social: [
         {
           icon: 'github',
@@ -40,6 +42,11 @@ export default defineConfig({
           href: 'https://github.com/fulstechlabs',
         },
       ],
+      components: {
+        Header: './src/components/Header.astro',
+        MarkdownContent: './src/components/MarkdownContent.astro',
+        PageTitle: './src/components/PageTitle.astro',
+      },
       sidebar,
     }),
   ],
