@@ -35,6 +35,25 @@ from import_gitbook import (
 )
 
 
+def duplicate_overview_groups(
+    items: list[dict[str, object]], path: tuple[str, ...] = ()
+) -> list[str]:
+    duplicates: list[str] = []
+    for item in items:
+        label = str(item.get("label", ""))
+        current_path = (*path, label)
+        children = item.get("items")
+        if not isinstance(children, list):
+            continue
+        overview_count = sum(
+            isinstance(child, dict) and child.get("label") == "Overview" for child in children
+        )
+        if overview_count > 1:
+            duplicates.append(" > ".join(current_path))
+        duplicates.extend(duplicate_overview_groups(children, current_path))
+    return duplicates
+
+
 MARKDOWN_URL = re.compile(r"https://fulstech\.gitbook\.io/docs/[^)\s]+\.md")
 NEXT_LLMS_PAGE = re.compile(r"\[Next Page\]\(([^)]+)\)")
 ASSET_PATH = re.compile(r"(?:(?:\.\./)*)assets/([A-Za-z0-9_-]+)(?:\.[A-Za-z0-9]+)")
@@ -413,6 +432,7 @@ def audit(live_base: str | None) -> dict[str, object]:
         "extra_assets": extra_assets,
         "broken_local_assets": broken_local_assets,
         "navigation_mismatch": actual_nav != expected_nav,
+        "duplicate_overview_groups": duplicate_overview_groups(actual_nav),
         "sitemap_only_urls": sorted(sitemap_urls - markdown_published_urls),
         "markdown_only_urls": sorted(markdown_published_urls - sitemap_urls),
         "llms_full_title_order_mismatch": (
