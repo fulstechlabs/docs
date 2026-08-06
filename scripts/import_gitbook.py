@@ -70,6 +70,33 @@ def page_path(url: str) -> PurePosixPath:
     return PurePosixPath(relative)
 
 
+def structural_page_paths(paths: list[PurePosixPath]) -> set[PurePosixPath]:
+    """Return GitBook navigation nodes that do not contain authored page content."""
+    routes = [path.with_suffix("") for path in paths]
+    return {
+        path
+        for path, route in zip(paths, routes, strict=True)
+        if route != PurePosixPath("index")
+        and any(other != route and route in other.parents for other in routes)
+    }
+
+
+def structural_redirects(paths: list[PurePosixPath]) -> dict[str, str]:
+    structural = structural_page_paths(paths)
+    redirects: dict[str, str] = {}
+    for source in paths:
+        if source not in structural:
+            continue
+        source_route = source.with_suffix("")
+        target = next(
+            candidate
+            for candidate in paths
+            if candidate not in structural and source_route in candidate.with_suffix("").parents
+        )
+        redirects[str(source)] = str(target)
+    return redirects
+
+
 def page_title(markdown: str) -> str:
     frontmatter = re.match(r'^---\n(.*?)\n---\n', markdown, re.DOTALL)
     if frontmatter:
@@ -143,6 +170,7 @@ def transform_links(
     markdown: str,
     current: PurePosixPath,
     valid_paths: set[str],
+    redirects: dict[str, str] | None = None,
 ) -> str:
     pattern = re.compile(r"(?P<prefix>!?\[[^]]*\]\()(?P<target>[^) ]+)(?P<suffix>[^)]*\))")
 
@@ -178,6 +206,8 @@ def transform_links(
             candidates = [candidate for candidate in valid_paths if candidate.endswith("/" + path)]
             if len(candidates) == 1:
                 path = candidates[0]
+        if redirects:
+            path = redirects.get(path, path)
         target_route = str(PurePosixPath(path).with_suffix(""))
         if target_route == "index":
             target_route = "."
@@ -261,12 +291,6 @@ def sidebar_data(pages: list[tuple[PurePosixPath, str]]) -> list[dict[str, objec
                 output.append({"label": label, "slug": str(PurePosixPath(page[1]).with_suffix(""))})
             else:
                 children: list[dict[str, object]] = []
-                overview = child.get("overview")
-                has_explicit_overview = isinstance(overview, dict) and "__page__" in overview
-                if page and not has_explicit_overview:
-                    children.append(
-                        {"label": "Overview", "slug": str(PurePosixPath(page[1]).with_suffix(""))}
-                    )
                 children.extend(emit(child))
                 output.append({"label": label, "items": children, "collapsed": True})
         return output
@@ -349,6 +373,11 @@ def main() -> None:
 
     def download(item: tuple[str, str]) -> tuple[str, str]:
         file_id, url = item
+        existing = list(ASSETS.glob(f"{file_id}.*"))
+        if len(existing) == 1:
+            target = temp_assets / existing[0].name
+            shutil.copy2(existing[0], target)
+            return file_id, existing[0].suffix
         try:
             payload, content_type = fetch(url)
         except Exception as error:
@@ -361,11 +390,17 @@ def main() -> None:
         downloaded = dict(pool.map(download, asset_sources.items()))
 
     nav_pages: list[tuple[PurePosixPath, str]] = []
-    valid_paths = {str(page_path(url)) for url, _ in page_data}
+    source_paths = [page_path(url) for url, _ in page_data]
+    structural = structural_page_paths(source_paths)
+    redirects = structural_redirects(source_paths)
+    valid_paths = {str(path) for path in source_paths}
     for url, source in page_data:
         destination = page_path(url)
+        nav_pages.append((destination, page_title(source)))
+        if destination in structural:
+            continue
         output = transform_gitbook(source)
-        output = transform_links(output, destination, valid_paths)
+        output = transform_links(output, destination, valid_paths, redirects)
 
         def replace_asset(match: re.Match[str]) -> str:
             file_id = match.group(1)
@@ -384,7 +419,6 @@ def main() -> None:
         target = temp_docs / destination
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(output, encoding="utf-8")
-        nav_pages.append((destination, page_title(output)))
 
     shutil.rmtree(DOCS)
     temp_docs.rename(DOCS)
@@ -394,7 +428,25 @@ def main() -> None:
         json.dumps(sidebar_data(nav_pages), ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Imported {len(page_data)} pages and {len(downloaded)} assets")
+    redirects_file = ROOT / "src" / "redirects.json"
+    redirects_file.write_text(
+        json.dumps(
+            {
+                "/" + str(PurePosixPath(source).with_suffix("")) + "/": (
+                    "/" + str(PurePosixPath(target).with_suffix("")) + "/"
+                )
+                for source, target in redirects.items()
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + chr(10),
+        encoding="utf-8",
+    )
+    print(
+        f"Imported {len(page_data) - len(structural)} authored pages, "
+        f"{len(structural)} structural redirects, and {len(downloaded)} assets"
+    )
 
 
 if __name__ == "__main__":
