@@ -9,6 +9,32 @@ const popular = [
   { icon: '⌁', title: 'Troubleshooting', text: 'Resolve common issues and errors.', href: 'latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/troubleshooting-unknown-macro-error/' },
   { icon: '◡', title: 'Support', text: 'Get help from our support team.', href: 'https://fulstech.atlassian.net/servicedesk/customer/portals' },
 ];
+
+const appGroups = [
+  {
+    title: 'Jira apps',
+    apps: [
+      ['Markdown Editor for Jira (Markin)', 'markdown/markin-markdown-editor-for-jira/'],
+      ['LaTeX for Jira — Math Editor', 'latex/latex-for-jira/'],
+      ['Table Custom Field for Jira Cloud', 'custom-fields/table-custom-field-for-jira-cloud/'],
+      ['Mermaid UML and Graphviz Diagrams for Jira', 'whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/'],
+      ['Excalidraw for Jira', 'whiteboarding-and-diagramming/excalidraw-for-jira/'],
+      ['Checklist for Jira Server', 'custom-fields/checklist-for-jira-server/'],
+      ['Better font for Jira Server', 'archived-apps/better-font-for-jira-server/'],
+    ],
+  },
+  {
+    title: 'Confluence apps',
+    apps: [
+      ['Markdown for Confluence', 'markdown/markdown-for-confluence/'],
+      ['Excalidraw for Confluence', 'whiteboarding-and-diagramming/excalidraw-for-confluence/'],
+      ['Mind Mapping for Confluence', 'whiteboarding-and-diagramming/mind-mapping-for-confluence/'],
+      ['LaTeX for Confluence', 'latex/latex-beautiful-math-for-confluence/'],
+      ['PlantUML, Mermaid UML and Graphviz for Confluence', 'whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/'],
+      ['User Flow (Wireflow) for Confluence', 'whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/'],
+    ],
+  },
+];
 ---
 
 <section class="ft-home-hero">
@@ -67,7 +93,25 @@ const popular = [
   </div>
 </section>
 
+<section class="app-directory" aria-labelledby="all-apps-heading">
+  <div class="section-heading">
+    <div><span class="eyebrow">COMPLETE PRODUCT DIRECTORY</span><h2 id="all-apps-heading">All Fulstech apps</h2></div>
+  </div>
+  <div class="app-directory-grid">
+    {appGroups.map((group) => (
+      <section class="app-group">
+        <h3>{group.title}</h3>
+        <div>
+          {group.apps.map(([title, path]) => (
+            <a href={href(path)}><span>{title}</span><span aria-hidden="true">→</span></a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>
+
 <section class="trusted">
   <span>Trusted by teams at</span>
-  <div><b>Apple</b><b>Amazon</b><b>Intel</b><b>IBM</b><b>Samsung</b><b>SpaceX</b><b>CERN</b></div>
+  <div><b>Apple</b><b>Amazon</b><b>Intel</b><b>IBM</b><b>HP</b><b>Samsung</b><b>Twilio</b><b>SpaceX</b><b>CERN</b><b>Airbus</b></div>
 </section>
