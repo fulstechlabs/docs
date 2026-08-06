@@ -100,7 +100,7 @@
   main { background: var(--sl-color-black); }
   main > .content-panel { border: 0; padding-block: 2.25rem 1.5rem; }
   main > .content-panel + .content-panel { border-top: 0; padding-top: .25rem; }
-  .sl-markdown-content { color: var(--sl-color-gray-1); font-size: .98rem; line-height: 1.78; }
+  .sl-markdown-content { color: var(--sl-color-gray-1); font-size: 1.02rem; line-height: 1.72; }
   .sl-markdown-content > :is(h2,h3,h4) { color: var(--sl-color-white); letter-spacing: -.025em; }
   .sl-markdown-content > h2 { border-top: 1px solid var(--sl-color-hairline-light); padding-top: 2.2rem; margin-top: 3.25rem; }
   .sl-markdown-content a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
@@ -112,6 +112,20 @@
   starlight-toc nav { font-size: .78rem; }
   starlight-toc a { border-inline-start: 1px solid var(--sl-color-hairline-light); padding-inline-start: .85rem; }
   starlight-toc a[aria-current='true'] { color: var(--ft-blue); border-inline-start: 2px solid var(--ft-blue); font-weight: 650; }
+
+  html:has(.ft-single-column) { --sl-mobile-toc-height: 0rem; }
+  footer .meta { margin-top: 2.25rem; }
+  footer .pagination-links { gap: .75rem; }
+  footer .pagination-links a {
+    min-height: 4.75rem;
+    padding: .75rem .9rem;
+    border-color: var(--sl-color-hairline-shade);
+    box-shadow: none;
+    background: color-mix(in srgb, var(--sl-color-black) 97%, var(--ft-soft-blue));
+  }
+  footer .pagination-links a:hover { border-color: color-mix(in srgb, var(--ft-blue) 55%, var(--sl-color-hairline-shade)); }
+  footer .pagination-links .link-title { font-size: 1rem; line-height: 1.35; font-weight: 650; }
+  footer .pagination-links svg { width: 1.1rem; height: 1.1rem; }
 
   body:has(.docs-home) main { padding: 0; }
   body:has(.docs-home) aside.right-sidebar-container { display: none; }
@@ -188,7 +202,7 @@
   .trusted b { color: var(--sl-color-gray-2); font-size: .95rem; }
 
   @media (min-width: 72rem) {
-    html[data-has-sidebar][data-has-toc] main > .content-panel .sl-container { margin-inline-start: clamp(2rem, 6vw, 6rem); }
+    html[data-has-sidebar][data-has-toc]:has(.ft-has-toc) main > .content-panel .sl-container { margin-inline-start: clamp(2rem, 6vw, 6rem); }
   }
   @media (max-width: 69rem) {
     .ft-home-hero { grid-template-columns: 1fr; padding-top: 3.25rem; }
@@ -214,4 +228,3 @@
     .product-card,.guide-card,.primary-cta { transition: none; }
   }
 }
-
