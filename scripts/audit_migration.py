@@ -28,6 +28,8 @@ from import_gitbook import (
     page_title,
     sidebar_data,
     starlight_page,
+    structural_page_paths,
+    structural_redirects,
     original_asset_url,
     transform_gitbook,
     transform_links,
@@ -166,10 +168,15 @@ def llms_full_titles(pages: list[str]) -> list[str]:
     return titles
 
 
-def expected_page(url: str, source: str, valid_paths: set[str]) -> str:
+def expected_page(
+    url: str,
+    source: str,
+    valid_paths: set[str],
+    redirects: dict[str, str],
+) -> str:
     destination = page_path(url)
     transformed = transform_gitbook(source)
-    return starlight_page(transform_links(transformed, destination, valid_paths))
+    return starlight_page(transform_links(transformed, destination, valid_paths, redirects))
 
 
 def target_url(base: str, destination: PurePosixPath) -> str:
@@ -266,8 +273,11 @@ def audit(live_base: str | None) -> dict[str, object]:
 
     page_data = list(zip(urls, sources, strict=True))
     expected_full_export_titles = [page_title(source) for source in sources]
-    valid_paths = {str(page_path(url)) for url in urls}
-    expected_paths = {Path(path) for path in valid_paths}
+    source_paths = [page_path(url) for url in urls]
+    structural = structural_page_paths(source_paths)
+    redirects = structural_redirects(source_paths)
+    valid_paths = {str(path) for path in source_paths}
+    expected_paths = {Path(path) for path in source_paths if path not in structural}
     actual_paths = {path.relative_to(DOCS) for path in DOCS.rglob("*.md")}
 
     missing_pages = sorted(str(path) for path in expected_paths - actual_paths)
@@ -287,6 +297,9 @@ def audit(live_base: str | None) -> dict[str, object]:
         destination = page_path(url)
         path = DOCS / destination
         source_block_counts.update(GITBOOK_BLOCK.findall(source))
+        nav_pages.append((destination, page_title(source)))
+        if destination in structural:
+            continue
         transformed_source = transform_gitbook(source)
         for target in visible_image_targets(transformed_source):
             if target.startswith("/files/"):
@@ -301,10 +314,9 @@ def audit(live_base: str | None) -> dict[str, object]:
                     expected_assets.add(external_asset_key(normalized))
         if not path.exists():
             continue
-        expected = expected_page(url, source, valid_paths)
+        expected = expected_page(url, source, valid_paths, redirects)
         actual = path.read_text(encoding="utf-8")
         label = str(destination)
-        nav_pages.append((destination, page_title(expected)))
         if normalize_markdown(expected) != normalize_markdown(actual):
             content_mismatches.append(label)
         if page_title(expected) != page_title(actual):
@@ -345,8 +357,15 @@ def audit(live_base: str | None) -> dict[str, object]:
 
     live: dict[str, object] | None = None
     if live_base:
-        source_rendered_urls = [url[:-3] for url in urls]
-        target_rendered_urls = [target_url(live_base, page_path(url)) for url in urls]
+        authored_page_data = [
+            (url, source)
+            for url, source in page_data
+            if page_path(url) not in structural
+        ]
+        source_rendered_urls = [url[:-3] for url, _ in authored_page_data]
+        target_rendered_urls = [
+            target_url(live_base, page_path(url)) for url, _ in authored_page_data
+        ]
         with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
             source_facts = list(pool.map(lambda item: rendered_facts(item, "main"), source_rendered_urls))
             target_facts = list(pool.map(lambda item: rendered_facts(item, "main"), target_rendered_urls))
@@ -357,7 +376,9 @@ def audit(live_base: str | None) -> dict[str, object]:
         ]
         rendered_mismatches = []
         known_rendered_differences = []
-        for markdown_source, source, target in zip(sources, source_facts, target_facts, strict=True):
+        for (_, markdown_source), source, target in zip(
+            authored_page_data, source_facts, target_facts, strict=True
+        ):
             if not source.get("ok") or not target.get("ok"):
                 continue
             expected_markdown = transform_gitbook(markdown_source)
@@ -412,7 +433,7 @@ def audit(live_base: str | None) -> dict[str, object]:
                     {"source": source["url"], "target": target["url"], "differences": known}
                 )
         live = {
-            "checked_pages": len(urls),
+            "checked_pages": len(authored_page_data),
             "unavailable": unavailable,
             "rendered_mismatches": rendered_mismatches,
             "known_rendered_differences": known_rendered_differences,
@@ -451,7 +472,9 @@ def audit(live_base: str | None) -> dict[str, object]:
     return {
         "source": SOURCE,
         "pages": {
-            "gitbook_markdown": len(urls),
+            "gitbook_source_urls": len(urls),
+            "authored_content": len(expected_paths),
+            "structural_navigation": len(structural),
             "gitbook_sitemap": len(sitemap_urls),
             "gitbook_llms_full": len(full_export_titles),
             "gitbook_llms_full_chunks": len(full_export_pages),

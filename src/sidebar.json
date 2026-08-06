@@ -7,16 +7,8 @@
     "label": "Markdown",
     "items": [
       {
-        "label": "Overview",
-        "slug": "markdown"
-      },
-      {
         "label": "Markdown Editor for Jira (Markin)",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "markdown/markin-markdown-editor-for-jira"
-          },
           {
             "label": "Jira Cloud",
             "items": [
@@ -72,10 +64,6 @@
         "label": "Markdown for Confluence",
         "items": [
           {
-            "label": "Overview",
-            "slug": "markdown/markdown-for-confluence"
-          },
-          {
             "label": "Confluence Cloud",
             "items": [
               {
@@ -103,16 +91,8 @@
     "label": "LaTeX",
     "items": [
       {
-        "label": "Overview",
-        "slug": "latex"
-      },
-      {
         "label": "LaTeX for Jira - Math Editor",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "latex/latex-for-jira"
-          },
           {
             "label": "Jira Cloud",
             "items": [
@@ -159,10 +139,6 @@
       {
         "label": "LaTeX for Confluence with Math Editor and Plotting",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "latex/latex-beautiful-math-for-confluence"
-          },
           {
             "label": "Confluence Cloud",
             "items": [
@@ -229,16 +205,8 @@
     "label": "Whiteboarding and Diagramming",
     "items": [
       {
-        "label": "Overview",
-        "slug": "whiteboarding-and-diagramming"
-      },
-      {
         "label": "Mermaid UML Diagrams and Graphviz Diagrams for Jira",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira"
-          },
           {
             "label": "Jira Cloud",
             "items": [
@@ -286,10 +254,6 @@
         "label": "Excalidraw for Jira",
         "items": [
           {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/excalidraw-for-jira"
-          },
-          {
             "label": "Jira Cloud",
             "items": [
               {
@@ -313,10 +277,6 @@
       {
         "label": "Excalidraw for Confluence - with Mermaid, PlantUML, and Graphviz",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence"
-          },
           {
             "label": "Confluence Cloud",
             "items": [
@@ -360,10 +320,6 @@
         "label": "PlantUML, Mermaid UML, Graphviz: UML Diagrams for Confluence",
         "items": [
           {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence"
-          },
-          {
             "label": "Confluence Cloud",
             "items": [
               {
@@ -406,10 +362,6 @@
         "label": "Mind Mapping for Confluence",
         "items": [
           {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence"
-          },
-          {
             "label": "Confluence Cloud",
             "items": [
               {
@@ -433,10 +385,6 @@
       {
         "label": "User Flow (Wireflow) for Confluence",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence"
-          },
           {
             "label": "Confluence Cloud",
             "items": [
@@ -465,10 +413,6 @@
     "label": "Custom Fields",
     "items": [
       {
-        "label": "Overview",
-        "slug": "custom-fields"
-      },
-      {
         "label": "Table Custom Field for Jira Cloud",
         "items": [
           {
@@ -489,10 +433,6 @@
       {
         "label": "JEditor-compatible custom field for Jira Cloud",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud"
-          },
           {
             "label": "Jira Cloud",
             "items": [
@@ -558,10 +498,6 @@
   {
     "label": "Archived Apps",
     "items": [
-      {
-        "label": "Overview",
-        "slug": "archived-apps"
-      },
       {
         "label": "Better font for Jira Server",
         "items": [
