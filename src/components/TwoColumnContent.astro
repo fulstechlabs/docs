@@ -1,9 +1,11 @@
 ---
 const { toc } = Astro.locals.starlightRoute;
-const hasMeaningfulToc = Boolean(toc?.items.some((item) => item.slug !== '_top'));
+const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
+const authoredTocItems = toc?.items.filter((item) => item.slug !== '_top') || [];
+const hasMeaningfulToc = !isHome && authoredTocItems.length >= 2;
 ---
 
-<div class:list={['lg:sl-flex', hasMeaningfulToc ? 'ft-has-toc' : 'ft-single-column']}>
+<div class:list={['ft-doc-shell', 'lg:sl-flex', hasMeaningfulToc ? 'ft-has-toc' : 'ft-single-column']}>
   {hasMeaningfulToc && (
     <aside class="right-sidebar-container print:hidden">
       <div class="right-sidebar">
@@ -22,10 +24,8 @@ const hasMeaningfulToc = Boolean(toc?.items.some((item) => item.slug !== '_top')
       .right-sidebar-container {
         order: 2;
         position: relative;
-        width: max(
-          var(--sl-sidebar-width),
-          calc(var(--sl-sidebar-width) + (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2)
-        );
+        flex: 0 0 15.5rem;
+        width: 15.5rem;
       }
 
       .right-sidebar {
@@ -39,15 +39,14 @@ const hasMeaningfulToc = Boolean(toc?.items.some((item) => item.slug !== '_top')
         scrollbar-width: none;
       }
 
-      .main-pane { width: 100%; }
-
-      :global([data-has-sidebar][data-has-toc]) .ft-has-toc .main-pane {
-        --sl-content-margin-inline: auto 0;
+      .main-pane {
+        --sl-content-margin-inline: 2rem auto;
         order: 1;
-        width: min(
-          calc(100% - var(--sl-sidebar-width)),
-          calc(var(--sl-content-width) + (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2)
-        );
+        width: 100%;
+      }
+
+      .ft-has-toc .main-pane {
+        width: calc(100% - 15.5rem);
       }
     }
   }
