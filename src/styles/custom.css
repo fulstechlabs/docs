@@ -174,9 +174,17 @@
   .guide-card b { display: block; font-size: .9rem; }
   .guide-card small { display: block; color: var(--sl-color-gray-2); font-size: .74rem; line-height: 1.45; margin-top: .25rem; }
   .guide-arrow { color: var(--sl-color-gray-3); }
+  .app-directory { padding: 0 var(--home-pad) 4rem; max-width: 92rem; margin: auto; }
+  .app-directory-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.4rem; }
+  .app-group { padding: 1.5rem; border: 1px solid var(--sl-color-hairline-shade); border-radius: .9rem; background: color-mix(in srgb,var(--sl-color-black) 97%,var(--ft-soft-blue)); }
+  .app-group h3 { margin: 0 0 .8rem; color: var(--sl-color-white); font-size: 1.05rem; }
+  .app-group > div { display: grid; }
+  .app-group a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .72rem 0; border-top: 1px solid var(--sl-color-hairline-light); color: var(--sl-color-gray-1); text-decoration: none; font-size: .86rem; }
+  .app-group a:hover { color: var(--ft-blue); }
+  .app-group a span:last-child { flex: none; color: var(--ft-blue); }
   .trusted { display: grid; justify-items: center; gap: 1.25rem; padding: 2.25rem var(--home-pad) 3rem; border-top: 1px solid var(--sl-color-hairline-light); color: var(--sl-color-gray-3); }
   .trusted > span { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-  .trusted div { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(1.5rem,4vw,4rem); }
+  .trusted div { width: min(100%,64rem); display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1.35rem 2rem; text-align: center; }
   .trusted b { color: var(--sl-color-gray-2); font-size: .95rem; }
 
   @media (min-width: 72rem) {
@@ -193,6 +201,8 @@
     .ft-home-copy h1 { font-size: clamp(2.7rem,14vw,4rem); }
     .ft-home-copy p { font-size: 1rem; }
     .product-grid { grid-template-columns: 1fr; }
+    .app-directory-grid { grid-template-columns: 1fr; }
+    .trusted div { grid-template-columns: repeat(2,minmax(0,1fr)); }
     .product-card { grid-template-columns: 4.5rem 1fr; min-height: 16rem; padding: 1.25rem; }
     .product-icon { width: 4.5rem; height: 4.5rem; }
     .product-icon svg { width: 2.5rem; height: 2.5rem; }
