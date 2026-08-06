@@ -22,10 +22,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/overview"
               },
               {
@@ -46,10 +42,6 @@
           {
             "label": "Jira Data Center and Jira Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server"
-              },
               {
                 "label": "Overview",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-data-center-and-jira-server/overview"
@@ -86,10 +78,6 @@
           {
             "label": "Confluence Cloud",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "markdown/markdown-for-confluence/confluence-cloud"
-              },
               {
                 "label": "Overview",
                 "slug": "markdown/markdown-for-confluence/confluence-cloud/overview"
@@ -130,10 +118,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "latex/latex-for-jira/jira-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "latex/latex-for-jira/jira-cloud/overview"
               },
               {
@@ -154,10 +138,6 @@
           {
             "label": "Jira Data Center and Jira Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "latex/latex-for-jira/jira-data-center-and-jira-server"
-              },
               {
                 "label": "Overview",
                 "slug": "latex/latex-for-jira/jira-data-center-and-jira-server/overview"
@@ -188,10 +168,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/overview"
               },
               {
@@ -212,10 +188,6 @@
           {
             "label": "Confluence Data Center and Confluence Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server"
-              },
               {
                 "label": "Overview",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/overview"
@@ -272,10 +244,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-cloud/overview"
               },
               {
@@ -292,10 +260,6 @@
           {
             "label": "Jira Data Center and Jira Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server"
-              },
               {
                 "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-jira/jira-data-center-and-jira-server/overview"
@@ -330,10 +294,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-jira/jira-cloud/overview"
               },
               {
@@ -362,10 +322,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/overview"
               },
               {
@@ -382,10 +338,6 @@
           {
             "label": "Confluence Data Center and Confluence Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server"
-              },
               {
                 "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/overview"
@@ -416,10 +368,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-cloud/overview"
               },
               {
@@ -436,10 +384,6 @@
           {
             "label": "Confluence Data Center and Confluence Server",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server"
-              },
               {
                 "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/mermaid-uml-diagrams-and-graphviz-diagrams-for-confluence/confluence-data-center-and-confluence-server/overview"
@@ -470,10 +414,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/mind-mapping-for-confluence/confluence-cloud/overview"
               },
               {
@@ -500,10 +440,6 @@
           {
             "label": "Confluence Cloud",
             "items": [
-              {
-                "label": "Overview",
-                "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud"
-              },
               {
                 "label": "Overview",
                 "slug": "whiteboarding-and-diagramming/user-flow-wireflow-for-confluence/confluence-cloud/overview"
@@ -537,10 +473,6 @@
         "items": [
           {
             "label": "Overview",
-            "slug": "custom-fields/table-custom-field-for-jira-cloud"
-          },
-          {
-            "label": "Overview",
             "slug": "custom-fields/table-custom-field-for-jira-cloud/overview"
           },
           {
@@ -566,10 +498,6 @@
             "items": [
               {
                 "label": "Overview",
-                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud"
-              },
-              {
-                "label": "Overview",
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview"
               },
               {
@@ -593,10 +521,6 @@
       {
         "label": "Checklist for Jira Server",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "custom-fields/checklist-for-jira-server"
-          },
           {
             "label": "Overview",
             "slug": "custom-fields/checklist-for-jira-server/overview"
@@ -641,10 +565,6 @@
       {
         "label": "Better font for Jira Server",
         "items": [
-          {
-            "label": "Overview",
-            "slug": "archived-apps/better-font-for-jira-server"
-          },
           {
             "label": "Overview",
             "slug": "archived-apps/better-font-for-jira-server/overview"

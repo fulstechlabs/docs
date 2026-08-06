@@ -261,7 +261,9 @@ def sidebar_data(pages: list[tuple[PurePosixPath, str]]) -> list[dict[str, objec
                 output.append({"label": label, "slug": str(PurePosixPath(page[1]).with_suffix(""))})
             else:
                 children: list[dict[str, object]] = []
-                if page:
+                overview = child.get("overview")
+                has_explicit_overview = isinstance(overview, dict) and "__page__" in overview
+                if page and not has_explicit_overview:
                     children.append(
                         {"label": "Overview", "slug": str(PurePosixPath(page[1]).with_suffix(""))}
                     )
