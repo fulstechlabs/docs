@@ -139,7 +139,7 @@
 
   .right-sidebar-panel { border-inline-start: 0; }
   starlight-toc nav { font-size: .78rem; }
-  :is(starlight-toc, mobile-starlight-toc) li:has(> a[href='#_top']) { display: none; }
+  .ft-toc-hide-top li:has(> a[href='#_top']) { display: none; }
   starlight-toc ul ul { display: none; }
   starlight-toc li:has(> a[aria-current='true']) > ul,
   starlight-toc li:has(> ul a[aria-current='true']) > ul { display: block; }

@@ -1,12 +1,11 @@
 ---
 const { toc } = Astro.locals.starlightRoute;
 const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
-const authoredTocItems = toc?.items.filter((item) => item.slug !== '_top') || [];
-const hasMeaningfulToc = !isHome && authoredTocItems.length >= 3;
+const showToc = !isHome && Boolean(toc);
 ---
 
-<div class:list={['ft-doc-shell', 'lg:sl-flex', hasMeaningfulToc ? 'ft-has-toc' : 'ft-single-column']}>
-  {hasMeaningfulToc && (
+<div class:list={['ft-doc-shell', 'lg:sl-flex', showToc ? 'ft-has-toc' : 'ft-single-column']}>
+  {showToc && (
     <aside class="right-sidebar-container print:hidden">
       <div class="right-sidebar">
         <slot name="right-sidebar" />
