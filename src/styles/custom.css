@@ -68,7 +68,7 @@
   site-search button[data-open-modal]:hover { border-color: var(--ft-blue) !important; }
   site-search button > kbd { background: var(--sl-color-gray-6) !important; border: 1px solid var(--sl-color-gray-5); }
 
-  nav.sidebar { border-inline-end: 1px solid var(--sl-color-hairline-shade); }
+  nav.sidebar { border-inline-end: 1px solid var(--sl-color-hairline-light); }
   nav.sidebar .sidebar-content { padding: 1.25rem .9rem 2rem; }
   nav.sidebar ul.top-level > li + li { margin-top: .25rem; }
   nav.sidebar summary,
@@ -139,6 +139,11 @@
 
   .right-sidebar-panel { border-inline-start: 0; }
   starlight-toc nav { font-size: .78rem; }
+  :is(starlight-toc, mobile-starlight-toc) li:has(> a[href='#_top']) { display: none; }
+  starlight-toc ul ul { display: none; }
+  starlight-toc li:has(> a[aria-current='true']) > ul,
+  starlight-toc li:has(> ul a[aria-current='true']) > ul { display: block; }
+  starlight-toc ul ul a { padding-inline-start: 1.25rem; color: var(--sl-color-gray-3); }
   starlight-toc a { border-inline-start: 1px solid var(--sl-color-hairline-light); padding-inline-start: .85rem; }
   starlight-toc a[aria-current='true'] { color: var(--ft-blue); border-inline-start: 2px solid var(--ft-blue); font-weight: 650; }
 
@@ -160,7 +165,7 @@
 
   @media (min-width: 72rem) {
     html[data-has-sidebar] .ft-doc-shell main > .content-panel .sl-container {
-      margin-inline: 2rem auto;
+      margin-inline: 3rem auto;
     }
   }
 

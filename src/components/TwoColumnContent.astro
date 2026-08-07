@@ -2,7 +2,7 @@
 const { toc } = Astro.locals.starlightRoute;
 const isHome = Astro.locals.starlightRoute.entry.data.title === 'Home';
 const authoredTocItems = toc?.items.filter((item) => item.slug !== '_top') || [];
-const hasMeaningfulToc = !isHome && authoredTocItems.length >= 2;
+const hasMeaningfulToc = !isHome && authoredTocItems.length >= 3;
 ---
 
 <div class:list={['ft-doc-shell', 'lg:sl-flex', hasMeaningfulToc ? 'ft-has-toc' : 'ft-single-column']}>
@@ -40,7 +40,7 @@ const hasMeaningfulToc = !isHome && authoredTocItems.length >= 2;
       }
 
       .main-pane {
-        --sl-content-margin-inline: 2rem auto;
+        --sl-content-margin-inline: 3rem auto;
         order: 1;
         width: 100%;
       }
