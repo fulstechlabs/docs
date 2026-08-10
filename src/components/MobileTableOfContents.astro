@@ -1,0 +1,24 @@
+---
+import DefaultMobileTableOfContents from '@astrojs/starlight/components/MobileTableOfContents.astro';
+
+const { toc, entry } = Astro.locals.starlightRoute;
+const pageTitle = entry.data.title;
+const normalizedTitle = pageTitle.trim().toLocaleLowerCase();
+const hasMatchingAuthoredHeading = toc?.items.some(
+  (item) => item.slug !== '_top' && item.text.trim().toLocaleLowerCase() === normalizedTitle,
+) || false;
+---
+
+<div
+  class:list={['ft-mobile-toc', { 'ft-toc-hide-top': hasMatchingAuthoredHeading }]}
+  data-page-title={pageTitle}
+>
+  <DefaultMobileTableOfContents />
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.ft-mobile-toc[data-page-title]').forEach((wrapper) => {
+    const topLabel = wrapper.querySelector<HTMLSpanElement>('a[href="#_top"] span');
+    if (topLabel && wrapper.dataset.pageTitle) topLabel.textContent = wrapper.dataset.pageTitle;
+  });
+</script>

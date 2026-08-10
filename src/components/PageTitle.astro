@@ -5,11 +5,29 @@ const isHome = route.entry.data.title === 'Home';
 type TrailItem = { label: string; href?: string };
 type NavEntry = { type: 'link'; label: string; href: string; isCurrent?: boolean } | { type: 'group'; label: string; entries: NavEntry[] };
 
+function descendantHrefs(entries: NavEntry[]): string[] {
+  return entries.flatMap((entry) => entry.type === 'link' ? [entry.href] : descendantHrefs(entry.entries));
+}
+
+function groupHref(entries: NavEntry[]): string | undefined {
+  const hrefs = descendantHrefs(entries);
+  if (hrefs.length === 0) return;
+
+  const segmentLists = hrefs.map((href) => href.split('/').filter(Boolean));
+  const commonSegments: string[] = [];
+  for (const [index, segment] of (segmentLists[0] || []).entries()) {
+    if (!segmentLists.every((segments) => segments[index] === segment)) break;
+    commonSegments.push(segment);
+  }
+
+  return commonSegments.length > 0 ? `/${commonSegments.join('/')}/` : undefined;
+}
+
 function findTrail(entries: NavEntry[], trail: TrailItem[] = []): TrailItem[] | undefined {
   for (const entry of entries) {
     if (entry.type === 'link' && entry.isCurrent) return [...trail, { label: entry.label, href: entry.href }];
     if (entry.type === 'group') {
-      const nested = findTrail(entry.entries, [...trail, { label: entry.label }]);
+      const nested = findTrail(entry.entries, [...trail, { label: entry.label, href: groupHref(entry.entries) }]);
       if (nested) return nested;
     }
   }
