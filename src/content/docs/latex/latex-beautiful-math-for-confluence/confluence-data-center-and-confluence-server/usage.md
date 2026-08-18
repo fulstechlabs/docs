@@ -80,7 +80,7 @@ We recommend installing `pdflatex` using TeX Live <https://www.tug.org/texlive/>
 
 To ensure the security of the Confluence server, this app does not allow the execution of bash commands in LaTeX content.
 
-For a general instructions to install TeX Live and Poppler please see <https://fulstech.gitbook.io/docs/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live>.
+For a general instructions to install TeX Live and Poppler please see <https://docs.fulstech.com/latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live/>.
 
 ### Verify if pdflatex has been installed correctly
 

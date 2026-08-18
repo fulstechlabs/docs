@@ -18,8 +18,8 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== '@ast
   </a>
   <div class="ft-header-search print:hidden">{shouldRenderSearch && <Search />}</div>
   <nav class="ft-nav print:hidden" aria-label="Utility">
-    <a href={docsHref('markdown/')}>Products</a>
-    <a href={docsHref('markdown/markin-markdown-editor-for-jira/jira-cloud/overview/')}>Guides</a>
+    <a href="https://marketplace.atlassian.com/vendors/1212817">Products</a>
+    <a href={`${docsHref()}#guides`}>Guides</a>
     <a href="https://fulstech.atlassian.net/servicedesk/customer/portals">Support</a>
     <a class="ft-github" href="https://github.com/fulstechlabs" aria-label="Fulstech on GitHub">
       GitHub
@@ -55,4 +55,3 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== '@ast
     }
   }
 </style>
-

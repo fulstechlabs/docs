@@ -12,6 +12,7 @@ const popular = [
 
 const appGroups = [
   {
+    id: 'jira-apps',
     title: 'Jira apps',
     apps: [
       ['Markdown Editor for Jira (Markin)', 'markdown/markin-markdown-editor-for-jira/'],
@@ -24,6 +25,7 @@ const appGroups = [
     ],
   },
   {
+    id: 'confluence-apps',
     title: 'Confluence apps',
     apps: [
       ['Markdown for Confluence', 'markdown/markdown-for-confluence/'],
@@ -70,20 +72,20 @@ const appGroups = [
 </section>
 
 <section class="product-grid" id="products" aria-label="Product documentation">
-  <a class="product-card jira" href={href('markdown/markin-markdown-editor-for-jira/')}>
+  <a class="product-card jira" href="#jira-apps">
     <span class="product-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6h12v10h10v12H30v14H18V28H8V16h10z" /></svg></span>
     <span class="product-info"><span class="product-title">Jira Apps</span><span class="product-description">Extend and customize Jira with focused apps for every team.</span><span class="pills"><span>Cloud</span><span>Data Center</span></span></span>
     <span class="card-link">Explore products&nbsp; →</span>
   </a>
-  <a class="product-card confluence" href={href('markdown/markdown-for-confluence/')}>
+  <a class="product-card confluence" href="#confluence-apps">
     <span class="product-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 5h15l9 9v29H13zM28 5v10h9" /></svg></span>
     <span class="product-info"><span class="product-title">Confluence Apps</span><span class="product-description">Improve collaboration and documentation in Confluence.</span><span class="pills"><span>Cloud</span><span>Data Center</span></span></span>
     <span class="card-link">Explore products&nbsp; →</span>
   </a>
 </section>
 
-<section class="popular-guides">
-  <div class="section-heading"><div><span class="eyebrow">LEARN AND BUILD</span><h2>Popular guides</h2></div><a href={href('markdown/')}>View all guides →</a></div>
+<section class="popular-guides" id="guides">
+  <div class="section-heading"><div><span class="eyebrow">LEARN AND BUILD</span><h2>Popular guides</h2></div></div>
   <div class="guide-grid">
     {popular.map((item) => (
       <a class="guide-card" href={item.href.startsWith('http') ? item.href : href(item.href)}>
@@ -99,7 +101,7 @@ const appGroups = [
   </div>
   <div class="app-directory-grid">
     {appGroups.map((group) => (
-      <section class="app-group">
+      <section class="app-group" id={group.id}>
         <h3>{group.title}</h3>
         <div>
           {group.apps.map(([title, path]) => (
@@ -115,4 +117,3 @@ const appGroups = [
   <span>Trusted by teams at</span>
   <div><b>Apple</b><b>Amazon</b><b>Intel</b><b>IBM</b><b>HP</b><b>Samsung</b><b>Twilio</b><b>SpaceX</b><b>CERN</b><b>Airbus</b></div>
 </section>
-
