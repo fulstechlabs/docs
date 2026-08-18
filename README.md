@@ -3,7 +3,6 @@
 Source for the Fulstech product documentation site.
 
 - Production: <https://docs.fulstech.com>
-- Temporary GitHub Pages URL: <https://fulstechlabs.github.io/docs/>
 - Legacy GitBook: <https://fulstech.gitbook.io/docs>
 
 ## Local development
@@ -13,11 +12,11 @@ npm install
 npm run dev
 ```
 
-To verify the same `/docs` base path used by GitHub Pages:
+To verify the root path used by the production custom domain:
 
 ```bash
-DOCS_SITE_URL=https://fulstechlabs.github.io DOCS_BASE_PATH=/docs npm run build
-DOCS_BASE_PATH=/docs npm run audit:build
+DOCS_SITE_URL=https://docs.fulstech.com DOCS_BASE_PATH=/ npm run build
+DOCS_BASE_PATH=/ npm run audit:build
 ```
 
 The site is built with [Astro Starlight](https://starlight.astro.build/) and
@@ -56,7 +55,7 @@ code blocks:
 
 ```bash
 python scripts/audit_migration.py \
-  --live-base https://fulstechlabs.github.io/docs/ \
+  --live-base https://docs.fulstech.com/ \
   --output migration-audit.json
 ```
 

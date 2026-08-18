@@ -31,12 +31,12 @@ jobs:
       - name: Build Starlight site
         run: npm run build
         env:
-          DOCS_SITE_URL: https://fulstechlabs.github.io
-          DOCS_BASE_PATH: /docs
+          DOCS_SITE_URL: https://docs.fulstech.com
+          DOCS_BASE_PATH: /
       - name: Audit built links and assets
         run: npm run audit:build
         env:
-          DOCS_BASE_PATH: /docs
+          DOCS_BASE_PATH: /
       - name: Configure Pages
         uses: actions/configure-pages@v6
       - name: Upload Pages artifact
