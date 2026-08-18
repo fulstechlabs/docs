@@ -67,6 +67,12 @@ REMOTE_MARKDOWN_IMAGE = re.compile(
 GITBOOK_BLOCK = re.compile(
     r"{%\s+(hint|endhint|tabs|endtabs|tab|endtab|embed|endembed|content-ref|endcontent-ref)\b"
 )
+MIGRATED_INTERNAL_LINKS = {
+    "https://fulstech.gitbook.io/docs/latex-for-jira/jira-cloud/usage-with-browser-extension":
+        "https://docs.fulstech.com/latex/latex-for-jira/jira-cloud/usage-with-browser-extension/",
+    "https://fulstech.gitbook.io/docs/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live":
+        "https://docs.fulstech.com/latex/latex-beautiful-math-for-confluence/confluence-data-center-and-confluence-server/how-to-install-tex-live/",
+}
 
 
 def normalize_markdown(value: str) -> str:
@@ -81,6 +87,8 @@ def normalize_markdown(value: str) -> str:
 
     value = REMOTE_MARKDOWN_IMAGE.sub(replace_remote, value)
     value = ASSET_PATH.sub(lambda match: f"/files/{match.group(1)}", value)
+    for gitbook_url, docs_url in MIGRATED_INTERNAL_LINKS.items():
+        value = value.replace(gitbook_url, docs_url)
     value = "\n".join(line.rstrip() for line in value.splitlines()).strip() + "\n"
     return re.sub(r"\n{3,}", "\n\n", value)
 
@@ -139,7 +147,16 @@ def markdown_code_blocks(value: str) -> list[tuple[str, str]]:
 def external_urls(value: str) -> list[str]:
     prose, _ = split_fenced_markdown(value)
     prose = re.sub(r"!\[[^]]*\]\([^)]+\)", "", prose)
-    return sorted({url.rstrip(".,") for url in URL.findall(prose) if not url.startswith(SOURCE)})
+
+    def normalized_url(url: str) -> str:
+        clean = url.rstrip(".,*_")
+        return MIGRATED_INTERNAL_LINKS.get(clean, clean)
+
+    return sorted(
+        {
+            normalized_url(url) for url in URL.findall(prose)
+        }
+    )
 
 
 def fetch_llms_full_pages() -> list[str]:
