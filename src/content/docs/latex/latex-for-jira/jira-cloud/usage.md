@@ -4,7 +4,7 @@ title: "Usage (without browser extension)"
 
 ## Notice
 
-> **It is recommended to use this Jira app with browser extension, since the combination provides the flexibility to write LaTeX in everwhere: Summary, Description, Comment, custom fields, etc. Please see the instructions here** [**https://fulstech.gitbook.io/docs/latex-for-jira/jira-cloud/usage-with-browser-extension**](../usage-with-browser-extension/)**.**
+> **It is recommended to use this Jira app with browser extension, since the combination provides the flexibility to write LaTeX in everwhere: Summary, Description, Comment, custom fields, etc. Please see the instructions here** [**https://docs.fulstech.com/latex/latex-for-jira/jira-cloud/usage-with-browser-extension/**](../usage-with-browser-extension/)**.**
 
 ## Overview
 
