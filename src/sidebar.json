@@ -4,6 +4,46 @@
     "slug": "index"
   },
   {
+    "label": "Better Pages",
+    "items": [
+      {
+        "label": "Confluence Cloud",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "better-pages/confluence-cloud/overview"
+          },
+          {
+            "label": "Getting Started",
+            "slug": "better-pages/confluence-cloud/getting-started"
+          },
+          {
+            "label": "Core Macros",
+            "slug": "better-pages/confluence-cloud/core-macros"
+          },
+          {
+            "label": "Extended Formatting",
+            "slug": "better-pages/confluence-cloud/extended-formatting"
+          },
+          {
+            "label": "Administration",
+            "slug": "better-pages/confluence-cloud/administration"
+          },
+          {
+            "label": "Security and Privacy",
+            "slug": "better-pages/confluence-cloud/security-and-privacy"
+          },
+          {
+            "label": "Troubleshooting and Support",
+            "slug": "better-pages/confluence-cloud/troubleshooting-and-support"
+          }
+        ],
+        "collapsed": false
+      }
+    ],
+    "collapsed": false
+  },
+  {
     "label": "Markdown",
     "items": [
       {
