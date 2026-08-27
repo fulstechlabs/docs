@@ -88,7 +88,3 @@ For a planned maintenance window:
   should not repeat the title.
 - Publish the page and verify the complete Page alert queue, not only the editor
   preview.
-
-In PDF and Word export, Better Pages renders the title and message as a static
-panel. Dismissal controls are omitted because exported documents are not
-interactive.

@@ -1,50 +1,79 @@
 ---
 title: "Administration"
-description: "Configure Better Pages external content, local forms, diagnostics, and usage reporting."
+description: "Configure Better Pages templates, brand assets, feature controls, external content, and diagnostics."
 ---
 
-Open **Confluence administration → Apps → Better Pages administration**. The same installation-scoped settings are available from **Manage apps → Better Pages → Configure**.
+Open **Confluence administration → Apps → Better Pages administration**. The
+same installation-wide settings are available from **Manage apps → Better
+Pages → Configure**. Only a Confluence application administrator can read or
+change this page; the Forge backend checks every operation again.
 
-Only a Confluence application administrator can use this page. Every settings mutation is also authorized by the Forge backend; displaying the page alone is not treated as authorization.
+## Recommended first-time setup
 
-## External frame policy
+1. Review the site feature controls and keep optional AI, local forms, and HTML
+   JavaScript disabled until your organization chooses to use them.
+2. Create a small shared color palette and, if needed, a
+   [Brand Kit](../brand-kits-and-colors/).
+3. Synchronize selected Better Pages page starters into Confluence's native
+   template catalog.
+4. Confirm Numbered Headings, tab share links, welcome guidance, in-app help,
+   and aggregate usage insights match your policy.
+5. Leave external origins empty unless a compatibility macro has a documented
+   business need.
 
-Choose the behavior for an HTTPS frame URL that does not match an approved rule:
+## Site feature controls
 
-- **Sandboxed**: renders with an empty iframe sandbox, which disables scripts and forms.
-- **Denied**: prevents rendering.
+| Control | Default | Effect |
+| --- | --- | --- |
+| AI in macros | Off | Enables explicit Interactive Banner generation and Smart Designer rewriting with an Atlassian-hosted Forge LLM |
+| Numbered Headings | On | Allows page editors to apply and remove heading numbering |
+| Display Tabs as links | On | Adds shareable, group-scoped tab URLs; tab buttons still work when off |
+| Local form capability | Off | Enables browser-local validation for retained compatibility form content; there is no submit destination |
+| HTML JavaScript | Off | Shows the JavaScript editor and permits isolated sandbox execution |
+| Welcome pop-up | On | Shows dismissible first-use guidance on Better Pages Home |
+| In-app help | On | Shows local help without an external chat service |
+| Usage insights | On | Stores bounded aggregate capability view counts only |
 
-Add an exact HTTPS URL, use `*` for one path segment, or use `/**` for the remainder of a path. Host wildcards and embedded credentials are rejected.
+Select **Save site feature controls** after reviewing the complete set.
 
-New origins require an Atlassian-owned customer-managed egress consent dialog. Review that dialog before approval. Rejecting consent leaves the Better Pages policy unchanged. The configurable egress group supports at most ten unique origins; several frame path rules may share one origin.
+## Templates, Brand Kits, and colors
 
-## External image policy
+The native template manager can synchronize selected page starters, update
+managed copies, or remove them from Confluence's template catalog. Blog and
+Delivery journey starters remain in Better Pages Home.
 
-Add an exact HTTPS origin such as `https://images.example.com`. Image and frame permissions are independent even when they use the same origin.
+Use Brand Kits for published collections of colors, images, and icons. Use the
+global color palette for reusable named colors without assets. See
+[Brand Kits and Colors](../brand-kits-and-colors/) for publication behavior.
 
-Observed frame and image URLs appear in separate inventories. Staging an observed URL does not immediately grant access: review the staged policy, select **Review and save changes**, then review Atlassian's consent dialog.
+## External content compatibility policy
 
-## Local forms
+Retained compatibility content may contain HTTPS frames or images. Frame rules
+accept an exact URL, `*` for one path segment, or `/**` for the remaining path.
+Image rules use an exact HTTPS origin. Host wildcards and embedded credentials
+are rejected.
 
-Local forms are disabled for the installation by default. Select **Enabled** and save the local-form setting to expose configured fields on published form macros. Disabling the feature again replaces every form with an administrator-disabled message.
+An unmatched frame is either **Sandboxed** with scripts and forms disabled or
+**Denied**. Adding an origin also requires Atlassian's administrator-owned
+customer-managed egress consent. Frame and image approval are separate, even
+for the same host, and a configurable group supports up to ten origins.
 
-Better Pages forms validate only in the reader's browser. The app does not receive or store entered values.
+Observed URLs can be staged for review, but staging never grants access. Review
+the final policy and Atlassian consent dialog before saving.
+
+## Usage audit and stored diagnostics
+
+**Macro Usage Audit Report** scans for every current Better Pages macro family
+and produces a CSV with page title, page link, and macro names. Results follow
+the administrator's Confluence access and do not inspect another vendor's data.
+
+Administrators can separately clear observed external URL inventories or reset
+aggregate usage counters. These actions do not delete pages, macro
+configuration, Brand Kits, colors, templates, or approved policy rules.
 
 ## Concurrent changes
 
-Settings are revisioned. If another administrator saves first, a stale browser tab cannot overwrite the newer value. Reload, review the current policy, and try again. External-policy changes also use a short lease while Atlassian egress consent or revocation is in progress.
-
-## Macro Usage Audit Report
-
-Select **Start scan** to find Confluence pages that contain the eight current Better Pages macro module keys. Results are grouped by page and include navigation back to the content. **Download report** exports page title, page link, and macro families as CSV.
-
-The report scans Better Pages macros only. It does not inspect comments or data owned by another app.
-
-## Stored diagnostic data
-
-Administrators can separately:
-
-- Clear observed frame and image URL inventories.
-- Reset aggregate extended-capability view counters.
-
-Each action requires confirmation. These controls do not delete macro configuration, Confluence pages, approved URL rules, or local-form configuration.
+Settings are revisioned. A stale browser tab cannot overwrite a newer save.
+Reload the administration page, review the latest values, and apply the change
+again. External egress updates may also be temporarily locked while Atlassian
+consent or revocation is in progress.

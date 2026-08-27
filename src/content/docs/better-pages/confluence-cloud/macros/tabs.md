@@ -84,6 +84,3 @@ For a release plan, create three adjacent Tabs macros:
 - Put the most useful or most frequently visited content in the default tab.
 - Do not hide mandatory instructions or critical warnings in a non-default tab.
 - Test the group with a keyboard and at a narrow browser width after publishing.
-
-In PDF and Word export, Better Pages outputs every tab section in reading order
-so content from inactive tabs is not lost.

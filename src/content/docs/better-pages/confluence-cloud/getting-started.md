@@ -113,5 +113,7 @@ fixed.
 ## Where to go next
 
 Use the [macro catalog](../macros/) to find the best component for your next
-page. Site administrators can configure shared colors, Brand Kits, feature
-controls, and other site-wide behavior from Better Pages administration.
+page. Continue with [Templates and Better Pages Home](../templates-and-home/)
+for complete page starters. Site administrators can configure shared colors,
+Brand Kits, feature controls, and other site-wide behavior in
+[Better Pages administration](../administration/).

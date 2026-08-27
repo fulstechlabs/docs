@@ -29,19 +29,105 @@
                 "slug": "better-pages/confluence-cloud/macros/alert"
               },
               {
+                "label": "Advanced Expand",
+                "slug": "better-pages/confluence-cloud/macros/advanced-expand"
+              },
+              {
                 "label": "Advanced Cards",
                 "slug": "better-pages/confluence-cloud/macros/advanced-cards"
+              },
+              {
+                "label": "Background",
+                "slug": "better-pages/confluence-cloud/macros/background"
+              },
+              {
+                "label": "BibTeX Reference",
+                "slug": "better-pages/confluence-cloud/macros/bibtex-reference"
+              },
+              {
+                "label": "BibTeX Summary",
+                "slug": "better-pages/confluence-cloud/macros/bibtex-summary"
               },
               {
                 "label": "Button",
                 "slug": "better-pages/confluence-cloud/macros/button"
               },
               {
+                "label": "Button Group",
+                "slug": "better-pages/confluence-cloud/macros/button-group"
+              },
+              {
+                "label": "Footnote",
+                "slug": "better-pages/confluence-cloud/macros/footnote"
+              },
+              {
+                "label": "Footnote Summary",
+                "slug": "better-pages/confluence-cloud/macros/footnote-summary"
+              },
+              {
+                "label": "HTML",
+                "slug": "better-pages/confluence-cloud/macros/html"
+              },
+              {
+                "label": "Interactive Banner",
+                "slug": "better-pages/confluence-cloud/macros/interactive-banner"
+              },
+              {
+                "label": "LaTeX Builder",
+                "slug": "better-pages/confluence-cloud/macros/latex-builder"
+              },
+              {
+                "label": "LaTeX Inline",
+                "slug": "better-pages/confluence-cloud/macros/latex-inline"
+              },
+              {
+                "label": "Pop-up Dialog",
+                "slug": "better-pages/confluence-cloud/macros/pop-up-dialog"
+              },
+              {
+                "label": "Progress Bar",
+                "slug": "better-pages/confluence-cloud/macros/progress-bar"
+              },
+              {
+                "label": "Table",
+                "slug": "better-pages/confluence-cloud/macros/table"
+              },
+              {
                 "label": "Tabs",
                 "slug": "better-pages/confluence-cloud/macros/tabs"
+              },
+              {
+                "label": "Tooltip",
+                "slug": "better-pages/confluence-cloud/macros/tooltip"
               }
             ],
-            "collapsed": false
+            "collapsed": true
+          },
+          {
+            "label": "Page-building Tools",
+            "items": [
+              {
+                "label": "Templates and Home",
+                "slug": "better-pages/confluence-cloud/templates-and-home"
+              },
+              {
+                "label": "Smart Designer",
+                "slug": "better-pages/confluence-cloud/smart-designer"
+              },
+              {
+                "label": "Space Manager",
+                "slug": "better-pages/confluence-cloud/space-manager"
+              },
+              {
+                "label": "Numbered Headings",
+                "slug": "better-pages/confluence-cloud/numbered-headings"
+              },
+              {
+                "label": "Brand Kits and Colors",
+                "slug": "better-pages/confluence-cloud/brand-kits-and-colors"
+              }
+            ],
+            "collapsed": true
           },
           {
             "label": "Administration",
@@ -54,12 +140,16 @@
           {
             "label": "Troubleshooting and Support",
             "slug": "better-pages/confluence-cloud/troubleshooting-and-support"
+          },
+          {
+            "label": "FAQ",
+            "slug": "better-pages/confluence-cloud/faq"
           }
         ],
-        "collapsed": false
+        "collapsed": true
       }
     ],
-    "collapsed": false
+    "collapsed": true
   },
   {
     "label": "Markdown",

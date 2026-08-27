@@ -1,57 +1,69 @@
 ---
 title: "Troubleshooting and Support"
-description: "Resolve common Better Pages configuration, navigation, search, external content, and permission issues."
+description: "Resolve common Better Pages authoring, interaction, permission, image, and administration issues."
 ---
 
 ## A macro is missing from the editor
 
-Confirm that Better Pages is installed and enabled under **Manage apps**. Reload the editor, open **Insert more content**, and search for `Better Pages`. If an older test page contains a retired pre-release macro identifier, remove that macro and insert the current Better Pages macro again.
+Confirm that Better Pages is installed and enabled under **Manage apps**. Reload
+the Confluence editor, open **Insert elements**, and search for `Better Pages`.
+The current catalog contains 19 authoring macros.
 
-## A button or destination is disabled
+## A Button, Card, Banner, or Progress step does not open
 
-Use a relative Confluence path beginning with `/`, an `https://` URL, or a strict `mailto:` address. Remove spaces, embedded credentials, protocol-relative syntax, and unsupported schemes such as `file:` or `javascript:`.
+Edit the component and verify the destination. Supported values are a selected
+Confluence page, an `https://` address, a relative path beginning with `/`, an
+anchor beginning with `#`, or a valid `mailto:` address. Credentials,
+protocol-relative URLs, `javascript:`, and local-file schemes are rejected.
 
-## Tabs show no sections
+## Tabs do not form one group
 
-Edit the body of **Better Pages tabs** and add level-two or level-three headings. Each heading starts a section. Content before the first supported heading is not a tab.
+Each Tabs macro represents one tab. Put the Tabs macro blocks directly next to
+one another. A normal block between them separates the groups. Give each tab a
+unique name and select only one default tab.
 
-## Search returns no results
+## Footnotes or references are missing from a summary
 
-- Confirm the reader can access the expected pages.
-- For explicit-space mode, verify the configured space keys.
-- Remove or widen the modified-after date.
-- Try a shorter search phrase.
+Publish the page before checking the final order. A summary collects compatible
+items above it, stopping at the previous summary in the same page scope. Move
+the summary after the items it should collect.
 
-Better Pages search intentionally does not fall back from an invalid explicit-space configuration to an all-site search.
+## An image is blank
 
-## An external frame is denied or blank
+Open the macro editor and reselect the source. For uploads, confirm the file
+type and size; for page attachments, verify the reader can access the page; for
+Brand Kit assets, confirm the kit is published. A stock result may become
+unavailable at its source and can be selected again.
 
-Ask a Confluence administrator to check both the Better Pages frame policy and Atlassian customer-managed egress approval. A frame can still be blank when the destination blocks embedding with Content Security Policy or `X-Frame-Options`; Better Pages cannot override the destination's policy.
+## Interactive controls look correct but do not respond
 
-## An external image is denied
+Test the published page, not only the Confluence editor placeholder. Reload the
+page, then try pointer and keyboard interaction. Confirm the app is enabled and
+that no browser content blocker is removing Atlassian Forge frames.
 
-The exact HTTPS origin must be approved specifically for images. Existing frame permission for the same origin is not sufficient. Also confirm the final image URL does not redirect to a different, unapproved origin.
+## Smart Designer will not save
 
-## A local form is disabled
+Open Smart Designer from the published page's byline. The editor launcher is a
+safe preview because Forge cannot replace the surrounding unsaved editor draft.
+If the source page changed, reload the source, rebuild the staged canvas, and
+apply it again.
 
-A Confluence administrator must enable **Local form capability** in **Better Pages administration**. This setting applies to the whole installation.
+## Space Manager stopped partway
 
-## An administrator save reports a conflict
+Review the completed-operation list and refresh the inventory. Confluence
+permissions and page state are checked immediately before each operation, so a
+batch can stop after earlier items succeeded. Do not rerun the full selection
+until you identify which pages already changed.
 
-Another administrator saved a newer settings revision or a customer-managed egress change is still in progress. Reload the administration page, review the latest state, and save again.
+## An administrator setting reports a conflict
 
-## PDF or Word looks different from the page
-
-Exports are intentionally static. Tabs, dialogs, tooltips, forms, search results, and external content cannot preserve live browser interaction. See [Security and Privacy](../security-and-privacy/#static-export) for the export contract.
+Another administrator saved a newer revision, or Atlassian egress consent is in
+progress. Reload, review the current state, and save again.
 
 ## Contact support
 
-Submit bugs and feature requests through the [Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals). Include:
-
-- Confluence site and page URL.
-- Better Pages macro name.
-- Expected and actual behavior.
-- Reproduction steps.
-- A screenshot with sensitive information removed.
-
-Do not include passwords, access tokens, private form values, or confidential page content that support does not need.
+Submit bugs and feature requests through the
+[Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals).
+Include the site and page URL, Better Pages feature, expected and actual result,
+reproduction steps, and a screenshot with sensitive information removed. Never
+include passwords, tokens, or confidential content that is not required.

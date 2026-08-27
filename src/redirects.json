@@ -34,5 +34,7 @@
   "/custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/": "/custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview/",
   "/custom-fields/checklist-for-jira-server/": "/custom-fields/checklist-for-jira-server/overview/",
   "/archived-apps/": "/archived-apps/better-font-for-jira-server/overview/",
-  "/archived-apps/better-font-for-jira-server/": "/archived-apps/better-font-for-jira-server/overview/"
+  "/archived-apps/better-font-for-jira-server/": "/archived-apps/better-font-for-jira-server/overview/",
+  "/better-pages/confluence-cloud/core-macros/": "/better-pages/confluence-cloud/macros/",
+  "/better-pages/confluence-cloud/extended-formatting/": "/better-pages/confluence-cloud/macros/"
 }

@@ -94,6 +94,3 @@ For a product launch home, create four cards:
 - Avoid making every section a card. Reserve cards for real choices or clearly
   grouped information.
 - Test every destination after publishing.
-
-In PDF and Word export, card titles, descriptions, and valid destinations remain
-available as readable static content.

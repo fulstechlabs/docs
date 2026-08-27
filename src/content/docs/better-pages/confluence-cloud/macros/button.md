@@ -85,6 +85,3 @@ For a release page:
   context is clear.
 - Test anchors, email links, and restricted Confluence pages as the intended
   audience.
-
-PDF and Word export keep the label and icon and include a link only when the
-destination is valid.

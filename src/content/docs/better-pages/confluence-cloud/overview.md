@@ -20,10 +20,10 @@ Confluence page.
 | Create a visual directory or resource hub | [Advanced Cards](../macros/advanced-cards/) |
 | Guide readers to a page, website, anchor, or email address | [Button](../macros/button/) |
 | Highlight an update or show an important page-load notice | [Alert](../macros/alert/) |
-| Present a process or journey | Progress Bar |
-| Build a visual hero area | Background or Interactive Banner |
-| Keep supporting detail out of the main reading flow | Advanced Expand, Tooltip, or Pop-up Dialog |
-| Present equations, references, or structured data | LaTeX, Footnotes, BibTeX, HTML, or Table |
+| Present a process or journey | [Progress Bar](../macros/progress-bar/) |
+| Build a visual hero area | [Background](../macros/background/) or [Interactive Banner](../macros/interactive-banner/) |
+| Keep supporting detail out of the main reading flow | [Advanced Expand](../macros/advanced-expand/), [Tooltip](../macros/tooltip/), or [Pop-up Dialog](../macros/pop-up-dialog/) |
+| Present equations, references, or structured data | [LaTeX Builder](../macros/latex-builder/), [Footnotes](../macros/footnote/), [BibTeX](../macros/bibtex-reference/), [HTML](../macros/html/), or [Table](../macros/table/) |
 
 ## The component collection
 
@@ -39,6 +39,21 @@ Better Pages currently includes 19 page-building macros:
 Browse the [macro catalog](../macros/) to choose the right component for your
 page.
 
+## More than macros
+
+Better Pages also includes workflows for larger page-building tasks:
+
+- [Templates and Better Pages Home](../templates-and-home/) provide 49 editable
+  starters and an optional multi-page delivery journey.
+- [Smart Designer](../smart-designer/) formats selected content, stages any of
+  the 19 components, and edits supported native blocks.
+- [Space Manager](../space-manager/) inventories accessible content and previews
+  permission-checked page operations.
+- [Numbered Headings](../numbered-headings/) applies a maintained numbering
+  scheme to a page outline.
+- [Brand Kits and Colors](../brand-kits-and-colors/) give authors reusable,
+  administrator-published visual choices.
+
 ## Designed to work with Confluence
 
 Better Pages macros live inside Confluence pages and follow the permissions of
@@ -47,8 +62,6 @@ macros continue to use the Confluence editor for their content, while visual
 settings are managed in the Better Pages configuration panel.
 
 Interactive controls are keyboard accessible and adapt to narrow screens.
-Where an interaction cannot run in an exported PDF or Word document, Better
-Pages provides a readable static representation instead.
 
 ## A good first page
 
