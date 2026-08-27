@@ -1,60 +1,117 @@
 ---
 title: "Getting Started"
-description: "Install Better Pages, open its home page, and add your first Confluence macro."
+description: "Add your first Better Pages macro and publish a useful Confluence page in a few minutes."
 ---
 
-## Requirements
+This guide takes you from an empty Confluence page to a small, useful landing
+page. You do not need design or development experience.
 
-- Confluence Cloud.
-- A Confluence administrator to install or upgrade the app.
-- Page edit permission to add macros.
-- Space create permission when using a Better Pages template.
+## Before you begin
 
-During private availability, install Better Pages with the Atlassian installation link supplied for your environment. After installation, confirm that **Better Pages home** appears under **Apps → Your apps**.
+You need:
 
-## Add your first macro
+- A Confluence Cloud site with Better Pages installed.
+- Permission to create or edit a page.
+- A Confluence administrator only if the app still needs to be installed or
+  site-wide settings must be changed.
 
-1. Edit a Confluence page.
-2. Select **Insert more content** or type `/`.
-3. Search for `Better Pages`.
-4. Select the macro that matches your need.
-5. Configure it and save the macro.
-6. Publish or update the page.
-7. Reload the published page and test its reader interaction.
+During private availability, your administrator installs Better Pages with the
+installation link supplied for your test environment. After installation,
+Better Pages appears in the Confluence macro browser and under **Apps**.
 
-Better Pages currently exposes these editor entries:
+## Add a macro
 
-- **Better Pages message**
-- **Better Pages button**
-- **Better Pages progress**
-- **Better Pages tooltip**
-- **Better Pages math**
-- **Better Pages tabs**
-- **Better Pages clickable content**
-- **Better Pages extended formatting**
+The same workflow applies to every Better Pages component:
 
-## Use a template
+1. Open a Confluence page and select **Edit**.
+2. Put the cursor where the component should appear.
+3. Type `/better pages`, or select **Insert elements** and search for
+   `Better Pages`.
+4. Choose a macro, such as **Better Pages Alert**.
+5. Configure the component and review its preview.
+6. Select **Save** in the macro configuration.
+7. Publish or update the Confluence page.
+8. Test the published interaction as a reader.
 
-Open **Apps → Better Pages home**, select a destination space, enter a unique title, and choose a template. Select **Preview template** to review the content type and generated structure. Nothing is created until you select **Create in Confluence**.
+If a macro contains rich Confluence content, select its body on the page and
+edit that content with the normal Confluence editor.
 
-Created pages and blog posts are ordinary Confluence content. You can open, edit, move, copy, or delete them using normal Confluence controls. A delivery journey creates one parent page and a linked child page for each configured stage. If a later child cannot be created, Better Pages keeps the items that were created successfully and shows them in the result.
+## Build a starter landing page
 
-Available templates:
+Use the following four components to create a compact project or team landing
+page.
 
-- Project brief
-- Weekly update blog post
-- Research brief
-- Financial review
-- Software requirements
-- Space landing page
-- Delivery journey
+### 1. Lead with an Alert
 
-## Safe destinations
+Insert **Better Pages Alert** and choose **Message panel** for information that
+should remain in the page flow. Add a short title and one actionable sentence.
 
-Buttons, progress steps, status labels, navigation items, rollover cards, and clickable content accept:
+Example:
 
-- Relative Confluence paths beginning with `/`, such as `/wiki/home`.
-- `https://` URLs without embedded credentials.
-- Strict `mailto:` addresses.
+> **Release readiness review**<br />
+> Confirm owners and open risks before Friday at 15:00.
 
-Unsafe or unsupported destinations such as `javascript:`, `file:`, protocol-relative URLs, or malformed email links do not become active navigation actions.
+See the [Alert guide](../macros/alert/) for page-load alerts, images, colors,
+and dismissal behavior.
+
+### 2. Add the main destinations
+
+Insert **Better Pages Advanced Cards**. Create one card for each important
+destination, such as the product plan, release checklist, support guide, and
+team directory. Use short descriptions so readers can choose without opening
+every link.
+
+See the [Advanced Cards guide](../macros/advanced-cards/) for images, layout,
+color, reordering, and destinations.
+
+### 3. Organize the details
+
+Insert **Better Pages Tabs** and create three tabs such as **Overview**,
+**Readiness**, and **Decisions**. Put the detailed Confluence content inside
+the matching tab body.
+
+See the [Tabs guide](../macros/tabs/) for styling, default tabs, shareable tab
+links, and keyboard behavior.
+
+### 4. End with one clear action
+
+Insert **Better Pages Button**. Link it to the next action readers should take,
+for example **Open the release checklist**. Choose a filled style for the
+primary action and keep the label specific.
+
+See the [Button guide](../macros/button/) for page search, safe destinations,
+icons, colors, sizes, and new-tab behavior.
+
+## Preview, publish, and verify
+
+Before publishing, check that:
+
+- Every title and link is meaningful without surrounding explanation.
+- Images have useful alternative text, or are clearly decorative.
+- Colors have enough contrast in both light and dark Confluence themes.
+- The page has one obvious primary action rather than several competing ones.
+
+After publishing, click every action and test Tabs, Alerts, and Cards with both
+pointer and keyboard controls. Also narrow the browser window to confirm the
+layout remains readable.
+
+## Supported destinations
+
+Buttons and linked components accept:
+
+- A Confluence page selected with the built-in page search.
+- A relative Confluence path beginning with `/`.
+- A page anchor beginning with `#`.
+- An `https://` web address without embedded credentials.
+- A valid `mailto:` email address.
+
+Unsafe or unsupported destinations such as `javascript:`, `file:`, malformed
+email links, and protocol-relative URLs are rejected. The component remains on
+the page but its navigation action is not enabled until the destination is
+fixed.
+
+## Where to go next
+
+Use the [macro catalog](../macros/) to find the best component for your next
+page. Site administrators can configure shared colors, Brand Kits, feature
+controls, and other site-wide behavior from Better Pages administration.

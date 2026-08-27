@@ -1,35 +1,68 @@
 ---
-title: "Overview"
-description: "Build clearer, richer Confluence pages with Better Pages formatting and interactive macros."
+title: "Better Pages for Confluence"
+description: "Create clear, engaging Confluence pages with interactive layouts, visual components, and reusable design tools."
 ---
 
-**Better Pages: Tabs & Formatting Macros for Confluence** is a collection of page-building components for Confluence Cloud. It helps authors organize long content, highlight important information, add safe navigation, present structured data, and create reusable starting pages without custom code.
+Better Pages gives Confluence authors a practical set of visual and interactive
+building blocks. Use it to turn a long document into an easy-to-navigate page,
+create a polished space home, highlight an announcement, or present technical
+content without writing code.
 
-## What Better Pages includes
+The app is designed for everyday Confluence authors. Add a macro, configure it
+in a visual editor, preview the result, and publish it as part of a normal
+Confluence page.
 
-- Dedicated macros for messages, buttons, progress steps, tooltips, math, tabs, and clickable rich content.
-- An extended formatting macro with callouts, status labels, navigation, dialogs, rollover cards, lists, tables, search, references, controlled external content, and local forms.
-- Editable templates for project briefs, weekly updates, research briefs, financial reviews, software requirements, space landing pages, and delivery journeys.
-- Administration controls for external frames, external images, local forms, stored diagnostic data, and macro usage reporting.
-- Static representations for PDF and Word export where live interaction is not available.
+## What can you build?
 
-Better Pages is a Forge app. It runs inside Confluence and uses the signed-in user's Confluence permissions. Search and template creation do not bypass space or page access controls.
-
-## Choose the right feature
-
-| Need | Recommended feature |
+| If you want to… | Start with… |
 | --- | --- |
-| Divide a long page into sections | Better Pages tabs |
-| Add one prominent link or call to action | Better Pages button |
-| Show a multi-step journey or status | Better Pages progress |
-| Explain a term without adding permanent page clutter | Better Pages tooltip |
-| Display an equation | Better Pages math |
-| Make rich Confluence content lead to a destination | Better Pages clickable content |
-| Add callouts, navigation, tables, references, search, or controlled external content | Better Pages extended formatting |
-| Start a common document quickly | Apps → Better Pages home |
+| Organize a long page into focused sections | [Tabs](../macros/tabs/) |
+| Create a visual directory or resource hub | [Advanced Cards](../macros/advanced-cards/) |
+| Guide readers to a page, website, anchor, or email address | [Button](../macros/button/) |
+| Highlight an update or show an important page-load notice | [Alert](../macros/alert/) |
+| Present a process or journey | Progress Bar |
+| Build a visual hero area | Background or Interactive Banner |
+| Keep supporting detail out of the main reading flow | Advanced Expand, Tooltip, or Pop-up Dialog |
+| Present equations, references, or structured data | LaTeX, Footnotes, BibTeX, HTML, or Table |
 
-Continue with [Getting started](../getting-started/), then use the [core macro reference](../core-macros/) or [extended formatting reference](../extended-formatting/).
+## The component collection
 
-## Current migration status
+Better Pages currently includes 19 page-building macros:
 
-Better Pages does not automatically read or convert data from third-party Data Center apps. Data Center migration is not part of the current product surface.
+- **Layout and visual design:** Background, Advanced Cards, Interactive Banner.
+- **Navigation and actions:** Tabs, Button, Button Group, Progress Bar.
+- **Messages and supporting detail:** Alert, Advanced Expand, Pop-up Dialog,
+  Tooltip.
+- **Technical and research content:** LaTeX Builder, LaTeX Inline, Footnote,
+  Footnote Summary, BibTeX Reference, BibTeX Summary, HTML, Table.
+
+Browse the [macro catalog](../macros/) to choose the right component for your
+page.
+
+## Designed to work with Confluence
+
+Better Pages macros live inside Confluence pages and follow the permissions of
+the signed-in user. They do not bypass page or space restrictions. Rich-body
+macros continue to use the Confluence editor for their content, while visual
+settings are managed in the Better Pages configuration panel.
+
+Interactive controls are keyboard accessible and adapt to narrow screens.
+Where an interaction cannot run in an exported PDF or Word document, Better
+Pages provides a readable static representation instead.
+
+## A good first page
+
+For your first Better Pages page, try this simple structure:
+
+1. Add an **Alert** for the most important update.
+2. Add **Advanced Cards** for the main destinations or owners.
+3. Add **Tabs** to divide detailed content into a few clear sections.
+4. Add one **Button** for the primary next action.
+
+Continue with [Getting started](../getting-started/) to build it step by step.
+
+## Availability and migration
+
+Better Pages is currently prepared for Confluence Cloud. It does not
+automatically read or convert content owned by third-party Data Center apps.
+Data Center migration is not part of the current app experience.

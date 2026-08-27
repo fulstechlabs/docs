@@ -18,12 +18,30 @@
             "slug": "better-pages/confluence-cloud/getting-started"
           },
           {
-            "label": "Core Macros",
-            "slug": "better-pages/confluence-cloud/core-macros"
+            "label": "Macro Catalog",
+            "slug": "better-pages/confluence-cloud/macros"
           },
           {
-            "label": "Extended Formatting",
-            "slug": "better-pages/confluence-cloud/extended-formatting"
+            "label": "Macro Guides",
+            "items": [
+              {
+                "label": "Alert",
+                "slug": "better-pages/confluence-cloud/macros/alert"
+              },
+              {
+                "label": "Advanced Cards",
+                "slug": "better-pages/confluence-cloud/macros/advanced-cards"
+              },
+              {
+                "label": "Button",
+                "slug": "better-pages/confluence-cloud/macros/button"
+              },
+              {
+                "label": "Tabs",
+                "slug": "better-pages/confluence-cloud/macros/tabs"
+              }
+            ],
+            "collapsed": false
           },
           {
             "label": "Administration",
