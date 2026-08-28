@@ -138,6 +138,10 @@
             "slug": "better-pages/confluence-cloud/security-and-privacy"
           },
           {
+            "label": "Privacy Policy",
+            "slug": "better-pages/confluence-cloud/privacy-policy"
+          },
+          {
             "label": "Troubleshooting and Support",
             "slug": "better-pages/confluence-cloud/troubleshooting-and-support"
           },

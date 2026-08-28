@@ -9,6 +9,13 @@ Confirm that Better Pages is installed and enabled under **Manage apps**. Reload
 the Confluence editor, open **Insert elements**, and search for `Better Pages`.
 The current catalog contains 19 authoring macros.
 
+## Better Pages says a subscription is required
+
+Ask a Confluence administrator to open **Manage apps** and start or renew the
+Marketplace evaluation or subscription. Atlassian Marketplace evaluations last
+at least 30 days. An inactive license blocks Better Pages editing and app tools
+without deleting existing Confluence content or Forge-hosted app data.
+
 ## A Button, Card, Banner, or Progress step does not open
 
 Edit the component and verify the destination. Supported values are a selected

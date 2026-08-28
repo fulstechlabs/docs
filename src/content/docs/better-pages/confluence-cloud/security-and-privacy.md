@@ -7,6 +7,9 @@ Better Pages runs on Atlassian Forge and uses Confluence Cloud APIs. Confluence
 continues to enforce the signed-in account's page, space, content, template,
 attachment, label, restriction, and administration permissions.
 
+For the customer-facing data notice, read the
+[Better Pages Privacy Policy](../privacy-policy/).
+
 ## Why the app requests permissions
 
 Better Pages reads accessible content, spaces, users, groups, attachments,
@@ -37,6 +40,15 @@ to the source the author chooses.
 
 Aggregate usage counters do not contain page IDs, users, queries, or authored
 content. Better Pages has no external analytics SDK or support chat widget.
+
+## Marketplace subscription
+
+Better Pages is a paid Marketplace product. An active subscription or
+evaluation enables normal features. When Atlassian reports an inactive license,
+authoring and app tools show a subscription-required state, backend resolver
+operations are rejected, and the Numbered Headings update trigger is skipped.
+The App does not delete Confluence content or Forge-hosted data when a trial or
+subscription ends.
 
 ## AI and external services
 
