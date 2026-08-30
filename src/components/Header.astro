@@ -31,7 +31,7 @@ const shouldRenderSearch = config.pagefind || config.components.Search !== '@ast
 
 <style>
   @layer starlight.core {
-    .ft-header { height: 100%; display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(16rem, 34rem) 1fr; align-items: center; gap: 1.5rem; }
+    .ft-header { height: 100%; display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(16rem, 34rem) minmax(max-content, 1fr); align-items: center; gap: 1.5rem; }
     .ft-brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--sl-color-white); text-decoration: none; font-size: 1.25rem; font-weight: 700; letter-spacing: -.025em; width: max-content; }
     .ft-brand b { color: var(--ft-blue); font-weight: 750; }
     .ft-header-search { min-width: 0; }
