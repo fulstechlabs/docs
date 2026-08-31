@@ -156,6 +156,66 @@
     "collapsed": true
   },
   {
+    "label": "Issue Templates",
+    "items": [
+      {
+        "label": "Jira Cloud",
+        "items": [
+          {
+            "label": "Overview",
+            "slug": "issue-templates/jira-cloud/overview"
+          },
+          {
+            "label": "Getting Started",
+            "slug": "issue-templates/jira-cloud/getting-started"
+          },
+          {
+            "label": "Templates and Supported Fields",
+            "slug": "issue-templates/jira-cloud/templates-and-fields"
+          },
+          {
+            "label": "Create, Apply, and Recreate",
+            "slug": "issue-templates/jira-cloud/create-apply-recreate"
+          },
+          {
+            "label": "Variables and Smart Values",
+            "slug": "issue-templates/jira-cloud/variables-and-smart-values"
+          },
+          {
+            "label": "Administration",
+            "slug": "issue-templates/jira-cloud/administration"
+          },
+          {
+            "label": "Native Jira Create Prefill",
+            "slug": "issue-templates/jira-cloud/native-create-prefill"
+          },
+          {
+            "label": "Backup and Restore",
+            "slug": "issue-templates/jira-cloud/backup-and-restore"
+          },
+          {
+            "label": "Security and Privacy",
+            "slug": "issue-templates/jira-cloud/security-and-privacy"
+          },
+          {
+            "label": "Privacy Policy",
+            "slug": "issue-templates/jira-cloud/privacy-policy"
+          },
+          {
+            "label": "Known Limitations",
+            "slug": "issue-templates/jira-cloud/known-limitations"
+          },
+          {
+            "label": "Troubleshooting and Support",
+            "slug": "issue-templates/jira-cloud/troubleshooting-and-support"
+          }
+        ],
+        "collapsed": true
+      }
+    ],
+    "collapsed": true
+  },
+  {
     "label": "Markdown",
     "items": [
       {
