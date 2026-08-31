@@ -22,8 +22,10 @@ Depending on the features used, stored data can include:
   references, and hierarchy definitions.
 - Jira project, issue-type, field, option, Sprint, group, account, and issue
   identifiers needed to validate or run a template.
-- Atlassian account IDs and display names selected for user fields or access
-  rules.
+- Atlassian account-ID references selected for user fields or access rules.
+  Copied profile labels, email addresses, avatars, locale, and time-zone data
+  are removed before app storage. Jira resolves the current user label when it
+  renders a user picker or Jira field.
 - Defaults, revisions, run plans, run and child status, actionable error text,
   provenance, and bounded audit events.
 - Versioned same-tenant backup documents when an administrator creates or
@@ -58,4 +60,3 @@ before uninstalling if you need help identifying the relevant configuration.
 For privacy questions or requests, use the
 [Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals).
 Do not include passwords, tokens, or unrelated confidential issue content.
-

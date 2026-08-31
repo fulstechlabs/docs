@@ -4,9 +4,9 @@ description: "Understand app permissions, Forge-hosted storage, authorization, e
 ---
 
 Issue Templates & Hierarchy Builder runs on Atlassian Forge and uses Jira Cloud
-APIs. Production version 3.0.0 is eligible for the **Runs on Atlassian**
-program. The app declares no external remote, egress domain, or runtime
-analytics service.
+APIs. The production release is eligible for the **Runs on Atlassian** program.
+The app declares no external remote, egress domain, or runtime analytics
+service.
 
 For the customer-facing privacy notice, read the
 [app privacy policy](../privacy-policy/).
@@ -20,7 +20,9 @@ Forge SQL stores the app-owned data needed to deliver and support the product:
   policy.
 - Project, issue-type, group, account, and request-context availability rules.
 - Defaults, durable runs, child outcomes, relations, and bounded audit events.
-- Atlassian account IDs and display names selected for user-field values.
+- Atlassian account-ID references selected for user-field values. Copied user
+  profile labels, email addresses, avatars, locale, and time-zone data are
+  removed before app storage and are not retained by the app.
 
 Jira issue provenance is also stored in an app-owned Jira entity property so
 the issue panel and JQL functions can explain the relationship.
@@ -61,4 +63,3 @@ customer API secrets. Runtime artwork is bundled with the Forge app.
 Production mutations fail closed unless Atlassian reports an active trial or
 paid license. Read-only configuration remains available so customers can
 understand existing data and obtain support.
-
