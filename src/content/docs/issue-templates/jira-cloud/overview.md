@@ -22,7 +22,7 @@ work.
 | Create new Jira work from a template | [Create, Apply, and Recreate](../create-apply-recreate/) |
 | Add a standard process to an existing issue | [Selective Apply](../create-apply-recreate/#apply-a-template-to-an-existing-issue) |
 | Reproduce selected live work once | [Recreate](../create-apply-recreate/#recreate-live-work-once) |
-| Ask for a teammate, date, or other run-specific value | [Variables and smart values](../variables-and-smart-values/) |
+| Ask for run-specific values or derive dates and Jira context | [Variables and Smart Values](../variables-and-smart-values/) |
 | Control who can use each template | [Administration](../administration/) |
 | Prefill Jira's standard Create dialog | [Native Create prefill](../native-create-prefill/) |
 | Protect app configuration | [Backup and restore](../backup-and-restore/) |
@@ -57,4 +57,3 @@ starter templates. Choose **Release readiness**, select **Preview create**,
 review its subtasks, and create the work when the preview is correct.
 
 Continue with [Getting started](../getting-started/) for the complete walkthrough.
-

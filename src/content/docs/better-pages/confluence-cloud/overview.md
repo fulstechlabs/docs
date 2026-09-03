@@ -12,6 +12,20 @@ The app is designed for everyday Confluence authors. Add a macro, configure it
 in a visual editor, preview the result, and publish it as part of a normal
 Confluence page.
 
+## Choose the right workflow
+
+| Your job | Use |
+| --- | --- |
+| Improve one page with a visual or interactive element | Insert a component from the [Macro Catalog](../macros/) |
+| Start a new page with a useful structure | Browse [Templates and Better Pages Home](../templates-and-home/) |
+| Reshape existing content or stage several coordinated changes | Open [Smart Designer](../smart-designer/) from the published page |
+| Review or change several pages across spaces | Use [Space Manager](../space-manager/) and confirm its plan |
+| Give authors approved colors, images, and icons | Publish [Brand Kits and Colors](../brand-kits-and-colors/) |
+| Apply consistent heading numbers | Use [Numbered Headings](../numbered-headings/) |
+
+These paths complement the normal Confluence editor. Use a page macro for a
+reader-facing component and an app tool for a page-level or space-level task.
+
 ## What can you build?
 
 | If you want to… | Start with… |
@@ -27,7 +41,7 @@ Confluence page.
 
 ## The component collection
 
-Better Pages currently includes 19 page-building macros:
+Better Pages currently includes 19 reader-facing page-building macros:
 
 - **Layout and visual design:** Background, Advanced Cards, Interactive Banner.
 - **Navigation and actions:** Tabs, Button, Button Group, Progress Bar.
@@ -38,6 +52,10 @@ Better Pages currently includes 19 page-building macros:
 
 Browse the [macro catalog](../macros/) to choose the right component for your
 page.
+
+Smart Designer also has an editor launcher, but it is a page-design workflow
+rather than a twentieth reader-facing component. Existing hidden compatibility
+macros are not offered for new authoring.
 
 ## More than macros
 
@@ -76,6 +94,8 @@ Continue with [Getting started](../getting-started/) to build it step by step.
 
 ## Availability and migration
 
-Better Pages is currently prepared for Confluence Cloud. It does not
+Better Pages is a paid Marketplace app for Confluence Cloud. Installation,
+evaluation, subscription, and billing are managed by Atlassian Marketplace.
+It does not
 automatically read or convert content owned by third-party Data Center apps.
 Data Center migration is not part of the current app experience.

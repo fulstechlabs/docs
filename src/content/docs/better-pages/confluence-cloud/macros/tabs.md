@@ -24,29 +24,33 @@ at once.
 
 ## Add a tab group
 
-Each new Tabs macro represents one tab and owns that tab's rich content.
+One new Tabs macro owns the complete group and its rich heading sections.
 
 1. Edit a page and insert **Better Pages Tabs**.
-2. Enter the **Tab name** and choose its icon and content alignment.
-3. Configure the shared appearance, then select **Save**.
-4. Edit the macro body directly on the Confluence page.
-5. Insert another **Better Pages Tabs** macro immediately before or after the
-   first one.
-6. Repeat for every tab, then publish the page.
+2. In the group editor, rename the first tab and choose its icon and content
+   alignment.
+3. Select **Add tab** for each additional section. One group supports up to 20
+   tabs.
+4. Drag tabs to reorder them, or use **Move up** and **Move down**. Choose one
+   default tab.
+5. Configure the shared appearance and review the interactive preview.
+6. Select **Save**.
+7. In the Confluence editor, add rich content under each generated heading
+   section inside the macro body, then publish the page.
 
-Adjacent Tabs macros form one group. Moving a tab away from the group starts a
-new group. Reorder tabs by moving their complete macro blocks in the Confluence
-editor.
+Deleting a tab in the group editor also deletes that tab's owned rich-content
+section. Review its content before confirming the macro update. Existing legacy
+adjacent-tab content can continue to render, but use the single-macro group
+editor for new pages.
 
 ## Configuration
 
 | Setting | What it changes |
 | --- | --- |
-| Tab name | The visible label in the tab list |
+| Tab name | The visible label in the tab list and its owned heading section |
 | Icon | A built-in or published Brand Kit icon shown with the label |
 | Content alignment | Left, center, or right alignment for this tab's body |
 | Open this tab by default | Selects the panel readers see first |
-| Hover text | Optional short context for pointer users |
 | Header style | Basic, filled, or rounded tab headings |
 | Accent color | A built-in, Brand Kit, shared palette, recent, or custom color |
 | Direction | Horizontal tabs or a vertical tab list |
@@ -54,8 +58,8 @@ editor.
 | Sticky headings | Keeps the tab controls available while reading long content |
 | Share links | Lets readers copy a URL that opens an individual tab |
 
-The latest saved presentation settings from a tab in the group apply to the
-whole group. Give every tab a unique name and choose only one default tab.
+Presentation settings apply to the whole group. Give every tab a unique name
+and choose only one default tab.
 
 ## Reader interaction
 
@@ -69,7 +73,7 @@ that tab selected when share links are enabled.
 
 ## Example structure
 
-For a release plan, create three adjacent Tabs macros:
+For a release plan, create one Tabs group with three sections:
 
 | Tab | Suggested content |
 | --- | --- |

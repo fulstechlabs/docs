@@ -34,7 +34,8 @@ Open **Release readiness** and select **Edit**. Review:
 - The Jira project and root issue type.
 - Root fields owned by the template.
 - The three child tasks and their parent relationships.
-- Any variables that users answer for each run.
+- Any variables that users answer for each run, plus supported Smart Values
+  such as `{{today+7d}}` or `{{project.key}}`.
 - Availability rules and default behavior.
 
 Save only when the project, issue type, and fields match your Jira
@@ -45,7 +46,7 @@ for the complete field list.
 
 1. Select **Preview create** on the template.
 2. Answer any required variables.
-3. Review the resolved root fields.
+3. Review the resolved root fields, especially dates and Jira-context values.
 4. Change a run-specific value if needed.
 5. Deselect any child work that is not required this time.
 6. Select the final Create action.
@@ -55,6 +56,11 @@ for the complete field list.
 The root issue is created first. Child work is then processed from a durable
 run plan. If a child fails, completed items are retained and a retry does not
 create them again.
+
+Variables are questions answered by the user. Smart Values are bounded values
+resolved by the app from the run time or Jira context. They are not the Jira
+Automation expression language. See [Variables and Smart Values](../variables-and-smart-values/)
+for the exact token list and availability rules.
 
 ## Confirm the result
 
@@ -67,4 +73,3 @@ Open the new root issue and check:
 
 Next, learn how to [Apply or Recreate work](../create-apply-recreate/) and how
 to [configure availability](../administration/).
-

@@ -3,9 +3,13 @@ title: "Macro Catalog"
 description: "Choose the right Better Pages macro for the content and interaction you want to create."
 ---
 
-Better Pages provides 19 macros for layout, navigation, communication,
-technical content, and structured data. Start with the reader's task, then
-choose the smallest component that supports it.
+Better Pages provides 19 reader-facing macros for layout, navigation,
+communication, technical content, and structured data. Start with the reader's
+task, then choose the smallest component that supports it.
+
+Smart Designer, Space Manager, templates, Brand Kits, and Numbered Headings are
+app workflows rather than additional reader-facing macros. Hidden compatibility
+macros can render existing content but are not offered for new authoring.
 
 ## Layout and visual design
 
@@ -60,3 +64,7 @@ Use a component only when it improves a reader's task:
 
 Every macro has a dedicated guide with authoring steps, reader behavior, an
 example, and practical design guidance.
+
+For a first complete page rather than an isolated component, follow
+[Getting Started](../getting-started/). For several coordinated changes to an
+existing page, use [Smart Designer](../smart-designer/).

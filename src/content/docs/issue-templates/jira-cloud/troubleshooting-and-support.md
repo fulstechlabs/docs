@@ -29,6 +29,25 @@ Read the preview or result warning. The field may have left the destination
 context, an option may no longer exist, or Jira may reject the value for the
 current user. Correct the template or destination configuration and retry.
 
+## A variable or Smart Value is blank
+
+Open Preview and check the exact token spelling. The app supports its bounded
+token catalog, not Jira Automation expressions. An unknown token or a token
+whose context does not yet exist resolves to an empty string.
+
+For example, a new root does not have `{{issue.key}}` before creation and a
+child does not have `{{parent.key}}` until its parent has been created. Avoid
+custom variable names that duplicate built-in names such as `today` or
+`project.key`. See [Variables and Smart Values](../variables-and-smart-values/)
+for the token and workflow reference.
+
+## Preview and the final Smart Value do not agree
+
+Do not confirm another run until the template is corrected. Record the
+template name and revision, flow, source/root issue key, token, previewed value,
+and final value. `currentUser.displayName` should not currently be used in
+Apply or child values; collect a readable name as a text variable instead.
+
 ## A hierarchy is partial
 
 Open **Template details** on the root issue and review each node outcome. Fix
@@ -62,4 +81,3 @@ Include:
 
 Never include passwords, tokens, full backup documents, or confidential issue
 content unless support specifically confirms a secure need and channel.
-

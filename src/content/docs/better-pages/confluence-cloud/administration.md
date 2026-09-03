@@ -63,9 +63,11 @@ the final policy and Atlassian consent dialog before saving.
 
 ## Usage audit and stored diagnostics
 
-**Macro Usage Audit Report** scans for every current Better Pages macro family
-and produces a CSV with page title, page link, and macro names. Results follow
-the administrator's Confluence access and do not inspect another vendor's data.
+**Macro Usage Audit Report** scans the report's supported Better Pages macro
+catalog and produces a CSV with page title, page link, and detected macro
+names. Results follow the administrator's Confluence access and do not inspect
+another vendor's data. The current scan does not include Button Group, so review
+known Button Group pages separately until that family appears in the report.
 
 Administrators can separately clear observed external URL inventories or reset
 aggregate usage counters. These actions do not delete pages, macro

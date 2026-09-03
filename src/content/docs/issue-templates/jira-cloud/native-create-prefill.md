@@ -7,6 +7,12 @@ Native Create prefill is an optional convenience for teams that want selected
 template values in Jira's standard **Create** dialog. It is not required for
 the app's explicit Create and Apply workflows.
 
+Native Create does not show the app's run-variable form or resolve a fresh Jira
+context for every dialog. When an administrator saves the rule, the app
+snapshots literal template values and available variable defaults into the UI
+Modification. Use explicit Create when users must answer variables or when a
+date/context value must be calculated for each run.
+
 ## How a rule works
 
 An administrator enables prefill for one exact combination of:
@@ -40,10 +46,22 @@ app's URL and cascading-select handling where Jira exposes them.
 Group picker and Sprint are not exposed to this Forge integration. They remain
 available in explicit Create and Apply.
 
+## Variables and Smart Values
+
+- Every required template variable needs a valid default before the native
+  rule can be saved.
+- Native Create cannot ask the user for a template variable. It uses the
+  default that was snapshotted when the administrator saved the rule.
+- Do not use `{{today}}`, `{{now}}`, or relative-date tokens for a date that
+  should move with each dialog opening. The saved rule contains the value
+  resolved at configuration time.
+- Issue, root, parent, and current-user context tokens are not a dependable
+  native-prefill path. Use [explicit Create](../create-apply-recreate/) and
+  confirm the resolved preview instead.
+
 ## Platform boundary
 
 Only one UI Modifications app can operate in a given context. Atlassian may
 also change which fields a Jira Create surface exposes. Keep explicit Create
 as the dependable cross-context path and verify a new rule in its exact project
 and issue type before announcing it to users.
-

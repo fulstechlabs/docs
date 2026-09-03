@@ -11,13 +11,25 @@ page. You do not need design or development experience.
 You need:
 
 - A Confluence Cloud site with Better Pages installed.
+- An active Marketplace evaluation or subscription.
 - Permission to create or edit a page.
 - A Confluence administrator only if the app still needs to be installed or
   site-wide settings must be changed.
 
-During private availability, your administrator installs Better Pages with the
-installation link supplied for your test environment. After installation,
+If the app is not installed, a Confluence administrator opens the Better Pages
+Marketplace listing, selects **Try it free**, chooses the destination site, and
+reviews Atlassian's installation and permission screens. After installation,
 Better Pages appears in the Confluence macro browser and under **Apps**.
+
+## Find each Better Pages tool
+
+| Location | What you can do there |
+| --- | --- |
+| Confluence page editor | Insert and configure the 19 reader-facing macros |
+| **Apps → Better Pages** | Browse templates and start page-building journeys |
+| Published page byline | Open Smart Designer for a reviewed page-level change |
+| **Apps → Better Pages Space Manager** | Inventory pages and preview multi-page operations |
+| Confluence administration | Manage Brand Kits, colors, templates, feature controls, external policy, and diagnostics |
 
 ## Add a macro
 
@@ -40,6 +52,8 @@ edit that content with the normal Confluence editor.
 
 Use the following four components to create a compact project or team landing
 page.
+
+![A complete product-launch page built from Better Pages components](./images/product-launch-page.jpg)
 
 ### 1. Lead with an Alert
 
@@ -66,9 +80,10 @@ color, reordering, and destinations.
 
 ### 3. Organize the details
 
-Insert **Better Pages Tabs** and create three tabs such as **Overview**,
-**Readiness**, and **Decisions**. Put the detailed Confluence content inside
-the matching tab body.
+Insert one **Better Pages Tabs** macro and create three tabs such as
+**Overview**, **Readiness**, and **Decisions** in its group editor. After saving
+the macro, put the detailed Confluence content inside the matching heading
+section in the macro body.
 
 See the [Tabs guide](../macros/tabs/) for styling, default tabs, shareable tab
 links, and keyboard behavior.

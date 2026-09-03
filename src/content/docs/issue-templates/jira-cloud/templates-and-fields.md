@@ -25,6 +25,21 @@ The app stores stable Jira field IDs and compact schema information. Field
 names remain readable labels and can change without becoming the field's
 identity.
 
+## Add reusable and dynamic values
+
+Use the **Insert variable** controls beside compatible root and child text
+values to add tokens such as `{{version}}`. Date fields also provide shortcuts
+for **Today**, **In 7 days**, and **In 1 month**.
+
+Typed Jira fields should normally keep their typed editor. For example, choose
+a user with Jira's User picker and choose a Sprint from the discovered Sprint
+options. Do not place a text token into a Jira option ID unless that exact path
+has been verified in Preview.
+
+Read [Variables and Smart Values](../variables-and-smart-values/) before using
+context tokens such as `{{issue.key}}` or `{{parent.key}}`; some Jira values do
+not exist until a particular operation or child creation step.
+
 ## Capture an existing issue
 
 Use **Create template from issue** when a live issue already represents the
@@ -62,4 +77,3 @@ hierarchy.
 
 See [Known limitations](../known-limitations/) for Rank, Assets, third-party
 fields, and native Create-specific boundaries.
-

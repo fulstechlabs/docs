@@ -12,9 +12,10 @@ The current catalog contains 19 authoring macros.
 ## Better Pages says a subscription is required
 
 Ask a Confluence administrator to open **Manage apps** and start or renew the
-Marketplace evaluation or subscription. Atlassian Marketplace evaluations last
-at least 30 days. An inactive license blocks Better Pages editing and app tools
-without deleting existing Confluence content or Forge-hosted app data.
+Marketplace evaluation or subscription. The Marketplace listing shows the
+current evaluation and pricing terms. An inactive license blocks Better Pages
+editing and app tools without deleting existing Confluence content or
+Forge-hosted app data.
 
 ## A Button, Card, Banner, or Progress step does not open
 
@@ -23,11 +24,16 @@ Confluence page, an `https://` address, a relative path beginning with `/`, an
 anchor beginning with `#`, or a valid `mailto:` address. Credentials,
 protocol-relative URLs, `javascript:`, and local-file schemes are rejected.
 
-## Tabs do not form one group
+## A tab is missing or shows the wrong content
 
-Each Tabs macro represents one tab. Put the Tabs macro blocks directly next to
-one another. A normal block between them separates the groups. Give each tab a
-unique name and select only one default tab.
+For new pages, one Tabs macro owns the complete group. Open its configuration,
+confirm every tab is present and uniquely named, and choose one default tab.
+After saving, keep each rich-content block under its matching generated heading
+inside the same macro body.
+
+Deleting a tab also deletes its owned heading section. If the page contains
+older adjacent Tabs macros, leave that compatibility content intact or rebuild
+it deliberately as one current tab group; do not mix the two authoring models.
 
 ## Footnotes or references are missing from a summary
 
