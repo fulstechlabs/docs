@@ -94,12 +94,41 @@ For longer editing sessions, turn **Auto preview** off:
 
 If the source changes again, refresh the preview again before saving. Turn **Auto preview** back on to resume automatic updates. This preference applies to the current editor session; it is not saved as a page setting.
 
-### Download a Mermaid SVG
+### Customize a Mermaid diagram
 
-The preview editor includes **Download SVG** for the current Mermaid diagram. Like Save, this action waits for a preview matching the current source. It does not save the macro or publish the page.
+Use **Configuration** to change Mermaid settings without having to write YAML yourself. For example, you can change a theme or whether sequence diagrams repeat their actor boxes at the bottom.
 
-:::caution[Download validation]
-SVG file generation has passed local browser tests, but successful file delivery from the Forge editor on a Confluence test site is still being verified. Personal Library file export/import and Confluence PDF/Word exports also remain under validation. Do not rely on these flows for backups or production migration yet.
+1. Choose **Configuration**. The JSON editor shows the settings already in your source, or `{}` if none are present.
+2. Enter a JSON object. For a sequence diagram, try:
+
+   ```json
+   {
+     "theme": "forest",
+     "sequence": {
+       "mirrorActors": false
+     }
+   }
+   ```
+
+3. Choose **Apply configuration**. The editor adds or updates `config` in the source's YAML frontmatter. Diagram code stays below that block. Applying settings can reformat the frontmatter, but does not save the macro or publish the page.
+4. Review the preview. If Auto preview is off, choose **Preview now**. Then Save and Update the page as usual.
+
+Choose **Cancel configuration** to leave the source unchanged. Invalid JSON is not applied. If you edit Source while Configuration is open, cancel and reopen Configuration before applying settings to the latest source. Enter `{}` to clear the frontmatter's configuration overrides.
+
+Settings travel with the source: Local history restores them together, and image exports use the matching configured preview. There is no separate settings copy to synchronize. Mermaid controls which options may be overridden; platform-controlled options cannot be changed here. Advanced YAML configuration with anchors remains editable directly in Source if the JSON panel cannot safely edit it.
+
+### Download or copy a Mermaid image
+
+Choose **Download SVG** for a vector image, **Download PNG** for a raster image, or **Copy image** to put a PNG on your clipboard. These actions wait for a preview matching the current source and configuration. They do not save the macro or publish the page.
+
+For a PNG, expand **PNG options** and optionally enter **PNG width (pixels)**. Leave it blank to use the diagram's original size. The exporter preserves the aspect ratio and uses a white background. Preview zoom does not change export size. If the requested image exceeds 8192 pixels on either side or 16 megapixels, choose a smaller width or download SVG. Linked external images are rejected by PNG export instead of being silently omitted.
+
+If Chrome opens a **Save** dialog, choose a destination and finish saving there. “PNG prepared” means the file is ready for the browser to save, not that the download is already on disk. For Copy image, paste into an application that accepts images; for example, use **Edit → Paste** in a Confluence page editor. If clipboard access is unavailable or denied, use Download PNG instead.
+
+PNG/SVG downloads and pasting a copied image into Confluence have been checked in Chrome on a test site. This is not a source backup: keep the editable Mermaid source if you need to change the diagram later.
+
+:::caution[Other exports still under validation]
+Personal Library file export/import and Confluence PDF/Word exports remain under validation. Image export does not prove those separate flows are ready for production migration.
 :::
 
 ### Start with a sample or find syntax help
