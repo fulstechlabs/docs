@@ -231,6 +231,26 @@ If a file contains an invalid entry or configuration, the complete import is rej
 The Connect-format import, restore confirmation, configured preview, export preservation and reload have been checked in Chrome using a test file matching the Connect export format. A file downloaded from an actual Connect editor has not yet completed this validation. This is not an assurance of complete Connect history migration.
 :::
 
+### Load Mermaid from a GitHub Gist
+
+Use this when a diagram is already maintained in a GitHub Gist containing **code.mmd** and, optionally, **config.json**. The app reads the Gist without signing in to GitHub; a Gist that requires authentication is not supported. Do not enter access tokens in the URL.
+
+1. Open **Local history** and find **Load Mermaid from GitHub Gist**.
+2. Paste an HTTPS URL such as `https://gist.github.com/owner/id`. You can also paste a URL ending in a revision ID.
+3. Choose **List Gist revisions** to inspect available revisions. Select one from **Gist revision**; **More Gist revisions** appears when another page is available. Leaving the selection at **Latest revision** imports the revision current when the request runs. If your URL includes a revision, the default is **Revision in URL** instead.
+4. Choose **Import Gist snapshot**. This adds a manual snapshot to Local history; it does not replace your current source or publish anything. Importing the same Gist revision again does not create a duplicate.
+5. Choose **Restore** on the imported snapshot and confirm. The editor keeps your replaced source as **Before restore**. Review the diagram and configuration, then use the normal **Save → Update** workflow when you want to publish it.
+
+**Cancel Gist request** stops an in-progress request. Changing the URL also cancels the previous request. If GitHub denies access, rate-limits the request, or returns incomplete/invalid content, your current diagram remains unchanged. A browser-storage error prevents the imported snapshot from being saved; do not clear your existing history as a workaround.
+
+This is a one-time import, not synchronization: later Gist edits do not update your page. Revision metadata is loaded in pages; source is fetched only for the revision you import. The snapshot retains its original code, configuration and revision metadata in **Export history**. Mermaid settings in the source's frontmatter take precedence over `config.json`.
+
+GitHub receives the requested Gist address and the browser's network request. The loader does not upload your current editor source, use a GitHub account token, or send a page referrer. The imported snapshot is browser-local until you explicitly save its source into a diagram. See [Data processing](#data-processing) for the external hosts involved.
+
+:::note[Preview validation boundary]
+Listing real Gist revisions, importing a selected revision and restoring its configured diagram have been checked in Chrome on a Forge test tenant. Publication/reopen of imported Gist content and large-file/paginated-history variants are still under validation. This is not a production availability announcement.
+:::
+
 ## Existing Connect diagrams
 
 The intended upgrade replaces the existing app on the same site and Marketplace listing. Users should not recreate all their pages or remove the existing app.
@@ -252,6 +272,7 @@ The Forge version uses Atlassian-hosted app resources and Forge storage, but it 
 | Graphviz | Diagram source is encoded into a request to **kroki.io** for rendering |
 | PlantUML | Diagram source is encoded into a request to **www.plantuml.com** for rendering |
 | DrawIO | Diagram XML is passed to an editor loaded from **embed.diagrams.net** |
+| Mermaid Gist import | On an explicit request, the browser reads revision metadata and source/configuration from **api.github.com** and, for truncated files, **gist.githubusercontent.com**. This does not upload the current diagram to GitHub. |
 | Fonts | The app permits font resources from **esm.sh** |
 
 Encoding a diagram in a URL does not encrypt it. Storing a copy in Forge does not mean that no external service processes the content. Check your organization's data-handling requirements before using externally processed diagram types. This guide does not make a claim about those services' retention policies or regulatory certification.
