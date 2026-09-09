@@ -94,7 +94,7 @@ Simulation is an editing aid, not a workflow engine: it does not execute busines
 
 Turn simulation off to review the normal diagram appearance. In the current Forge preview, **Save** also turns simulation off automatically before creating the saved preview, so temporary simulation colors are not saved as your diagram's colors. Then select **Update** or **Publish** on the Confluence page to make the changes visible to readers.
 
-If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow the recovery guidance below. Do not assume that an error means the page is ready to publish.
+If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow [Open and save a diagram](#open-and-save-a-diagram). Do not assume that an error means the page is ready to publish.
 
 To change a task's color, select it, choose **Set Color**, then a swatch. Save the diagram and Update the page to publish the color. To add a standalone task, choose **Create Task** from the left palette and place it on the canvas; adding a task does not automatically connect it to the process. **Reset** restores the model loaded at editor open, discarding current unsaved edits such as label, color or added-task changes.
 
