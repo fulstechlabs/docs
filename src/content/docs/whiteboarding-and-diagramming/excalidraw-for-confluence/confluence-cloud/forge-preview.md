@@ -214,6 +214,10 @@ Snapshots stay in this browser, separated by site, signed-in account, page and m
 
 If a history write fails, the editor reports it instead of pretending the snapshot was saved. A restore that cannot preserve the current source stops without replacing it. If history is unavailable because the editor lacks a complete account/site/page/macro identity, you can still use the normal diagram editor; do not remove or recreate the macro to work around the history message.
 
+When you first save a Connect Mermaid macro through Forge, the editor preserves snapshots made in that Forge editing session across the macro's change of identity. This is separate from importing history held by the old Connect editor. Keep an exported backup: it does not automatically recover snapshots that became unavailable during an earlier upgrade or app version.
+
+If a message says that the diagram was saved to the page draft but local history could not follow it, keep the editor open. Use **Export history** to protect your snapshots, then retry **Save**. Do not recreate the macro or repeatedly publish the page to resolve a browser-history problem. A draft save still requires Confluence **Update** to publish.
+
 #### Bring a Connect Mermaid history file
 
 History transfer is manual and separate from upgrading the diagram stored on a page. Before upgrading, keep copies of any browser history you want to retain:
@@ -248,7 +252,7 @@ This is a one-time import, not synchronization: later Gist edits do not update y
 GitHub receives the requested Gist address and the browser's network request. The loader does not upload your current editor source, use a GitHub account token, or send a page referrer. The imported snapshot is browser-local until you explicitly save its source into a diagram. See [Data processing](#data-processing) for the external hosts involved.
 
 :::note[Preview validation boundary]
-Listing real Gist revisions, importing a selected revision and restoring its configured diagram have been checked in Chrome on a Forge test tenant. Publication/reopen of imported Gist content and large-file/paginated-history variants are still under validation. This is not a production availability announcement.
+Listing real Gist revisions, importing a selected revision, restoring its configured diagram and publishing/reopening the imported source have been checked in Chrome on a Forge test tenant. Large-file/paginated-history variants and preservation of Gist snapshot metadata across the first Connect-to-Forge save still require validation. This is not a production availability announcement.
 :::
 
 ## Existing Connect diagrams
@@ -258,6 +262,10 @@ The intended upgrade replaces the existing app on the same site and Marketplace 
 When supported Connect data is opened in the Forge editor, a legacy-data notice explains that migration has not yet been saved. Review the loaded content before choosing **Save**, then update the page. Opening or viewing a page is not an instruction to overwrite its stored diagram.
 
 If the editor reports that legacy data is unreadable or read-only, leave the original macro in place and contact support. Do not reset the scene, delete the macro, or paste unrelated content over it to clear the message. Keep the page URL and version available for investigation.
+
+A missing preview is not an empty diagram. For an unreadable Mind Map, **Save** is disabled even when there is no preview image; choose **Close** and keep the original page for investigation. By contrast, a valid Mind Map with just one root topic is editable and can be saved normally.
+
+Confluence may create an unpublished draft or update its macro wrapper when you open an older macro's configuration. This does not mean that the published diagram has been migrated. Review the page's draft separately; closing its editor is not a way to delete an existing draft.
 
 :::note[Validation still in progress]
 Core same-site upgrade, rendering and edit/save/reopen flows have been checked on controlled Connect-created examples for Excalidraw, Mermaid, Graphviz, PlantUML, Mind Map and BPMN. This does not cover every historical diagram. The current DrawIO Connect-before-upgrade flow remains unverified because the Connect editor did not provide usable creation controls in the test environment. PDF/Word output and additional feature cases are also still being validated. Do not treat this preview as an assurance of production migration readiness.
