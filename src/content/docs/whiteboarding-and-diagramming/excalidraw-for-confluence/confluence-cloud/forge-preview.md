@@ -43,6 +43,17 @@ Use the shape and text tools to build your drawing. Double-click existing text t
 
 Fonts may finish loading shortly after the editor opens. Wait until the intended font is visible before reviewing the drawing. If a font remains incorrect, report it rather than changing your original text to compensate.
 
+If Save reports that a required font has not loaded, keep the editor open and retry after the font loads. The failed save does not apply the current edits to the macro. Avoid closing or reloading the editor while you have unsaved work.
+
+#### Reuse drawings with Personal Library
+
+1. Select the shapes and text you want to reuse on the canvas.
+2. Open **Library** and choose the **+** thumbnail to add the selection.
+3. Click a saved item's thumbnail to insert it into the current drawing. Move it to the desired position; it may initially overlap existing content. Use **Undo** if you did not want the insertion.
+4. Save the diagram and update the Confluence page to publish the inserted content.
+
+Library items are stored separately in this browser's local storage. Adding an item does not publish or change the page, and closing the diagram editor without Save does not undo the library addition. Do not rely on the library as a backup: clearing browser data can remove it, and it is not a shared team library or cross-browser sync service. Automatic transfer of a library from the old Connect editor has not been verified.
+
 ### Mind Map
 
 Double-click a topic to rename it. Select a topic and press **Tab** to add a child. Use the branch's **−** and **+** controls to collapse and expand its descendants. Reopen a saved map to continue editing its topics, not just its preview image.
@@ -68,6 +79,26 @@ flowchart LR
 ```
 
 The published diagram is a visual representation. A diagram arrow is not automatically a Confluence navigation link or an executable action.
+
+### Control the Mermaid preview
+
+**Auto preview** is on when you open the editor. After you pause typing, the preview refreshes. **Save** remains disabled until the preview matches the current source, so a previous diagram image is not saved with newly edited source.
+
+For longer editing sessions, turn **Auto preview** off:
+
+1. Edit the source. The previous preview stays visible while you type.
+2. Choose **Preview now**, or press **Cmd+Enter** on macOS / **Ctrl+Enter** on Windows or Linux while the source editor has focus.
+3. Review the refreshed diagram, then choose **Save** and update the Confluence page.
+
+If the source changes again, refresh the preview again before saving. Turn **Auto preview** back on to resume automatic updates. This preference applies to the current editor session; it is not saved as a page setting.
+
+### Download a Mermaid SVG
+
+The preview editor includes **Download SVG** for the current Mermaid diagram. Like Save, this action waits for a preview matching the current source. It does not save the macro or publish the page.
+
+:::caution[Download validation]
+SVG file generation has passed local browser tests, but successful file delivery from the Forge editor on a Confluence test site is still being verified. Personal Library file export/import and Confluence PDF/Word exports also remain under validation. Do not rely on these flows for backups or production migration yet.
+:::
 
 ## Existing Connect diagrams
 
