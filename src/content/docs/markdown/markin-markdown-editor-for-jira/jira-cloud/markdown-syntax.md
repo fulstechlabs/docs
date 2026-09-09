@@ -1,10 +1,13 @@
 ---
 title: "Markdown Syntax"
+description: "Copy Markdown, LaTeX, Mermaid, Graphviz, and Gherkin examples for Forge 3.6.0."
 ---
 
 ## Overview
 
-![Markdown for Jira](../../../assets/-Ma8B10HXqr1ay8bB3me.png)
+Use these examples in the **Rich Text Custom Fields** editor, click **Preview**, then return to **Edit** and **Save**. Syntax illustrations below come from the earlier editor; they demonstrate formatting, not the current Forge UI. Image loading and attachment behavior changed in Forge, as explained below.
+
+Math examples intentionally use doubled backslashes in Markdown source so the renderer preserves the LaTeX delimiters. Keep formulas outside fenced code blocks when you want them rendered.
 
 ## Autocompletion
 
@@ -185,6 +188,8 @@ Class08 <--> C2: Cool label
 - [ ] this is an incomplete item
 ```
 
+Edit the source marker and save to change a task's state. Clicking a rendered checkbox is not a persisted checklist workflow.
+
 ![](../../../assets/-Mf2m6D0HC1hxW5l3ocI.png)
 
 ### Using emoji
@@ -199,15 +204,17 @@ Class08 <--> C2: Cool label
 
 Type `@` and select the user to be mentioned.
 
+This inserts a user reference; it does not guarantee a Jira mention notification.
+
 ![](../../../assets/remote-1c17d6c00f6cb6a0.png)Input
 
 ![](../../../assets/remote-78843caf54ebf61f.png)Render
 
-### Inserting attachments as images <a href="#inserting-attachments-as-images" id="inserting-attachments-as-images"></a>
+### Linking issue attachments <a href="#inserting-attachments-as-images" id="inserting-attachments-as-images"></a>
 
 Type `@@` and select the attachment to be inserted.
 
-![](../../../assets/remote-8bf5461accf4f29b.png)
+Select an attachment already on this issue. The Forge renderer displays supported attachment references as links, not embedded images. This is not an upload tool; Jira permissions apply when opening the file.
 
 ### Images
 
@@ -215,12 +222,12 @@ Type `@@` and select the attachment to be inserted.
 ![Markdown Logo (Source: Wikipedia)](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 ```
 
-![Render](../../../assets/-Mf2nEOcCnu-YkdMfpg4.png)
+In Forge 3.6.0 this example displays a link with the image's alternative text, **not** the remote image. The app does not automatically fetch the external URL.
 
 ### Links
 
 ```markdown
-[Markin](https://marketplace.atlassian.com/plugins/com.fulstech.jira-gherkin-custom-field/server/overview)
+[Markdown for Jira](https://marketplace.atlassian.com/apps/1214558)
 ```
 
 ![Render](../../../assets/-Mf2ok4GPY4HlRA71D1Y.png)

@@ -229,15 +229,31 @@
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/overview"
               },
               {
-                "label": "Create a Markdown-enabled Custom Field",
+                "label": "Get started",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/getting-started"
+              },
+              {
+                "label": "Configure Markdown fields",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/create-a-markdown-enabled-custom-field"
+              },
+              {
+                "label": "Use the editor",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/using-the-editor"
               },
               {
                 "label": "Markdown Syntax",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/markdown-syntax"
               },
               {
-                "label": "Support",
+                "label": "Upgrading from Connect",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/upgrading-from-connect"
+              },
+              {
+                "label": "Security and privacy",
+                "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/security-and-privacy"
+              },
+              {
+                "label": "Troubleshooting and support",
                 "slug": "markdown/markin-markdown-editor-for-jira/jira-cloud/support"
               }
             ],

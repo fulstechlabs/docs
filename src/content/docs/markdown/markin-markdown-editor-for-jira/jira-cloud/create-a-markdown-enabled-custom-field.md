@@ -1,78 +1,49 @@
 ---
-title: "Create a Markdown-enabled Custom Field"
+title: "Configure Markdown fields"
+description: "Configure existing Jira fields or the Forge-owned Rich Text Editor Custom Field."
 ---
 
-Since it is impossible for a Jira Cloud's app to create its own custom field type, Markin provides Markdown Editor for fields of Jira Cloud’s built-in types. This gives you important benefits:
+## Choose a field
 
-* All Markdown data is stored securely in your Jira Cloud the same way other Jira data is stored. **Your data will never be stored on our site.**
-* Search, JQL, export, API, email notifications, and other field-related utilities will work the same way other fields work.
+| Field | Behavior |
+| --- | --- |
+| Jira Description | Enable for selected issue types; Markdown is stored in a Jira document code block |
+| Classic Jira multiline text field | Supported when its schema is Jira's standard textarea type |
+| **Rich Text Editor Custom Field** | App-owned Forge string field; edited through the app panel |
+| Other field types | Arbitrary single-line strings, numbers, selects, and other apps' fields are not supported |
 
-Please follow the instructions below to create a Markdown-enabled custom field.
+A field named Paragraph is not necessarily compatible: the underlying Jira schema matters. Use the eligible fields shown in the selector. Do not assume every team-managed Paragraph field is supported. The documented validation baseline is company-managed Jira Software; check your project's configuration before rollout.
 
-## Create a new custom field
+## Configure an existing field
 
-### Company-managed projects (classic projects)
+1. Open **Project settings → Apps → Markdown Fields**.
+2. Select a field and click **Add**.
+3. Check the issue types that should show it in the panel.
+4. Optionally enable **Also highlight Gherkin keywords**.
+5. Click **Save** and open an issue of a selected type.
 
-#### New Jira Cloud UI
+Repeat for each field and project. To disable a mapped field, click **Remove**, then **Save**. This removes its mapping, not the Jira field or stored content.
 
-Create a new custom field of type **Paragraph (supports rich text)**. Configure the custom field (name, description, screens) normally. The renderer must be **Default Text Renderer.**
+## Create an app-owned field
 
-![Markdown for Jira](../../../assets/XJMxe0UAuvHafZMzMGIK.png)
+A Jira administrator can create a custom field using the app's **Rich Text Editor Custom Field** type.
 
-![Markdown for Jira](../../../assets/rRhX1iclBIxrIPaSEviI.png)
+1. Open Jira administration's custom fields page.
+2. Create a field of type **Rich Text Editor Custom Field**.
+3. Give it a name such as **Technical notes** and configure its context and applicable screens.
+4. Return to **Project settings → Apps → Markdown Fields**. App-owned fields appear separately from the existing-field selector, with a Gherkin option.
+5. Save any setting change. Open **Rich Text Custom Fields** on an issue to enter content.
 
-#### Old Jira Cloud UI
+App-owned fields use Jira field context for applicability, not the existing-field issue-type checkboxes.
 
-Create a new custom field of type **Text Field (multi-line)**. Configure the custom field (name, description, screens) normall&#x79;**.**
+:::note
+The app-owned field is intentionally read-only in Jira's standard editor, including Create and transition forms. Edit it in the app panel after the issue exists.
+:::
 
-![Markdown for Jira](../../../assets/-Ma8B0yx6P3rvej6oQOL.png)
+## Working alongside Jira's editor
 
-### Team-managed projects (nextgen projects)
+Use the app panel consistently for Markdown content. Jira's native editor may show source or a code block instead of the formatted view.
 
-Create a custom field of type **Paragraph**.
+Preserve a copy before enabling a populated Description. Saving through the app updates the field; it does not merge Markdown into an arbitrary existing rich-text document.
 
-![Markdown for Jira](../../../assets/C8Re0exX6rWs7NwVMikK.png)
-
-## Configure the newly created custom field as a Markdown field
-
-Go to the **Project Settings** page of the corresponding project. Select **Markdown Fields** under the **Apps** menu. In the configuration page, select the field created in Step 1 along with all issue types in which you want it to appear as Markdown content.
-
-Optionally you can turn on/off highlighting Gherkin keywords.
-
-![Markdown for Jira](../../../assets/h9nJTl8ruOUQD5at7jWE.png)
-
-## Create an issue for testing
-
-Create an issue for testing. Click on the **More Options (three-dots)** button. You should see the **Markdown Fields** section. The fields configured in the above steps should be displayed in the section.
-
-![Markdown for Jira](../../../assets/-Ma8B0z-ShZ3a7DY9jGW.png)
-
-Click on the fields inside the **Markdown Fields** panel to edit the content.
-
-> **warning**
->
-DO NOT edit the fields using Jira's built-in editors outside the **Markdown FIelds** panel.
-
-![Markdown for Jira](../../../assets/MryPn1c55c6ZqgXqs0Tw.png)
-
-![Markdown for Jira](../../../assets/nz75C8PVw9rCswnPtAyD.png)
-
-## Hide the original field editor
-
-**If your project is company-managed (formerly classic),** you can also hide the original field editor. Please see the instructions here <https://support.atlassian.com/jira-software-cloud/docs/configure-field-layout-in-the-issue-view/#Configurefieldlayoutintheissueview-Hiddenfields>.
-
-![Markdown for Jira](../../../assets/-Ma8B0z4-W1q9tNPNHCy.png)
-
-## Fulstech AI Copilot for Writing (Preview)
-
-AI Copilot leverages OpenAI's ChatGPT to help you revise the content effectively.
-
-> **info**
->
-This feature is powered by OpenAI's ChatGPT. The data you submit and the responses you receive are not used to fine-tune or improve OpenAI’s models or services. Each data request is sent to OpenAI individually, over an SSL-encrypted service, to process and send back to your Jira. OpenAI does not store the data you submit or the responses you receive.
-
-![Markdown for Jira](../../../assets/WAh4q9UPpokoIsQSc0BD.png)
-
-To disable the feature, please click on the **Configure** button on the Jira Plugin Manager page.
-
-![Markdown for Jira](../../../assets/maiVTeuCRYJMg2JDd96I.png)
+Do not delete or recreate fields when upgrading. See [Upgrading from Connect](../upgrading-from-connect/).
