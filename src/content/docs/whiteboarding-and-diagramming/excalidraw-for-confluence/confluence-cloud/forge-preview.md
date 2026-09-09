@@ -43,11 +43,17 @@ If Save says that Confluence has not confirmed the macro in the page draft yet, 
 
 Use the shape and text tools to build your drawing. Double-click existing text to edit it. **Undo** and **Redo** let you review changes before saving. Use **Zoom in**, **Zoom out**, and **Reset zoom** to navigate the canvas. **Grid mode** displays a drawing grid; it is not additional diagram content.
 
+Turn on **View mode** to inspect the drawing without editing it; turn it off to use the drawing tools again. **Zen mode** reduces surrounding controls so you can focus on the canvas. These controls change how you work in the editor, not the meaning of the diagram.
+
+**Reset Scene** restores the drawing loaded when you opened the editor. It removes your current unsaved drawing changes; it does not restore an older Confluence page version. To leave without applying edits, choose **Close** instead of Save.
+
 Fonts may finish loading shortly after the editor opens. Wait until the intended font is visible before reviewing the drawing. If a font remains incorrect, report it rather than changing your original text to compensate.
 
 If Save reports that a required font has not loaded, keep the editor open and retry after the font loads. The failed save does not apply the current edits to the macro. Avoid closing or reloading the editor while you have unsaved work.
 
 #### Reuse drawings with Personal Library
+
+The editor's **Personal Library help** link opens this section in another tab. Confluence asks you to confirm the navigation; cancelling or opening help leaves the current drawing in the editor.
 
 1. Select the shapes and text you want to reuse on the canvas.
 2. Open **Library** and choose the **+** thumbnail to add the selection.
@@ -56,17 +62,25 @@ If Save reports that a required font has not loaded, keep the editor open and re
 
 Library items are stored separately in this browser's local storage. Adding an item does not publish or change the page, and closing the diagram editor without Save does not undo the library addition. Do not rely on the library as a backup: clearing browser data can remove it, and it is not a shared team library or cross-browser sync service. Automatic transfer of a library from the old Connect editor has not been verified.
 
+To download a library copy, open the three-dot menu beside **Personal Library**, choose **Save to...**, and finish the browser's Save dialog. The download is an `.excalidrawlib` file, separate from the current page's drawing. File export has been checked in Chrome; importing that file back through **Open** is still under validation. Keep your original library and do not reset it just to try an import.
+
 ### Mind Map
 
 Double-click a topic to rename it. Select a topic and press **Tab** to add a child. Use the branch's **−** and **+** controls to collapse and expand its descendants. Reopen a saved map to continue editing its topics, not just its preview image.
+
+Choose **Close** without Save to leave the stored map unchanged. A changed topic is not published merely because it appears on the editing canvas.
 
 ### BPMN
 
 Select an element to open its context controls. For example, **Append EndEvent** adds an end event connected to the selected task. **Token Simulation** lets you explore a process; trigger a start event and open the simulation log to follow execution. Simulation is an editing aid, not a workflow engine that executes business actions in Confluence. Turn simulation off before reviewing and saving the diagram.
 
+To change a task's color, select it, choose **Set Color**, then a swatch. Save the diagram and Update the page to publish the color. To add a standalone task, choose **Create Task** from the left palette and place it on the canvas; adding a task does not automatically connect it to the process. **Reset** restores the model loaded at editor open, discarding current unsaved edits such as label, color or added-task changes.
+
 ### DrawIO
 
 The Forge preview uses draw.io's standard editor layout, with shape libraries on the left and formatting on the right. **Save & Exit** and **Exit** are in the top toolbar. Your browser language can change these labels. Saving requires both reusable diagram XML and a preview image; a save error is not confirmation that the page has been updated.
+
+To leave without saving, choose **Exit**. If you changed the diagram, draw.io asks whether to discard those changes. Confirm discarding only when you no longer need the unsaved edits. This is different from **Save & Exit**, which applies the diagram changes to the page draft.
 
 ## Text-defined diagrams
 
@@ -81,6 +95,22 @@ flowchart LR
 ```
 
 The published diagram is a visual representation. A diagram arrow is not automatically a Confluence navigation link or an executable action.
+
+### Share editable Mermaid source
+
+Expand **Share Mermaid source** in the Mermaid editor:
+
+- **Copy Markdown** copies a fenced `mermaid` code block.
+- **Download Markdown** saves the same kind of block in a Markdown file.
+- **Download source (.mmd)** saves the exact source, including its configuration and current unsaved edits.
+
+These actions do not save the macro or update the Confluence page. A receiving tool must support Mermaid to display the Markdown as a diagram; otherwise it shows code. This is not an externally hosted image link, a Confluence page share, or a GitHub Gist integration. Use PNG or SVG when the recipient needs an image. If clipboard access fails, use a download instead. You can back up invalid source before fixing its syntax, but finish or cancel any pending configuration/sample decision first.
+
+### Inspect Mermaid in Full view
+
+Choose **Full view** once the preview matches the current source. It opens a larger read-only view inside Confluence. Use zoom and pan to inspect details; **Back to editor** or Escape returns to the same source editor without saving anything. The view displays the rendered snapshot from the moment you opened it, not a separately editable diagram.
+
+Full view is not a standalone browser page or a shareable URL. Its size is controlled by Confluence and your browser window. For edits, return to the editor, change the source, and wait for a fresh preview before opening Full view again.
 
 ### Control the Mermaid preview
 
@@ -128,7 +158,7 @@ If Chrome opens a **Save** dialog, choose a destination and finish saving there.
 PNG/SVG downloads and pasting a copied image into Confluence have been checked in Chrome on a test site. This is not a source backup: keep the editable Mermaid source if you need to change the diagram later.
 
 :::caution[Other exports still under validation]
-Personal Library file export/import and Confluence PDF/Word exports remain under validation. Image export does not prove those separate flows are ready for production migration.
+Personal Library file import and Confluence PDF/Word exports remain under validation. Downloading a library or image does not prove those separate flows are ready for production migration.
 :::
 
 ### Start with a sample or find syntax help
