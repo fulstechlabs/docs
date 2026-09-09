@@ -78,7 +78,23 @@ Choose **Close** without Save to leave the stored map unchanged. A changed topic
 
 ### BPMN
 
-Select an element to open its context controls. For example, **Append EndEvent** adds an end event connected to the selected task. **Token Simulation** lets you explore a process; trigger a start event and open the simulation log to follow execution. Simulation is an editing aid, not a workflow engine that executes business actions in Confluence. Turn simulation off before reviewing and saving the diagram.
+Select an element to open its context controls. For example, **Append EndEvent** adds an end event connected to the selected task.
+
+#### Walk through a process
+
+1. Turn on **Token Simulation**. The diagram switches to its simulation appearance; your modeling colors return when you turn simulation off.
+2. Choose **Slow**, **Normal**, or **Fast** using the speed controls at the bottom of the canvas. Slow is useful when explaining the path through a diagram.
+3. Trigger the start event. Open **Simulation Log** to follow the process events.
+4. While a token is moving, use **Play/Pause Simulation** to pause it. Press the control again to resume. You can select another speed before resuming.
+5. For a connected Start → Task → End example, the token reaches the end and displays **Finished**. Use **Reset Simulation** to clear the run and try again; this is different from the editor's **Reset** button.
+
+Simulation is an editing aid, not a workflow engine: it does not execute business actions in Confluence. A successful simulation is not a certification that a complex business process is valid.
+
+#### Save after simulation
+
+Turn simulation off to review the normal diagram appearance. In the current Forge preview, **Save** also turns simulation off automatically before creating the saved preview, so temporary simulation colors are not saved as your diagram's colors. Then select **Update** or **Publish** on the Confluence page to make the changes visible to readers.
+
+If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow the recovery guidance below. Do not assume that an error means the page is ready to publish.
 
 To change a task's color, select it, choose **Set Color**, then a swatch. Save the diagram and Update the page to publish the color. To add a standalone task, choose **Create Task** from the left palette and place it on the canvas; adding a task does not automatically connect it to the process. **Reset** restores the model loaded at editor open, discarding current unsaved edits such as label, color or added-task changes.
 
