@@ -35,6 +35,8 @@ On development installations, Confluence may append **(Development)** to a macro
 
 To leave a diagram editor without applying its current edits, use **Close**, or **Exit** in DrawIO, before choosing Save.
 
+If Save says that Confluence has not confirmed the macro in the page draft yet, keep the diagram editor open. Your current work stays there so you can retry **Save**. Wait for the editor to close successfully before choosing Publish or Update; repeatedly clicking the page's Update button is not a substitute for a confirmed diagram save.
+
 ## Canvas tools
 
 ### Excalidraw
@@ -99,6 +101,37 @@ The preview editor includes **Download SVG** for the current Mermaid diagram. Li
 :::caution[Download validation]
 SVG file generation has passed local browser tests, but successful file delivery from the Forge editor on a Confluence test site is still being verified. Personal Library file export/import and Confluence PDF/Word exports also remain under validation. Do not rely on these flows for backups or production migration yet.
 :::
+
+### Start with a sample or find syntax help
+
+Choose a **Sample diagram**, then **Load sample**. The available starting points include flowcharts, sequence, class, state and entity relationship diagrams, Gantt, user journey, Git graph, pie, mindmap and quadrant chart. If you already have source, the editor asks before replacing it. Choose **Keep current source** to cancel. Loading a sample changes the editor only; review it before Save and Update.
+
+**Syntax help** opens the official Mermaid documentation for the diagram type detected from your source. Confluence asks you to confirm opening the external documentation page. **Cancel** leaves the source unchanged. The help URL does not include your diagram source. Documentation may describe newer syntax than the app's bundled renderer; check the preview before saving.
+
+### Make room for a larger diagram
+
+Drag the divider between Source and Preview to change their widths. You can also focus the divider and use the arrow keys; **Home** and **End** move to its limits. Double-click it to return to an even split.
+
+Use **−** and **+** above the Mermaid preview to zoom between 25% and 400%; the percentage button resets to 100%. Enable **Pan preview** to drag around an enlarged diagram. For long Gantt charts, zoom in until labels are readable and scroll or pan to review the full chart. These controls affect your editor view, not the source or published diagram size. Collapse Local history when you need more vertical space.
+
+### Recover source with Local history
+
+Local history gives you snapshots you can return to while editing a Mermaid diagram. It is separate from the page's Confluence version history.
+
+1. Open **Local history**, optionally enter a **Snapshot name**, then choose **Save snapshot**.
+2. Continue editing. To inspect an older snapshot without changing anything, expand its **View source**.
+3. Choose **Restore** on the snapshot you want. Review the confirmation, then choose **Confirm history action**, or cancel to keep editing.
+4. The replaced source is kept in a **Before restore** snapshot. Review the restored preview, then choose **Save** and **Update** if you want to publish it.
+
+**Auto history** is optional and off when you open an editor. While enabled in that session, it checks once a minute and keeps up to 30 automatic snapshots, skipping unchanged source. Manual snapshots are not removed by that automatic limit. This is not continuous autosave: source typed after the last snapshot can still be lost if you close the editor or browser.
+
+**Export history** downloads a JSON copy of local source snapshots. **Import history** accepts this Forge app's version-1 source-history export and adds snapshots without replacing the current editor source. Existing snapshot IDs are skipped. It is not an importer for Connect history, page versions or arbitrary Mermaid configuration files. **Delete** and **Clear local history** require confirmation and remove only local snapshots, not the diagram on the page.
+
+:::caution[Local history is not a shared backup]
+Snapshots stay in this browser, separated by site, signed-in account, page and macro. They are not synchronized to teammates or other browsers. Browser cleanup, storage limits, restricted browser storage or an app update can make them unavailable. Do not store your only copy of important source here. File import/export has passed local browser tests; delivery through the tenant editor is still being validated.
+:::
+
+If a history write fails, the editor reports it instead of pretending the snapshot was saved. A restore that cannot preserve the current source stops without replacing it. If history is unavailable because the editor lacks a complete account/site/page/macro identity, you can still use the normal diagram editor; do not remove or recreate the macro to work around the history message.
 
 ## Existing Connect diagrams
 
