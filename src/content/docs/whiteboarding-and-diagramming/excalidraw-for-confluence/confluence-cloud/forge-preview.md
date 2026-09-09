@@ -62,7 +62,13 @@ The editor's **Personal Library help** link opens this section in another tab. C
 
 Library items are stored separately in this browser's local storage. Adding an item does not publish or change the page, and closing the diagram editor without Save does not undo the library addition. Do not rely on the library as a backup: clearing browser data can remove it, and it is not a shared team library or cross-browser sync service. Automatic transfer of a library from the old Connect editor has not been verified.
 
-To download a library copy, open the three-dot menu beside **Personal Library**, choose **Save to...**, and finish the browser's Save dialog. The download is an `.excalidrawlib` file, separate from the current page's drawing. File export has been checked in Chrome; importing that file back through **Open** is still under validation. Keep your original library and do not reset it just to try an import.
+To download a library copy, open the three-dot menu beside **Personal Library**, choose **Save to...**, and finish the browser's Save dialog. The download is an `.excalidrawlib` file, separate from the current page's drawing.
+
+To import a library, use **Open** in that same Personal Library menu and select an `.excalidrawlib` file. Do not use the canvas menu's **Open**, which loads a drawing instead. Import adds library items alongside your existing items; it does not replace the page's drawing. Click an imported thumbnail to insert it, then Save and update the page when you want to publish the result. You do not need to reset your library before importing.
+
+Library export/reimport, adding a new library item, reopening the editor and inserting the imported item have been checked in Chrome on a test site. This does not establish automatic migration of a Connect browser library. Keep your original export as a backup.
+
+If the editor warns that library changes could not be saved in this browser, keep it open and use **Personal Library → Save to...** to download a copy. Saving the diagram does not back up the library. The warning clears after a successful library-storage operation; do not reload to dismiss it while your only copy is still in memory.
 
 ### Mind Map
 
@@ -158,7 +164,7 @@ If Chrome opens a **Save** dialog, choose a destination and finish saving there.
 PNG/SVG downloads and pasting a copied image into Confluence have been checked in Chrome on a test site. This is not a source backup: keep the editable Mermaid source if you need to change the diagram later.
 
 :::caution[Other exports still under validation]
-Personal Library file import and Confluence PDF/Word exports remain under validation. Downloading a library or image does not prove those separate flows are ready for production migration.
+Confluence PDF/Word exports remain under validation. Downloading a library or image does not prove those separate flows are ready for production migration.
 :::
 
 ### Start with a sample or find syntax help
