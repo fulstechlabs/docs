@@ -206,13 +206,30 @@ Local history gives you snapshots you can return to while editing a Mermaid diag
 
 **Auto history** is optional and off when you open an editor. While enabled in that session, it checks once a minute and keeps up to 30 automatic snapshots, skipping unchanged source. Manual snapshots are not removed by that automatic limit. This is not continuous autosave: source typed after the last snapshot can still be lost if you close the editor or browser.
 
-**Export history** downloads a JSON copy of local source snapshots. **Import history** accepts this Forge app's version-1 source-history export and adds snapshots without replacing the current editor source. Existing snapshot IDs are skipped. It is not an importer for Connect history, page versions or arbitrary Mermaid configuration files. **Delete** and **Clear local history** require confirmation and remove only local snapshots, not the diagram on the page.
+**Export history** downloads a JSON copy of local source snapshots. **Import history** accepts this Forge app's version-1 source-history export or a JSON history export from the Connect Mermaid editor. It adds snapshots without replacing the current editor source; existing snapshot IDs are skipped. It does not import Confluence page versions or arbitrary Mermaid configuration files. **Delete** and **Clear local history** require confirmation and remove only local snapshots, not the diagram on the page.
 
 :::caution[Local history is not a shared backup]
-Snapshots stay in this browser, separated by site, signed-in account, page and macro. They are not synchronized to teammates or other browsers. Browser cleanup, storage limits, restricted browser storage or an app update can make them unavailable. Do not store your only copy of important source here. File import/export has passed local browser tests; delivery through the tenant editor is still being validated.
+Snapshots stay in this browser, separated by site, signed-in account, page and macro. They are not synchronized to teammates or other browsers. Browser cleanup, storage limits, restricted browser storage or an app update can make them unavailable. Do not store your only copy of important source here. Forge history import/export and reload have been checked through the tenant editor in Chrome; this does not establish automatic transfer from Connect.
 :::
 
 If a history write fails, the editor reports it instead of pretending the snapshot was saved. A restore that cannot preserve the current source stops without replacing it. If history is unavailable because the editor lacks a complete account/site/page/macro identity, you can still use the normal diagram editor; do not remove or recreate the macro to work around the history message.
+
+#### Bring a Connect Mermaid history file
+
+History transfer is manual and separate from upgrading the diagram stored on a page. Before upgrading, keep copies of any browser history you want to retain:
+
+1. In the Connect Mermaid editor, open **History**, select **Saved**, **Timeline** or **Revisions**, and download that tab's JSON history. Repeat for each tab you need. Keep the original files.
+2. In the Forge Mermaid editor for the destination macro, open **Local history** and choose **Import history**. Select a downloaded JSON file in the browser's file picker.
+3. Check the imported snapshot names. Import leaves the current diagram source and existing snapshots unchanged. Imported Timeline and Revisions entries become manual snapshots, so the automatic 30-snapshot limit does not remove them.
+4. Choose **Restore** on a snapshot when you want to use it. Confirm only after reviewing the replacement warning; the current source is backed up as **Before restore**. Check the resulting diagram before **Save** and Confluence **Update**.
+
+The imported snapshot combines diagram code and Mermaid configuration in source frontmatter. Source-level settings take precedence over the old editor's base configuration; frontmatter formatting may change. The original entry is also retained in subsequent **Export history** downloads. Old editor layout, pan/zoom, auto-sync settings and external loader links are not activated. Import does not fetch a GitHub Gist or its revisions.
+
+If a file contains an invalid entry or configuration, the complete import is rejected rather than silently skipping entries. Keep the original file and contact support; do not clear existing history to retry. Reimporting an already imported snapshot ID does not update or duplicate that snapshot.
+
+:::note[Preview validation boundary]
+The Connect-format import, restore confirmation, configured preview, export preservation and reload have been checked in Chrome using a test file matching the Connect export format. A file downloaded from an actual Connect editor has not yet completed this validation. This is not an assurance of complete Connect history migration.
+:::
 
 ## Existing Connect diagrams
 
