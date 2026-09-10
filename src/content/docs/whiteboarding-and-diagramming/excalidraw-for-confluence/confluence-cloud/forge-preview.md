@@ -259,6 +259,33 @@ Listing real Gist revisions, importing a selected revision, restoring its config
 
 The intended upgrade replaces the existing app on the same site and Marketplace listing. Users should not recreate all their pages or remove the existing app.
 
+### Know what you are keeping
+
+The drawing on a page, reusable library items and source-history snapshots are separate things. Successfully upgrading one does not prove the others have transferred.
+
+| Your content | What to do |
+| --- | --- |
+| A diagram already saved on a Confluence page | Keep its existing macro. Review it in Forge before the first Save, then publish and reopen it using the checklist below. |
+| Excalidraw Personal Library | Export an `.excalidrawlib` backup from the old editor while it is available. See [Personal Library](#reuse-drawings-with-personal-library) for import and its current validation limits. Do not assume the new editor can read the old browser's library. |
+| Mermaid history in the Connect editor | Download the history files you need before upgrading. Follow [Bring a Connect Mermaid history file](#bring-a-connect-mermaid-history-file); these snapshots are not part of the page's diagram. |
+| Current unsaved edits | Finish the intended save or keep an editable export before leaving the editor. A screenshot preserves appearance, not editable diagram data. |
+
+Keep original library/history exports even after importing them. Do not clear browser data, reset a library or uninstall the app as a migration step.
+
+### Check the first edited diagram
+
+For an authorized preview test, start with a page whose expected diagram you know. This checklist is for a controlled test, not a recommendation to roll the preview out to production.
+
+1. Record the page URL and published version. Review the existing diagram's text, connections, colors and any embedded images.
+2. Open its existing macro in Forge. Check that the editable content matches the page. If content is missing, unexpected or read-only, choose **Close** without Save and use the guidance below.
+3. Make a small, identifiable edit. Choose **Save** once, wait for the successful return to Confluence, then **Update** or **Publish**. Follow any save-confirmation error before proceeding.
+4. Reload the published page and check the whole diagram, not just the changed item. Reopen the macro and confirm the edit is still editable. Choose **Close** without Save when only inspecting it.
+5. If testing a copied page or duplicated macro, change only the copy and check the original separately. A copy that looks correct before editing is not proof that the two diagrams are independent.
+
+If a check fails, keep the original macro, page URL/version and any exported source. Report the failed step to [support](#get-help). Do not repeatedly save missing content or delete/reinsert the macro to hide the problem. Confluence page history is separate from browser-local library/history; do not assume a page-version restore recovers those items.
+
+### When an older diagram needs attention
+
 When supported Connect data is opened in the Forge editor, a legacy-data notice explains that migration has not yet been saved. Review the loaded content before choosing **Save**, then update the page. Opening or viewing a page is not an instruction to overwrite its stored diagram.
 
 If the editor reports that legacy data is unreadable or read-only, leave the original macro in place and contact support. Do not reset the scene, delete the macro, or paste unrelated content over it to clear the message. Keep the page URL and version available for investigation.
