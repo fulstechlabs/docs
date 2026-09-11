@@ -543,6 +543,14 @@
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/forge-preview"
               },
               {
+                "label": "Security and privacy",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/security-and-privacy"
+              },
+              {
+                "label": "App privacy policy",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/privacy-policy"
+              },
+              {
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
               }

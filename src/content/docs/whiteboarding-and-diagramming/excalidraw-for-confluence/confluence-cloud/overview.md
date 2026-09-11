@@ -17,6 +17,10 @@ description: "Create whiteboards, UML, architecture, mind maps, BPMN and DrawIO 
 
 Open the [Forge app guide](../forge-preview/) for insertion, editing, export, history, Gist import, Connect upgrade and data-processing guidance.
 
+Review [Security and privacy](../security-and-privacy/) and the
+[App privacy policy](../privacy-policy/) before using an external renderer with
+restricted content.
+
 Install or evaluate the app from its [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/1226438/excalidraw-mermaid-plantuml-whiteboard-for-confluence?hosting=cloud\&tab=installation).
 
 ![Excalidraw for Confluence](../../../assets/zSHuaXf0asiX1GvZDnft.png)

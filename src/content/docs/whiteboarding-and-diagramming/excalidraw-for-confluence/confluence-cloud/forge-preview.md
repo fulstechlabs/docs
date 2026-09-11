@@ -304,13 +304,13 @@ The Forge version uses Atlassian-hosted app resources and Forge storage, but it 
 
 | Feature | External processing |
 | --- | --- |
-| Graphviz | Diagram source is encoded into a request to **kroki.io** for rendering |
-| PlantUML | Diagram source is encoded into a request to **www.plantuml.com** for rendering |
-| DrawIO | Diagram XML is passed to an editor loaded from **embed.diagrams.net** |
+| Graphviz | Diagram source is compressed and encoded into an HTTPS request to **kroki.io** for rendering |
+| PlantUML | Diagram source is compressed and encoded into an HTTPS request to **www.plantuml.com** for rendering |
+| DrawIO | The editor loads from **embed.diagrams.net**. Editable XML is exchanged client-side with the embedded editor; the destination still receives normal network information when its resources load |
 | Mermaid Gist import | On an explicit request, the browser reads revision metadata and source/configuration from **api.github.com** and, for truncated files, **gist.githubusercontent.com**. This does not upload the current diagram to GitHub. |
-| Fonts | The app permits font resources from **esm.sh** |
+| Fonts | The browser loads permitted font resources from **esm.sh**; diagram source is not intentionally included in those requests |
 
-Encoding a diagram in a URL does not encrypt it. Storing a copy in Forge does not mean that no external service processes the content. Check your organization's data-handling requirements before using externally processed diagram types. This guide does not make a claim about those services' retention policies or regulatory certification.
+Encoding a diagram in a URL does not encrypt it. Storing a copy in Forge does not mean that no external service processes the content. Check your organization's data-handling requirements before using externally processed diagram types. See the [App privacy policy](../privacy-policy/) for the complete data-handling notice and [Security and privacy](../security-and-privacy/) for permission and authorization details.
 
 ## Get help
 
