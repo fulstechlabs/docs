@@ -1,10 +1,10 @@
 ---
-title: "Forge preview"
-description: "Using the Forge preview of Excalidraw, Mermaid, PlantUML and the other diagram macros for Confluence."
+title: "Forge app guide"
+description: "Use Excalidraw, Mermaid, PlantUML and the other Forge diagram macros in Confluence."
 ---
 
-:::caution[Preview availability]
-This guide describes the Forge version currently being validated on test sites. It is not a production rollout announcement. If your editor has an **Open Editor** button followed by a separate macro dialog, use the [current Connect usage guide](../usage/) instead. Do not uninstall the existing app to try this preview.
+:::note[Which guide should I use?]
+This page describes the Forge version. If your editor still has an **Open Editor** button followed by a separate macro dialog, use the [Connect usage guide](../usage/) until your site administrator upgrades the app. Do not uninstall or replace existing macros during an upgrade.
 :::
 
 ## Choose a diagram
@@ -92,7 +92,7 @@ Simulation is an editing aid, not a workflow engine: it does not execute busines
 
 #### Save after simulation
 
-Turn simulation off to review the normal diagram appearance. In the current Forge preview, **Save** also turns simulation off automatically before creating the saved preview, so temporary simulation colors are not saved as your diagram's colors. Then select **Update** or **Publish** on the Confluence page to make the changes visible to readers.
+Turn simulation off to review the normal diagram appearance. In the Forge editor, **Save** also turns simulation off automatically before creating the saved preview, so temporary simulation colors are not saved as your diagram's colors. Then select **Update** or **Publish** on the Confluence page to make the changes visible to readers.
 
 If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow [Open and save a diagram](#open-and-save-a-diagram). Do not assume that an error means the page is ready to publish.
 
@@ -100,7 +100,7 @@ To change a task's color, select it, choose **Set Color**, then a swatch. Save t
 
 ### DrawIO
 
-The Forge preview uses draw.io's standard editor layout, with shape libraries on the left and formatting on the right. **Save & Exit** and **Exit** are in the top toolbar. Your browser language can change these labels. Saving requires both reusable diagram XML and a preview image; a save error is not confirmation that the page has been updated.
+The Forge app uses draw.io's standard editor layout, with shape libraries on the left and formatting on the right. **Save & Exit** and **Exit** are in the top toolbar. Your browser language can change these labels. Saving requires both reusable diagram XML and a preview image; a save error is not confirmation that the page has been updated.
 
 To leave without saving, choose **Exit**. If you changed the diagram, draw.io asks whether to discard those changes. Confirm discarding only when you no longer need the unsaved edits. This is different from **Save & Exit**, which applies the diagram changes to the page draft.
 
@@ -179,8 +179,8 @@ If Chrome opens a **Save** dialog, choose a destination and finish saving there.
 
 PNG/SVG downloads and pasting a copied image into Confluence have been checked in Chrome on a test site. This is not a source backup: keep the editable Mermaid source if you need to change the diagram later.
 
-:::caution[Other exports still under validation]
-Confluence PDF/Word exports remain under validation. Downloading a library or image does not prove those separate flows are ready for production migration.
+:::note[Confluence PDF and Word]
+Confluence PDF and Word exports use the diagram snapshot saved with the macro. Save the diagram and publish the page before exporting. Browser image or library downloads are separate actions and do not update the Confluence page.
 :::
 
 ### Start with a sample or find syntax help
@@ -251,8 +251,8 @@ This is a one-time import, not synchronization: later Gist edits do not update y
 
 GitHub receives the requested Gist address and the browser's network request. The loader does not upload your current editor source, use a GitHub account token, or send a page referrer. The imported snapshot is browser-local until you explicitly save its source into a diagram. See [Data processing](#data-processing) for the external hosts involved.
 
-:::note[Preview validation boundary]
-Listing real Gist revisions, importing a selected revision, restoring its configured diagram and publishing/reopening the imported source have been checked in Chrome on a Forge test tenant. Large-file/paginated-history variants and preservation of Gist snapshot metadata across the first Connect-to-Forge save still require validation. This is not a production availability announcement.
+:::note[Known Gist limits]
+The app supports listing Gist revisions, importing a selected revision, restoring its configured diagram and publishing the imported source. Very large or deeply paginated Gist histories have not been exhaustively tested. Keep your own source backup before the first Connect-to-Forge save.
 :::
 
 ## Existing Connect diagrams
@@ -274,7 +274,7 @@ Keep original library/history exports even after importing them. Do not clear br
 
 ### Check the first edited diagram
 
-For an authorized preview test, start with a page whose expected diagram you know. This checklist is for a controlled test, not a recommendation to roll the preview out to production.
+When upgrading from Connect, start with a page whose expected diagram you know and use this checklist before editing a large set of pages.
 
 1. Record the page URL and published version. Review the existing diagram's text, connections, colors and any embedded images.
 2. Open its existing macro in Forge. Check that the editable content matches the page. If content is missing, unexpected or read-only, choose **Close** without Save and use the guidance below.
@@ -294,8 +294,8 @@ A missing preview is not an empty diagram. For an unreadable Mind Map, **Save** 
 
 Confluence may create an unpublished draft or update its macro wrapper when you open an older macro's configuration. This does not mean that the published diagram has been migrated. Review the page's draft separately; closing its editor is not a way to delete an existing draft.
 
-:::note[Validation still in progress]
-Core same-site upgrade, rendering and edit/save/reopen flows have been checked on controlled Connect-created examples for Excalidraw, Mermaid, Graphviz, PlantUML, Mind Map and BPMN. This does not cover every historical diagram. The current DrawIO Connect-before-upgrade flow remains unverified because the Connect editor did not provide usable creation controls in the test environment. PDF/Word output and additional feature cases are also still being validated. Do not treat this preview as an assurance of production migration readiness.
+:::note[Upgrade coverage and limits]
+Same-site rendering and edit/save/reopen flows were checked on controlled Connect-created examples for Excalidraw, Mermaid, Graphviz, PlantUML, Mind Map and BPMN. Historical diagrams can vary. DrawIO compatibility is implemented and regression-tested, but a genuine Connect-authored editable DrawIO baseline was unavailable in the test environment. Browser-local Personal Library and source-history data are not migrated automatically; export and import anything you want to keep.
 :::
 
 ## Data processing
