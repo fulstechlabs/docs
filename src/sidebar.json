@@ -156,6 +156,28 @@
     "collapsed": true
   },
   {
+    "label": "Time in Status",
+    "collapsed": true,
+    "items": [
+      {
+        "label": "Overview",
+        "slug": "time-in-status/jira-cloud/overview"
+      },
+      {
+        "label": "User Guide",
+        "slug": "time-in-status/jira-cloud/getting-started"
+      },
+      {
+        "label": "Security and Data",
+        "slug": "time-in-status/jira-cloud/security-and-data"
+      },
+      {
+        "label": "Troubleshooting and Support",
+        "slug": "time-in-status/jira-cloud/support"
+      }
+    ]
+  },
+  {
     "label": "Issue Templates",
     "items": [
       {
