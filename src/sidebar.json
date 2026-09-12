@@ -168,6 +168,10 @@
         "slug": "time-in-status/jira-cloud/getting-started"
       },
       {
+        "label": "Working Calendars",
+        "slug": "time-in-status/jira-cloud/working-calendars"
+      },
+      {
         "label": "Report Analysis",
         "slug": "time-in-status/jira-cloud/report-analysis"
       },

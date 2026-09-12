@@ -1,54 +1,50 @@
 ---
 title: "Exports"
-description: "Download report results as CSV or XLSX, including large background exports."
+description: "Download a page as CSV or prepare a large CSV/XLSX export."
 ---
 
-Export report results for further analysis or to keep a local copy. Use a page
-CSV for a small result, or a background export for all matching issues and XLSX.
+Choose the export that matches the result you need.
 
-## Export the current page
+| You need… | Choose… |
+| --- | --- |
+| The current report page | **Export this page as CSV** |
+| All matching issues | **Export all as CSV** or **Export all as XLSX** |
+| Issues behind grouped results | **Contributing issues XLSX** |
+
+## Download a page
 
 1. Run your report and review its scope and completeness.
 2. Choose **Export this page as CSV**.
-3. When preparation finishes, choose **Download CSV**.
-4. Save the file using your browser's download controls.
+3. When ready, select **Download CSV** and save the file.
 
-The export recalculates results. Its cutoff and open durations may therefore
-differ from the result previously displayed. Filters, calendar, measurement
-window and completeness information help identify what the file covers.
+## Download a background export
 
-## Export all matching issues
+1. Expand **Large and XLSX exports**.
+2. Choose **Export all as CSV** or **Export all as XLSX**.
+3. Check status and progress in the export list.
+4. When ready, choose **Prepare download → Download**.
 
-1. Configure the report you want to export.
-2. Expand **Large and XLSX exports**.
-3. Choose **Export all as CSV** or **Export all as XLSX**.
-4. Review the job's status and progress in the export list.
-5. When ready, choose **Prepare download**, then **Download**.
+You can close the tab while the job runs. Return to the list to download it, or choose **Cancel** while it is queued/running.
 
-The job continues after you close the tab. Return to the export list to check
-its progress. Choose **Cancel** to stop a queued or running job.
+:::tip[Download within 24 hours]
+Background files expire after 24 hours. Save a copy before expiry or create a new export. Files already downloaded stay on your computer.
+:::
 
-For a grouped report, **Contributing issues XLSX** exports the underlying issues
-so you can investigate the measurements behind grouped results.
+<details>
+<summary>Why can exported numbers differ from the screen?</summary>
 
-## Keep a copy before expiry
+Export recalculates results, so its cutoff and open durations can differ. Read the filters, calendar, measurement window and completeness included in the file.
+Jira issues can change while pages are collected; all-issues exports are not atomic snapshots.
 
-Background export files expire after 24 hours. Download the file before expiry,
-or create a new export afterward. Files already saved to your computer remain
-under your control.
+</details>
 
-Sharing a report configuration does not share the owner's export files. Review
-a downloaded file before distributing it, since it contains data available to
-the person who generated it.
+<details>
+<summary>Partial or failed export?</summary>
 
-## Check the result
+Missing values are not zero. Review issue errors before using a partial total.
+Background exports still have application limits; narrow your project, JQL or measurement window and retry.
+See [Support](../support/) for repeated failures.
 
-- Read completeness information before treating a total as complete.
-- Missing values are not zero. Resolve issue errors or narrow the selection
-  before rerunning a partial report.
-- Large exports still have application limits. Narrow the project, JQL or
-  measurement window if a job cannot complete.
-- Jira issues can change while pages are collected. An all-issues export is not
-  an atomic snapshot of Jira.
+</details>
 
-See [Troubleshooting and Support](../support/) if an export repeatedly fails.
+Sharing a report configuration does not share your export files. Review downloaded data before passing it on.

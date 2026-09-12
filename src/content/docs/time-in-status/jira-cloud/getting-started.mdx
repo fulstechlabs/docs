@@ -1,0 +1,71 @@
+---
+title: "User Guide"
+description: "Create your first Time in Status report and understand the result."
+---
+
+Start with one project and a simple report. You can refine it after seeing the results.
+
+import { Steps, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Your first report
+
+<Steps>
+
+1. **Open Reports**  
+   In Jira, go to **Apps → Time in Status → Reports**.
+
+2. **Choose your issues**  
+   Under **Select issues**, choose **Basic** and a project. Use **JQL** for an advanced filter.
+
+3. **Choose your measurement**  
+   Select **Time in status**, **Full history** and **24/7 elapsed time**.
+
+4. **Run the report**  
+   Start with **One search page** and **25** issues. Select **Run report**.
+
+</Steps>
+
+## Read the result
+
+![An issue report showing time in each status and a View history button on each row](./assets/report.png)
+*Example with demonstration issues.*
+
+| Look at… | To understand… |
+| --- | --- |
+| Status columns | How long each issue spent in that status |
+| Scope and completeness | Which issues were included and whether any data is missing |
+| Calculation time | When the current open visits were measured |
+| **View history** | The visits behind an issue's result |
+
+A dash means no observed measurement. **Zero** means a measured zero. Do not treat a partial total as complete.
+
+## Compare and save
+
+Open **Group results** to compare projects, current assignees, issue types or components.
+Choose **Save as new** to keep the report settings; rerun the saved report to get current data.
+
+<details>
+<summary>First run slow or cache unavailable?</summary>
+
+The first report may take longer because the app reads Jira history, including issues created before installation.
+If **Enable cache for [project]** appears, a Jira administrator can enable the workflow field.
+Direct calculation still works without the cache. Read the setup message because a field configuration may be shared across projects.
+
+</details>
+
+<details>
+<summary>What happens to my saved settings?</summary>
+
+**Update saved report** changes a named configuration; **Delete saved report** removes it.
+Saved reports keep settings, not frozen results. Last-used inputs are remembered separately in your browser and may disappear when browser storage is cleared.
+
+</details>
+
+## Next steps
+
+<CardGrid>
+  <LinkCard title="Analyze a report" description="Choose metrics, inspect trends and drill into issues." href="../report-analysis/" />
+  <LinkCard title="Use a calendar" description="Measure business time instead of elapsed time." href="../working-calendars/" />
+  <LinkCard title="Share or schedule" description="Reuse a configuration with your team." href="../sharing-and-schedules/" />
+  <LinkCard title="Export results" description="Download a page or run a background export." href="../exports/" />
+</CardGrid>
