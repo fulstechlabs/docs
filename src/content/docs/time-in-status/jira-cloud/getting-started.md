@@ -1,6 +1,6 @@
 ---
 title: "User Guide"
-description: "Select Jira issues, calculate workflow time, use business calendars, save reports and export CSV."
+description: "Select Jira issues, calculate workflow time, use business calendars, save reports and export CSV or XLSX."
 ---
 
 ## Your first report
@@ -77,6 +77,19 @@ run it to get current data. **Update saved report** changes that configuration;
 Last-used inputs are remembered separately in this browser and may disappear
 when browser storage is cleared; named saved views are stored by the app.
 
+## Share and schedule a report
+
+Share a saved report configuration when teammates need to use the same settings.
+Each viewer calculates results with their own Jira permissions. Sharing settings
+does not grant access to issues or to your downloaded files.
+
+To prepare recurring exports, share your saved report and open **Schedule this
+report**. Choose weekly or monthly, select the day and local hour, review the
+shown timezone, and choose **Create schedule**. Runs use the owner's current
+Jira access and are picked up by the hourly scheduler. The resulting XLSX appears
+in **Large and XLSX exports** and expires after 24 hours. You can update or delete
+the schedule from the same section.
+
 ## Export and recover
 
 Run a report and choose its CSV export action. When preparation finishes, use
@@ -88,6 +101,16 @@ measurement window, completeness, scope, report type, grouping and aggregation.
 **One search page** covers only that page. **All search pages** collects results
 in smaller requests within application limits. Jira search membership can change
 while collecting pages; this is not an atomic database snapshot.
+
+For a background export, open **Large and XLSX exports** and choose **Export all
+as CSV** or **Export all as XLSX**. The job continues if you close the tab. Return
+to see its status and progress; when ready, choose **Prepare download**, then
+**Download**. You can cancel a queued or running export. Grouped reports also
+offer **Contributing issues XLSX** to export the underlying issues.
+
+Background files expire after 24 hours. Download a copy before expiry, or start a
+new export afterward. Check completeness before using the file; application
+limits still apply to background exports.
 
 | Situation | Action |
 |---|---|
