@@ -42,6 +42,37 @@ Under **Time in status → Repeated status visits**, choose the rule that answer
 | Latest observed visit | 6 hours |
 | Average observed visit | 4 hours |
 
+## Configure your workflow
+
+| Task | Steps |
+| --- | --- |
+| Load available statuses | Choose a project/JQL → **Statuses and optional groups → Load statuses from scope**. |
+| Create a group | **Add status group** → enter **Group name** → select **Group statuses**. Save the report to reuse it. |
+| Measure cycle time | Select **Cycle time** → choose **Cycle time: sum time in these statuses**, or include configured groups → run. |
+| Measure lead time | Select **Lead time** → choose **Lead time definition** → select completion statuses or the statuses to sum → run. |
+
+For example, choose your Development and Review statuses for a cycle. A Waiting group can combine Blocked and Waiting for Customer. These are examples; use your own workflow names.
+
+An empty general status selection includes all statuses. Status labels include IDs to distinguish same-named statuses.
+
+## Run a trend or aging report
+
+| Report | Configure before running |
+| --- | --- |
+| **Status time by period** | Set **Status period** to week or month; choose the measurement window and statuses. |
+| **Delivery trend** | Set **Trend period**, cycle statuses, completion statuses and lead-time definition. Cycle statuses must exclude completion statuses. |
+| **Open work aging** | Choose cycle-start and completion statuses, then set **Minimum cycle age (hours)**. |
+
+## Measure Jira field history
+
+1. Select **Jira field duration** or **Jira field value count**.
+2. Choose **Jira history field**: priority, a single-select field, user picker or Sprint.
+3. Optionally restrict measurement with **Only while issue is in these statuses** or configured status groups.
+4. Run the report and compare the field values.
+
+A Client or Vendor field is eligible when it uses a supported type, such as single-select; arbitrary text fields are not supported.
+Sprint memberships may overlap, so do not add their durations together as a single total. If a label is unavailable, the app uses Jira's stable ID.
+
 ## Understand the calculation
 
 <details>
@@ -60,7 +91,7 @@ Entrance dates refer to the first or latest observed entrance in the measurement
 <summary>Cycle time and lead time</summary>
 
 Cycle time sums time in your configured cycle statuses/groups without double-counting overlapping selections.
-Lead time uses your selected states or a created-to-completion definition. Configure completion statuses to match your workflow.
+Lead time uses your selected states or creation to the latest completion. If reopened, elapsed lead time continues up to now. Configure completion statuses to match your workflow.
 
 </details>
 

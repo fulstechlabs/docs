@@ -39,6 +39,15 @@ import { Steps, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 A dash means no observed measurement. **Zero** means a measured zero. Do not treat a partial total as complete.
 
+<details>
+<summary>Choose the right scope and filters</summary>
+
+**Basic** supports project, issue type and current assignee. Use **JQL** with autocomplete for additional fields or date filters.
+**One search page** measures the selected page; **All search pages** collects matching issues within app limits. Use all-pages scope when comparing the complete selected population.
+The [calendar guide](../working-calendars/#filter-issues-or-measure-a-period) explains issue filters versus the measurement window.
+
+</details>
+
 ## Compare and save
 
 Open **Group results** to compare projects, current assignees, issue types or components.
@@ -49,7 +58,7 @@ Choose **Save as new** to keep the report settings; rerun the saved report to ge
 
 The first report may take longer because the app reads Jira history, including issues created before installation.
 If **Enable cache for [project]** appears, a Jira administrator can enable the workflow field.
-Direct calculation still works without the cache. Read the setup message because a field configuration may be shared across projects.
+Direct calculation still works without the cache. Follow [Setup and Administration](../administration/) to enable it safely.
 
 </details>
 

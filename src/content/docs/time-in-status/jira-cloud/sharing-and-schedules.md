@@ -36,5 +36,7 @@ The hourly scheduler picks up due runs; execution is not guaranteed at an exact 
 
 ## Add a dashboard report
 
-Add the Time in Status gadget to your Jira dashboard, select a saved report and save the gadget.
+In your Jira dashboard, choose **Add gadget** and find **Workflow Time report**. Add it, select a saved report in the gadget configuration, then choose **Save gadget**.
 Share the configuration if other dashboard viewers need it. Each viewer sees results based on their own Jira access.
+
+The gadget shows a bounded report page of up to 25 issues. Open the full report to analyze a larger selection.

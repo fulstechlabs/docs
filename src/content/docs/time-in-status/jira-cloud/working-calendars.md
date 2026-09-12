@@ -7,9 +7,9 @@ Use a calendar when weekends, breaks or holidays should not count toward duratio
 
 ## Set up working hours
 
-1. As a Jira administrator, open **Calendars**.
+1. As a Jira administrator, open **Calendars → New calendar**, or select an existing calendar.
 2. Set the timezone, working weekdays, start and end times.
-3. Add breaks and excluded dates, then save the calendar.
+3. Use **Add break** and **Add excluded date** as needed, then choose **Save calendar**.
 4. Return to **Reports** and select it under **Time calculation**.
 
 ![Calendar editor showing timezone, working days and daily start and end times](./assets/calendar.png)
@@ -37,3 +37,12 @@ Changing the report calendar recalculates the same history. Overnight shifts are
 For example, JQL on `created` selects issues created in a period; it does not limit their measured history to that period.
 
 If a saved calendar is unavailable, select another calendar or **24/7 elapsed time**, then run again.
+
+<details>
+<summary>Daylight saving time and editing calendars</summary>
+
+Working time uses actual elapsed time. If a local boundary falls in a skipped time, it moves forward by the clock change; if it occurs twice, the first occurrence is used. The same rules apply to breaks.
+
+Select an existing calendar to edit and save it. **Delete calendar** asks for confirmation; saved reports using it will need another calendar. The default calendar cannot be deleted.
+
+</details>

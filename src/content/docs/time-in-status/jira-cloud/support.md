@@ -8,6 +8,9 @@ for help or feature requests.
 
 | Situation | Next step |
 | --- | --- |
+| Setup not complete | Use **Refresh setup status**; a Jira administrator can choose **Request setup (Jira admin)**. See [Setup](../administration/). |
+| Shared report unavailable | Ask its owner whether sharing was stopped or the configuration was deleted. Jira access can also affect results. |
+| Export expired | Create a new export; background files expire after 24 hours. |
 | Invalid JQL | Correct the syntax and run again. Basic project filtering is also available. |
 | First report is slow | Reading issue history can take longer than using a valid workflow cache. Keep the report tab open while batches run. |
 | Timeout after retry | Choose 10 issues per page or narrow the JQL. Avoid repeatedly starting the same large request. |

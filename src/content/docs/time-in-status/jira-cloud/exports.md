@@ -42,7 +42,7 @@ Jira issues can change while pages are collected; all-issues exports are not ato
 <summary>Partial or failed export?</summary>
 
 Missing values are not zero. Review issue errors before using a partial total.
-Background exports still have application limits; narrow your project, JQL or measurement window and retry.
+Background exports collect up to 20,000 issues, subject to page and data-size limits. Interactive all-pages reports collect up to 5,000 issues. A data-size limit can be reached sooner; narrow your project, JQL or measurement window and retry.
 See [Support](../support/) for repeated failures.
 
 </details>
