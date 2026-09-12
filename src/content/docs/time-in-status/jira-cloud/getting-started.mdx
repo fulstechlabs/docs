@@ -6,6 +6,8 @@ description: "Create your first Time in Status report and understand the result.
 Start with one project and a simple report. You can refine it after seeing the results.
 
 import { Steps, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import GuideFigure from '../../../../components/GuideFigure.astro';
+import reportImage from './assets/report.png';
 
 ## Your first report
 
@@ -27,8 +29,7 @@ import { Steps, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 ## Read the result
 
-![An issue report showing time in each status and a View history button on each row](./assets/report.png)
-*Example with demonstration issues.*
+<GuideFigure image={reportImage} alt="Time in Status report showing three issue rows, their status duration and View history actions" caption="Example result for three selected issues. Your columns follow your Jira workflow." />
 
 | Look at… | To understand… |
 | --- | --- |

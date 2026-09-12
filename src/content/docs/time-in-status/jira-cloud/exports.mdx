@@ -1,0 +1,60 @@
+---
+title: "Exports"
+description: "Download a page as CSV or prepare a large CSV/XLSX export."
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import GuideFigure from '../../../../components/GuideFigure.astro';
+import exportImage from './assets/export-controls.png';
+
+Download the result on screen, or prepare all matching issues in the background.
+
+## Choose an export
+
+<Tabs>
+<TabItem label="Current result">
+
+1. Run the report and check scope and completeness.
+2. Choose the CSV action for your result:
+
+| Result | Action |
+| --- | --- |
+| Issue rows | **Export this page as CSV** |
+| Grouped values | **Export aggregate CSV** |
+| Issues behind groups | **Export contributing issues CSV** |
+
+3. When ready, select **Download CSV** and save the file.
+
+**Result:** a CSV for the displayed report scope. Export recalculates data, so the cutoff and open durations can differ from the screen.
+
+</TabItem>
+<TabItem label="All issues / XLSX">
+
+1. Run the report, then expand **Large and XLSX exports**.
+2. Choose **Export all as CSV** or **Export all as XLSX**.
+3. Wait for **ready**, then choose **Prepare download → Download**.
+
+<GuideFigure image={exportImage} alt="Background export options and a ready XLSX job with a Download action" caption="The export list shows progress and the download action in one place." />
+
+**Result:** a file for all matching issues within app limits. **Contributing issues XLSX** is also available for grouped reports.
+
+You can close the tab while the job runs. Return to the list to download it, or **Cancel** a queued/running job.
+
+</TabItem>
+</Tabs>
+
+:::tip[Download within 24 hours]
+Background files expire after 24 hours. Save a copy before expiry or create a new export. Downloaded files remain under your control.
+:::
+
+<details>
+<summary>Check completeness and limits</summary>
+
+Missing values are not zero. Resolve issue errors before using a partial total.
+Background exports collect up to 20,000 issues; interactive all-pages reports collect up to 5,000. Page/data-size limits may stop collection sooner. Narrow the selection and retry if needed.
+
+Read the filters, calendar, period and completeness in the file. Jira can change while pages are collected; an all-issues export is not an atomic snapshot.
+
+</details>
+
+Sharing a configuration does not share your export files. Review downloaded data before distributing it. For repeated failures, see [Support](../support/).

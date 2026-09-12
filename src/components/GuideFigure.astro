@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props { image: ImageMetadata; alt: string; caption: string; }
+const { image, alt, caption } = Astro.props;
+---
+<figure>
+  <a href={image.src} target="_blank" rel="noopener" aria-label={`${alt} — open full-size image in a new tab`}>
+    <Image src={image} alt={alt} loading="lazy" />
+  </a>
+  <figcaption>{caption} <span>Open image to enlarge.</span></figcaption>
+</figure>
+<style>
+  figure { margin: 1.25rem 0; }
+  a { display: block; border: 1px solid var(--sl-color-gray-5); border-radius: .5rem; overflow: hidden; background: white; }
+  a:focus-visible { outline: 3px solid var(--sl-color-accent); outline-offset: 3px; }
+  img { display: block; max-width: 100%; height: auto; margin: 0; }
+  figcaption { margin-top: .5rem; font-size: .875rem; line-height: 1.5; color: var(--sl-color-gray-2); }
+  figcaption span { white-space: normal; }
+</style>

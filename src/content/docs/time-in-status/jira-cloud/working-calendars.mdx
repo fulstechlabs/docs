@@ -3,6 +3,9 @@ title: "Working Calendars"
 description: "Measure working hours and choose the right date window."
 ---
 
+import GuideFigure from '../../../../components/GuideFigure.astro';
+import calendarImage from './assets/calendar.png';
+
 Use a calendar when weekends, breaks or holidays should not count toward duration.
 
 ## Set up working hours
@@ -12,8 +15,7 @@ Use a calendar when weekends, breaks or holidays should not count toward duratio
 3. Use **Add break** and **Add excluded date** as needed, then choose **Save calendar**.
 4. Return to **Reports** and select it under **Time calculation**.
 
-![Calendar editor showing timezone, working days and daily start and end times](./assets/calendar.png)
-*Example calendar settings. Select the calendar in your report to apply them.*
+<GuideFigure image={calendarImage} alt="Calendar weekdays and start/end controls set to Monday–Friday, 09:00–17:00" caption="Select the saved calendar under Time calculation in your report to apply it." />
 
 ## See the difference
 

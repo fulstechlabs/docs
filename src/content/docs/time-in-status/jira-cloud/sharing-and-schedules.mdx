@@ -1,0 +1,57 @@
+---
+title: "Sharing and Schedules"
+description: "Share report settings and schedule recurring XLSX exports."
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import GuideFigure from '../../../../components/GuideFigure.astro';
+import savedImage from './assets/saved-report.png';
+import scheduleImage from './assets/schedule.png';
+
+Save a useful report once. Share the settings, prepare recurring files or put the report on a dashboard.
+
+## Choose how to reuse a report
+
+<Tabs>
+<TabItem label="Share">
+
+1. Configure a report and choose **Save as new**.
+2. With that saved report selected, choose **Share configuration**.
+3. Copy the **Share link** and send it to your teammates.
+
+<GuideFigure image={savedImage} alt="Saved report toolbar with Share configuration and Schedule this report" caption="Save the report first to reveal sharing and scheduling actions." />
+
+**Result:** teammates open the same settings and run them using their own Jira access. Review saved JQL before sharing; it is part of the configuration.
+
+Choose **Stop sharing** to disable existing links. Recipients can save a separate private copy.
+
+</TabItem>
+<TabItem label="Schedule">
+
+**Before you start:** select a saved report and share its configuration.
+
+1. Open **Schedule this report**.
+2. Choose **Weekly** or **Monthly**, a day and local hour.
+3. Check the displayed timezone, then select **Create schedule**.
+
+<GuideFigure image={scheduleImage} alt="Weekly report schedule set to Monday at 09:00 UTC" caption="Check cadence, day, hour and timezone together before creating the schedule." />
+
+**Result:** next-run and last-run information appear here; the XLSX appears in **Large and XLSX exports**. Use **Update schedule** or **Delete schedule** to change or stop it.
+
+Runs use the owner's current Jira permissions and require an active app license. The hourly scheduler picks up due runs; exact-minute execution is not guaranteed. **Download within 24 hours.**
+
+</TabItem>
+<TabItem label="Dashboard">
+
+1. On a Jira dashboard, choose **Add gadget**.
+2. Find and add **Workflow Time report**.
+3. Choose a saved report and select **Save gadget**.
+
+**Result:** the gadget shows up to 25 issues using each viewer's Jira access. Open the full report for larger selections.
+
+Share the saved configuration if teammates need to use it on the dashboard. Sharing settings never grants additional Jira issue permissions.
+
+</TabItem>
+</Tabs>
+
+Need a file instead? Continue to [Exports](../exports/).

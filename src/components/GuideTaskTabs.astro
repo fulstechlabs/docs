@@ -1,0 +1,7 @@
+<div class="guide-task-tabs"><slot /></div>
+<style>
+  @media (max-width: 30rem) {
+    .guide-task-tabs :global([role='tablist']) { flex-wrap: wrap; }
+    .guide-task-tabs :global(.tab > [role='tab']) { padding-inline: .65rem; }
+  }
+</style>
