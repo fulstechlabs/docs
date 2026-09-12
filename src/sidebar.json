@@ -168,6 +168,18 @@
         "slug": "time-in-status/jira-cloud/getting-started"
       },
       {
+        "label": "Report Analysis",
+        "slug": "time-in-status/jira-cloud/report-analysis"
+      },
+      {
+        "label": "Sharing and Schedules",
+        "slug": "time-in-status/jira-cloud/sharing-and-schedules"
+      },
+      {
+        "label": "Exports",
+        "slug": "time-in-status/jira-cloud/exports"
+      },
+      {
         "label": "Security and Data",
         "slug": "time-in-status/jira-cloud/security-and-data"
       },

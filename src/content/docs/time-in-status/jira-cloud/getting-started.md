@@ -28,7 +28,7 @@ data into the field themselves.
 
 | Metric | Meaning |
 |---|---|
-| Time in status | Sum of all visits to each selected status, including the current open visit up to the calculation cutoff. |
+| Time in status | Duration in each selected status using the chosen repeated-visit rule, including the current visit when applicable. |
 | Status count | Number of observed entrances into a status; initial status at creation is an entrance. |
 | Transition count | Number of observed directional changes between statuses. Status selection filters destination statuses. |
 | First / latest status entrance | Earliest / latest entrance timestamp for each status. |
@@ -102,3 +102,7 @@ while collecting pages; this is not an atomic database snapshot.
 For support, include the error message, approximate time, metric, scope and
 calendar configuration. Start with issue counts and a redacted example rather
 than exporting a whole customer dataset. Contact the [Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals).
+
+Continue with [Report Analysis](../report-analysis/) for trends and drilldowns,
+[Sharing and Schedules](../sharing-and-schedules/) for recurring reports, or
+[Exports](../exports/) for background CSV and XLSX downloads.
