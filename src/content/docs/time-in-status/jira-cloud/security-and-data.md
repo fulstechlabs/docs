@@ -1,42 +1,25 @@
 ---
-title: "Security and Data"
-description: "Where Time in Status stores configuration and reusable Jira workflow history."
+title: "Data and Privacy"
+description: "Where your data stays, who can view reports and how long export files are available."
 ---
 
-Time in Status runs on Atlassian Forge and calls Jira Cloud APIs. The app has
-no external backend, external runtime analytics service or configured external
-network destination.
+Time in Status uses Jira history to calculate your reports. Here is how your data is handled.
 
-## Data locations
+## Data storage
 
-| Location | Purpose |
-| --- | --- |
-| App-managed Jira custom field | A bounded, replaceable workflow snapshot per issue: source revision, status IDs and visit timestamps, assignee account IDs and ownership timestamps. It contains no saved report totals, copied assignee profile names or email addresses. |
-| Forge SQL | Working calendars, saved report configurations, schedules and background export job information. Saved JQL may contain references entered by its owner. |
-| Your browser | Last-used report inputs. This is separate from named saved reports and does not synchronize across devices. |
-| Request memory | Jira responses, current display names and calculated results used for the active request. |
-| Forge Object Store | Temporary background export files, which expire after 24 hours. |
-| Downloaded CSV/XLSX | A user-controlled export of the selected report, including its labels and filters. |
+Workflow data and saved configurations stay in Jira and Atlassian-hosted app storage. The app does not use an external backend.
+Your last-used report inputs are stored in your browser; they do not sync across devices and may disappear when browser storage is cleared.
 
-Jira history remains the calculation source. The app reads current display names
-from Jira when needed. If a name is unavailable, it shows the unchanged account
-ID. A failed profile lookup does not change historical ownership or durations.
+## Jira permissions
 
-The cache is validated against Jira source metadata before reuse and replaced
-when necessary. Calendar changes recalculate results from stored source visits;
-the cache does not embed one user's timezone or working-hours totals.
+Reports use the viewer's Jira permissions. Sharing a saved configuration does not grant access to additional issues or the owner's export files.
+Scheduled reports use the owner's current Jira permissions.
 
-## Permissions and events
+## Export files
 
-Reports retrieve Jira data as the signed-in user. The app does not introduce a
-separate role-management system. Jira administration permission is required for
-calendar administration and workflow-field setup. Saved reports are private unless the owner shares their configuration. Shared
-reports are calculated separately using each viewer's Jira access.
+Background CSV and XLSX files expire after **24 hours**. Download a copy before expiry or create a new export.
+You control the storage, sharing and deletion of files saved to your computer.
 
-App installation and upgrade initialize storage. A deleted-user event removes
-that user's owned saved reports, schedules and export job records; it does not
-edit Jira issue history. Scheduled reports use the owner's current Jira access.
-Historical issues can be calculated on demand without a bulk import.
+## Policies and support
 
-Consult the [Fulstech Privacy Policy](/privacy-policy/),
-[Security Policy](/security-policy/) and [support](../support/).
+Read the [Privacy Policy](/privacy-policy/) and [Security Policy](/security-policy/), or [contact support](../support/) with questions about your data.
