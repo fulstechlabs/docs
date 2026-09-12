@@ -16,8 +16,7 @@ using your own statuses, optional status groups and working calendars.
 
 Select issues using a project and basic filters or JQL with autocomplete.
 Compare issue rows or group by project, current assignee, issue type or component.
-Save report configurations, share them with your team, and export CSV or XLSX.
-Use scheduled exports to prepare recurring reports.
+Save private report configurations and export recalculated CSV results.
 
 Start with the [user guide](../getting-started/). Jira administrators can configure
 working calendars and enable the app-managed workflow field where needed.
@@ -27,7 +26,7 @@ not require a bulk import before the first report.
 ## Current scope
 
 This release focuses on workflow time. It does not provide timesheets, billing,
-or arbitrary formulas. Grouping uses current
+shared dashboards, advanced charts or arbitrary formulas. Grouping uses current
 issue fields rather than reconstructing historical team membership.
 
 See [security and data](../security-and-data/) and
