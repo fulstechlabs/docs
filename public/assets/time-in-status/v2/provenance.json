@@ -1,0 +1,13 @@
+{
+  "sourceRepository": "https://github.com/fulstechlabs/brand",
+  "sourceCommit": "1a87bde210d1e56fd620ff4e8d27a4c35fb66c02",
+  "sourcePath": "assets/app-icons/time-in-status",
+  "approvedAt": "2026-09-13",
+  "approvedOption": "B — Blue tile",
+  "files": {
+    "app-icon.svg": "1d7c107c997acf7a85c20c5e3eef6910b9b33a4ea11684b35336eeec950a37f1",
+    "app-icon-144.png": "8f288ef9cdb77256da6575678c6eace0dfa1f74961ce53c4c9164ce50189786f",
+    "product-logo.svg": "d7ccb4a48e1b5d2ad03cbba6463d02cfb4542ac685bb174ccf015b7839949216",
+    "product-logo-1200x288.png": "270fd809382718545e520f551293e5441266acdd7712a06a0455b6933a0a0b8b"
+  }
+}

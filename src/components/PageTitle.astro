@@ -24,7 +24,7 @@ function findTrail(entries: NavEntry[], trail: TrailItem[] = [], depth = 0): Tra
 
 const trail = isHome ? [] : (findTrail(route.sidebar as NavEntry[]) || []);
 const isTimeInStatus = trail[0]?.label === 'Time in Status';
-const timeInStatusIcon = base.replace(/\/?$/, '/') + 'assets/time-in-status/v1/app-icon.svg';
+const timeInStatusIcon = base.replace(/\/?$/, '/') + 'assets/time-in-status/v2/app-icon.svg';
 ---
 
 {!isHome && (
