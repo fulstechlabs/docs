@@ -1,0 +1,12 @@
+{
+  "sourceRepository": "https://github.com/fulstechlabs/brand",
+  "sourceCommit": "42f4c9b3f61ceedd9e2bafd4720a7418495f731b",
+  "sourcePath": "assets/app-icons/time-in-status",
+  "approvedAt": "2026-09-13",
+  "files": {
+    "app-icon-144.png": "f165bd1c9434594788279e993d0ea0a94168a5d28a20bb80a3a8e532305b094d",
+    "product-logo.svg": "957e05536be371e0f92a45034868e08b88b6b7d9d0ce765a584a7f84128c5535",
+    "product-logo-1200x288.png": "be29ba739635578bcc5b09ab483bce48964381e8bb3b53307ec0e16dd603ed70",
+    "app-icon.svg": "7e35aa7542128c50d6042ba452a69c95a4817666f3012a83ebecd307e85c9b26"
+  }
+}
