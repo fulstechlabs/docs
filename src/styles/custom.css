@@ -237,7 +237,9 @@
   .app-group > div { display: grid; }
   .app-group a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .72rem 0; border-top: 1px solid var(--sl-color-hairline-light); color: var(--sl-color-gray-1); text-decoration: none; font-size: .86rem; }
   .app-group a:hover { color: var(--ft-blue); }
-  .app-group a span:last-child { flex: none; color: var(--ft-blue); }
+  .app-group .app-directory-name { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+  .app-group .app-directory-name img { flex: 0 0 32px; width: 32px; height: 32px; object-fit: contain; padding: 2px; border-radius: 6px; background: #fff; margin: 0; }
+  .app-group .app-directory-arrow { flex: none; color: var(--ft-blue); }
   .trusted { display: grid; justify-items: center; gap: 1.25rem; padding: 2.25rem var(--home-pad) 3rem; border-top: 1px solid var(--sl-color-hairline-light); color: var(--sl-color-gray-3); }
   .trusted > span { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
   .trusted div { width: min(100%,64rem); display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1.35rem 2rem; text-align: center; }
