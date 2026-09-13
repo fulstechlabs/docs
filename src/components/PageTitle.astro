@@ -1,6 +1,4 @@
 ---
-import { productIcon } from '../product-icons';
-
 const route = Astro.locals.starlightRoute;
 const isHome = route.entry.data.title === 'Home';
 
@@ -25,7 +23,8 @@ function findTrail(entries: NavEntry[], trail: TrailItem[] = [], depth = 0): Tra
 }
 
 const trail = isHome ? [] : (findTrail(route.sidebar as NavEntry[]) || []);
-const appIcon = productIcon(route.entry.id);
+const isTimeInStatus = trail[0]?.label === 'Time in Status';
+const timeInStatusIcon = base.replace(/\/?$/, '/') + 'assets/time-in-status/v1/app-icon.svg';
 ---
 
 {!isHome && (
@@ -40,7 +39,7 @@ const appIcon = productIcon(route.entry.id);
         ))}
       </nav>
     )}
-    <div class:list={["ft-title-row", { "with-app-icon": Boolean(appIcon) }]}>{appIcon && <img src={appIcon} width="40" height="40" alt="" />}<h1 id="_top">{route.entry.data.title}</h1></div>
+    <div class:list={["ft-title-row", { "with-app-icon": isTimeInStatus }]}>{isTimeInStatus && <img src={timeInStatusIcon} width="40" height="40" alt="" />}<h1 id="_top">{route.entry.data.title}</h1></div>
   </div>
 )}
 
@@ -51,7 +50,7 @@ const appIcon = productIcon(route.entry.id);
     .ft-breadcrumbs a:hover { color: var(--ft-blue); }
     .ft-breadcrumbs .separator { color: var(--sl-color-gray-4); font-size: 1rem; }
     .with-app-icon { display: flex; align-items: flex-start; gap: .75rem; }
-    .with-app-icon img { flex: 0 0 40px; width: 40px; height: 40px; object-fit: contain; margin: 0; padding: 2px; border-radius: 8px; background: #fff; }
+    .with-app-icon img { flex: 0 0 40px; margin: 0; }
     h1 { margin: 0; max-width: 48rem; font-size: clamp(2rem, 3vw, 2.5rem); line-height: 1.12; letter-spacing: -.038em; font-weight: 750; color: var(--sl-color-white); }
   }
 </style>

@@ -1,6 +1,4 @@
 ---
-import { productIcon } from '../product-icons';
-
 const base = import.meta.env.BASE_URL;
 const baseWithSlash = base.endsWith('/') ? base : `${base}/`;
 const href = (path = '') => `${baseWithSlash}${path}`.replace(/\/+/g, '/');
@@ -17,9 +15,6 @@ const appGroups = [
     id: 'jira-apps',
     title: 'Jira apps',
     apps: [
-      ['Time in Status', 'time-in-status/jira-cloud/overview/'],
-      ['Issue Templates & Hierarchy Builder', 'issue-templates/jira-cloud/overview/'],
-      ['JEditor-compatible Custom Fields for Jira Cloud', 'custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview/'],
       ['Markdown Editor for Jira (Markin)', 'markdown/markin-markdown-editor-for-jira/'],
       ['LaTeX for Jira — Math Editor', 'latex/latex-for-jira/'],
       ['Table Custom Field for Jira Cloud', 'custom-fields/table-custom-field-for-jira-cloud/'],
@@ -33,7 +28,6 @@ const appGroups = [
     id: 'confluence-apps',
     title: 'Confluence apps',
     apps: [
-      ['Better Pages', 'better-pages/confluence-cloud/overview/'],
       ['Markdown for Confluence', 'markdown/markdown-for-confluence/'],
       ['Excalidraw for Confluence', 'whiteboarding-and-diagramming/excalidraw-for-confluence/'],
       ['Mind Mapping for Confluence', 'whiteboarding-and-diagramming/mind-mapping-for-confluence/'],
@@ -111,7 +105,7 @@ const appGroups = [
         <h3>{group.title}</h3>
         <div>
           {group.apps.map(([title, path]) => (
-            <a href={href(path)}><span class="app-directory-name">{productIcon(path) && <img src={productIcon(path)} width="32" height="32" alt="" loading="lazy" />}<span>{title}</span></span><span class="app-directory-arrow" aria-hidden="true">→</span></a>
+            <a href={href(path)}><span>{title}</span><span aria-hidden="true">→</span></a>
           ))}
         </div>
       </section>
