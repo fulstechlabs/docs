@@ -50,7 +50,10 @@ Your content here
 \end{document}
 ```
 
+![A published Confluence page showing an inline MathJax fraction, a TeX Live chemistry equation, and a TeX Live vector diagram](../../../assets/latex-cloud-published-output.jpg)
+
+Published output keeps inline MathJax, TeX Live chemistry, and TeX Live diagrams readable alongside ordinary Confluence content.
+
 Advanced rendering uses an Atlassian-hosted Forge Container. The first uncached preview can take longer while a non-production container starts; production keeps one renderer instance available. Published output is cached as a derived PNG, so ordinary views do not compile unchanged content every time.
 
 TeX Live output is a raster image with its authored colors and canvas. Unlike ordinary MathJax SVG output, it is not recolored when Confluence changes between Light and Dark appearance.
-
