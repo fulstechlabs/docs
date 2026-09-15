@@ -45,6 +45,10 @@ Selecting a reference on a published page moves to the matching formula. Referen
 
 The list preserves each source page's equation numbering; it does not create one new sequence across several pages. Cross-page entries also identify their source page.
 
+![A published equation list linking to numbered equations on the current page and a child page](../../../assets/latex-cloud-reference-list-output.jpg)
+
+This example combines a same-page reference with an equation list that identifies equations from the current page and a child page. Select an equation number or list entry to move to that formula.
+
 ## Refresh after changes
 
 The picker and list read published content. After adding, removing, reordering, or renaming a referenceable formula:
