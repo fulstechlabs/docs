@@ -421,16 +421,8 @@
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/usage"
               },
               {
-                "label": "Permissions and data handling",
-                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/permissions-and-data"
-              },
-              {
-                "label": "Migration and Forge upgrades",
+                "label": "Migrate from Confluence Server and Confluence Data Center",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/migrate-from-confluence-server-and-confluence-data-center"
-              },
-              {
-                "label": "Release notes",
-                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/release-notes"
               },
               {
                 "label": "Support",
