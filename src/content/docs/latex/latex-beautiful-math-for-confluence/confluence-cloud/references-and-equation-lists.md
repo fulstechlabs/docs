@@ -10,6 +10,8 @@ A referenceable formula has two independent values:
 
 ![The formula Reference panel with separate Display label and Reference key fields](../../../assets/latex-cloud-reference-panel.png)
 
+Before you begin, make sure you can edit and publish the source page. Cross-page references also require permission to view the target page. The picker reads published content, so publish a new or changed target formula before selecting it elsewhere.
+
 ## Make a formula referenceable
 
 1. Open a MathJax formula and select **Reference** in the toolbar. For an Advanced LaTeX formula, use its Options section.
@@ -35,6 +37,8 @@ Cross-page references save the selected page ID, so the link continues to target
 
 Selecting a reference on a published page moves to the matching formula. References in the Confluence editor are previews and do not navigate.
 
+You have succeeded when the published reference shows an equation number and selecting it moves the reader to the chosen formula.
+
 ## Create an equation list
 
 1. Insert **LaTeX equation list**.
@@ -48,6 +52,8 @@ The list preserves each source page's equation numbering; it does not create one
 ![A published equation list linking to numbered equations on the current page and a child page](../../../assets/latex-cloud-reference-list-output.jpg)
 
 This example combines a same-page reference with an equation list that identifies equations from the current page and a child page. Select an equation number or list entry to move to that formula.
+
+You have succeeded when each visible list entry shows the source equation's number and selecting it moves to that equation. Readers only see entries from pages they can access.
 
 ## Refresh after changes
 
