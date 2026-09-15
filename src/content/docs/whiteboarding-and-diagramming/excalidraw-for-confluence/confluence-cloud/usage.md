@@ -11,10 +11,7 @@ without a separate **Open Editor** step, use the
 
 ## Excalidraw Macro
 
-This macro helps you create figures, diagrams, and notes using a bundled
-Excalidraw editor. Diagram content is handled by Confluence and the Connect app
-service; see [Connect permissions and data](../connect-permissions-and-data/)
-before using restricted content.
+This macro helps you create figures, diagrams, and notes using Excalidraw. It's a powerful tool for brainstorming and visualizing ideas. This plugin uses a built-in Excalidraw version, therefore, your data will not be seen or stored by excalidraw\.com and will be securely kept in your Confluence instance.
 
 ### Insert Excalidraw drawings
 
@@ -100,9 +97,7 @@ Click **Insert** (for new macro contents) or **Save** (for existing macro conten
 
 ## BPMN Macro
 
-This macro helps you create BPMN diagrams using a bundled bpmn.io editor. The
-diagram is saved with the Confluence macro, and the Connect app service receives
-the macro content when Confluence asks it to render the diagram.
+This macro helps you create BPMN diagrams using a built-in version of bpmn.io. The data is securely kept in your Confluence instance and is not shared with bpmn.io.
 
 ### Insert BPMN drawings
 

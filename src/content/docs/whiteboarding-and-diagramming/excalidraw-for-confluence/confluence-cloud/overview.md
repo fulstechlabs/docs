@@ -30,18 +30,16 @@ Connect app. Follow [Create your first Excalidraw drawing](../getting-started/)
 for the shortest path to a published result, then use the
 [Connect guide](../usage/) for libraries and the other diagram types.
 
-Review [Connect permissions and data](../connect-permissions-and-data/) before
-using the app with restricted content. Administrators can use
-[Troubleshooting](../troubleshooting/) and [Support](../support/) when authors
-cannot create or render a diagram.
+Administrators can use [Troubleshooting](../troubleshooting/) and
+[Support](../support/) when authors cannot create or render a diagram.
 
 ## Forge successor preview
 
-A Forge successor is under preparation. Its editors, save lifecycle, local
-history, export tools, storage, and permissions differ from the current Connect
-release. Use the [Forge preview guide](../forge-preview/) only for a site that
-has been explicitly enrolled in that preview. Do not uninstall the current app
-or recreate existing macros as an upgrade step.
+A Forge successor is under preparation. Its editors and save workflow differ
+from the current Connect release. Use the
+[Forge preview guide](../forge-preview/) only for a site that has been explicitly
+enrolled in that preview. Do not uninstall the current app or recreate existing
+macros as an upgrade step.
 
 Install or evaluate the app from its
 [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/1226438/excalidraw-for-confluence?hosting=cloud&tab=installation).

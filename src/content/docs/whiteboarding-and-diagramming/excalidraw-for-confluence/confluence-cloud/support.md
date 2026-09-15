@@ -21,9 +21,5 @@ or email [support@fulstech.com](mailto:support@fulstech.com).
   export.
 - The Confluence page version and browser.
 - Clear reproduction steps, expected result, actual result, and visible error.
-- A sanitized screenshot with enough Confluence context to locate the problem.
+- A screenshot with enough Confluence context to locate the problem.
 - Whether the diagram existed before a Connect-to-Forge upgrade.
-
-Do not send passwords, session cookies, API tokens, confidential diagram source,
-raw browser archives, or unrelated customer data. Support may request additional
-diagnostics after reviewing the initial report.

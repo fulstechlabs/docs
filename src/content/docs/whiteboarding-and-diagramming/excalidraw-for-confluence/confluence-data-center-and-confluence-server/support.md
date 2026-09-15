@@ -11,6 +11,3 @@ Include the app version, Confluence version, exact macro name, reproduction
 steps, expected and actual results, visible error text, and a sanitized
 screenshot. For PlantUML problems, also mention whether Graphviz is installed or
 the diagram uses `!pragma layout smetana`.
-
-Do not send passwords, license keys, access tokens, confidential diagram source,
-raw logs containing secrets, or unrelated customer data.

@@ -31,10 +31,3 @@ The macro names and basic purpose are shared by the current Connect app and the
 Forge successor. Their editors and save flows differ. Use the
 [Connect guide](../usage/) for the current Marketplace version or the
 [Forge preview guide](../forge-preview/) only when your site has that preview.
-
-## Data-handling choice
-
-The diagram type can affect where content is processed. Review
-[Connect permissions and data](../connect-permissions-and-data/) before putting
-restricted information in a diagram. Forge preview participants should instead
-read [Forge preview security and privacy](../security-and-privacy/).

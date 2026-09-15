@@ -49,7 +49,7 @@ the current page's diagram to GitHub. Font resources are loaded from `esm.sh`;
 the App does not intentionally include diagram source in those font requests.
 
 The external services have their own privacy, security, availability and
-logging practices. See the [Forge preview guide](../forge-preview/#data-processing)
+logging practices. See the [Forge app guide](../forge-preview/#data-processing)
 before using an externally processed diagram type with restricted content.
 
 ## Permissions and access
