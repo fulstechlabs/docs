@@ -23,7 +23,7 @@ If you use Confluence Data Center or Server, see the [Data Center and Server gui
 
 ## How the app fits into Confluence
 
-The app provides six macros:
+While editing a Confluence page, type `/LaTeX` and choose one of the six app macros:
 
 | Macro | Use it for |
 | --- | --- |
@@ -36,11 +36,13 @@ The app provides six macros:
 
 MathJax is the best default for most equations. Choose an Advanced LaTeX macro only when you need a full LaTeX document or packages that MathJax does not provide.
 
+References and equation lists use the current published version of pages the reader can access. They do not reconstruct historical numbering or navigation from an older page version.
+
 ## Start here
 
 Follow [Create your first equation](../getting-started/) to add `E=mc^2` to a page and publish a result. Then use the [guide index](../usage/) to find the next task.
 
-Administrators and evaluators can review [permissions and data handling](../permissions-and-data/). Existing customers moving from the Connect version should read [Cloud upgrades and Connect compatibility](../migrate-from-confluence-server-and-confluence-data-center/).
+Administrators and evaluators can review [security, privacy, and data handling](../permissions-and-data/). Existing customers moving from the Connect version should read [Cloud upgrades and Connect compatibility](../migrate-from-confluence-server-and-confluence-data-center/).
 
 ## Platform and licensing
 

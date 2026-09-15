@@ -5,6 +5,12 @@ description: "Use TeX Live packages for plots, chemistry structures, and diagram
 
 Use an Advanced LaTeX macro when your content requires a full LaTeX document or packages unavailable in the everyday MathJax editor.
 
+## Before you start
+
+- You need permission to edit and publish the Confluence page.
+- Prepare a complete LaTeX document, including `\documentclass`, `\begin{document}`, and `\end{document}`.
+- Use an ordinary **LaTeX Math** macro instead when you only need an equation supported by MathJax.
+
 ## Create an advanced formula
 
 1. Edit a Confluence page.
@@ -13,6 +19,8 @@ Use an Advanced LaTeX macro when your content requires a full LaTeX document or 
 4. Select **Preview**.
 5. Correct any reported LaTeX error, then select **Save**.
 6. Publish or update the page.
+
+You have succeeded when the published page shows the generated image without a macro editor frame. If compilation fails, the preview shows an error before you save.
 
 Use this minimal document structure to avoid page headers, footers, and page numbers in the rendered image:
 
@@ -54,6 +62,6 @@ Your content here
 
 Published output keeps inline MathJax, TeX Live chemistry, and TeX Live diagrams readable alongside ordinary Confluence content.
 
-Advanced rendering uses an Atlassian-hosted Forge Container. The first uncached preview can take longer while a non-production container starts; production keeps one renderer instance available. Published output is cached as a derived PNG, so ordinary views do not compile unchanged content every time.
+Advanced rendering uses an Atlassian-hosted Forge Container. A first uncached preview can take longer than a repeated preview. Published output is cached as a derived PNG, so ordinary views do not compile unchanged content every time.
 
 TeX Live output is a raster image with its authored colors and canvas. Unlike ordinary MathJax SVG output, it is not recolored when Confluence changes between Light and Dark appearance.

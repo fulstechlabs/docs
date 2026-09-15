@@ -13,7 +13,7 @@ Check which engine the macro uses:
 
 ## An Advanced LaTeX preview is still starting
 
-On development or staging environments, the TeX Live container can scale to zero and needs time to start for an uncached formula. The editor retries a bounded startup response. Wait for the preview state to change before resubmitting.
+A first uncached TeX Live preview can take longer than a repeated preview. Wait for the preview state to change before resubmitting the same content.
 
 If the message persists, copy the visible error text and contact support. Do not send confidential page content unless it is required and sanitized.
 
@@ -51,4 +51,3 @@ MathJax output follows Confluence appearance unless the formula specifies an exp
 ## Get more help
 
 Follow [Support](../support/) and include the exact macro name, platform, reproduction steps, expected result, actual result, visible error text, and a sanitized screenshot.
-

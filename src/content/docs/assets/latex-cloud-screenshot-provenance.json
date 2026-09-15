@@ -1,0 +1,50 @@
+{
+  "product": "LaTeX Math for Confluence (MathJax, TeX Live, Math Editor)",
+  "sourceRelease": "7.18.0",
+  "forgeProductionVersion": "6.0.0",
+  "assets": [
+    {
+      "file": "latex-cloud-editor-toolbar.png",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "MathJax display macro editor with formula toolbar",
+      "captured": "2026-09-14"
+    },
+    {
+      "file": "latex-cloud-formula-library.png",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Formula Library open in the MathJax editor",
+      "captured": "2026-09-14"
+    },
+    {
+      "file": "latex-cloud-keyboard-greek.png",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Docked virtual keyboard, Greek layout",
+      "captured": "2026-09-14"
+    },
+    {
+      "file": "latex-cloud-keyboard-numeric.png",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Docked virtual keyboard, Numeric layout",
+      "captured": "2026-09-14"
+    },
+    {
+      "file": "latex-cloud-reference-panel.png",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Existing MathJax display macro with Reference panel expanded; no changes saved",
+      "captured": "2026-09-15",
+      "pageId": "63275009"
+    },
+    {
+      "file": "latex-cloud-published-output.jpg",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Published mixed MathJax and TeX Live output",
+      "captured": "2026-09-15"
+    },
+    {
+      "file": "latex-cloud-reference-list-output.jpg",
+      "environment": "Fulstech dev2 Confluence test site",
+      "workflow": "Published same-page reference and equation list with child-page entries",
+      "captured": "2026-09-15"
+    }
+  ]
+}

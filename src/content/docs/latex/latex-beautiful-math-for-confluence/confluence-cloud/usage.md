@@ -19,12 +19,12 @@ Use this page as the task index for LaTeX for Confluence Cloud.
 
 ## Publish and maintain content
 
-- [Export and compatibility](../export-and-compatibility/) explains PDF, Word, mobile, page history, and Connect-format content.
+- [Export and compatibility](../export-and-compatibility/) explains PDF, Word, viewing, page history, and Connect-format content.
 - [Cloud upgrades and Connect compatibility](../migrate-from-confluence-server-and-confluence-data-center/) explains major Forge upgrades and what happens to existing macros.
 - [Troubleshooting](../troubleshooting/) helps with rendering, references, equation lists, permissions, and licenses.
 
 ## Evaluate or administer the app
 
-- [Permissions and data handling](../permissions-and-data/) explains scopes, Forge processing, storage, retention, access control, and egress.
+- [Security, privacy, and data handling](../permissions-and-data/) explains scopes, Forge processing, storage, retention, data residency, access control, analytics, and egress.
 - [Release notes](../release-notes/) summarizes customer-visible changes.
 - [Support](../support/) explains how to request help and what information to include.
