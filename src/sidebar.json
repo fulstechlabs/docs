@@ -417,16 +417,56 @@
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/overview"
               },
               {
-                "label": "Usage",
+                "label": "Guides",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/usage"
               },
               {
-                "label": "Migrate from Confluence Server and Confluence Data Center",
+                "label": "Create your first equation",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/getting-started"
+              },
+              {
+                "label": "Choose the right macro",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/choose-a-macro"
+              },
+              {
+                "label": "Write and edit formulas",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/write-and-edit-formulas"
+              },
+              {
+                "label": "Formula Library",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/formula-library"
+              },
+              {
+                "label": "References and equation lists",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/references-and-equation-lists"
+              },
+              {
+                "label": "Advanced LaTeX",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/advanced-latex"
+              },
+              {
+                "label": "Export and compatibility",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/export-and-compatibility"
+              },
+              {
+                "label": "Permissions and data handling",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/permissions-and-data"
+              },
+              {
+                "label": "Cloud upgrades and Connect compatibility",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/migrate-from-confluence-server-and-confluence-data-center"
+              },
+              {
+                "label": "Troubleshooting",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/troubleshooting"
               },
               {
                 "label": "Support",
                 "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/support"
+              },
+              {
+                "label": "Release notes",
+                "slug": "latex/latex-beautiful-math-for-confluence/confluence-cloud/release-notes"
               }
             ],
             "collapsed": true
