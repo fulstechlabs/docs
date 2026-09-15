@@ -1,7 +1,13 @@
 ---
-title: "Security and privacy"
-description: "Understand Forge storage, authorization, permissions, external processing, and local browser data."
+title: "Forge preview: security and privacy"
+description: "Understand Forge preview storage, authorization, permissions, external processing, and local browser data."
 ---
+
+:::caution[Forge preview only]
+This page describes the Forge successor preview, not the Connect version
+currently distributed on Atlassian Marketplace. For the current app, read
+[Connect permissions and data](../connect-permissions-and-data/).
+:::
 
 **Excalidraw, Mermaid, PlantUML - Whiteboard for Confluence** runs on Atlassian
 Forge and uses Confluence Cloud APIs. It is not eligible for the **Runs on
