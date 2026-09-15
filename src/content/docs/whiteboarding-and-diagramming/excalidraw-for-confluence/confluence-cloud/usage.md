@@ -1,6 +1,13 @@
 ---
-title: "Usage"
+title: "Use the Connect app"
+description: "Use Excalidraw, DrawIO, BPMN, Mermaid, PlantUML, Graphviz, and Mind Map in the current Confluence Cloud app."
 ---
+
+This guide applies to the Connect app currently available from Atlassian
+Marketplace. Start with [Create your first Excalidraw drawing](../getting-started/)
+if you are new to the app. If the macro opens directly into a full-page editor
+without a separate **Open Editor** step, use the
+[Forge preview guide](../forge-preview/).
 
 ## Excalidraw Macro
 

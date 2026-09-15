@@ -595,11 +595,27 @@
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/overview"
               },
               {
-                "label": "Usage",
+                "label": "Create your first drawing",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/getting-started"
+              },
+              {
+                "label": "Choose a diagram",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/choose-a-diagram"
+              },
+              {
+                "label": "Use the Connect app",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/usage"
               },
               {
-                "label": "Forge app guide",
+                "label": "Troubleshooting",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/troubleshooting"
+              },
+              {
+                "label": "Support",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
+              },
+              {
+                "label": "Forge preview guide",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/forge-preview"
               },
               {
@@ -609,10 +625,6 @@
               {
                 "label": "App privacy policy",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/privacy-policy"
-              },
-              {
-                "label": "Support",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
               }
             ],
             "collapsed": true

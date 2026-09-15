@@ -1,10 +1,14 @@
 ---
-title: "Forge app guide"
-description: "Use Excalidraw, Mermaid, PlantUML and the other Forge diagram macros in Confluence."
+title: "Forge preview guide"
+description: "Use Excalidraw, Mermaid, PlantUML, and the other diagram macros in an invited Forge preview."
 ---
 
-:::note[Which guide should I use?]
-This page describes the Forge version. If your editor still has an **Open Editor** button followed by a separate macro dialog, use the [Connect usage guide](../usage/) until your site administrator upgrades the app. Do not uninstall or replace existing macros during an upgrade.
+:::caution[Preview, not the current Marketplace release]
+Atlassian Marketplace currently distributes Cloud version **1.0.15-AC** as a
+Connect app. Use this page only if your site has been explicitly enrolled in the
+Forge successor preview. If your editor has an **Open Editor** button followed
+by a separate macro dialog, use the [Connect guide](../usage/). Do not uninstall
+or replace existing macros during an upgrade.
 :::
 
 ## Choose a diagram
