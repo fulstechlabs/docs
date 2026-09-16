@@ -14,10 +14,15 @@ Use **Preview create** when the process should begin with a new root issue.
 2. Answer its run variables.
 3. Review and adjust the root values.
 4. Select the child work needed for this run.
-5. Confirm creation.
+5. Open **Details** on child work to confirm its Jira parent and any additional
+   issue-link direction.
+6. Confirm creation.
 
-Jira receives a normal root issue followed by the selected hierarchy. The run
-keeps an immutable plan, so retry can skip children that already succeeded.
+Jira receives a normal root issue followed by the selected hierarchy. Parent
+work is created before its children. The run keeps an immutable plan, so retry
+can skip children and links that already succeeded.
+
+![Preview the selected Jira parent before creating the hierarchy](./assets/hierarchy-preview.jpg)
 
 ## Apply a template to an existing issue
 
@@ -42,8 +47,12 @@ Use **Recreate issue and selected work** when a useful live issue should be
 reproduced without adding a governed template to the library.
 
 Choose the destination project and issue type, select the supported root
-fields, children, and links, then review the one-time creation plan. The
-resulting issue is marked **Recreated once** in its provenance.
+fields, nested child work, and links, then review the one-time creation plan.
+Recreate preserves selected parent relationships and keeps one copy when the
+same issue is both a child and linked to the source root. Before Jira is
+changed, the app checks that the destination project has compatible hierarchy
+levels for the selected work types. The resulting issue is marked
+**Recreated once** in its provenance.
 
 ## Understand the result
 
@@ -59,4 +68,3 @@ The **Template details** issue panel shows:
 
 Retry is available only for failed or partial work. Completed nodes are not
 replayed.
-

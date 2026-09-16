@@ -17,6 +17,20 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 - Jira subtasks inherit Sprint from their parent because Jira rejects direct
   Sprint writes to a subtask.
 
+## Hierarchy boundaries
+
+- A Jira parent must be on the directly compatible hierarchy level. Same-level
+  parents and skipped levels are rejected.
+- A subtask cannot be standalone. It needs a compatible parent in the selected
+  creation plan.
+- Parent hierarchy and issue links are separate. A valid link does not make an
+  otherwise invalid parent hierarchy valid.
+- Capture and Recreate inspect at most 20 related work items in one operation.
+  The preview reports when the result is truncated.
+- Cross-project Apply and Recreate require compatible destination work types and
+  hierarchy levels. The operation stops before changing Jira when they cannot be
+  mapped safely.
+
 ## Native Create boundaries
 
 - Group picker and Sprint are not exposed by Forge UI Modifications and remain
