@@ -611,8 +611,12 @@
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/text-diagrams"
               },
               {
-                "label": "Cloud feature reference",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/feature-reference"
+                "label": "Mermaid editor tools",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/mermaid-editor-tools"
+              },
+              {
+                "label": "Upgrade from Connect",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/upgrade-from-connect"
               },
               {
                 "label": "Troubleshooting",

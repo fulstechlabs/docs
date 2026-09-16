@@ -42,7 +42,7 @@ flowchart LR
 
 The preview should show three nodes connected from left to right. Mermaid also
 supports samples, configuration, Full view, image export, and manual preview
-control. See the [Mermaid feature reference](../feature-reference/#text-defined-diagrams).
+control. See [Use Mermaid editor tools](../mermaid-editor-tools/).
 
 ![Mermaid editor with source on the left and the rendered preview on the right](../../../assets/excalidraw-confluence-cloud/3.0.0/mermaid-editor.jpg)
 
@@ -98,6 +98,6 @@ sample text to show the editor layout._
 
 ## Next steps
 
-- [Use Mermaid configuration, export, samples, and Full view](../feature-reference/#text-defined-diagrams).
+- [Use Mermaid configuration, export, samples, and Full view](../mermaid-editor-tools/).
 - [Resolve a diagram that does not render](../troubleshooting/#a-mermaid-graphviz-or-plantuml-diagram-does-not-render).
 - [Create and edit canvas diagrams](../canvas-diagrams/).

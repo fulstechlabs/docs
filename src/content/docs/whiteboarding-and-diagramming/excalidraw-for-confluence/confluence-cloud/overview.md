@@ -41,8 +41,10 @@ Cloud version **3.0.0** is the published Forge release.
   Mind Map, BPMN, and DrawIO.
 - Use [Create diagrams from text](../text-diagrams/) for Mermaid, Graphviz, and
   PlantUML.
-- Open the [Cloud feature reference](../feature-reference/) for advanced editor
-  features and existing Connect diagrams.
+- Use [Mermaid editor tools](../mermaid-editor-tools/) for configuration,
+  preview control, export, sharing, and Local history.
+- Follow [Upgrade existing diagrams from Connect](../upgrade-from-connect/)
+  before the first Forge save of existing content.
 - Use [Troubleshooting](../troubleshooting/) when an editor, save, or preview
   does not behave as expected.
 
@@ -52,7 +54,7 @@ Sites still using Connect can follow the [legacy Connect guide](../usage/).
 The Forge editor opens directly from the macro and has a different save flow.
 Administrators may need to approve additional permissions during the upgrade.
 Do not uninstall the app or recreate existing macros as an upgrade step; follow
-[Existing Connect diagrams](../feature-reference/#existing-connect-diagrams) to
+[Upgrade existing diagrams from Connect](../upgrade-from-connect/) to
 review your content before its first Forge save.
 
 Install or evaluate the app from its

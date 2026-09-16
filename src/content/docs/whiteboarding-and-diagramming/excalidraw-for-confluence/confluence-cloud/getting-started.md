@@ -58,10 +58,10 @@ Readers continue to see the previous published version until you select
 - [Choose the right diagram macro](../choose-a-diagram/).
 - [Create and edit canvas diagrams](../canvas-diagrams/).
 - [Create diagrams from text](../text-diagrams/).
-- [Reuse shapes with Personal Library](../feature-reference/#reuse-drawings-with-personal-library).
+- [Reuse shapes with Personal Library](../canvas-diagrams/#reuse-shapes-with-personal-library).
 - [Troubleshoot a diagram](../troubleshooting/).
 
 If your site still shows **Open Editor** and **Save and Close**, use the
 [legacy Connect guide](../usage/). If **Save** does not return you to the page,
 keep the editor open and follow
-[Save and publish any diagram](../feature-reference/#save-and-publish-any-diagram).
+[The editor closed but the published page did not change](../troubleshooting/#the-editor-closed-but-the-published-page-did-not-change).
