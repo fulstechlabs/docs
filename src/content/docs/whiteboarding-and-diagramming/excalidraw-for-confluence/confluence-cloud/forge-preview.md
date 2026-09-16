@@ -1,10 +1,15 @@
 ---
-title: "Forge app guide"
-description: "Use Excalidraw, Mermaid, PlantUML and the other Forge diagram macros in Confluence."
+title: "Use the Cloud app"
+description: "Create, edit, save, and reuse diagrams with the published Forge app for Confluence Cloud."
 ---
 
-:::note[Which guide should I use?]
-This page describes the Forge version. If your editor still has an **Open Editor** button followed by a separate macro dialog, use the [Connect usage guide](../usage/) until your site administrator upgrades the app. Do not uninstall or replace existing macros during an upgrade.
+:::note[Applies to the published Forge app]
+This guide applies to Cloud version **3.0.0**. The older `forge-preview` URL is
+retained so existing help and Marketplace links continue to work; the app is no
+longer an invited preview. Start with [Create your first drawing](../getting-started/).
+If your site still uses the Connect editor with a separate **Open Editor** step,
+use the [legacy Connect guide](../usage/). Do not uninstall or replace existing
+macros during an upgrade.
 :::
 
 ## Choose a diagram
@@ -231,7 +236,7 @@ The imported snapshot combines diagram code and Mermaid configuration in source 
 
 If a file contains an invalid entry or configuration, the complete import is rejected rather than silently skipping entries. Keep the original file and contact support; do not clear existing history to retry. Reimporting an already imported snapshot ID does not update or duplicate that snapshot.
 
-:::note[Preview validation boundary]
+:::note[History import validation boundary]
 The Connect-format import, restore confirmation, configured preview, export preservation and reload have been checked in Chrome using a test file matching the Connect export format. A file downloaded from an actual Connect editor has not yet completed this validation. This is not an assurance of complete Connect history migration.
 :::
 
