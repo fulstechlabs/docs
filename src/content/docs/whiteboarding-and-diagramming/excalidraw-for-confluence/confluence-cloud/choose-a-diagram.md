@@ -31,3 +31,13 @@ Use the [Cloud app guide](../forge-preview/) for the published Forge release.
 If your site has not upgraded and still shows a separate **Open Editor** step,
 follow the [legacy Connect guide](../usage/). The macro names and purposes are
 shared, but the editors and save flows differ.
+
+## Continue with your diagram
+
+- For Excalidraw, Mind Map, BPMN, or DrawIO, start with
+  [Canvas tools](../forge-preview/#canvas-tools).
+- For Mermaid, Graphviz, or PlantUML, start with
+  [Text-defined diagrams](../forge-preview/#text-defined-diagrams).
+- If you are editing a diagram created before the Forge upgrade, follow
+  [Existing Connect diagrams](../forge-preview/#existing-connect-diagrams)
+  before the first save.
