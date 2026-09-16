@@ -33,7 +33,7 @@ Open **Release readiness** and select **Edit**. Review:
 
 - The Jira project and root issue type.
 - Root fields owned by the template.
-- The three child tasks and their parent relationships.
+- The child work, each Jira parent, and any separate issue-link relationship.
 - Any variables that users answer for each run, plus supported Smart Values
   such as `{{today+7d}}` or `{{project.key}}`.
 - Availability rules and default behavior.
@@ -49,13 +49,16 @@ for the complete field list.
 3. Review the resolved root fields, especially dates and Jira-context values.
 4. Change a run-specific value if needed.
 5. Deselect any child work that is not required this time.
-6. Select the final Create action.
+6. Open **Details** for child work when you need to confirm its Jira parent or
+   issue-link direction.
+7. Select the final Create action.
 
 ![Create preview with selectable child work](./assets/create-preview.png)
 
-The root issue is created first. Child work is then processed from a durable
-run plan. If a child fails, completed items are retained and a retry does not
-create them again.
+The root issue is created first. Parent work is created before its selected
+children, using the hierarchy shown in Preview. Child work is then processed
+from a durable run plan. If a child fails, completed items are retained and a
+retry does not create them again.
 
 Variables are questions answered by the user. Smart Values are bounded values
 resolved by the app from the run time or Jira context. They are not the Jira

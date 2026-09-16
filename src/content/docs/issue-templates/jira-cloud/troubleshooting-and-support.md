@@ -54,6 +54,22 @@ Open **Template details** on the root issue and review each node outcome. Fix
 the reported Jira permission, issue-type, field, or link problem, then retry
 the same run. Do not start a new run just to replay completed children.
 
+## Preview says the hierarchy is incompatible
+
+Open the affected work item and review its **Work type** and **Parent**. Jira
+allows only a compatible direct parent level; a subtask cannot be standalone.
+If the operation targets another project, confirm that project has matching work
+types at compatible hierarchy levels. Correct the template or destination, then
+run Preview again. The app does not create or update Jira issues while this
+preflight error is present.
+
+## An issue link cannot be created
+
+The selected link type may have been renamed, deleted, or made unavailable.
+Edit the work item, choose one of Jira's current link types and confirm the
+displayed direction. Retry the same partial run so completed issue creation is
+not repeated.
+
 ## Native Create did not prefill
 
 Confirm that an administrator enabled a rule for the exact project and issue

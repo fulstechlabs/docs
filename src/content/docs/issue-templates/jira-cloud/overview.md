@@ -32,7 +32,8 @@ work.
 1. An administrator or project lead prepares the reusable process once.
 2. A user chooses a template and answers any run-specific questions.
 3. The app shows the exact root fields and child work before changing Jira.
-4. Jira receives normal issues, subtasks, and selected links.
+4. Jira receives normal issues with the reviewed parent hierarchy and selected
+   issue links.
 5. The **Template details** panel records what happened and supports safe
    recovery when a hierarchy finishes only partially.
 
@@ -49,6 +50,10 @@ configured project and issue-type combinations.
   and backup/restore.
 - An issue's actions menu contains Apply, Capture, and Recreate journeys.
 - The **Template details** issue panel shows provenance and run outcomes.
+
+Template authors can also open **Details** in the library to copy the stable
+template ID or a ready-to-use `createdFromTemplate("…")` JQL query for issues
+created from that template.
 
 ## Start in under ten minutes
 

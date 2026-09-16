@@ -3,8 +3,9 @@ title: "Templates and Supported Fields"
 description: "Create, capture, edit, and govern reusable Jira templates with typed Jira-native fields."
 ---
 
-A template describes one root issue and an optional bounded hierarchy of
-subtasks or linked issues. It also records the Jira context, variables,
+A template describes one root issue and optional child work. Each work item can
+have a Jira parent, an additional issue link, both, or neither when Jira allows
+that structure. The template also records the Jira context, variables,
 availability rules, overwrite policy, and revision used for support and
 provenance.
 
@@ -24,6 +25,28 @@ provenance.
 The app stores stable Jira field IDs and compact schema information. Field
 names remain readable labels and can change without becoming the field's
 identity.
+
+## Build the work structure
+
+Open **Structure** in the template editor, add a work item, and choose its work
+type. Configure its two relationships separately:
+
+- **Parent** controls Jira hierarchy. Choose the root issue, a compatible work
+  item in the template, or **Standalone — no Jira parent** when that work type
+  can exist without a parent.
+- **Relationship** optionally adds a Jira issue link. Choose the link type and
+  direction shown by the editor, or keep **Hierarchy only**.
+
+The parent list follows the hierarchy levels configured by Jira. It excludes
+self, descendants, same-level work and other incompatible choices that would
+produce an invalid Jira hierarchy. A compatible work item added later in the
+template can still be selected as the parent.
+
+![Choose Jira parent hierarchy separately from an optional issue link](./assets/template-structure.jpg)
+
+Review the visible tree after changing a work type or parent. If the new work
+type makes an existing parent invalid, the app clears that choice instead of
+guessing a replacement.
 
 ## Add reusable and dynamic values
 
@@ -45,9 +68,11 @@ not exist until a particular operation or child creation step.
 Use **Create template from issue** when a live issue already represents the
 process you want to reuse.
 
-The capture preview lists supported root fields and native subtasks. Choose the
-fields and child work to keep before saving. Unsupported fields are reported
-and omitted rather than copied with a guessed payload.
+The capture preview lists supported root fields, nested child work, and links to
+the captured root. Choose the fields and related work to keep before saving. If
+the same issue is both below the root and linked to it, the app keeps one work
+item with both relationships instead of duplicating it. Unsupported fields are
+reported and omitted rather than copied with a guessed payload.
 
 ## Supported Jira-native fields
 
@@ -74,6 +99,11 @@ A field can be removed, renamed, or leave the target project/issue-type
 context. Before writing, the app reloads the live Jira metadata. An unavailable
 field is warned and skipped; it does not silently invalidate the whole
 hierarchy.
+
+When Apply or Recreate targets another project, the app maps work types by name
+and subtask kind, then validates their hierarchy levels before changing Jira.
+If the destination cannot represent the selected structure, the preview stops
+the operation and identifies the incompatible work item.
 
 See [Known limitations](../known-limitations/) for Rank, Assets, third-party
 fields, and native Create-specific boundaries.
