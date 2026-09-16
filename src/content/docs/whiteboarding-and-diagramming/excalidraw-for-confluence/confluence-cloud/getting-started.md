@@ -4,7 +4,7 @@ description: "Add, save, and publish an Excalidraw drawing on a Confluence Cloud
 ---
 
 This guide creates a small drawing that readers can see on a Confluence Cloud
-page. It applies to the current Marketplace Connect version of the app.
+page. It applies to the published Forge app, Cloud version **3.0.0**.
 
 ## Before you start
 
@@ -14,23 +14,12 @@ page. It applies to the current Marketplace Connect version of the app.
 ## Add the drawing
 
 1. Open a Confluence page and select **Edit**.
-2. Type `/Excalidraw`, then choose **Excalidraw Diagram**. On some Confluence
-   editor versions, the picker displays **Excalidraw diagrams**.
-
-   ![The Confluence macro picker showing Excalidraw diagrams](../../../assets/-MjSVn_RRinFyA8ZF13I.png)
-
-3. Select **Open Editor**.
-
-   ![The Excalidraw macro dialog with the Open Editor button](../../../assets/-MjSW4YPqig00yFIBk4b.png)
-
-4. Add a rectangle, an arrow, and a short label to the canvas. Hold Shift while
-   drawing when you want a regular shape such as a square or circle.
-
-   ![The Excalidraw editor with a small architecture drawing and Save and Close controls](../../../assets/zSHuaXf0asiX1GvZDnft.png)
-
-5. Select **Save and Close**.
-6. Wait for the drawing preview to appear, then select **Insert** for a new macro.
-7. Select **Publish** in Confluence.
+2. Type `/Excalidraw`, then choose **Excalidraw Diagram**. The diagram editor
+   opens directly; there is no separate **Open Editor** step in Forge.
+3. Draw two rectangles and label them **Browser** and **Service**. Connect them
+   with an arrow to show the direction of a request.
+4. Select **Save** and wait for the editor to return to Confluence.
+5. Select **Publish** for a new page, or **Update** for an existing page.
 
 You have succeeded when the published page shows the drawing instead of the
 macro editor or an empty placeholder.
@@ -39,9 +28,10 @@ macro editor or an empty placeholder.
 
 1. Edit the Confluence page.
 2. Select the drawing and choose **Edit**.
-3. Select **Open Editor**, make the change, and choose **Save and Close**.
-4. Wait for the updated preview, select **Save** in the macro dialog, then select
-   **Update** in Confluence.
+3. Change the **Service** label to **API service**, then select **Save**.
+4. Wait for the editor to return to Confluence, then select **Update**.
+5. Reload the published page and confirm the label changed while both rectangles
+   and their connecting arrow are still present.
 
 Saving the drawing and publishing the page are separate steps. Readers continue
 to see the published page until you select **Publish** or **Update**.
@@ -49,9 +39,11 @@ to see the published page until you select **Publish** or **Update**.
 ## Next steps
 
 - [Choose the right diagram macro](../choose-a-diagram/).
-- [Use Excalidraw libraries and the other Connect editors](../usage/).
+- [Reuse shapes with Personal Library](../forge-preview/#reuse-drawings-with-personal-library).
+- [Use the other diagram editors](../forge-preview/).
 - [Troubleshoot a diagram](../troubleshooting/).
 
-If selecting a macro opens a full-page editor immediately and there is no
-separate **Open Editor** step, your site may be using the
-[Forge preview](../forge-preview/).
+If your site still shows **Open Editor** and **Save and Close**, use the
+[legacy Connect guide](../usage/). If saving reports that the macro has not yet
+been confirmed in the page draft, keep the editor open and retry **Save** after
+the draft is ready. Do not publish until the diagram editor closes successfully.

@@ -3,9 +3,9 @@ title: "Troubleshooting"
 description: "Resolve common macro, editor, preview, library, rendering, and license problems in Confluence Cloud."
 ---
 
-This page starts with the current Marketplace Connect app. If your macro opens
-directly into a full-page Forge editor, use the troubleshooting guidance inside
-the [Forge preview guide](../forge-preview/).
+This page applies to the published Forge app, Cloud **3.0.0**. Sites still using
+the separate **Open Editor** dialog can follow the [legacy Connect guide](../usage/).
+The [Cloud app guide](../forge-preview/) also explains editor-specific messages.
 
 ## The diagram macro is not available
 
@@ -16,9 +16,10 @@ the [Forge preview guide](../forge-preview/).
 - If you can request apps but cannot install them, ask a Confluence site
   administrator to review the Marketplace app request.
 
-## Open Editor does not open the canvas
+## The diagram editor does not open
 
-1. Keep the Confluence page editor open and retry **Open Editor** once.
+1. Keep the Confluence page editor open. Select the existing macro and retry
+   **Edit** once. On legacy Connect sites, retry **Open Editor** instead.
 2. Reload the page only after copying or exporting any unsaved text or diagram
    content you still need.
 3. Check whether a browser extension or organizational browser policy blocks
@@ -31,16 +32,16 @@ that can remove the only editable copy attached to the page.
 
 ## The editor closed but the published page did not change
 
-The Connect workflow has three save boundaries:
+The Forge workflow has two save boundaries:
 
-1. **Save and Close** (or the equivalent action in the embedded editor) returns
-   the changed diagram to the macro dialog.
-2. **Insert** for a new macro, or **Save** for an existing macro, applies it to
-   the Confluence page draft.
-3. **Publish** or **Update** makes the page draft visible to readers.
+1. **Save** in the diagram editor applies the diagram to the page draft. DrawIO
+   uses **Save & Exit**. Wait for a successful return to Confluence.
+2. **Publish** or **Update** makes the page draft visible to readers.
 
-Complete all three steps and then reload the published page. If the preview in
-the macro dialog never changed, keep the original macro and contact support.
+Complete both steps and reload the published page. If Save reports that the
+macro is not confirmed in the draft, keep the editor open and retry after the
+draft is ready. Repeatedly clicking Update does not complete a failed diagram
+save. Keep the original macro and contact support if the problem persists.
 
 ## A published diagram is blank or missing
 
@@ -60,7 +61,7 @@ diagram must remain editable.
 - Use **Show preview** when the editor provides it and fix the first reported
   syntax error.
 - Reduce the source to a small known-valid example from the
-  [Connect usage guide](../usage/) to separate a syntax problem from an app or
+  [Cloud app guide](../forge-preview/) to separate a syntax problem from an app or
   browser problem.
 - For PlantUML code that includes remote files, confirm that your organization
   permits the referenced destination and try a self-contained example.

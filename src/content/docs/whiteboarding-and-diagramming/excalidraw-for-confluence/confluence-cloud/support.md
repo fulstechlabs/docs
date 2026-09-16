@@ -13,7 +13,7 @@ or email [support@fulstech.com](mailto:support@fulstech.com).
 ## Include this information
 
 - Product: Excalidraw for Confluence Cloud.
-- App experience: Connect or Forge preview. Mention whether you see a separate
+- App version and experience: Forge or legacy Connect. Mention whether you see a separate
   **Open Editor** step.
 - The exact macro name, such as **Excalidraw Diagram** or
   **Mermaid UML Diagram**.

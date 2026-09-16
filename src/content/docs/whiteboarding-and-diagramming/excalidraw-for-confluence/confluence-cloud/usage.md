@@ -1,13 +1,13 @@
 ---
-title: "Use the Connect app"
-description: "Use Excalidraw, DrawIO, BPMN, Mermaid, PlantUML, Graphviz, and Mind Map in the current Confluence Cloud app."
+title: "Legacy Connect guide"
+description: "Use the older Connect editors on Confluence Cloud sites that have not upgraded to Forge."
 ---
 
-This guide applies to the Connect app currently available from Atlassian
-Marketplace. Start with [Create your first Excalidraw drawing](../getting-started/)
-if you are new to the app. If the macro opens directly into a full-page editor
-without a separate **Open Editor** step, use the
-[Forge preview guide](../forge-preview/).
+This guide applies to sites still using the older Connect app. The published
+Cloud **3.0.0** release uses Forge. New users should start with
+[Create your first Excalidraw drawing](../getting-started/), then use the
+[Cloud app guide](../forge-preview/). Keep this legacy guide for editors with
+a separate **Open Editor** step; do not apply its save sequence to Forge.
 
 ## Excalidraw Macro
 

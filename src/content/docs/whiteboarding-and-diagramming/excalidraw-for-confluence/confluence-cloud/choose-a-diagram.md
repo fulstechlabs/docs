@@ -27,7 +27,7 @@ seven macros are included in the Confluence Cloud app.
 - Use **DrawIO Diagram** when a canvas with extensive shape libraries is more
   useful than a hand-drawn style.
 
-The macro names and basic purpose are shared by the current Connect app and the
-Forge successor. Their editors and save flows differ. Use the
-[Connect guide](../usage/) for the current Marketplace version or the
-[Forge preview guide](../forge-preview/) only when your site has that preview.
+Use the [Cloud app guide](../forge-preview/) for the published Forge release.
+If your site has not upgraded and still shows a separate **Open Editor** step,
+follow the [legacy Connect guide](../usage/). The macro names and purposes are
+shared, but the editors and save flows differ.

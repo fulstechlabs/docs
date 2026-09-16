@@ -25,26 +25,25 @@ which editor fits your task.
 
 ## Start with the current Cloud app
 
-Atlassian Marketplace currently distributes Cloud version **1.0.15-AC** as a
-Connect app. Follow [Create your first Excalidraw drawing](../getting-started/)
+Cloud version **3.0.0** is the published Forge release. Follow
+[Create your first Excalidraw drawing](../getting-started/)
 for the shortest path to a published result, then use the
-[Connect guide](../usage/) for libraries and the other diagram types.
+[Cloud app guide](../forge-preview/) for libraries and the other diagram types.
 
 Administrators can use [Troubleshooting](../troubleshooting/) and
 [Support](../support/) when authors cannot create or render a diagram.
 
-## Forge successor preview
+## Upgrading an existing site
 
-A Forge successor is under preparation. Its editors and save workflow differ
-from the current Connect release. Use the
-[Forge preview guide](../forge-preview/) only for a site that has been explicitly
-enrolled in that preview. Do not uninstall the current app or recreate existing
-macros as an upgrade step.
+Sites still using Connect can follow the [legacy Connect guide](../usage/).
+The Forge editor opens directly from the macro and has a different save flow.
+Administrators may need to approve additional permissions during the upgrade.
+Do not uninstall the app or recreate existing macros as an upgrade step; follow
+[Existing Connect diagrams](../forge-preview/#existing-connect-diagrams) to
+review your content before its first Forge save.
 
 Install or evaluate the app from its
 [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/1226438/excalidraw-for-confluence?hosting=cloud&tab=installation).
 
 If you use Confluence Data Center, see the
 [Data Center guide](../../confluence-data-center-and-confluence-server/overview/).
-
-![Excalidraw for Confluence](../../../assets/zSHuaXf0asiX1GvZDnft.png)
