@@ -6,7 +6,7 @@ description: "Use the older Connect editors on Confluence Cloud sites that have 
 This guide applies to sites still using the older Connect app. The published
 Cloud **3.0.0** release uses Forge. New users should start with
 [Create your first Excalidraw drawing](../getting-started/), then use the
-[Cloud app guide](../forge-preview/). Keep this legacy guide for editors with
+[Cloud app guide](../feature-reference/). Keep this legacy guide for editors with
 a separate **Open Editor** step; do not apply its save sequence to Forge.
 
 ## Save and publish a legacy diagram

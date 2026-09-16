@@ -5,7 +5,7 @@ description: "Resolve common macro, editor, preview, library, rendering, and lic
 
 This page applies to the published Forge app, Cloud **3.0.0**. Sites still using
 the separate **Open Editor** dialog can follow the [legacy Connect guide](../usage/).
-The [Cloud feature reference](../forge-preview/) also explains editor-specific
+The [Cloud feature reference](../feature-reference/) also explains editor-specific
 messages.
 
 ## Start with the stage that failed
