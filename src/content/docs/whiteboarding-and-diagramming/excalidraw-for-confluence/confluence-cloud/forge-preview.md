@@ -1,34 +1,29 @@
 ---
-title: "Use the Cloud app"
-description: "Create, edit, save, and reuse diagrams with the published Forge app for Confluence Cloud."
+title: "Cloud feature reference"
+description: "Use advanced editor features in the published Forge app for Confluence Cloud."
 ---
 
 :::note[Applies to the published Forge app]
 This guide applies to Cloud version **3.0.0**. The older `forge-preview` URL is
 retained so existing help and Marketplace links continue to work; the app is no
-longer an invited preview. Start with [Create your first drawing](../getting-started/).
+longer an invited preview. Start with [Create your first drawing](../getting-started/),
+[canvas diagrams](../canvas-diagrams/), or [text-defined diagrams](../text-diagrams/).
 If your site still uses the Connect editor with a separate **Open Editor** step,
 use the [legacy Connect guide](../usage/). Do not uninstall or replace existing
 macros during an upgrade.
 :::
 
-## Choose a diagram
+## Find the task you need
 
-All seven macros belong to the same Confluence app. Choose the tool that fits the information you want to explain.
+- Compare all seven macros in [Choose the right diagram macro](../choose-a-diagram/).
+- Follow the common workflow for [canvas diagrams](../canvas-diagrams/) or
+  [text-defined diagrams](../text-diagrams/).
+- Use this reference for advanced editor controls and existing Connect diagrams.
 
-| Macro | Best for | How you edit |
-| --- | --- | --- |
-| Excalidraw Diagram | Sketches, wireframes and informal whiteboards | Draw shapes and edit text on a canvas |
-| Mermaid UML Diagram | Diagrams maintained alongside a text description | Edit Mermaid source and review the preview |
-| Graphviz Diagram | Relationships, dependencies and directed graphs | Edit DOT source and review the preview |
-| PlantUML Diagram | UML and other text-defined diagrams | Edit PlantUML source and review the preview |
-| Mind Map | Brainstorming and topic hierarchies | Edit topics and add child branches |
-| BPMN Diagram | Business process diagrams | Connect process elements on a canvas |
-| DrawIO Diagram (Powered by draw.io) | Structured diagrams using shape libraries | Use the embedded draw.io editor |
+On development installations, Confluence may append **(Development)** to a
+macro's name.
 
-On development installations, Confluence may append **(Development)** to a macro's name.
-
-## Open and save a diagram
+## Save and publish any diagram
 
 1. Edit the Confluence page. Insert a diagram macro, or select an existing macro and choose **Edit**.
 2. Make your changes in the diagram editor. Review the complete diagram before saving.
@@ -99,7 +94,7 @@ Simulation is an editing aid, not a workflow engine: it does not execute busines
 
 Turn simulation off to review the normal diagram appearance. In the Forge editor, **Save** also turns simulation off automatically before creating the saved preview, so temporary simulation colors are not saved as your diagram's colors. Then select **Update** or **Publish** on the Confluence page to make the changes visible to readers.
 
-If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow [Open and save a diagram](#open-and-save-a-diagram). Do not assume that an error means the page is ready to publish.
+If Save reports that Confluence has not confirmed the macro in the draft, keep the editor open and follow [Save and publish any diagram](#save-and-publish-any-diagram). Do not assume that an error means the page is ready to publish.
 
 To change a task's color, select it, choose **Set Color**, then a swatch. Save the diagram and Update the page to publish the color. To add a standalone task, choose **Create Task** from the left palette and place it on the canvas; adding a task does not automatically connect it to the process. **Reset** restores the model loaded at editor open, discarding current unsaved edits such as label, color or added-task changes.
 
