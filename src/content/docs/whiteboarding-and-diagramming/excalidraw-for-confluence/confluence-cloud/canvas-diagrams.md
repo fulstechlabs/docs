@@ -38,7 +38,11 @@ wireframes, and informal diagrams.
 
 For a complete first example, follow
 [Create your first Excalidraw drawing](../getting-started/). Advanced modes and
-Personal Library are covered in the [Excalidraw feature reference](../forge-preview/#excalidraw).
+Personal Library are covered in the [Excalidraw feature reference](../feature-reference/#excalidraw).
+
+![Excalidraw editor showing its shape toolbar, style controls, and Save action](../../../assets/excalidraw-confluence-cloud/3.0.0/excalidraw-editor.jpg)
+
+_Select an element to change its stroke, background, and other drawing styles._
 
 ## Build a Mind Map
 
@@ -50,6 +54,10 @@ Use **Mind Map** when the result should show a topic hierarchy.
 4. Use **−** and **+** on a branch to collapse or expand its descendants.
 5. Save, publish the page, then reopen the macro to confirm that the topics are
    still editable.
+
+![Mind Map editor with a selected topic and its style panel](../../../assets/excalidraw-confluence-cloud/3.0.0/mind-map-editor.jpg)
+
+_Select a topic to edit its text, color, tags, and other node properties._
 
 ## Model a process with BPMN
 
@@ -63,7 +71,11 @@ Use **BPMN Diagram** when BPMN notation is meaningful to the audience.
 
 Token Simulation can help you walk through the modeled path. It is an editing
 aid and does not execute business actions in Confluence. See
-[Walk through a process](../forge-preview/#walk-through-a-process).
+[Walk through a process](../feature-reference/#walk-through-a-process).
+
+![BPMN editor with its element palette, start event, and Token Simulation control](../../../assets/excalidraw-confluence-cloud/3.0.0/bpmn-editor.jpg)
+
+_Use the palette and an element's context controls to build a connected process._
 
 ## Build a structured diagram with DrawIO
 
@@ -78,8 +90,13 @@ libraries and its structured canvas.
 To leave without applying the current editor changes, choose **Exit** instead
 of **Save & Exit**.
 
+![DrawIO editor with shape libraries, formatting controls, and Save and Exit](../../../assets/excalidraw-confluence-cloud/3.0.0/drawio-editor.jpg)
+
+_DrawIO keeps its shape libraries on the left, formatting controls on the
+right, and **Save & Exit** in the top toolbar._
+
 ## Next steps
 
-- [Use advanced canvas controls](../forge-preview/#canvas-tools).
+- [Use advanced canvas controls](../feature-reference/#canvas-tools).
 - [Troubleshoot an editor or save problem](../troubleshooting/).
 - [Create diagrams from text](../text-diagrams/).

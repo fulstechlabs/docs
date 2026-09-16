@@ -42,7 +42,12 @@ flowchart LR
 
 The preview should show three nodes connected from left to right. Mermaid also
 supports samples, configuration, Full view, image export, and manual preview
-control. See the [Mermaid feature reference](../forge-preview/#text-defined-diagrams).
+control. See the [Mermaid feature reference](../feature-reference/#text-defined-diagrams).
+
+![Mermaid editor with source on the left and the rendered preview on the right](../../../assets/excalidraw-confluence-cloud/3.0.0/mermaid-editor.jpg)
+
+_The source and preview appear side by side. The screenshot uses different
+sample text to show the editor layout._
 
 ## Try a Graphviz relationship graph
 
@@ -59,6 +64,11 @@ digraph {
 The preview should show a directed graph laid out from left to right. Use the
 [Graphviz gallery](https://graphviz.org/gallery/) for additional DOT examples.
 
+![Graphviz editor with DOT source and a rendered left-to-right graph](../../../assets/excalidraw-confluence-cloud/3.0.0/graphviz-editor.jpg)
+
+_Graphviz calculates the layout from DOT source. The screenshot uses different
+sample text to show the editor layout._
+
 ## Try a PlantUML sequence
 
 Insert **PlantUML Diagram** and enter:
@@ -73,6 +83,11 @@ Reviewer --> Requester: Approved
 The preview should show two participants and two messages. Use the
 [PlantUML language reference](https://plantuml.com/) for other diagram types.
 
+![PlantUML editor with sequence source and its rendered diagram](../../../assets/excalidraw-confluence-cloud/3.0.0/plantuml-editor.jpg)
+
+_PlantUML renders the source beside the editor. The screenshot uses different
+sample text to show the editor layout._
+
 ## Work safely with source
 
 - Keep a copy of source before reducing a failing diagram to a smaller example.
@@ -83,6 +98,6 @@ The preview should show two participants and two messages. Use the
 
 ## Next steps
 
-- [Use Mermaid configuration, export, samples, and Full view](../forge-preview/#text-defined-diagrams).
+- [Use Mermaid configuration, export, samples, and Full view](../feature-reference/#text-defined-diagrams).
 - [Resolve a diagram that does not render](../troubleshooting/#a-mermaid-graphviz-or-plantuml-diagram-does-not-render).
 - [Create and edit canvas diagrams](../canvas-diagrams/).

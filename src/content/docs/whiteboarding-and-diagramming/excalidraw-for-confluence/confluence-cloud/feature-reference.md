@@ -4,9 +4,9 @@ description: "Use advanced editor features in the published Forge app for Conflu
 ---
 
 :::note[Applies to the published Forge app]
-This guide applies to Cloud version **3.0.0**. The older `forge-preview` URL is
-retained so existing help and Marketplace links continue to work; the app is no
-longer an invited preview. Start with [Create your first drawing](../getting-started/),
+This guide applies to Cloud version **3.0.0**. The previous `forge-preview` URL
+redirects here so existing help and Marketplace links continue to work; the app
+is no longer an invited preview. Start with [Create your first drawing](../getting-started/),
 [canvas diagrams](../canvas-diagrams/), or [text-defined diagrams](../text-diagrams/).
 If your site still uses the Connect editor with a separate **Open Editor** step,
 use the [legacy Connect guide](../usage/). Do not uninstall or replace existing

@@ -22,6 +22,11 @@ guide applies to the published Forge app, Cloud version **3.0.0**.
 6. Wait for the editor to return to Confluence. Select **Publish** for a new
    page, or **Update** for an existing page.
 
+![Excalidraw editor with a selected rounded rectangle and the Save action in the top toolbar](../../../assets/excalidraw-confluence-cloud/3.0.0/excalidraw-editor.jpg)
+
+_The Forge editor opens directly from the macro. Build and review the complete
+drawing before choosing **Save**._
+
 You have succeeded when the published page shows the drawing instead of the
 macro editor or an empty placeholder. The two labels and connecting arrow should
 all be visible.
@@ -53,10 +58,10 @@ Readers continue to see the previous published version until you select
 - [Choose the right diagram macro](../choose-a-diagram/).
 - [Create and edit canvas diagrams](../canvas-diagrams/).
 - [Create diagrams from text](../text-diagrams/).
-- [Reuse shapes with Personal Library](../forge-preview/#reuse-drawings-with-personal-library).
+- [Reuse shapes with Personal Library](../feature-reference/#reuse-drawings-with-personal-library).
 - [Troubleshoot a diagram](../troubleshooting/).
 
 If your site still shows **Open Editor** and **Save and Close**, use the
 [legacy Connect guide](../usage/). If **Save** does not return you to the page,
 keep the editor open and follow
-[Save and publish any diagram](../forge-preview/#save-and-publish-any-diagram).
+[Save and publish any diagram](../feature-reference/#save-and-publish-any-diagram).

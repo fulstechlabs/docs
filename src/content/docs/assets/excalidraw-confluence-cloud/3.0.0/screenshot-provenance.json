@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-07-11",
+  "environment": "Fulstech controlled Confluence Cloud development tenant",
+  "product": "Excalidraw for Confluence Cloud",
+  "release": "3.0.0",
+  "sourceRepository": "fulstechlabs/confluence-cloud-excalidraw-forge",
+  "sourceDirectory": "reports/evidence/confluence-cloud-excalidraw/migration-20260711",
+  "reviewedAt": "2026-09-16",
+  "notes": "Actual Forge editor captures with sample QA content. Current editor behavior was rechecked on a controlled development tenant before documentation reuse.",
+  "assets": {
+    "excalidraw-editor.jpg": "forge-dev2-excalidraw-editor-drawn.png",
+    "mind-map-editor.jpg": "forge-dev2-mindmap-editor-renamed.png",
+    "bpmn-editor.jpg": "forge-dev2-bpmn-editor-initial.png",
+    "drawio-editor.jpg": "forge-dev2-drawio-editor-labeled-valid.png",
+    "mermaid-editor.jpg": "forge-dev2-mermaid-editor-after-input.png",
+    "graphviz-editor.jpg": "forge-dev2-graphviz-dedicated-editor.png",
+    "plantuml-editor.jpg": "forge-dev2-plantuml-editor.png"
+  }
+}
