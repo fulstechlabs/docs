@@ -40,10 +40,10 @@ seven macros are included in the Confluence Cloud app.
   [Create and edit canvas diagrams](../canvas-diagrams/).
 - For Mermaid, Graphviz, or PlantUML, follow
   [Create diagrams from text](../text-diagrams/).
-- For advanced editor controls, open the
-  [Cloud feature reference](../feature-reference/).
+- For Mermaid configuration, export, sharing, and Local history, follow
+  [Use Mermaid editor tools](../mermaid-editor-tools/).
 - If you are editing a diagram created before the Forge upgrade, follow
-  [Existing Connect diagrams](../feature-reference/#existing-connect-diagrams)
+  [Upgrade existing diagrams from Connect](../upgrade-from-connect/)
   before the first save.
 
 If your site still shows a separate **Open Editor** step, use the

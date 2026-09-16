@@ -5,8 +5,9 @@ description: "Resolve common macro, editor, preview, library, rendering, and lic
 
 This page applies to the published Forge app, Cloud **3.0.0**. Sites still using
 the separate **Open Editor** dialog can follow the [legacy Connect guide](../usage/).
-The [Cloud feature reference](../feature-reference/) also explains editor-specific
-messages.
+Use the [canvas diagram guide](../canvas-diagrams/),
+[text-defined diagram guide](../text-diagrams/), or
+[Mermaid editor tools](../mermaid-editor-tools/) for task-specific controls.
 
 ## Start with the stage that failed
 
