@@ -3,35 +3,48 @@ title: "Excalidraw for Confluence Cloud"
 description: "Create whiteboards, UML, architecture, mind maps, BPMN, and DrawIO diagrams directly in Confluence Cloud."
 ---
 
-**Excalidraw, Mermaid, PlantUML - Whiteboard for Confluence** gives teams seven
-ways to explain ideas without leaving a Confluence page. Sketch freely, maintain
-diagrams as text, map a process, or build a structured diagram in the editor
-that fits the job.
+**Excalidraw, Mermaid, PlantUML - Whiteboard for Confluence** lets teams create
+and maintain seven kinds of diagrams directly on a Confluence Cloud page. Use a
+visual canvas for free-form work, or keep a diagram as text when source review
+and repeatable structure matter.
 
-## Included macros
+## How the app fits into Confluence
 
-- **Excalidraw Diagram** for sketches, UI wireframes, and informal whiteboards.
-- **Mermaid UML Diagram** for flowcharts, sequences, architecture, and other
-  text-defined diagrams.
-- **Graphviz Diagram** for directed graphs and relationship maps written in DOT.
-- **PlantUML Diagram** for UML and other text-defined diagrams.
-- **Mind Map** for brainstorming and topic hierarchies.
-- **BPMN Diagram** for business process models.
-- **DrawIO Diagram (Powered by draw.io)** for structured diagrams using draw.io
-  shape libraries.
+Every diagram is a Confluence macro:
 
-Use [Choose the right diagram macro](../choose-a-diagram/) when you are not sure
-which editor fits your task.
+1. Edit a page and insert the macro that matches your task.
+2. Create or update the diagram in its editor.
+3. Save the diagram to the page draft.
+4. Publish or update the Confluence page so readers can see the result.
+
+Saving the diagram and publishing the page are separate steps. This workflow is
+shared across the seven macros, although DrawIO labels its editor action
+**Save & Exit**.
+
+## Choose an editing style
+
+| Editing style | Macros | Good fit |
+| --- | --- | --- |
+| Visual canvas | **Excalidraw Diagram**, **Mind Map**, **BPMN Diagram**, **DrawIO Diagram (Powered by draw.io)** | Sketching, brainstorming, process modeling, and diagrams built from shapes |
+| Text-defined | **Mermaid UML Diagram**, **Graphviz Diagram**, **PlantUML Diagram** | Diagrams whose structure should be readable and editable as source |
+
+See [Choose the right diagram macro](../choose-a-diagram/) for a comparison of
+all seven options.
 
 ## Start with the current Cloud app
 
-Cloud version **3.0.0** is the published Forge release. Follow
-[Create your first Excalidraw drawing](../getting-started/)
-for the shortest path to a published result, then use the
-[Cloud app guide](../forge-preview/) for libraries and the other diagram types.
+Cloud version **3.0.0** is the published Forge release.
 
-Administrators can use [Troubleshooting](../troubleshooting/) and
-[Support](../support/) when authors cannot create or render a diagram.
+- Follow [Create your first Excalidraw drawing](../getting-started/) for the
+  shortest path to a published result.
+- Use [Create and edit canvas diagrams](../canvas-diagrams/) for Excalidraw,
+  Mind Map, BPMN, and DrawIO.
+- Use [Create diagrams from text](../text-diagrams/) for Mermaid, Graphviz, and
+  PlantUML.
+- Open the [Cloud feature reference](../forge-preview/) for advanced editor
+  features and existing Connect diagrams.
+- Use [Troubleshooting](../troubleshooting/) when an editor, save, or preview
+  does not behave as expected.
 
 ## Upgrading an existing site
 

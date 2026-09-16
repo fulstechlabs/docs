@@ -3,8 +3,15 @@ title: "Choose the right diagram macro"
 description: "Choose between Excalidraw, Mermaid, Graphviz, PlantUML, Mind Map, BPMN, and DrawIO in Confluence Cloud."
 ---
 
-Choose a macro based on how the diagram will be created and maintained. All
+Choose based on how people will create, review, and maintain the diagram. All
 seven macros are included in the Confluence Cloud app.
+
+## Start with the editing model
+
+- Choose a **visual canvas** when people should work with shapes and direct
+  manipulation.
+- Choose a **text-defined diagram** when the source should be readable, copied,
+  or reviewed alongside the result.
 
 | Macro | Choose it when | Editing model |
 | --- | --- | --- |
@@ -16,7 +23,7 @@ seven macros are included in the Confluence Cloud app.
 | **BPMN Diagram** | You want to model a business process with BPMN elements. | Place and connect process elements on a canvas. |
 | **DrawIO Diagram (Powered by draw.io)** | You need a structured diagram and draw.io shape libraries. | Use the embedded draw.io editor. |
 
-## A practical default
+## Practical defaults
 
 - Start with **Excalidraw Diagram** when the discussion matters more than formal
   notation.
@@ -27,17 +34,18 @@ seven macros are included in the Confluence Cloud app.
 - Use **DrawIO Diagram** when a canvas with extensive shape libraries is more
   useful than a hand-drawn style.
 
-Use the [Cloud app guide](../forge-preview/) for the published Forge release.
-If your site has not upgraded and still shows a separate **Open Editor** step,
-follow the [legacy Connect guide](../usage/). The macro names and purposes are
-shared, but the editors and save flows differ.
-
 ## Continue with your diagram
 
-- For Excalidraw, Mind Map, BPMN, or DrawIO, start with
-  [Canvas tools](../forge-preview/#canvas-tools).
-- For Mermaid, Graphviz, or PlantUML, start with
-  [Text-defined diagrams](../forge-preview/#text-defined-diagrams).
+- For Excalidraw, Mind Map, BPMN, or DrawIO, follow
+  [Create and edit canvas diagrams](../canvas-diagrams/).
+- For Mermaid, Graphviz, or PlantUML, follow
+  [Create diagrams from text](../text-diagrams/).
+- For advanced editor controls, open the
+  [Cloud feature reference](../forge-preview/).
 - If you are editing a diagram created before the Forge upgrade, follow
   [Existing Connect diagrams](../forge-preview/#existing-connect-diagrams)
   before the first save.
+
+If your site still shows a separate **Open Editor** step, use the
+[legacy Connect guide](../usage/). The macro names are similar, but the editors
+and save flows differ.

@@ -5,7 +5,18 @@ description: "Resolve common macro, editor, preview, library, rendering, and lic
 
 This page applies to the published Forge app, Cloud **3.0.0**. Sites still using
 the separate **Open Editor** dialog can follow the [legacy Connect guide](../usage/).
-The [Cloud app guide](../forge-preview/) also explains editor-specific messages.
+The [Cloud feature reference](../forge-preview/) also explains editor-specific
+messages.
+
+## Start with the stage that failed
+
+| Symptom | Start here |
+| --- | --- |
+| You cannot find the macro | [The diagram macro is not available](#the-diagram-macro-is-not-available) |
+| The macro exists but its editor does not open | [The diagram editor does not open](#the-diagram-editor-does-not-open) |
+| The editor saved but readers see the old page | [The editor closed but the published page did not change](#the-editor-closed-but-the-published-page-did-not-change) |
+| A text-defined diagram shows an error | [A Mermaid, Graphviz, or PlantUML diagram does not render](#a-mermaid-graphviz-or-plantuml-diagram-does-not-render) |
+| A published diagram is empty or missing | [A published diagram is blank or missing](#a-published-diagram-is-blank-or-missing) |
 
 ## The diagram macro is not available
 
@@ -61,8 +72,8 @@ diagram must remain editable.
 - Use **Show preview** when the editor provides it and fix the first reported
   syntax error.
 - Reduce the source to a small known-valid example from the
-  [Cloud app guide](../forge-preview/) to separate a syntax problem from an app or
-  browser problem.
+  [text-defined diagram guide](../text-diagrams/) to separate a syntax problem
+  from an app or browser problem.
 - For PlantUML code that includes remote files, confirm that your organization
   permits the referenced destination and try a self-contained example.
 
