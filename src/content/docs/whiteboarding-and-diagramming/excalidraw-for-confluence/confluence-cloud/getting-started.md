@@ -44,6 +44,6 @@ to see the published page until you select **Publish** or **Update**.
 - [Troubleshoot a diagram](../troubleshooting/).
 
 If your site still shows **Open Editor** and **Save and Close**, use the
-[legacy Connect guide](../usage/). If saving reports that the macro has not yet
-been confirmed in the page draft, keep the editor open and retry **Save** after
-the draft is ready. Do not publish until the diagram editor closes successfully.
+[legacy Connect guide](../usage/). If **Save** does not return you to the page,
+keep the editor open and follow
+[Open and save a diagram](../forge-preview/#open-and-save-a-diagram).

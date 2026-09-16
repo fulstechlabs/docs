@@ -9,6 +9,20 @@ Cloud **3.0.0** release uses Forge. New users should start with
 [Cloud app guide](../forge-preview/). Keep this legacy guide for editors with
 a separate **Open Editor** step; do not apply its save sequence to Forge.
 
+## Save and publish a legacy diagram
+
+Canvas editors such as Excalidraw, Draw.io, BPMN, and Mind Map use three save
+boundaries:
+
+1. Choose **Save and Close**, or **Save & Exit** in Draw.io, to return the
+   diagram to the macro dialog.
+2. Choose **Insert** for a new macro or **Save** for an existing macro.
+3. Choose **Publish** or **Update** in Confluence.
+
+Text-defined macros use their macro editor instead of **Open Editor**. Enter the
+source, review the preview when available, save the macro, and then publish or
+update the Confluence page.
+
 ## Excalidraw Macro
 
 This macro helps you create figures, diagrams, and notes using Excalidraw. It's a powerful tool for brainstorming and visualizing ideas. This plugin uses a built-in Excalidraw version, therefore, your data will not be seen or stored by excalidraw\.com and will be securely kept in your Confluence instance.
@@ -69,11 +83,11 @@ To save your library locally (for the backup purpose, for example), click the **
 
 ![Excalidraw for Confluence](../../../assets/XnmqYVNafdzGixOAxpvd.png)
 
-## Draw\.io Integration Macro
+## Draw.io Integration Macro
 
 This macro helps you to use draw\.io to create multiple kinds of advanced diagrams. The macro uses the embedded version of draw\.io editor. If this is the first time you use draw\.io, please check out their privacy policy.&#x20;
 
-### Insert Draw\.io drawings
+### Insert Draw.io drawings
 
 Select the **DrawIO diagrams** macro from the macro list.
 
@@ -119,9 +133,10 @@ Click **Insert** (for new macro contents) or **Save** (for existing macro conten
 
 ## Mermaid UML Diagrams Macro
 
-The **Render Mermaid UML Diagrams** macro (<https://mermaid-js.github.io/mermaid/#/>) uses Mermaid to render UML diagrams. It allows you to define UML diagrams in plain-text format just like Markdown.
+The **Render Mermaid UML Diagrams** macro uses [Mermaid](https://mermaid.js.org/)
+to render diagrams from readable text source.
 
-For a live editor to draft your diagrams, please try <https://mermaidjs.github.io/mermaid-live-editor>.
+You can draft source in the [Mermaid Live Editor](https://mermaid.live/).
 
 In the Confluence editor, open the **Select macro** dialog. The macro name is **Render Mermaid UML Diagrams**.
 
@@ -161,7 +176,8 @@ Save the page, and the UML diagram will be rendered.
 
 The **Render PlantUML Diagrams** macro (<https://plantuml.com/>) uses PlantUML to render UML diagrams. It allows you to define UML diagrams in plain-text format just like Markdown.
 
-For a live editor to draft your diagrams, please try <http://www.plantuml.com/plantuml>.
+You can draft source in the
+[PlantUML online server](https://www.plantuml.com/plantuml/uml/).
 
 In the Confluence editor, open the **Select macro** dialog. The macro name is **Render PlantUML Diagrams**.
 
@@ -181,7 +197,9 @@ Rel(personAlias, containerAlias, "Label", "Optional Technology")
 @enduml
 ```
 
-You can find more examples here <https://plantuml.com/>. The PDF guideline can be downloaded here <https://plantuml.com/guide>.
+See the [PlantUML documentation](https://plantuml.com/) and
+[language reference](https://pdf.plantuml.net/PlantUML_Language_Reference_Guide_en.pdf)
+for more examples.
 
 Save the macro, and the UML diagram will be rendered.
 
@@ -189,9 +207,12 @@ Save the macro, and the UML diagram will be rendered.
 
 ## Graphviz Diagrams Macro
 
-The Graphviz layout programs (<https://www.graphviz.org/>) take descriptions of graphs in a simple text language, and make diagrams in useful formats, such as images and SVG for web pages; PDF or Postscript for inclusion in other documents; or display in an interactive graph browser. Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.
+[Graphviz](https://graphviz.org/) renders graphs from DOT source. Use it for
+dependency maps, relationship diagrams, and layouts that should be calculated
+from nodes and edges.
 
-You can find more Graphviz examples [here](https://graphs.grevian.org/example).
+See the official [Graphviz gallery](https://graphviz.org/gallery/) for more
+DOT examples.
 
 In the Confluence editor, open the **Select macro** dialog. The macro name is **Render Graphviz Diagrams**.
 
@@ -220,7 +241,7 @@ Save the page, and the Graphviz diagram will be rendered.
 
 ![Mermaid UML Diagrams and Graphviz Diagrams for Confluence Cloud](../../../assets/-Ma8B0shFuHupAVuFabG.png)
 
-## Mindmap
+## Mind Map
 
 Select the **Mind Map** macro from the macro list.
 
@@ -248,7 +269,7 @@ Click **Insert** (for new macro contents) or **Save** (for existing macro conten
 
 #### Flowchart
 
-Flowcharts can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/flowchart>.
+[Mermaid flowchart syntax](https://mermaid.js.org/syntax/flowchart.html) includes options and examples.
 
 ![Input](../../../assets/-MfRk3r-aZ5wr1KNon7F.png)
 
@@ -256,7 +277,7 @@ Flowcharts can be rendered with Mermaid. See more <https://mermaid-js.github.io/
 
 #### Sequence diagram
 
-Sequence diagrams can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/sequenceDiagram>.
+[Mermaid sequence diagram syntax](https://mermaid.js.org/syntax/sequenceDiagram.html) includes options and examples.
 
 ![Input](../../../assets/-MfRkuCcrDHX912SRYh-.png)
 
@@ -264,7 +285,7 @@ Sequence diagrams can be rendered with Mermaid. See more <https://mermaid-js.git
 
 #### Class diagram
 
-Class diagrams can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/classDiagram>.
+[Mermaid class diagram syntax](https://mermaid.js.org/syntax/classDiagram.html) includes options and examples.
 
 ![Input](../../../assets/-MfRn3mlJrz1YqR05FCh.png)
 
@@ -272,7 +293,7 @@ Class diagrams can be rendered with Mermaid. See more <https://mermaid-js.github
 
 #### State diagram
 
-State diagrams can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/stateDiagram>.
+[Mermaid state diagram syntax](https://mermaid.js.org/syntax/stateDiagram.html) includes options and examples.
 
 ![Input](../../../assets/-MfRp3169SHX4uJdp1Yc.png)
 
@@ -280,7 +301,7 @@ State diagrams can be rendered with Mermaid. See more <https://mermaid-js.github
 
 #### Entity Relationship diagram
 
-Entity Relationship diagrams can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram>.
+[Mermaid entity relationship diagram syntax](https://mermaid.js.org/syntax/entityRelationshipDiagram.html) includes options and examples.
 
 ![Input](../../../assets/-MfRpqQjT8zOQQf8Q3nk.png)
 
@@ -288,7 +309,7 @@ Entity Relationship diagrams can be rendered with Mermaid. See more <https://mer
 
 #### User Journey
 
-User Journey can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/user-journey>.
+[Mermaid user journey syntax](https://mermaid.js.org/syntax/userJourney.html) includes options and examples.
 
 ![Render](../../../assets/-MfRqQFLOuW7X7WTD9sp.png)
 
@@ -296,7 +317,7 @@ User Journey can be rendered with Mermaid. See more <https://mermaid-js.github.i
 
 #### Gantt chart
 
-Gantt charts can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/gantt>.
+[Mermaid Gantt syntax](https://mermaid.js.org/syntax/gantt.html) includes options and examples.
 
 ![Input](../../../assets/-MfRrtD1vjpuuDNkExc4.png)
 
@@ -304,7 +325,7 @@ Gantt charts can be rendered with Mermaid. See more <https://mermaid-js.github.i
 
 #### Pie chart
 
-Pie charts can be rendered with Mermaid. See more <https://mermaid-js.github.io/mermaid/#/pie>.
+[Mermaid pie chart syntax](https://mermaid.js.org/syntax/pie.html) includes options and examples.
 
 ![Input](../../../assets/-MfRsoBc46muewkcNbc_.png)
 
@@ -331,7 +352,7 @@ Alice <-- Bob: Another authentication Response
 @enduml
 ```
 
-![](../../../assets/BzCpuj0JJXQCp9DyAzsB.png)
+![Rendered PlantUML sequence diagram](../../../assets/BzCpuj0JJXQCp9DyAzsB.png)
 
 #### Use Case diagram
 
@@ -356,7 +377,7 @@ g --> UC3
 @enduml
 ```
 
-![](../../../assets/4RkJiLZpmk4vG7JxPXCY.png)
+![Rendered PlantUML use case diagram](../../../assets/4RkJiLZpmk4vG7JxPXCY.png)
 
 #### Class diagram
 
@@ -369,7 +390,7 @@ ArrayList : size()
 @enduml
 ```
 
-![](../../../assets/esFAsAhIsrF5ofw0pvlq.png)
+![Rendered PlantUML class diagram](../../../assets/esFAsAhIsrF5ofw0pvlq.png)
 
 #### Activity diagram
 
@@ -385,7 +406,7 @@ stop
 @enduml
 ```
 
-![](../../../assets/LtYfO4TEXlZIdWAYP7Op.png)
+![Rendered PlantUML activity diagram](../../../assets/LtYfO4TEXlZIdWAYP7Op.png)
 
 #### Component diagram
 
@@ -416,7 +437,7 @@ database "MySql" {
 @enduml
 ```
 
-![](../../../assets/R0VFj9xIne5U5YkaJWu4.png)
+![Rendered PlantUML component diagram](../../../assets/R0VFj9xIne5U5YkaJWu4.png)
 
 #### Deployment diagram
 
@@ -434,7 +455,7 @@ node1 == node5
 @enduml
 ```
 
-![](../../../assets/EjHJxbc116V0wMZDr1GM.png)
+![Rendered PlantUML deployment diagram](../../../assets/EjHJxbc116V0wMZDr1GM.png)
 
 #### State diagram
 
@@ -459,7 +480,7 @@ state Configuring {
 @enduml
 ```
 
-![](../../../assets/1f6yeFkSU4uVGyVH1O7W.png)
+![Rendered PlantUML state diagram](../../../assets/1f6yeFkSU4uVGyVH1O7W.png)
 
 #### Timing diagram
 
@@ -478,7 +499,7 @@ WB is Waiting
 @enduml
 ```
 
-![](../../../assets/uYCBars88dYrPg58PtIl.png)
+![Rendered PlantUML timing diagram](../../../assets/uYCBars88dYrPg58PtIl.png)
 
 #### JSON
 
@@ -511,9 +532,9 @@ WB is Waiting
 @endjson
 ```
 
-![](../../../assets/u2WBPufs4sSABRnZQVvw.png)
+![Rendered PlantUML JSON diagram](../../../assets/u2WBPufs4sSABRnZQVvw.png)
 
-#### Mindmap
+#### Mind Map
 
 ```plant-uml
 @startmindmap
@@ -537,7 +558,7 @@ class cname{
 @endmindmap
 ```
 
-![](../../../assets/63NIaJdmiBvt7sQ6yNsX.png)
+![Rendered PlantUML mind map](../../../assets/63NIaJdmiBvt7sQ6yNsX.png)
 
 #### Work Breakdown Structure
 
@@ -557,7 +578,7 @@ class cname{
 @endwbs
 ```
 
-![](../../../assets/m7uYJ02VdLKmxx3ar7KZ.png)
+![Rendered PlantUML work breakdown structure](../../../assets/m7uYJ02VdLKmxx3ar7KZ.png)
 
 #### Maths
 
@@ -573,7 +594,7 @@ end note
 @enduml
 ```
 
-![](../../../assets/6PzP7e3o2ibxeU2kaOcZ.png)
+![Rendered PlantUML mathematical notation](../../../assets/6PzP7e3o2ibxeU2kaOcZ.png)
 
 #### Entity Relationship diagram
 
@@ -606,7 +627,7 @@ e01 |o..o{ e03
 @enduml
 ```
 
-![](../../../assets/zSDrjcG3pIaIhX6BCryU.png)
+![Rendered PlantUML entity relationship diagram](../../../assets/zSDrjcG3pIaIhX6BCryU.png)
 
 #### C4 diagram
 
@@ -650,7 +671,7 @@ Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
 @endumlplan
 ```
 
-![](../../../assets/LUsE7LSgZZSGRUdgWX6w.png)
+![Rendered PlantUML C4 container diagram](../../../assets/LUsE7LSgZZSGRUdgWX6w.png)
 
 #### AWS architecture diagram
 
@@ -722,4 +743,4 @@ AWSCloudGroup(cloud){
 @enduml
 ```
 
-![](../../../assets/t0sW5tFqKW68QBFd99VG.png)
+![Rendered PlantUML AWS architecture diagram](../../../assets/t0sW5tFqKW68QBFd99VG.png)

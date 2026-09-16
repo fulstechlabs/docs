@@ -603,6 +603,10 @@
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/choose-a-diagram"
               },
               {
+                "label": "Use the Cloud app",
+                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/forge-preview"
+              },
+              {
                 "label": "Legacy Connect guide",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/usage"
               },
@@ -613,10 +617,6 @@
               {
                 "label": "Support",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/support"
-              },
-              {
-                "label": "Use the Cloud app",
-                "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-cloud/forge-preview"
               },
               {
                 "label": "Security and privacy",
@@ -637,7 +637,7 @@
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/overview"
               },
               {
-                "label": "Usage",
+                "label": "Use the Data Center app",
                 "slug": "whiteboarding-and-diagramming/excalidraw-for-confluence/confluence-data-center-and-confluence-server/usage"
               },
               {
