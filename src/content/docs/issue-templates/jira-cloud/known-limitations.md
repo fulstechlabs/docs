@@ -63,8 +63,9 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 - The **Issue template** field can be added to a Jira Service Management request
   form, but customer-portal use is not yet a supported rollout path. The portal
   flow has been verified with a licensed Jira administrator; portal-only customer
-  accounts still require validation, and the template editor does not yet provide
-  request-type-specific availability.
+  accounts still require validation. The template editor does not yet provide
+  request-type-specific availability, and the portal selector does not collect
+  template variables before the request is submitted.
 - Workflow-driven creation is Beta while the relevant Forge module remains
   Preview.
 
