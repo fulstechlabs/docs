@@ -1,56 +1,63 @@
 ---
-title: "Create a JEditor-compatible Custom Field"
+title: "Configure JEditor Fields"
+description: "Map Jira fields to issue types, edit rich text from the issue panel, and create reusable templates."
 ---
 
-Since it is impossible for a Jira Cloud's app to create its own custom field type, this app provides JEditor-compatible Editor for fields of Jira Cloud’s built-in types. This gives you important benefits:
+A project administrator configures which supported fields appear in the **JEditor Fields** panel for each issue type.
 
-* All JEditor-compatible data is stored securely in your Jira Cloud the same way other Jira data is stored. **Your data will never be stored on our site.**
-* Search, JQL, export, API, email notifications, and other field-related utilities will work the same way other fields work.
+## Choose a field path
 
-Please follow the instructions below to create a JEditor-compatible custom field.
+Use one of these field paths before configuring the project:
 
-## Migrate JEditor custom fields from Jira Data Center or Jira Server to Jira Cloud
+| Goal | Field to use |
+| --- | --- |
+| Receive content migrated from Jira Data Center or Server | **Description** or a Jira **Text Field (multi-line)** field |
+| Create a new app-owned field in Jira Cloud | A custom field created with the **JEditor Rich Text** field type |
 
-> **info**
->
-JEditor custom fields only Jira Data Center or Jira Server must be created by the [JEditor - Rich Text Editor For Jira](https://marketplace.atlassian.com/apps/1210768/jeditor-rich-text-editor-for-jira?tab=overview) plugin.
+For a migration, do not import the old JEditor value directly into a new **JEditor Rich Text** field. Import it into a Jira **Text Field (multi-line)** field first, then map that field as described below.
 
-Please see [this article](../migrate-to-jira-cloud/).
+## Map a field to issue types
 
-## Configure JEditor custom fields on Jira Cloud
+1. In the Jira project, open **Project settings**.
+2. Under **Apps**, select **JEditor Fields**.
+3. In **Select a Jira field**, choose a supported field and select **Add field**.
+4. Under that field, select every issue type that should show it in the JEditor panel.
+5. Select **Save** and wait for the **Saved** status.
 
-Go to the **Project Settings** page of the project that contains JEditor custom fields. Select **JEditor-compatible Fields** under the **Apps** menu. In the configuration page, select the JEditor custom fields that have been migrated along with all issue types containing the fields.
+Repeat these steps for each field that needs the rich-text experience. Use **Remove field** to remove a mapping; this removes the field from the app configuration, not from Jira.
 
-![JEditor-compatible custom fields for Jira](../../../assets/V3UDLqLLJa75YyHv86WR.png)
+## Edit a configured field
 
-Open an issue that contains the field. Click on the **More Options (three-dots)** button. You should see the **JEditor-compatbile Fields** section.
+1. Open an issue whose type is mapped to the field.
+2. Find and open the **JEditor Fields** panel.
+3. Under the field name, select **Edit**.
+4. Add or format the content in the editor.
+5. Select **Save** and wait for the **Saved** status.
+6. Reload the issue and confirm that the content is still present in the JEditor Fields panel.
 
-![JEditor-compatible custom fields for Jira](../../../assets/BvzIQUjVMv0BXerlewRL.png)
+:::caution
+Use the **JEditor Fields** panel to edit mapped rich-text content. The **JEditor Rich Text** field type is read-only in Jira's native field surfaces, and migrated multi-line fields can display their stored source differently outside the panel.
+:::
 
-![JEditor-compatible custom fields for Jira](../../../assets/Vb9cKsx3IQNHfOdNEs8C.png)
+## Create and use templates
 
-Edit the field *in the **JEditor Fields** section* by clicking **Edit** under the edito&#x72;*.*
+Templates are configured per project and per field.
 
-> **danger**
->
-Do not use the normal editor provided by Jira
+1. Go to **Project settings** > **Apps** > **JEditor Fields**.
+2. Find the configured field and select **Templates**.
+3. Select **Add template**.
+4. Enter a title, optional description, and the HTML content to insert.
+5. Select **Save templates** and wait for the **Saved** status.
 
-![JEditor-compatible custom fields for Jira](../../../assets/1NDvgz4kRa74t8npa6nE.png)
+To use a template, edit the field from the issue panel, select a template, and select **Insert template**. Review the inserted content before saving the field.
 
-## Hide the original field editor
+## If the panel or field is missing
 
-**If your project is company-managed (formerly classic),** you can also hide the original field editor. Please see the instructions here <https://support.atlassian.com/jira-software-cloud/docs/configure-field-layout-in-the-issue-view/#Configurefieldlayoutintheissueview-Hiddenfields>.
+Check that:
 
-![JEditor-compatible custom fields for Jira](../../../assets/-Ma8B0z4-W1q9tNPNHCy.png)
+- the field was added and the current issue type was selected before saving;
+- the issue belongs to the project where the mapping was configured;
+- you have permission to browse and edit the issue; and
+- the field is **Description**, **Text Field (multi-line)**, or **JEditor Rich Text**.
 
-## Templates
-
-Templates can be used to reduce the efforts composing repetitive content.
-
-To create a template, navigate to the **JEditor Fields** setting and click **Add Template**.
-
-![JEditor-compatible custom fields for Jira](../../../assets/Ugs3Ay5T9m2ioznIvSTr.png)
-
-In the template management screen, input the content and click **Save**.
-
-![JEditor-compatible custom fields for Jira](../../../assets/elUB2DJhnsbXcqtA9S0d.png)
+If the configuration still does not appear, collect the project key, issue key, field name, issue type, and app version, then [contact Fulstech support](../support/).

@@ -777,7 +777,7 @@
         "collapsed": true
       },
       {
-        "label": "JEditor-compatible custom field for Jira Cloud",
+        "label": "JEditor-compatible Custom Fields for Jira Cloud",
         "items": [
           {
             "label": "Jira Cloud",
@@ -787,11 +787,11 @@
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/overview"
               },
               {
-                "label": "Create a JEditor-compatible Custom Field",
+                "label": "Configure JEditor Fields",
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/create-a-markdown-enabled-custom-field"
               },
               {
-                "label": "Migrate to Jira Cloud",
+                "label": "Migrate JEditor Content to Jira Cloud",
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/migrate-to-jira-cloud"
               },
               {
