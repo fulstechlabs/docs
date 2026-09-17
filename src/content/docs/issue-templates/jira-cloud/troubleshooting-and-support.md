@@ -16,6 +16,9 @@ availability rules. All configured parts of a rule must match the current user
 and Jira context. Ask an administrator to confirm the destination project and
 issue type still exist.
 
+If the template was archived, a Jira administrator can restore it from
+**Administration → Data management → Archived templates**.
+
 ## A field is missing from the editor
 
 Select the project and issue type, then load Jira fields again. Jira returns
@@ -80,8 +83,9 @@ prevent the rule from running.
 ## Backup validation fails
 
 Confirm that the document is a complete version 2 app backup. Review every
-invalid project, issue type, field, option, user, group, and default before
-restoring. Do not edit stable Jira IDs by guessing.
+invalid project, work type, field, hierarchy reference, and default before
+restoring. Do not edit stable Jira IDs by guessing. Availability references
+that Jira can no longer resolve remain fail-closed after restore.
 
 ## Contact support
 

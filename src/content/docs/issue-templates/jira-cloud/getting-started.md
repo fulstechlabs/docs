@@ -13,15 +13,16 @@ You need:
 - A Jira Cloud site with the app installed and an active evaluation or
   subscription.
 - Permission to create issues in the target project.
-- A Jira or project administrator to install starters or manage governed
-  templates.
+- A Jira administrator to install starters. Jira or project administrators can
+  manage governed templates for projects they administer.
 
-## Open the template library
+## Install editable starters
 
-1. In Jira, open **Apps**.
-2. Select **Issue Templates & Hierarchy Builder**.
-3. Enter an issue key from the project you want to use for the starter data.
-4. Select **Install editable starter templates**.
+1. In Jira settings, open **Issue Templates & Hierarchy Builder**.
+2. Open **Administration → Defaults & integrations**.
+3. Select **Install editable starters**.
+4. Enter an issue key from the project that should own the starter templates.
+5. Select **Install editable starters** in the dialog.
 
 The starter gallery contains normal editable templates for a bug report, user
 story, teammate onboarding, and release readiness. They are starting points,
@@ -29,7 +30,8 @@ not locked demo content.
 
 ## Review a template
 
-Open **Release readiness** and select **Edit**. Review:
+Return to **Templates**, open **Release readiness**, select **Details**, and
+then select **Edit template**. Review:
 
 - The Jira project and root issue type.
 - Root fields owned by the template.
@@ -44,16 +46,17 @@ for the complete field list.
 
 ## Preview and create
 
-1. Select **Preview create** on the template.
-2. Answer any required variables.
-3. Review the resolved root fields, especially dates and Jira-context values.
-4. Change a run-specific value if needed.
-5. Deselect any child work that is not required this time.
-6. Open **Details** for child work when you need to confirm its Jira parent or
+1. Select **Use template** on the template.
+2. Keep **Create new** selected and answer any required runtime inputs.
+3. Select **Preview new issue**.
+4. Review the resolved root fields, especially dates and Jira-context values.
+5. Select **Edit** beside a value when it needs a one-run change.
+6. Deselect any child work that is not required this time.
+7. Open **Details** for child work when you need to confirm its Jira parent or
    issue-link direction.
-7. Select the final Create action.
+8. Select **Create issue**.
 
-![Create preview with selectable child work](./assets/create-preview.png)
+![Review the fields that will be created before confirming the new issue](./assets/create-preview.png)
 
 The root issue is created first. Parent work is created before its selected
 children, using the hierarchy shown in Preview. Child work is then processed

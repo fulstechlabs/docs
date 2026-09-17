@@ -3,7 +3,8 @@ title: "Administration"
 description: "Control template availability, defaults, licensing, diagnostics, and recovery tools."
 ---
 
-Jira administrators can open the app's administration page from Jira settings.
+Jira administrators can open **Issue Templates & Hierarchy Builder** from Jira
+settings and select **Administration**.
 Project administrators can manage governed templates for projects where Jira
 grants the required permission. The backend checks permissions again for every
 read or mutation; hiding a button is not the authorization boundary.
@@ -26,8 +27,33 @@ group, or account does not broaden access.
 An app default helps users find the relevant template in the explicit app
 journey. It does not automatically change Jira's standard Create dialog.
 
+To preview the matching default for an issue:
+
+1. Open **Administration → Defaults & integrations**.
+2. Select **Apply project default**.
+3. Enter the Jira issue key and select **Preview project default**.
+4. Review the proposed changes before selecting **Apply changes**.
+
 Native Create prefill is a separate administrator-controlled rule. See
 [Native Create prefill](../native-create-prefill/) before enabling it.
+
+## Archive and restore templates
+
+Archiving removes a template from the active library. It also clears that
+template's app default and native Create rule. Existing Jira issues and their
+**Template details** remain unchanged.
+
+A Jira administrator can restore an archived template from
+**Administration → Data management → Archived templates**. Restoring returns
+the template to the library; it does not automatically recreate a previous
+default or native Create rule.
+
+## Backup and restore
+
+**Data management** also contains same-site configuration backup and restore.
+Only Jira administrators can perform these operations. See
+[Backup and restore](../backup-and-restore/) for the contents and restore
+safety checks.
 
 ## Licensing behavior
 
@@ -42,14 +68,15 @@ When Atlassian reports an inactive license:
 
 Ending a trial or subscription does not silently delete app data.
 
-## Diagnostics and support lookup
+## Advanced diagnostics and recovery
 
-Administrator diagnostics show bounded counts and schema status. The run
-lookup accepts a known root issue key and returns a human-readable run summary;
-it does not expose raw SQL rows.
+Select **Show diagnostics** under **Administration → Advanced** to see storage
+status, inspect native Create rules, run reconciliation, or find the latest app
+run for a known root issue key. A failed or partial run can expose
+**Retry failed nodes** after the underlying Jira problem is corrected.
 
-Use [Backup and restore](../backup-and-restore/) before significant
-configuration work. For a support case, include the site URL, affected issue
-key, run ID, expected result, and a screenshot with unrelated information
-removed.
+The support lookup returns a human-readable run summary and does not expose raw
+SQL rows.
 
+For a support case, include the site URL, affected issue key, run ID, expected
+result, and a screenshot with unrelated information removed.

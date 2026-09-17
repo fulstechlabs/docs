@@ -37,9 +37,9 @@ work.
 5. The **Template details** panel records what happened and supports safe
    recovery when a hierarchy finishes only partially.
 
-Explicit **Create from template** and **Apply template** are the guaranteed
-product paths. Optional native Create prefill is available for carefully
-configured project and issue-type combinations.
+The explicit **Use template** and **Apply template** journeys are the dependable
+product paths. Optional native Create prefill is available for exact project
+and issue-type combinations configured by a Jira administrator.
 
 ## Where the app appears
 
@@ -55,10 +55,13 @@ Template authors can also open **Details** in the library to copy the stable
 template ID or a ready-to-use `createdFromTemplate("…")` JQL query for issues
 created from that template.
 
-## Start in under ten minutes
+## Create your first hierarchy
 
-Open the template library, enter an example issue key, and install the editable
-starter templates. Choose **Release readiness**, select **Preview create**,
-review its subtasks, and create the work when the preview is correct.
+1. Ask a Jira administrator to open **Administration → Defaults & integrations**
+   and select **Install editable starters**.
+2. In the template library, find **Release readiness** and select **Use template**.
+3. Keep **Create new** selected, answer any runtime inputs, and select
+   **Preview new issue**.
+4. Review the fields and child hierarchy, then select **Create issue**.
 
 Continue with [Getting started](../getting-started/) for the complete walkthrough.
