@@ -60,11 +60,7 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 
 - Explicit Create, Apply, and hierarchy behavior has tenant evidence on both
   company-managed and team-managed Jira Software projects.
-- The **Issue template** field can be added to a Jira Service Management request
-  form, but customer-portal use is not yet a supported rollout path. The portal
-  flow has been verified with a licensed Jira administrator; portal-only customer
-  accounts still require validation, and the template editor does not yet provide
-  request-type-specific availability.
+- Jira Service Management customer-portal templates are not a launch claim.
 - Workflow-driven creation is Beta while the relevant Forge module remains
   Preview.
 
