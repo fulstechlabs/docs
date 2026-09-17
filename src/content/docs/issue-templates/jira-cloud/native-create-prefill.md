@@ -24,6 +24,16 @@ An administrator enables prefill for one exact combination of:
 The app then fills supported fields only when both project and issue type
 match. Changing context causes app-owned values to be reevaluated.
 
+## Enable a rule
+
+1. Open a template and select **Edit template**.
+2. Continue to **Review & settings** and expand the settings.
+3. Enable **Use as the app default for this project and issue type**.
+4. Enable **Also prefill Jira's native Create dialog**.
+5. Select **Save template**.
+6. Open Jira's standard **Create** dialog and test the exact project and work
+   type before rolling the rule out.
+
 ![URL and cascading select prefilled in Jira Create](./assets/native-create-prefill.png)
 
 ## User-value protection

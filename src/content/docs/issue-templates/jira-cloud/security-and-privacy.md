@@ -15,11 +15,13 @@ For the customer-facing privacy notice, read the
 
 Forge SQL stores the app-owned data needed to deliver and support the product:
 
-- Template definitions, revisions, values, and compact field-schema metadata.
+- Current template definitions, revision numbers, values, and compact
+  field-schema metadata.
 - Variables, hierarchy plans, comments, attachment references, and overwrite
   policy.
 - Project, issue-type, group, account, and request-context availability rules.
-- Defaults, durable runs, child outcomes, relations, and bounded audit events.
+- Defaults, durable runs, child outcomes, relations, and operational audit
+  events used to explain and recover app actions.
 - Atlassian account-ID references selected for user-field values. Copied user
   profile labels, email addresses, avatars, locale, and time-zone data are
   removed before app storage and are not retained by the app.

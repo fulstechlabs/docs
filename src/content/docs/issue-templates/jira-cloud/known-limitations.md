@@ -58,9 +58,8 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 
 ## Jira product contexts
 
-- The release has end-to-end tenant evidence on a company-managed Jira
-  Software project.
-- Team-managed projects have not completed separate tenant certification.
+- Explicit Create, Apply, and hierarchy behavior has tenant evidence on both
+  company-managed and team-managed Jira Software projects.
 - Jira Service Management customer-portal templates are not a launch claim.
 - Workflow-driven creation is Beta while the relevant Forge module remains
   Preview.
@@ -68,6 +67,8 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 ## Data movement
 
 - JSON backup/restore protects same-tenant app configuration.
+- Native Create rules are not included in a backup and must be configured again
+  after restore.
 - It does not migrate another vendor's Data Center data.
 - It does not automatically remap projects, issue types, fields, options,
   users, or attachments between Jira sites.

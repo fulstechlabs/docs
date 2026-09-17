@@ -41,15 +41,16 @@ the resolved preview before selecting the final Create or Apply action.
 ## Define a variable
 
 1. Open **Apps → Issue Templates & Hierarchy Builder**.
-2. Create a template or select **Edit** on an existing template.
-3. Under **Variables**, select **Add variable**.
+2. Create a template, or select **Details → Edit template** on an existing
+   template.
+3. Open **Fields & inputs**. Under **Variables**, select **Add variable**.
 4. Enter a unique name, choose a type, and optionally add a default.
 5. Enable **Required** when every run must supply a value.
 6. Insert the generated `{{name}}` token into a supported root or child value.
 7. Save the template, enter a test value, and use Preview before creating Jira
    work.
 
-![A child Summary using an authored variable token](./assets/smart-value-authoring.jpg)
+![A text variable and relative date in Fields and inputs](./assets/smart-value-authoring.jpg)
 
 ## Variable types
 
@@ -69,7 +70,7 @@ Variable names must start with a letter or underscore. The remaining
 characters can be letters, numbers, dots, dashes, or underscores. Names are
 case-sensitive and must be unique within the template.
 
-![Typed teammate and date inputs](./assets/variables.png)
+![Runtime inputs are collected before the app builds the preview](./assets/variables.png)
 
 ## Where tokens can be used
 

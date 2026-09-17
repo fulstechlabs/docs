@@ -26,10 +26,8 @@ Depending on the features used, stored data can include:
   Copied profile labels, email addresses, avatars, locale, and time-zone data
   are removed before app storage. Jira resolves the current user label when it
   renders a user picker or Jira field.
-- Defaults, revisions, run plans, run and child status, actionable error text,
-  provenance, and bounded audit events.
-- Versioned same-tenant backup documents when an administrator creates or
-  restores them.
+- Defaults, revision numbers, run plans, run and child status, actionable error
+  text, provenance, and operational audit events.
 
 The app does not ask for passwords, Atlassian personal access tokens, payment
 card data, or unrelated profile information.
@@ -49,11 +47,13 @@ external advertising or analytics provider.
 
 ## Retention
 
-The app defines no external retention store. Templates can be archived in the
-product, and issue-relation records are cleaned when Jira reports the related
-issue deleted. Forge-hosted data after uninstall follows Atlassian's Forge
-application-data lifecycle. Contact support for a tenant-specific data request
-before uninstalling if you need help identifying the relevant configuration.
+The app defines no external retention store. Templates can be archived and
+restored in the product. Issue-relation records are cleaned when Jira reports
+the related issue deleted; operation records are retained in Forge-hosted
+storage to provide provenance and recovery. Data after uninstall follows
+Atlassian's Forge application-data lifecycle. Contact support for a
+tenant-specific data request before uninstalling if you need help identifying
+the relevant configuration.
 
 ## Contact
 

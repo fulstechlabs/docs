@@ -8,15 +8,18 @@ is changed.
 
 ## Create new work from a template
 
-Use **Preview create** when the process should begin with a new root issue.
+Use **Use template → Create new** when the process should begin with a new root
+issue.
 
 1. Choose a template from the library.
-2. Answer its run variables.
-3. Review and adjust the root values.
-4. Select the child work needed for this run.
-5. Open **Details** on child work to confirm its Jira parent and any additional
+2. Select **Use template**, keep **Create new** selected, and answer its runtime
+   inputs.
+3. Select **Preview new issue**.
+4. Review and adjust the root values.
+5. Select the child work needed for this run.
+6. Open **Details** on child work to confirm its Jira parent and any additional
    issue-link direction.
-6. Confirm creation.
+7. Select **Create issue**.
 
 Jira receives a normal root issue followed by the selected hierarchy. Parent
 work is created before its children. The run keeps an immutable plan, so retry
@@ -31,14 +34,16 @@ standard fields or follow-up work.
 
 1. Open the issue and choose the app's Apply action.
 2. Select an available template.
-3. Compare the current value with the template value.
-4. Select only the root fields and child work you want.
-5. Include configured comments or attachments only when needed.
-6. Confirm Apply.
+3. Answer any runtime inputs and select **Preview changes**.
+4. Compare **Current** and **Proposed** values. The decision beside each field
+   explains whether the app will **Keep**, **Fill**, **Replace**, or **Skip** it.
+5. Select only the root fields and child work you want.
+6. Include configured comments or attachments only when needed.
+7. Select **Apply changes**.
 
 ![Selective Apply preview](./assets/apply-preview.png)
 
-The default **only empty** policy preserves a populated Jira field. The preview
+The default **Only fill empty fields** rule preserves a populated Jira field. The preview
 makes every selected overwrite visible before it happens.
 
 ## Recreate live work once

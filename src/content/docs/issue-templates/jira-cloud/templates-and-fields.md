@@ -12,15 +12,17 @@ provenance.
 ## Create a template from scratch
 
 1. Open the template library and select **Create template**.
-2. Give the template a clear name, description, and category.
-3. Choose the target Jira project and issue type.
-4. Load the Jira fields available in that context.
-5. Select only the fields the template should own and enter their values.
-6. Add child definitions and load fields separately for each child issue type.
-7. Add variables or availability rules when needed.
-8. Save the template.
+2. In **Basics**, give the template a clear name, description, category,
+   project, and work type.
+3. In **Fields & inputs**, add only the Jira values the template should own and
+   define any runtime inputs.
+4. In **Structure**, add child work and configure each item's work type,
+   parent, optional issue link, and Jira values.
+5. In **Review & settings**, confirm the outcome, overwrite rule, availability,
+   and optional integrations.
+6. Select **Save template**.
 
-![Typed root and child fields in the template editor](./assets/template-editor.png)
+![Choose the template identity and Jira context in Basics](./assets/template-editor.png)
 
 The app stores stable Jira field IDs and compact schema information. Field
 names remain readable labels and can change without becoming the field's
@@ -48,6 +50,9 @@ Review the visible tree after changing a work type or parent. If the new work
 type makes an existing parent invalid, the app clears that choice instead of
 guessing a replacement.
 
+A template can contain up to 20 child work items. This is also the maximum
+number of related work items inspected by a single Capture or Recreate operation.
+
 ## Add reusable and dynamic values
 
 Use the **Insert variable** controls beside compatible root and child text
@@ -65,11 +70,13 @@ not exist until a particular operation or child creation step.
 
 ## Capture an existing issue
 
-Use **Create template from issue** when a live issue already represents the
-process you want to reuse.
+Use **Create from issue** in the library, or **Create template from issue** from
+an issue's actions menu, when live Jira work already represents the process you
+want to reuse.
 
 The capture preview lists supported root fields, nested child work, and links to
-the captured root. Choose the fields and related work to keep before saving. If
+the captured root. Select **Preview capture**, choose the fields and related
+work to keep, and then select **Save template**. If
 the same issue is both below the root and linked to it, the app keeps one work
 item with both relationships instead of duplicating it. Unsupported fields are
 reported and omitted rather than copied with a guessed payload.
