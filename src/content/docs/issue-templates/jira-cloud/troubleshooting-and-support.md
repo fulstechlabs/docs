@@ -19,6 +19,27 @@ issue type still exist.
 If the template was archived, a Jira administrator can restore it from
 **Administration → Data management → Archived templates**.
 
+## A template does not appear on a JSM request form
+
+Confirm that the request form contains the **Issue template** field. Then edit
+the template and check that one enabled availability rule contains the exact
+service project and JSM request type. The request type must use the same Jira
+work type as the template root. Required template variables also need defaults.
+
+Portal selectors fail closed. A rule for another request type, a disabled rule,
+or a project/work-type mismatch intentionally exposes no template.
+
+## A JSM request was created but no hierarchy appeared
+
+Open the request in Jira and check **Template details**. **No template** is a
+valid selection and intentionally creates no app run. For a selected template,
+record the request key and run ID, then check whether the run is Pending,
+Partial, Failed, or Completed. Correct the reported Jira configuration or
+permission problem before retrying unfinished work.
+
+The automatic portal path fills empty supported root fields only. A populated
+customer Summary or Description is preserved.
+
 ## A field is missing from the editor
 
 Select the project and issue type, then load Jira fields again. Jira returns
@@ -79,6 +100,20 @@ Confirm that an administrator enabled a rule for the exact project and issue
 type. The app fills empty fields only. Group and Sprint are not available in
 this integration. Another UI Modifications app in the same context can also
 prevent the rule from running.
+
+## A workflow transition did not run the template
+
+Check all three configuration points:
+
+1. The transitioned issue's project and work type have an active app default.
+2. The default template has the intended **Workflow integration (Beta)** mode.
+3. The Jira transition contains the app's **Create issue template structure**
+   post-function and the workflow change was published.
+
+A missing or unavailable default produces no mutation. Invalid hierarchy,
+missing variable defaults, or insufficient Jira context fail before child work
+is queued. A completed transition run appears in **Template details** with
+origin **Workflow**.
 
 ## Backup validation fails
 

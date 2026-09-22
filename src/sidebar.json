@@ -224,6 +224,14 @@
             "slug": "issue-templates/jira-cloud/administration"
           },
           {
+            "label": "JSM Customer Portal Templates",
+            "slug": "issue-templates/jira-cloud/jsm-customer-portal"
+          },
+          {
+            "label": "Workflow Create (Beta)",
+            "slug": "issue-templates/jira-cloud/workflow-create"
+          },
+          {
             "label": "Native Jira Create Prefill",
             "slug": "issue-templates/jira-cloud/native-create-prefill"
           },
@@ -246,6 +254,10 @@
           {
             "label": "Troubleshooting and Support",
             "slug": "issue-templates/jira-cloud/troubleshooting-and-support"
+          },
+          {
+            "label": "Release Notes",
+            "slug": "issue-templates/jira-cloud/release-notes"
           }
         ],
         "collapsed": true

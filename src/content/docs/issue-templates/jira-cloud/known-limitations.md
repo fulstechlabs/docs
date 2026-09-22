@@ -60,9 +60,17 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 
 - Explicit Create, Apply, and hierarchy behavior has tenant evidence on both
   company-managed and team-managed Jira Software projects.
-- Jira Service Management customer-portal templates are not a launch claim.
+- Jira Service Management templates support authenticated portal customers
+  when an administrator configures an exact service project and request type.
+  Anonymous portal submission is not supported.
+- A portal run cannot pause to ask template variables. Every required variable
+  needs a usable default before the template can be offered on the portal.
+- Portal and workflow automation preserve populated root fields and do not
+  automatically copy comments or attachments.
 - Workflow-driven creation is Beta while the relevant Forge module remains
   Preview.
+- A later legitimate matching transition starts another workflow run and can
+  create the configured hierarchy again.
 
 ## Data movement
 

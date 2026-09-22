@@ -22,6 +22,11 @@ A template can be limited by:
 All configured parts of a rule must match. A deleted or invisible project,
 group, or account does not broaden access.
 
+For Jira Service Management, select both the service project and its exact
+**JSM request type** in the same enabled rule. The request type restriction is
+applied only on the customer portal. See
+[JSM customer portal templates](../jsm-customer-portal/) for the complete setup.
+
 ## App defaults
 
 An app default helps users find the relevant template in the explicit app
@@ -36,6 +41,18 @@ To preview the matching default for an issue:
 
 Native Create prefill is a separate administrator-controlled rule. See
 [Native Create prefill](../native-create-prefill/) before enabling it.
+
+## Workflow integration
+
+The template's **Workflow integration (Beta)** setting controls what happens
+when Jira runs the app's workflow post-function. The matching active app
+default supplies the template. The Jira workflow determines which transition
+starts the run.
+
+Workflow execution is automatic, so required variables need defaults and
+comments or attachments are not copied. See
+[Workflow Create](../workflow-create/) before adding the post-function to a
+workflow.
 
 ## Archive and restore templates
 

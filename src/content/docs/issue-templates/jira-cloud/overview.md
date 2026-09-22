@@ -24,6 +24,8 @@ work.
 | Reproduce selected live work once | [Recreate](../create-apply-recreate/#recreate-live-work-once) |
 | Ask for run-specific values or derive dates and Jira context | [Variables and Smart Values](../variables-and-smart-values/) |
 | Control who can use each template | [Administration](../administration/) |
+| Offer a governed template on a JSM customer request form | [JSM customer portal templates](../jsm-customer-portal/) |
+| Run a template after a Jira workflow transition | [Workflow Create](../workflow-create/) |
 | Prefill Jira's standard Create dialog | [Native Create prefill](../native-create-prefill/) |
 | Protect app configuration | [Backup and restore](../backup-and-restore/) |
 
@@ -41,6 +43,11 @@ The explicit **Use template** and **Apply template** journeys are the dependable
 product paths. Optional native Create prefill is available for exact project
 and issue-type combinations configured by a Jira administrator.
 
+Administrators can also expose a template on an authenticated Jira Service
+Management request form or run an app default from a Jira workflow transition.
+Workflow Create is Beta while Atlassian's Forge workflow post-function module
+remains Preview.
+
 ## Where the app appears
 
 - **Apps → Issue Templates & Hierarchy Builder** opens the complete template
@@ -48,6 +55,10 @@ and issue-type combinations configured by a Jira administrator.
 - **Project → Templates & Hierarchies** opens the library in a project context.
 - Jira administration contains governance, native Create rules, diagnostics,
   and backup/restore.
+- A configured JSM request form can show the **Issue template** field to
+  authenticated portal customers.
+- A configured Jira workflow post-function can run the matching app default
+  after a transition.
 - An issue's actions menu contains Apply, Capture, and Recreate journeys.
 - The **Template details** issue panel shows provenance and run outcomes.
 
@@ -65,3 +76,4 @@ created from that template.
 4. Review the fields and child hierarchy, then select **Create issue**.
 
 Continue with [Getting started](../getting-started/) for the complete walkthrough.
+See [Release notes](../release-notes/) for the latest customer-visible changes.
