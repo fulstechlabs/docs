@@ -44,38 +44,26 @@ A dash means no observed measurement. **Zero** means a measured zero. Do not tre
 <summary>Choose the right scope and filters</summary>
 
 **Basic** supports project, issue type and current assignee. Use **JQL** with autocomplete for additional fields or date filters.
-**One search page** measures the selected page; **All search pages** collects matching issues within app limits. Use all-pages scope when comparing the complete selected population.
+**One search page** measures the selected page; **All search pages** collects matching issues within app limits.
 The [calendar guide](../working-calendars/#filter-issues-or-measure-a-period) explains issue filters versus the measurement window.
 
 </details>
 
 ## Compare and save
 
-Open **Group results** to compare projects, current assignees, issue types or components.
-Choose **Save as new** to keep the report settings; rerun the saved report to get current data.
+Open **Group results** to compare project, current assignee, issue type or component.
+Choose **Total** or **Mean per contributing issue** when grouping.
 
-<details>
-<summary>First run slow or cache unavailable?</summary>
+Choose **Save as new** to keep a private report configuration. Rerun the saved report to calculate current data.
+**Update saved report** changes the configuration; **Delete saved report** removes it.
 
-The first report may take longer because the app reads Jira history, including issues created before installation.
-If **Enable cache for [project]** appears, a Jira administrator can enable the workflow field.
-Direct calculation still works without the cache. Follow [Setup and Administration](../administration/) to enable it safely.
-
-</details>
-
-<details>
-<summary>What happens to my saved settings?</summary>
-
-**Update saved report** changes a named configuration; **Delete saved report** removes it.
-Saved reports keep settings, not frozen results. Last-used inputs are remembered separately in your browser and may disappear when browser storage is cleared.
-
-</details>
+Last-used inputs are remembered separately in your browser and may disappear when browser storage is cleared.
 
 ## Next steps
 
 <CardGrid>
-  <LinkCard title="Analyze a report" description="Choose metrics, inspect trends and drill into issues." href="../report-analysis/" />
+  <LinkCard title="Analyze a report" description="Choose metrics and inspect the history behind results." href="../report-analysis/" />
   <LinkCard title="Use a calendar" description="Measure business time instead of elapsed time." href="../working-calendars/" />
-  <LinkCard title="Share or schedule" description="Reuse a configuration with your team." href="../sharing-and-schedules/" />
-  <LinkCard title="Export results" description="Download a page or run a background export." href="../exports/" />
+  <LinkCard title="Export CSV" description="Download one page or all collected pages." href="../exports/" />
+  <LinkCard title="Setup and administration" description="Manage calendars and the workflow-history field." href="../administration/" />
 </CardGrid>

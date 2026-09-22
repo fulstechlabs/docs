@@ -180,10 +180,6 @@
         "slug": "time-in-status/jira-cloud/report-analysis"
       },
       {
-        "label": "Sharing and Schedules",
-        "slug": "time-in-status/jira-cloud/sharing-and-schedules"
-      },
-      {
         "label": "Exports",
         "slug": "time-in-status/jira-cloud/exports"
       },
