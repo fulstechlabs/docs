@@ -1,18 +1,17 @@
 ---
 title: "Time in Status for Jira"
-description: "Measure status duration, cycle time, lead time and elapsed ownership using your Jira workflow."
+description: "Find workflow bottlenecks, understand delivery trends and analyze Jira history with Time in Status 3.0.0."
 ---
 
-See where Jira work spends its time — from the first status to completion.
-Use your team's statuses and working calendar to understand waiting, delivery and handoffs.
+Time in Status 3.0.0 for Jira Cloud shows where work waits, how delivery changes over time and which open issues need attention. Reports use your Jira workflow, Jira history and an optional working calendar.
 
 import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 <CardGrid>
-  <LinkCard title="Create your first report" description="Choose a project, select a metric and see your results." href="../getting-started/" />
-  <LinkCard title="Analyze workflow time" description="Compare status time, counts, ownership and delivery duration." href="../report-analysis/" />
-  <LinkCard title="Use working hours" description="Exclude weekends, breaks and non-working dates." href="../working-calendars/" />
-  <LinkCard title="Export CSV" description="Download the current page or all collected report pages." href="../exports/" />
+  <LinkCard title="Create your first report" description="Choose a project, select a metric and understand the result." href="../getting-started/" />
+  <LinkCard title="Analyze workflow and field history" description="Compare groups, trends, aging work and supported Jira fields." href="../report-analysis/" />
+  <LinkCard title="Share and use dashboards" description="Reuse a saved configuration with teammates and Jira dashboards." href="../sharing-and-dashboards/" />
+  <LinkCard title="Export CSV or XLSX" description="Download the current result or prepare a background export." href="../exports/" />
 </CardGrid>
 
 ## Choose your question
@@ -20,12 +19,17 @@ import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 | Your question | Report to use |
 | --- | --- |
 | Where does work wait? | **Time in status** |
-| How long does delivery take? | **Cycle time** or **Lead time** |
-| Which current issues have been waiting longest? | **Current visit age** |
-| Who owned the issue over time? | **Assignee time** |
+| Where did workflow time occur each week or month? | **Status time by period** |
+| How long does delivery take? | **Cycle time**, **Lead time** or **Delivery trend** |
+| Which current issues have been waiting longest? | **Open work aging** or **Current visit age** |
+| Who owned work, and in which status? | **Assignee time** or **Assignee by status** |
 | How often did work enter or move between statuses? | **Status count** or **Transition count** |
-| When did an issue enter a status? | **First status entrance** or **Latest status entrance** |
+| How long did Priority, Sprint or another supported field hold a value? | **Jira field duration** or **Jira field value count** |
 
-**Assignee time is elapsed ownership, not hours worked.** The app focuses on workflow time; timesheets and billing are outside its scope.
+You can compare results by one or two dimensions, use total, mean or median aggregation, and drill into contributing issues. Status summaries also show distribution statistics such as P85 where available.
 
-Need help? Visit [Support](../support/) or read [Data and Privacy](../security-and-data/).
+Saved reports keep configurations rather than frozen results. Sharing a configuration or showing it in the dashboard gadget never grants additional Jira issue access; each viewer calculates results with their own permissions.
+
+**Assignee metrics measure elapsed ownership, not hours worked or individual productivity.** Timesheets and billing are outside the app's scope.
+
+Need help? Visit [Troubleshooting and Support](../support/) or read [Data and Privacy](../security-and-data/).

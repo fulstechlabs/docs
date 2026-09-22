@@ -30,7 +30,7 @@ If Jira has not applied the change yet, use **Refresh settings** and rerun the r
 
 ## Manage working calendars
 
-Follow [Working Calendars](../working-calendars/) to create or edit a schedule.
+Follow [Working Calendars](../working-calendars/) to create or edit working hours, breaks and holidays.
 Deleting a calendar requires saved reports that use it to select another calendar. The default calendar cannot be deleted.
 
 ## Inspect one issue

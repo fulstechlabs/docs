@@ -1,31 +1,72 @@
 ---
 title: "Exports"
-description: "Export the current report page or all collected report pages as CSV."
+description: "Download the current result as CSV or prepare a background CSV/XLSX export."
 ---
 
-Time in Status exports CSV from a fresh calculation so you can keep or analyze a copy of the report.
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import GuideFigure from '../../../../components/GuideFigure.astro';
+import exportImage from './assets/export-controls.png';
 
-## Export the current page
+Download the result on screen, or prepare all matching issues in the background. Exports recalculate the report, so open durations and Jira search membership can differ from the result currently displayed.
 
-1. Run the report and review its scope and completeness.
-2. Choose **Export this page as CSV**.
-3. When preparation finishes, choose **Download CSV** and save the file.
+## Choose an export
 
-The export recalculates data, so the cutoff and open durations can differ from the result currently on screen.
+<Tabs>
+<TabItem label="Current result">
 
-## Export all collected pages
+1. Run the report and check its scope and completeness.
+2. Choose the CSV action for your result:
 
-1. Set **Report scope** to **All search pages**.
-2. Run the report and confirm the collected population and completeness.
-3. Choose **Export all pages as CSV**.
-4. Download the prepared CSV.
+| Result | Action |
+| --- | --- |
+| Issue rows | **Export this page as CSV** |
+| Grouped values | **Export aggregate CSV** |
+| Issues behind groups | **Export contributing issues CSV** |
 
-All-pages export traverses the selected Jira search again. Jira search membership can change during traversal, so the file is not an atomic database snapshot.
+3. When preparation finishes, select **Download CSV** and save the file.
 
-## Check limits and completeness
+**Result:** a CSV for the displayed report scope.
 
-Interactive all-pages reports are bounded by application limits, including issue/page/result-size limits. If a large selection cannot complete, narrow the project or JQL and try again.
+</TabItem>
+<TabItem label="All issues / XLSX">
 
-Missing values are not zero. Resolve issue errors before using partial totals.
+1. Run the report, then expand **Large and XLSX exports**.
+2. Choose **Export all as CSV** or **Export all as XLSX**.
+3. Follow the page/issue progress until the job is **ready**.
+4. Choose **Prepare download → Download**.
 
-Downloaded CSV files are stored wherever you save them and remain under your control. For repeated failures, see [Support](../support/).
+<GuideFigure image={exportImage} alt="Background export actions and a ready XLSX job with page and issue progress" caption="The export center shows job status, progress and the download action." />
+
+**Contributing issues XLSX** is also available for grouped reports. You can close the tab while a background job runs and return later to download it.
+
+</TabItem>
+</Tabs>
+
+## Understand background status
+
+| Status | Meaning and action |
+| --- | --- |
+| **queued** | The request is waiting for a worker. Recovery can redispatch recoverable queued work. |
+| **running** | Jira pages are being collected. Progress shows processed pages and issues. |
+| **ready** | The file is available. Choose **Prepare download**, then **Download**. |
+| **failed** | The job stopped after a permission, configuration or processing error. Read the message, correct the cause and start a new export. |
+| **cancelled** | You cancelled a queued or running job. Start a new export if needed. |
+| **expired** | The 24-hour file window ended. Start a new export. |
+
+Use **Cancel** to stop a queued or running job. Recoverable transient failures can be retried by the background worker; a permission failure does not fall back to another Jira user or app-wide access.
+
+:::tip[Download within 24 hours]
+Background files are stored in Atlassian Forge Object Store and expire after **24 hours**. Save a copy before expiry or create a new export. Downloaded files remain under your control.
+:::
+
+<details>
+<summary>Check completeness and limits</summary>
+
+Missing values are not zero. Resolve issue errors before using a partial total.
+Background exports collect up to 20,000 issues; interactive all-pages reports collect up to 5,000. Page and data-size limits may stop collection sooner. Narrow the selection and retry if needed.
+
+Read the filters, calendar, period and completeness in the file. Jira can change while pages are collected; an all-issues export is not an atomic database snapshot.
+
+</details>
+
+Sharing a configuration does not share its owner's export files. Review downloaded data before distributing it. For repeated failures, see [Troubleshooting and Support](../support/).

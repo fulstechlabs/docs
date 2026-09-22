@@ -1,9 +1,9 @@
 ---
 title: "User Guide"
-description: "Create your first Time in Status report and understand the result."
+description: "Create your first Time in Status 3.0.0 report and understand the result."
 ---
 
-Start with one project and a simple report. You can refine it after seeing the results.
+Start with one project and a simple report. Your first useful result is a table showing how long each selected issue spent in each workflow status.
 
 import { Steps, CardGrid, LinkCard } from '@astrojs/starlight/components';
 import GuideFigure from '../../../../components/GuideFigure.astro';
@@ -29,13 +29,13 @@ import reportImage from './assets/report.png';
 
 ## Read the result
 
-<GuideFigure image={reportImage} alt="Time in Status report showing three issue rows, their status duration and View history actions" caption="Example result for three selected issues. Your columns follow your Jira workflow." />
+<GuideFigure image={reportImage} alt="Time in Status report showing three demo issue rows, status duration and View history actions" caption="Example result for three issues. Your columns follow your Jira workflow." />
 
 | Look at… | To understand… |
 | --- | --- |
 | Status columns | How long each issue spent in that status |
 | Scope and completeness | Which issues were included and whether any data is missing |
-| Calculation time | When the current open visits were measured |
+| Calculation time | When current open visits were measured |
 | **View history** | The visits behind an issue's result |
 
 A dash means no observed measurement. **Zero** means a measured zero. Do not treat a partial total as complete.
@@ -51,19 +51,21 @@ The [calendar guide](../working-calendars/#filter-issues-or-measure-a-period) ex
 
 ## Compare and save
 
-Open **Group results** to compare project, current assignee, issue type or component.
-Choose **Total** or **Mean per contributing issue** when grouping.
+Open **Group results** to compare project, current assignee, issue type or component. Add an optional **Second dimension** for a nested comparison, then choose **Total**, **Mean per contributing issue** or **Median per contributing issue**.
 
-Choose **Save as new** to keep a private report configuration. Rerun the saved report to calculate current data.
-**Update saved report** changes the configuration; **Delete saved report** removes it.
+For **Time in status**, choose how repeated visits contribute inside each issue and status: total of all visits, first visit, latest visit or average visit. The visit rule is applied before issues are grouped.
+
+Choose **Save as new** to keep a private report configuration. Rerun the saved report to calculate current data. **Update saved report** changes the configuration; **Delete saved report** removes it.
+
+To let teammates reuse the configuration, follow [Sharing and Dashboards](../sharing-and-dashboards/). Shared links contain report settings, not frozen results or export files.
 
 Last-used inputs are remembered separately in your browser and may disappear when browser storage is cleared.
 
 ## Next steps
 
 <CardGrid>
-  <LinkCard title="Analyze a report" description="Choose metrics and inspect the history behind results." href="../report-analysis/" />
+  <LinkCard title="Analyze a report" description="Choose advanced metrics, inspect trends and drill into issues." href="../report-analysis/" />
   <LinkCard title="Use a calendar" description="Measure business time instead of elapsed time." href="../working-calendars/" />
-  <LinkCard title="Export CSV" description="Download one page or all collected pages." href="../exports/" />
-  <LinkCard title="Setup and administration" description="Manage calendars and the workflow-history field." href="../administration/" />
+  <LinkCard title="Share or add a gadget" description="Reuse a saved configuration with your team." href="../sharing-and-dashboards/" />
+  <LinkCard title="Export results" description="Download the current result or run a background CSV/XLSX export." href="../exports/" />
 </CardGrid>

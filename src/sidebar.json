@@ -184,6 +184,10 @@
         "slug": "time-in-status/jira-cloud/exports"
       },
       {
+        "label": "Sharing and Dashboards",
+        "slug": "time-in-status/jira-cloud/sharing-and-dashboards"
+      },
+      {
         "label": "Data and Privacy",
         "slug": "time-in-status/jira-cloud/security-and-data"
       },
