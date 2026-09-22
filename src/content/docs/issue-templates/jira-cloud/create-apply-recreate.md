@@ -73,3 +73,17 @@ The **Template details** issue panel shows:
 
 Retry is available only for failed or partial work. Completed nodes are not
 replayed.
+
+## Use templates from other Jira entry points
+
+The explicit Create, Apply, and Recreate journeys remain available when your
+team also configures automatic entry points:
+
+- [JSM customer portal templates](../jsm-customer-portal/) let an authenticated
+  customer choose a request-type-specific template while submitting a request.
+- [Workflow Create](../workflow-create/) runs the matching app default after a
+  configured Jira transition. This integration is Beta while the Atlassian
+  Forge module remains Preview.
+
+Automatic entry points use conservative empty-only field behavior and do not
+copy comments or attachments.

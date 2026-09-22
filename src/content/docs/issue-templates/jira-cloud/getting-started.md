@@ -78,4 +78,6 @@ Open the new root issue and check:
   attention.
 
 Next, learn how to [Apply or Recreate work](../create-apply-recreate/) and how
-to [configure availability](../administration/).
+to [configure availability](../administration/). Jira administrators can then
+add the template to a [JSM customer portal request](../jsm-customer-portal/) or
+connect it to a [workflow transition](../workflow-create/).
