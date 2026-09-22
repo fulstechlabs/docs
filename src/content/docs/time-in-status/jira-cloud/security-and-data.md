@@ -1,24 +1,33 @@
 ---
 title: "Data and Privacy"
-description: "Where your data stays, who can view reports and how long export files are available."
+description: "Where Time in Status stores configuration and reusable Jira workflow history."
 ---
 
-Time in Status uses Jira history to calculate your reports. Here is how your data is handled.
+Time in Status uses Jira history to calculate reports and runs on Atlassian Forge. The app has no external backend.
 
 ## Data storage
 
-Workflow data and saved configurations stay in Jira and Atlassian-hosted app storage. The app does not use an external backend.
-Your last-used report inputs are stored in your browser; they do not sync across devices and may disappear when browser storage is cleared.
+| Location | Purpose |
+| --- | --- |
+| App-managed Jira custom field | A bounded, replaceable workflow snapshot per issue, including status visits and assignee account IDs/timestamps. |
+| Forge SQL | Working calendars, private saved report configurations and bounded cache-validation state. Saved JQL may contain references entered by its owner. |
+| Your browser | Last-used report inputs. This is separate from named saved reports and does not synchronize across devices. |
+| Request memory | Jira responses, current display names and calculated report results used for the active request. |
+| Downloaded CSV | A user-controlled export of the selected report, including its labels and filters. |
+
+Jira history remains the calculation source. Current display names are read from Jira when needed; reusable snapshots do not store assignee profile names or email addresses.
 
 ## Jira permissions
 
-Reports use the viewer's Jira permissions. Sharing a saved configuration does not grant access to additional issues or the owner's export files.
-Scheduled reports use the owner's current Jira permissions.
+Reports use the signed-in viewer's Jira permissions. The app does not introduce a separate role-management system.
+Jira administration permission is required for calendar administration and workflow-field setup.
+Saved reports are private to their owner.
 
-## Export files
+## User and lifecycle events
 
-Background CSV and XLSX files expire after **24 hours**. Download a copy before expiry or create a new export.
-You control the storage, sharing and deletion of files saved to your computer.
+Installation and upgrade initialize app storage. A deleted-user event removes that user's private saved reports; it does not edit Jira issue history.
+
+Downloaded CSV files are outside the app after you save them. You control their storage, sharing and deletion.
 
 ## Policies and support
 
