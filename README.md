@@ -25,3 +25,5 @@ uses Starlight's default Pagefind search. Production output is generated in
 The committed `src/content/docs/` tree is the canonical documentation source.
 Navigation is maintained in `src/sidebar.json`, and redirects are maintained in
 `src/redirects.json`.
+
+Customer-facing documentation should follow [`docs/docs-style-guide.md`](docs/docs-style-guide.md).
