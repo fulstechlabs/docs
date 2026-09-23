@@ -1,15 +1,36 @@
 ---
 title: "Create, Apply, and Recreate"
-description: "Choose the correct explicit workflow for new work, existing issues, or a one-time copy."
+description: "Choose the right explicit workflow for new work, existing issues, or a one-time copy."
 ---
 
-The app has three explicit user journeys. Each presents a preview before Jira
-is changed.
+Create, Apply, and Recreate are the three explicit user journeys. Each presents
+a preview before Jira is changed.
+
+## Choose the right workflow
+
+| Your goal | Use |
+| --- | --- |
+| Start a new governed process from a saved template | **Create** |
+| Standardize fields or add follow-up work to an existing issue | **Apply** |
+| Reproduce useful live work once without saving a governed template | **Recreate** |
+
+Use [Native Jira Create Prefill](../native-create-prefill/) when you specifically
+need values inside Jira's standard Create dialog. Use
+[JSM customer portal templates](../jsm-customer-portal/) or
+[Workflow Create](../workflow-create/) only when the action should happen from
+those automatic entry points.
 
 ## Create new work from a template
 
 Use **Use template → Create new** when the process should begin with a new root
 issue.
+
+### Before you begin
+
+You need permission to create the selected root and child work in the target
+Jira project.
+
+### Steps
 
 1. Choose a template from the library.
 2. Select **Use template**, keep **Create new** selected, and answer its runtime
@@ -27,37 +48,54 @@ can skip children and links that already succeeded.
 
 ![Preview the selected Jira parent before creating the hierarchy](./assets/hierarchy-preview.jpg)
 
+### Verify the result
+
+Open the new root and confirm the selected child hierarchy matches Preview.
+**Template details** should show the template revision, run ID, status, and child
+outcomes.
+
 ## Apply a template to an existing issue
 
-Use **Apply template** from an issue when the root already exists but needs
-standard fields or follow-up work.
+Use **Apply template** when the root already exists but needs standard fields or
+follow-up work.
 
-1. Open the issue and choose the app's Apply action.
+### Steps
+
+1. Open the issue and choose **Apply template**.
 2. Select an available template.
 3. Answer any runtime inputs and select **Preview changes**.
-4. Compare **Current** and **Proposed** values. The decision beside each field
-   explains whether the app will **Keep**, **Fill**, **Replace**, or **Skip** it.
-5. Select only the root fields and child work you want.
-6. Include configured comments or attachments only when needed.
-7. Select **Apply changes**.
+4. Compare **Current** and **Proposed** values.
+5. Review the decision beside each field: **Keep**, **Fill**, **Replace**, or
+   **Skip**.
+6. Select only the root fields and child work you want.
+7. Include configured comments or attachments only when needed.
+8. Select **Apply changes**.
 
 ![Selective Apply preview](./assets/apply-preview.png)
 
-The default **Only fill empty fields** rule preserves a populated Jira field. The preview
-makes every selected overwrite visible before it happens.
+The default **Only fill empty fields** rule preserves a populated Jira field.
+Every selected overwrite is visible before the final action.
+
+### Verify the result
+
+Reopen the root issue and confirm skipped/current values were preserved.
+**Template details** records the Apply run and any selected child work.
 
 ## Recreate live work once
 
-Use **Recreate issue and selected work** when a useful live issue should be
-reproduced without adding a governed template to the library.
+Use **Recreate issue and selected work** when useful live Jira work should be
+copied without adding a governed template to the library.
 
-Choose the destination project and issue type, select the supported root
-fields, nested child work, and links, then review the one-time creation plan.
+1. Open the source issue and choose **Recreate issue and selected work**.
+2. Choose the destination project and issue type.
+3. Select the supported root fields, nested child work, and links to reproduce.
+4. Review the one-time creation plan.
+5. Confirm the operation.
+
 Recreate preserves selected parent relationships and keeps one copy when the
-same issue is both a child and linked to the source root. Before Jira is
-changed, the app checks that the destination project has compatible hierarchy
-levels for the selected work types. The resulting issue is marked
-**Recreated once** in its provenance.
+same issue is both a child and linked to the source root. Before Jira is changed,
+the app validates compatible destination hierarchy levels. The resulting issue
+is marked **Recreated once** in its provenance.
 
 ## Understand the result
 
@@ -74,16 +112,31 @@ The **Template details** issue panel shows:
 Retry is available only for failed or partial work. Completed nodes are not
 replayed.
 
-## Use templates from other Jira entry points
+## Troubleshooting
 
-The explicit Create, Apply, and Recreate journeys remain available when your
-team also configures automatic entry points:
+### A field is not changed
 
-- [JSM customer portal templates](../jsm-customer-portal/) let an authenticated
-  customer choose a request-type-specific template while submitting a request.
-- [Workflow Create](../workflow-create/) runs the matching app default after a
-  configured Jira transition. This integration is Beta while the Atlassian
-  Forge module remains Preview.
+Check the preview decision first. **Keep** and **Skip** intentionally preserve
+the current value. If a selected field is reported as unavailable, Jira may
+have removed it from the destination project/work-type context.
 
-Automatic entry points use conservative empty-only field behavior and do not
-copy comments or attachments.
+### Preview says the hierarchy is incompatible
+
+Confirm the selected destination work types have compatible Jira hierarchy
+levels. The app stops before mutation rather than guessing a parent mapping.
+
+### A hierarchy finishes partially
+
+Open **Template details**, fix the reported Jira permission, field, work-type, or
+link problem, then retry the same run. Do not start another Create or Apply just
+to replay completed children.
+
+For additional symptoms, see
+[Troubleshooting and Support](../troubleshooting-and-support/).
+
+## Related tasks
+
+- [Build or capture a reusable template](../templates-and-fields/).
+- [Add variables and Smart Values](../variables-and-smart-values/).
+- [Configure availability and defaults](../administration/).
+- [Review current product boundaries](../known-limitations/).
