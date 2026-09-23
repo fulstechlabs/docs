@@ -1,52 +1,78 @@
 ---
 title: "Issue Templates & Hierarchy Builder for Jira"
-description: "Create consistent Jira issues, subtasks, and reusable hierarchies with clear previews and recoverable results."
+description: "Standardize recurring Jira work with reusable templates, previewed changes, multi-level hierarchies, and recoverable automation."
 ---
 
 ![Issue Templates & Hierarchy Builder for Jira](./assets/product-logo.png)
 
 Issue Templates & Hierarchy Builder turns repeatable Jira work into a reusable
-process. Build a template from scratch or capture a proven issue, ask users for
-the values that change each time, preview the result, and create or apply the
-work without silently changing unrelated fields.
+process. Build a template from scratch or capture proven Jira work, preview what
+will change, and create or apply the result without silently replacing unrelated
+user data.
 
 The app is designed for Jira Cloud teams that repeat release checklists,
 onboarding, QA, incident follow-up, operational reviews, and other structured
 work.
 
-## What can you do?
+## Choose the right workflow
 
-| If you want to… | Start with… |
+| If you want to… | Use |
 | --- | --- |
-| Build a reusable issue and subtask structure | [Templates and supported fields](../templates-and-fields/) |
-| Create new Jira work from a template | [Create, Apply, and Recreate](../create-apply-recreate/) |
-| Add a standard process to an existing issue | [Selective Apply](../create-apply-recreate/#apply-a-template-to-an-existing-issue) |
-| Reproduce selected live work once | [Recreate](../create-apply-recreate/#recreate-live-work-once) |
-| Ask for run-specific values or derive dates and Jira context | [Variables and Smart Values](../variables-and-smart-values/) |
-| Control who can use each template | [Administration](../administration/) |
-| Offer a governed template on a JSM customer request form | [JSM customer portal templates](../jsm-customer-portal/) |
-| Run a template after a Jira workflow transition | [Workflow Create](../workflow-create/) |
-| Prefill Jira's standard Create dialog | [Native Create prefill](../native-create-prefill/) |
-| Protect app configuration | [Backup and restore](../backup-and-restore/) |
+| Start new Jira work from a governed process | [Create from a template](../create-apply-recreate/#create-new-work-from-a-template) |
+| Standardize an issue that already exists | [Apply a template](../create-apply-recreate/#apply-a-template-to-an-existing-issue) |
+| Copy useful live work once without saving a governed template | [Recreate](../create-apply-recreate/#recreate-live-work-once) |
+| Prefill Jira's standard Create dialog | [Native Jira Create prefill](../native-create-prefill/) |
+| Let an authenticated JSM customer choose a template on a request form | [JSM customer portal templates](../jsm-customer-portal/) |
+| Run template behavior after a Jira workflow transition | [Workflow Create](../workflow-create/) |
 
-## The predictable workflow
+If you are unsure, start with explicit **Create** or **Apply**. They are the
+dependable interactive paths because the user can review the result before Jira
+is changed.
 
-1. An administrator or project lead prepares the reusable process once.
-2. A user chooses a template and answers any run-specific questions.
-3. The app shows the exact root fields and child work before changing Jira.
-4. Jira receives normal issues with the reviewed parent hierarchy and selected
-   issue links.
-5. The **Template details** panel records what happened and supports safe
-   recovery when a hierarchy finishes only partially.
+## What you can rely on
 
-The explicit **Use template** and **Apply template** journeys are the dependable
-product paths. Optional native Create prefill is available for exact project
-and issue-type combinations configured by a Jira administrator.
+### Preview before changing Jira
 
-Administrators can also expose a template on an authenticated Jira Service
-Management request form or run an app default from a Jira workflow transition.
-Workflow Create is Beta while Atlassian's Forge workflow post-function module
-remains Preview.
+Create, Apply, and Recreate show the fields and selected hierarchy before the
+final action. Cross-project hierarchy is validated before mutation.
+
+### Preserve user-entered data
+
+Selective Apply makes Keep, Fill, Replace, and Skip decisions visible. Automatic
+JSM and Workflow paths use a conservative empty-only root-field policy and do
+not silently copy template comments or attachments.
+
+### Recover partial hierarchy work safely
+
+The **Template details** panel records the template revision, run status, child
+outcomes, and actionable failures. Retrying a partial run reuses completed
+checkpoints instead of creating the same child work again.
+
+## Common use cases
+
+- **Release readiness:** create a root issue with repeatable validation,
+  documentation, and rollout tasks.
+- **Onboarding:** ask for the person, date, or environment that changes each
+  time and create the standard follow-up hierarchy.
+- **Bug and QA process:** capture proven Jira work, standardize supported fields,
+  and reproduce selected child work.
+- **JSM operations:** let authenticated portal customers choose a governed
+  request-type template while preserving the values they entered.
+
+## Build and govern templates
+
+Template authors can:
+
+- Create a template from scratch or capture an existing issue.
+- Add typed Jira-native fields, variables, and bounded Smart Values.
+- Model multi-level Jira parent hierarchy separately from optional issue links.
+- Control availability by project, group, person, and JSM request type.
+- Configure app defaults, optional native Create prefill, and Workflow Create.
+- Back up and validate same-tenant app configuration.
+
+See [Templates and supported fields](../templates-and-fields/) and
+[Administration](../administration/) for the complete authoring and governance
+model.
 
 ## Where the app appears
 
@@ -63,17 +89,13 @@ remains Preview.
 - The **Template details** issue panel shows provenance and run outcomes.
 
 Template authors can also open **Details** in the library to copy the stable
-template ID or a ready-to-use `createdFromTemplate("…")` JQL query for issues
-created from that template.
+template ID or a ready-to-use `createdFromTemplate("…")` JQL query.
 
-## Create your first hierarchy
+## Create your first useful result
 
-1. Ask a Jira administrator to open **Administration → Defaults & integrations**
-   and select **Install editable starters**.
-2. In the template library, find **Release readiness** and select **Use template**.
-3. Keep **Create new** selected, answer any runtime inputs, and select
-   **Preview new issue**.
-4. Review the fields and child hierarchy, then select **Create issue**.
+The fastest first success is to install the editable starters and create the
+**Release readiness** hierarchy.
 
-Continue with [Getting started](../getting-started/) for the complete walkthrough.
-See [Release notes](../release-notes/) for the latest customer-visible changes.
+Continue with [Getting Started](../getting-started/). After that, use the
+[FAQ](../faq/) for common product decisions or [Release Notes](../release-notes/)
+for the latest customer-visible changes.
