@@ -34,7 +34,7 @@ match. Changing context causes app-owned values to be reevaluated.
 6. Open Jira's standard **Create** dialog and test the exact project and work
    type before rolling the rule out.
 
-![URL and cascading select prefilled in Jira Create](./assets/native-create-prefill.png)
+![Native Create settings showing the app default and prefill controls](./assets/native-create-settings.png)
 
 ## User-value protection
 
@@ -53,8 +53,9 @@ Forge UI Modifications exposes a smaller field set than the app's explicit
 workflows. The verified native path supports common system fields plus the
 app's URL and cascading-select handling where Jira exposes them.
 
-Group picker and Sprint are not exposed to this Forge integration. They remain
-available in explicit Create and Apply.
+Group picker and Sprint are not exposed to this Forge integration, so this app
+does not prefill those fields through native Create. They remain available in
+explicit Create and Apply.
 
 ## Variables and Smart Values
 
@@ -71,7 +72,11 @@ available in explicit Create and Apply.
 
 ## Platform boundary
 
-Only one UI Modifications app can operate in a given context. Atlassian may
-also change which fields a Jira Create surface exposes. Keep explicit Create
-as the dependable cross-context path and verify a new rule in its exact project
-and issue type before announcing it to users.
+Jira currently allows up to five UI Modifications apps to apply changes in the
+same project, issue-type, and view context. They run asynchronously, and apps
+that modify the same field can conflict; when more than five are configured,
+some app changes are ignored.
+
+Atlassian may also change which fields a Jira Create surface exposes. Keep
+explicit Create as the dependable cross-context path and verify a new rule in
+its exact project and issue type before announcing it to users.
