@@ -44,8 +44,7 @@ never treated as the permission check.
 ## Why permissions are requested
 
 - Jira read/write permissions support field discovery, capture, preview,
-  issue creation and updates, comments, opted-in attachments, links,
-  transitions, and provenance.
+  issue creation and updates, comments, opted-in attachments, and issue links.
 - User read permission supports Jira user and group selection.
 - Jira Software board and Sprint reads support typed Sprint values.
 - Project read permission supports context validation and hierarchy mapping.

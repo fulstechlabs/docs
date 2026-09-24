@@ -32,6 +32,13 @@ by source, tests, or production evidence.
 | Workflow Create Beta disclosure | manifest / Atlassian Forge module status checked during PR #42 | Pass. |
 | Native Create empty-only/user-owned-value safety | `app/static/ui-modifications/index.js` | Pass. |
 | Native Create Group/Sprint boundary and multi-UIM wording | PR #42 platform revalidation | Pass. |
+| FAQ licensing behavior | resolver licensing checks + current UI contract | Pass — mutations require an active production license; read-only configuration/support visibility remains available. |
+| Security: no external runtime remote/egress | production `manifest.yml` | Pass — no Forge `remotes` or external egress declarations are present. |
+| Security: user-profile minimization | `app/src/logic.js` | Pass — stored account references keep `accountId` while copied profile labels/email/avatar/locale/time-zone keys are stripped. |
+| Security: comments / selected attachment copying | `app/src/index.js`, `app/src/jira.js` | Pass — interactive explicit paths copy configured comments/attachments only when the user selected those side effects. |
+| Privacy: deleted Jira issue relation cleanup | issue lifecycle trigger in `app/src/index.js` | Pass — issue relations and lifecycle selection state are removed on Jira issue deletion; an audit event remains. |
+| Privacy: Forge-hosted uninstall lifecycle wording | current Atlassian Forge hosted-storage documentation | Pass — public text intentionally delegates uninstall retention/deletion to Atlassian's hosted-storage lifecycle instead of hard-coding a retention number. |
+| Release Notes 4.0.0 | production release receipt + `publication.json` | Pass — JSM portal, Workflow Create Beta, hierarchy, collection normalization, SQL bootstrap, lifecycle/idempotency and automatic-path safety claims match the released evidence. |
 
 ## Screenshot verification
 
@@ -89,7 +96,7 @@ accurate current image merely because a newer image looks cleaner.
 
 ## Audit outcome
 
-The public text is within the verified 4.0.0/source contract after the corrections
-above. Current screenshots are usable only under the evidence boundaries listed
+The public text, including FAQ, Security/Privacy, and 4.0.0 Release Notes, is
+within the verified 4.0.0/source contract after the corrections above. Current screenshots are usable only under the evidence boundaries listed
 in this document. The remaining quality improvement is scenario-specific
 production capture, not a known product-claim defect.
