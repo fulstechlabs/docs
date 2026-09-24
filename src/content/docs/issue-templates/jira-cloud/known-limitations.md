@@ -33,9 +33,11 @@ from guessing Jira or third-party payloads that cannot be validated safely.
 
 ## Native Create boundaries
 
-- Group picker and Sprint are not exposed by Forge UI Modifications and remain
-  blank in native Create.
-- Only one UI Modifications app can operate in a context.
+- Group picker and Sprint are not exposed by Forge UI Modifications, so this
+  app does not prefill them through native Create.
+- Jira currently allows up to five UI Modifications apps in the same project,
+  issue-type, and view context. Their changes run asynchronously and can
+  conflict when multiple apps modify the same field.
 - Native prefill is verified for exact company-managed Jira Software project
   and issue-type rules. Use explicit Create for the guaranteed path.
 - Native prefill snapshots literal values and variable defaults when the rule

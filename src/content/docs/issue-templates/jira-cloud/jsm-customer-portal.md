@@ -50,7 +50,7 @@ does not expose internal template IDs.
 ## What happens after submission
 
 - **No template** creates the customer request and no app run.
-- Selecting a template stores its friendly name on the request.
+- Selecting a template stores the template selection on the Jira request; the portal and Jira UI display the template's friendly name.
 - Customer-entered Summary, Description, and other populated root fields are
   preserved.
 - The automatic policy fills supported empty root values only.

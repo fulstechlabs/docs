@@ -23,9 +23,11 @@ Internal follow-up:
 
 **JSM Customer Portal Templates**
 
-![An authenticated JSM customer sees No template plus the matching request-type template](./assets/jsm-template-selection.jpg)
+![A controlled JSM portal verification showing No template plus the matching request-type template](./assets/jsm-template-selection.jpg)
 
-*The selector is filtered to the exact portal context. Anonymous portal access is not supported.*
+*The screenshot shows the selector behavior on the customer portal. Production
+4.0.0 separately verified the matching-template path with an authenticated
+portal-only customer. Anonymous portal access is not supported.*
 
 ![Agents can see the completed template run and created child work on the Jira request](./assets/jsm-run-result.jpg)
 
