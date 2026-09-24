@@ -8,6 +8,13 @@ a few values change each time.
 
 ## Find a familiar situation
 
+| Build the reusable process | Preview what will happen | See the final run |
+| --- | --- | --- |
+| ![Model reusable Jira work in the template editor](./assets/template-structure.jpg) | ![Review the root and child work before creating Jira issues](./assets/create-preview.png) | ![Template details records the run and created work](./assets/provenance-panel.png) |
+
+The screenshots show the same product pattern from three angles: define the
+process once, preview the next run, then keep a visible record of what happened.
+
 | Situation | Use | Result |
 | --- | --- | --- |
 | Every release needs the same readiness work | [Release readiness](../use-case-release-readiness/) | One release issue + repeatable child checklist |
