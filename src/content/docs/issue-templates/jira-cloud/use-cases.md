@@ -1,71 +1,36 @@
 ---
 title: "Explore Use Cases"
-description: "See practical ways teams use reusable Jira issue templates and hierarchies for releases, onboarding, incidents, service requests, and recurring delivery."
+description: "See quick examples of how teams use Jira issue templates for releases, onboarding, incidents, customer delivery, and JSM fulfillment."
 ---
 
-Issue Templates & Hierarchy Builder is useful anywhere a team repeatedly creates
-the same **kind of Jira work** but the people, dates, customer, version, or scope
-change each time.
+Use the app when your team creates **almost the same Jira work repeatedly**, but
+a few values change each time.
 
-You do not need to start by choosing a feature. Start with a recurring process
-your team already recognizes.
+## Find a familiar situation
 
-## Which situation looks familiar?
+| Situation | Use | Result |
+| --- | --- | --- |
+| Every release needs the same readiness work | [Release readiness](../use-case-release-readiness/) | One release issue + repeatable child checklist |
+| Every new employee needs coordinated setup | [Employee onboarding](../use-case-employee-onboarding/) | One onboarding issue + IT/access/setup work |
+| Every customer rollout follows similar steps | [Customer onboarding](../use-case-customer-onboarding/) | One delivery plan with customer-specific values |
+| Every incident needs the same follow-up | [Incident follow-up](../use-case-incident-follow-up/) | Apply standard follow-up to the existing incident |
+| A JSM request needs predictable fulfillment work | [JSM request fulfillment](../use-case-jsm-request-fulfillment/) | Customer request + internal follow-up hierarchy |
 
-| Your recurring work | A useful starting pattern |
-| --- | --- |
-| Every release needs the same readiness work | [Release readiness checklist](../use-case-release-readiness/) |
-| Every new employee needs the same coordinated setup | [Employee onboarding](../use-case-employee-onboarding/) |
-| Every customer rollout follows a repeatable delivery plan | [Customer onboarding and implementation](../use-case-customer-onboarding/) |
-| Every incident needs structured follow-up after the urgent response | [Incident follow-up](../use-case-incident-follow-up/) |
-| A JSM request should create standard fulfillment work | [JSM request fulfillment](../use-case-jsm-request-fulfillment/) |
+## The reusable pattern
 
-These are examples, not fixed template types. The app stores normal Jira work,
-so you can adapt the same model to your own process.
+**Keep the process. Change the inputs. Choose how it starts.**
 
-## The pattern behind all of them
+- **Keep:** fields, child work, hierarchy, links.
+- **Change:** customer, employee, version, date, owner, environment.
+- **Start with:** Create, Apply, JSM portal, or Workflow Create.
 
-A reusable process usually has three parts:
+## More ideas
 
-1. **What stays the same** — the standard fields, child work, hierarchy, and
-   optional links.
-2. **What changes each time** — a customer, employee, release version, date,
-   owner, environment, or other run-specific input.
-3. **How the process starts** — a user creates it explicitly, applies it to
-   existing work, a JSM customer selects it, or a workflow transition triggers
-   it.
+Deployment checklists · access reviews · vendor onboarding · campaign launches ·
+monthly operations · QA regression packs · audit readiness · support escalations ·
+site-opening checklists.
 
-The app lets you capture those three parts without turning the process into a
-large Jira Automation rule.
+If your team says **“we create almost the same Jira issues every time”**, the
+pattern probably fits.
 
-## More ideas to adapt
-
-Once you recognize the pattern, the same approach can fit many other recurring
-jobs:
-
-- change rollout and deployment checklists;
-- recurring access or configuration reviews;
-- vendor or partner onboarding;
-- campaign or launch coordination;
-- monthly operational checklists;
-- environment provisioning follow-up;
-- QA or regression work packages;
-- audit-readiness task sets;
-- support escalation follow-up;
-- office, store, or site opening checklists.
-
-A good candidate is any process where someone says:
-
-> "We create almost the same Jira issues every time, but a few values and
-> people are different."
-
-## Start from your own process
-
-If you already have a good Jira issue and child structure, you can
-[Capture it into a template](../templates-and-fields/#capture-an-existing-issue).
-
-If you are designing a new process, start with
-[Templates and Supported Fields](../templates-and-fields/).
-
-If you are not sure which execution path fits the use case, see
-[Create, Apply, and Recreate](../create-apply-recreate/).
+[Build your own template →](../templates-and-fields/)
