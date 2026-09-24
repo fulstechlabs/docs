@@ -19,10 +19,10 @@ INC-123 — Checkout outage
 
 **Apply to the existing incident**
 
-![Compare the current incident with the proposed template values before applying](./assets/apply-preview.png)
+![Apply can preserve all root fields while still creating selected child work](./assets/apply-preserve.jpg)
 
-*Apply shows Current vs Proposed so the incident details can stay untouched while
-the follow-up work is added.*
+*This verified Apply preview shows no root-field changes and one selected child.
+That is the pattern to use when the incident details should stay untouched.*
 
 ### What this gives the team
 
