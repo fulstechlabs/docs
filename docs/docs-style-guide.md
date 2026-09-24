@@ -253,6 +253,24 @@ Use cases should:
 - link to implementation guides rather than duplicating all setup steps;
 - avoid implying that the app provides domain-specific logic it does not have.
 
+### Keep use cases scannable
+
+Use cases are **recipes, not essays**.
+
+Default to:
+
+- one recognition sentence such as **Use this when…**;
+- one compact example, diagram, tree, or table;
+- one **Best fit** workflow;
+- a short **Also works for** list;
+- 1–3 links to the canonical setup guides.
+
+Prefer roughly 100–200 words when the scenario is simple. Add more explanation
+only when a real product boundary or tradeoff requires it.
+
+A reader should understand the scenario and product fit without reading every
+sentence.
+
 A Use Cases hub may also include short "more ideas" examples that do not yet
 justify dedicated pages.
 
