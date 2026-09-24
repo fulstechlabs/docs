@@ -430,6 +430,30 @@ For use-case pages, include at least one meaningful visual when a current
 product screenshot or simple product/result visual can explain the scenario
 better than another paragraph.
 
+## 14.2 Verify screenshots as evidence
+
+A screenshot is a product claim.
+
+Before publishing or reusing one, verify:
+
+- the UI labels still exist in the current product source or running release;
+- the screenshot's flow matches the surrounding text (Create vs Apply, portal
+  vs Jira, development vs production, and so on);
+- the screenshot does not imply a capability that is merely visible because of
+  Jira defaults, another app, or test-fixture setup;
+- the caption describes only what the image actually demonstrates;
+- a development/test-tenant screenshot is not used as proof of a
+  production-only claim unless independent production evidence also exists;
+- scenario-specific screenshots are preferred over generic QA fixtures when
+  the page names a specific customer scenario.
+
+Do not reuse an image simply because it is visually similar. If the correct
+screenshot does not exist, use a diagram/example or omit the image until valid
+evidence can be captured.
+
+During release reconciliation, re-check screenshots that show release-sensitive
+UI, platform limitations, or Beta/Preview behavior.
+
 ## 15. Screenshots
 
 Use screenshots when they reduce ambiguity, not as decoration.
