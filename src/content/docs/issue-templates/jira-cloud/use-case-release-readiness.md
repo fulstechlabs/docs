@@ -23,7 +23,7 @@ Change each run:
 
 **Create from a template**
 
-![Preview a reusable hierarchy before creating the release work](./assets/create-preview.png)
+![Preview selected Release readiness child work before creating Jira issues](./assets/release-preview.png)
 
 *Preview lets the release owner confirm the root values and selected child work
 before Jira is changed.*
