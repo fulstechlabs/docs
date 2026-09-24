@@ -45,6 +45,8 @@ The selector shows **No template** plus only templates that match the exact
 service project, request type, and root work type. It shows friendly names and
 does not expose internal template IDs.
 
+![A controlled portal verification showing No template and one exact matching template](./assets/jsm-template-selection.jpg)
+
 ## What happens after submission
 
 - **No template** creates the customer request and no app run.
@@ -59,6 +61,8 @@ does not expose internal template IDs.
 Open the request in Jira and expand **Template details** to see the template
 revision, run status, created child work, and a safe retry action when work is
 partial or failed. Completed nodes are not created again during retry.
+
+![A controlled JSM verification showing the completed template run and created child work](./assets/jsm-run-result.jpg)
 
 ## Verify the setup
 
