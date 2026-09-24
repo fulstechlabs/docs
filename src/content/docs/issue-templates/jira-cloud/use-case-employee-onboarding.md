@@ -23,10 +23,10 @@ Change each run:
 
 **Create from a template**
 
-![Fields and inputs can reuse a run-specific value inside Jira fields](./assets/customer-fields-inputs.jpg)
-
-*This verified delivery example shows the same input mechanism. An onboarding
-template can use it for values such as employee name, team, manager, and start date.*
+The template author defines those values as runtime inputs, then reuses them in
+the root and child fields. A scenario-specific onboarding screenshot will be
+used only when the captured UI shows the actual onboarding variables rather than
+an unrelated example.
 
 ### What this gives the team
 
