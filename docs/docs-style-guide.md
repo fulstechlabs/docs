@@ -447,6 +447,35 @@ UI.
 Every screenshot should show current product behavior, use safe test data, and
 remain readable at the docs layout width.
 
+## 15.1 Screenshot verification gate
+
+A screenshot is a product claim, not decoration. Build success and a valid image
+path do **not** prove that the screenshot is semantically correct.
+
+Before publishing or materially reusing a screenshot:
+
+1. Open the image at readable resolution and inspect it visually.
+2. Verify the visible UI labels against the current product source or current
+   running product.
+3. Verify the screenshot's tenant/context and the behavior it demonstrates.
+4. Ensure the caption claims only what the image actually shows.
+5. Cross-check the behavior with current tests, release evidence, or production
+   evidence when the screenshot supports a release-sensitive claim.
+6. Prefer customer-shaped examples over dense QA fixtures when both demonstrate
+   the same behavior.
+7. If an image comes from a controlled development/E2E fixture and that context
+   matters, describe it as an example or controlled verification; never imply
+   that it is a production screenshot.
+8. Re-review screenshots when the relevant UI or behavior changes.
+
+Do not reuse a screenshot merely because it is visually similar to the intended
+scenario. For example, an Apply run must not be captioned as a portal-triggered
+run, and a generic QA input form must not be described as containing
+employee-onboarding variables unless those values are actually visible.
+
+For a release or substantial docs rewrite, review both **text correctness** and
+**screenshot correctness** as separate quality-gate items.
+
 ## 16. Navigation and links
 
 Navigation should reflect customer intent.
@@ -490,6 +519,10 @@ Before publishing, verify:
 - Permissions and scope are verified.
 - Limitations are verified.
 - Security/data claims come from the actual app.
+- Every reused screenshot has been opened and visually checked against its
+  surrounding claim.
+- Screenshot captions do not claim a different flow, tenant context, or result
+  from what the image actually shows.
 
 ### Usability
 - Blocking prerequisites appear first.
