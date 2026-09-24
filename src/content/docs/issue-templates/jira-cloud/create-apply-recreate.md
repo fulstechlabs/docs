@@ -71,7 +71,7 @@ follow-up work.
 7. Include configured comments or attachments only when needed.
 8. Select **Apply changes**.
 
-![A second read-only Apply preview shows a Keep decision and one selected child](./assets/customer-use-cases/incident-kept-fields-child.png)
+![A second Apply preview shows a Keep decision and one selected child](./assets/customer-use-cases/incident-kept-fields-child.png)
 
 *This pictured state is a second preview after an earlier Apply completed. No
 second Apply was submitted.*
