@@ -23,6 +23,17 @@ Change each run:
 
 **Create from a template**
 
+![Preview a reusable hierarchy before creating the release work](./assets/create-preview.png)
+
+*Preview lets the release owner confirm the root values and selected child work
+before Jira is changed.*
+
+### What this gives the team
+
+- One governed release process instead of copied checklists.
+- New version/date/owner values for each run.
+- Recoverable child creation if Jira completes only part of the hierarchy.
+
 The release owner enters the new values, previews the hierarchy, removes any
 unneeded child work, then creates it.
 
