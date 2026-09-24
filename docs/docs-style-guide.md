@@ -1,6 +1,6 @@
 # Fulstech Documentation Style Guide
 
-Last reviewed: 2026-09-23
+Last reviewed: 2026-09-24
 
 This is the repository-level source of truth for customer-facing documentation
 on `docs.fulstech.com`. It consolidates the Fulstech App Documentation
@@ -54,6 +54,12 @@ A mature Cloud app should normally provide:
 
 - **Overview**
 - **Getting Started**
+
+### Use cases
+
+For flexible products, scenario pages that help customers recognize problems
+the product can solve even when they did not begin by searching for a specific
+feature.
 
 ### Core tasks
 
@@ -116,7 +122,9 @@ Recommended order:
 3. One useful product screenshot when it helps the first decision.
 4. **Choose the right workflow** table when the app has multiple entry points.
 5. Two to four product promises or safety guarantees.
-6. Common customer use cases and deeper navigation below the first-success path.
+6. A prominent path to customer use cases when scenarios are a meaningful
+   discovery channel.
+7. Deeper navigation below the first-success path.
 
 Avoid opening with implementation details, exhaustive field catalogs, or
 internal architecture.
@@ -181,6 +189,76 @@ Rules:
   right".
 - Keep troubleshooting close to the task when the failure is specific to that
   task.
+
+## 6.1 Use-case-led discovery
+
+Flexible products often have a discovery problem: a customer may need the
+outcome but not know the product category or feature name to search for.
+
+Use-case content should help the reader think:
+
+> "That looks like my situation."
+
+A use-case page is different from a task guide. It starts from the customer's
+scenario and demonstrates how the product can fit that scenario, then links to
+the canonical configuration/task guides.
+
+Create use-case pages when:
+
+- one product capability can solve several recognizable business processes;
+- customers may search for the problem rather than the feature;
+- examples can reveal value that is not obvious from the product name;
+- the product is flexible enough that a feature catalog undersells its range.
+
+Use customer/search language in page titles where practical, for example:
+
+- Release readiness checklist
+- Employee onboarding
+- Incident follow-up
+- Customer onboarding
+- JSM request fulfillment
+
+Recommended structure:
+
+```text
+# Use Case: <customer scenario>
+
+One short statement of the recurring problem.
+
+## Situation
+What repeats and what changes each time.
+
+## Example Jira/Confluence structure
+A concrete example the reader can imagine.
+
+## Recommended approach
+Which product workflow fits and why.
+
+## Why this works well
+The customer outcomes, not a list of features.
+
+## Variations
+Adjacent situations that use the same pattern.
+
+## Build it
+Links to the canonical task/configuration guides.
+```
+
+Use cases should:
+
+- be concrete enough to inspire adaptation;
+- stay within verified product behavior;
+- show realistic examples of names, fields, child work, or variables;
+- explain tradeoffs when another workflow may fit better;
+- link to implementation guides rather than duplicating all setup steps;
+- avoid implying that the app provides domain-specific logic it does not have.
+
+A Use Cases hub may also include short "more ideas" examples that do not yet
+justify dedicated pages.
+
+For flexible products, place use cases prominently near **Start here**, not only
+inside advanced reference navigation. Use cases support discovery; users should
+be able to find them before they understand the product's internal vocabulary.
 
 ## 7. Choosing between task, concept, reference, FAQ, and troubleshooting
 
@@ -388,16 +466,17 @@ Before publishing, verify:
 Documentation is ready when a reasonable customer can independently answer:
 
 1. What problem does the app solve?
-2. Which workflow should I choose?
-3. What do I need before I start?
-4. How do I reach the first useful result?
-5. How do I complete the main recurring tasks?
-6. What can an administrator configure?
-7. What permissions and data boundaries matter?
-8. What limitations affect my rollout?
-9. How do I diagnose common failures?
-10. What information should I provide to Fulstech Support?
-11. What changed in the latest meaningful release?
+2. Can I recognize my own situation in one or more documented use cases?
+3. Which workflow should I choose?
+4. What do I need before I start?
+5. How do I reach the first useful result?
+6. How do I complete the main recurring tasks?
+7. What can an administrator configure?
+8. What permissions and data boundaries matter?
+9. What limitations affect my rollout?
+10. How do I diagnose common failures?
+11. What information should I provide to Fulstech Support?
+12. What changed in the latest meaningful release?
 
 If a basic product question requires a support ticket, the documentation is
 incomplete.
@@ -424,9 +503,10 @@ their own planned tasks.
 
 Use current Fulstech docs as implementation references, not copy sources:
 
-- **Issue Templates & Hierarchy Builder for Jira** demonstrates workflow
-  selection, task-oriented automation guides, FAQ, limitations, release notes,
-  and recovery-oriented support.
+- **Issue Templates & Hierarchy Builder for Jira** demonstrates visual-first
+  onboarding, use-case-led discovery, workflow selection, task-oriented
+  automation guides, FAQ, limitations, release notes, and recovery-oriented
+  support.
 - **Better Pages for Confluence** demonstrates outcome-first Overview,
   first-success Getting Started, nested information architecture, and
   symptom-first troubleshooting.

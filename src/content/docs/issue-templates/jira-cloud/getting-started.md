@@ -65,6 +65,7 @@ That's it — you have completed the core product flow.
 
 | Next goal | Guide |
 | --- | --- |
+| See how other teams could use the app | [Explore Use Cases](../use-cases/) |
 | Change the starter or build your own template | [Templates and Supported Fields](../templates-and-fields/) |
 | Apply a template to an existing Jira issue | [Create, Apply, and Recreate](../create-apply-recreate/#apply-a-template-to-an-existing-issue) |
 | Ask for values that change every run | [Variables and Smart Values](../variables-and-smart-values/) |

@@ -218,6 +218,36 @@
             "collapsed": false
           },
           {
+            "label": "Use cases",
+            "items": [
+              {
+                "label": "Explore Use Cases",
+                "slug": "issue-templates/jira-cloud/use-cases"
+              },
+              {
+                "label": "Release Readiness",
+                "slug": "issue-templates/jira-cloud/use-case-release-readiness"
+              },
+              {
+                "label": "Employee Onboarding",
+                "slug": "issue-templates/jira-cloud/use-case-employee-onboarding"
+              },
+              {
+                "label": "Customer Onboarding",
+                "slug": "issue-templates/jira-cloud/use-case-customer-onboarding"
+              },
+              {
+                "label": "Incident Follow-up",
+                "slug": "issue-templates/jira-cloud/use-case-incident-follow-up"
+              },
+              {
+                "label": "JSM Request Fulfillment",
+                "slug": "issue-templates/jira-cloud/use-case-jsm-request-fulfillment"
+              }
+            ],
+            "collapsed": false
+          },
+          {
             "label": "Build templates",
             "items": [
               {
