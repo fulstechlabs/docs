@@ -83,6 +83,27 @@ When one sidebar category grows beyond roughly ten peer pages, group pages by
 intent instead of leaving a long flat list. Prefer groups such as **Start
 here**, **Build**, **Use**, **Automation**, **Administration**, and **Help**.
 
+## 3.1 Visual-first onboarding
+
+Correct information is not enough if a new customer must read several screens
+before knowing what to click.
+
+For Overview and Getting Started pages:
+
+- show the primary action within the first screen of content;
+- prefer one short opening paragraph over several orientation paragraphs;
+- show a 3–5 step quick-start path before detailed explanation;
+- place the first useful screenshot near the first important decision or preview;
+- use screenshots to confirm what success looks like, not as decoration;
+- move edge cases, architecture, and detailed safety semantics to the relevant
+  task, reference, limitation, or troubleshooting page;
+- prefer compact tables for workflow choices instead of prose comparisons;
+- use progressive disclosure: first help the reader succeed, then help them
+  understand the deeper model.
+
+A useful test is: a first-time customer should be able to answer **"What do I
+click next?"** within a few seconds of opening the page.
+
 ## 4. Overview standard
 
 An Overview should help a customer decide what to do next, not enumerate every
@@ -91,11 +112,11 @@ feature.
 Recommended order:
 
 1. One-sentence product outcome.
-2. **Choose the right workflow** table when the app has multiple entry points.
-3. Two to four product promises or safety guarantees.
-4. Common customer use cases.
-5. Where the app appears in Jira/Confluence.
-6. One primary CTA to Getting Started.
+2. A visible **Start here** path or primary CTA.
+3. One useful product screenshot when it helps the first decision.
+4. **Choose the right workflow** table when the app has multiple entry points.
+5. Two to four product promises or safety guarantees.
+6. Common customer use cases and deeper navigation below the first-success path.
 
 Avoid opening with implementation details, exhaustive field catalogs, or
 internal architecture.
@@ -104,7 +125,9 @@ internal architecture.
 
 Getting Started is for **first useful success**.
 
-Target a 5–10 minute result when practical.
+Target a 5–10 minute result when practical. Keep the first-run path visually
+scannable: a user should be able to follow the headings, numbered actions, and
+screenshots without reading every explanatory paragraph.
 
 Use this shape:
 
