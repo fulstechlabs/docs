@@ -24,7 +24,7 @@ Change each run:
 
 **Create from a template**
 
-![Model parent hierarchy separately from optional Jira issue links](./assets/template-structure.jpg)
+![Model a reusable delivery root and child work in the Structure editor](./assets/customer-structure.jpg)
 
 *The structure editor keeps the reusable delivery hierarchy visible before a
 customer rollout is created.*
@@ -40,7 +40,7 @@ governed reusable template.
 
 ## Also works for
 
-Professional services · partner enablement · migrations · managed-service
+Professional services · partner enablement · migration project preparation · managed-service
 onboarding · new-site rollouts.
 
 [Choose Create vs Recreate →](../create-apply-recreate/)  
