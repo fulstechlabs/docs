@@ -19,6 +19,17 @@ INC-123 — Checkout outage
 
 **Apply to the existing incident**
 
+![Compare the current incident with the proposed template values before applying](./assets/apply-preview.png)
+
+*Apply shows Current vs Proposed so the incident details can stay untouched while
+the follow-up work is added.*
+
+### What this gives the team
+
+- The existing incident remains the source of truth.
+- Standard follow-up work is added only after review.
+- Partial child creation can resume from the same run.
+
 Preview **Current** vs **Proposed**, keep the real incident details, and add only
 the follow-up work you need.
 

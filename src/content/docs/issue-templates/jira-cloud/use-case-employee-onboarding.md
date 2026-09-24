@@ -23,6 +23,17 @@ Change each run:
 
 **Create from a template**
 
+![Define the values that change for each onboarding run](./assets/variables.png)
+
+*Variables keep the employee-specific values separate from the reusable
+onboarding process.*
+
+### What this gives the team
+
+- The same setup flow for every new teammate.
+- Different employee, team, manager, and start date each run.
+- Optional JSM entry when onboarding begins from a service request.
+
 Use **JSM portal templates** instead when onboarding begins from a service
 request.
 

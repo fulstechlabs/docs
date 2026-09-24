@@ -24,6 +24,17 @@ Change each run:
 
 **Create from a template**
 
+![Model parent hierarchy separately from optional Jira issue links](./assets/template-structure.jpg)
+
+*The structure editor keeps the reusable delivery hierarchy visible before a
+customer rollout is created.*
+
+### What this gives the team
+
+- A standard implementation plan without cloning a whole Jira project.
+- Customer-specific values and optional child work per rollout.
+- Destination hierarchy validation before Jira is changed.
+
 Use **Recreate** when an existing rollout is useful once but should not become a
 governed reusable template.
 

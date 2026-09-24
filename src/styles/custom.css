@@ -105,6 +105,10 @@
   .sl-markdown-content > h2 { border-top: 1px solid var(--sl-color-hairline-light); padding-top: 2.2rem; margin-top: 3.25rem; }
   .sl-markdown-content a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .sl-markdown-content img { border: 1px solid var(--sl-color-hairline-shade); border-radius: .75rem; box-shadow: 0 14px 36px rgba(15,23,42,.08); }
+  .sl-markdown-content table:has(img) { width: 100%; table-layout: fixed; }
+  .sl-markdown-content table:has(img) th { text-align: center; font-size: .82rem; }
+  .sl-markdown-content table:has(img) td { vertical-align: top; padding: .6rem; background: color-mix(in srgb, var(--sl-color-black) 97%, var(--ft-soft-blue)); }
+  .sl-markdown-content table:has(img) img { width: 100%; margin: 0; border-radius: .55rem; box-shadow: none; }
   .sl-markdown-content .expressive-code { max-width: 100%; border-radius: .75rem; overflow: hidden; border: 1px solid #26314c; }
   .sl-markdown-content .expressive-code pre { max-width: 100%; overflow-x: auto; }
   .sl-markdown-content :is(.starlight-aside, blockquote) { border-radius: .65rem; }
