@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Create your first Jira issue hierarchy from an editable starter in about five minutes."
+description: "Create your first Jira issue hierarchy from an editable starter in under ten minutes."
 ---
 
 ## Goal
@@ -36,7 +36,7 @@ You now have ready-to-use examples such as **Release readiness**.
 4. Keep **Create new** selected.
 5. Select **Preview new issue**.
 
-![The preview shows the root values and selected child work](./assets/create-preview.png)
+![The Release readiness preview shows the selected child work for this run](./assets/release-preview.png)
 
 Check only two things:
 
@@ -49,9 +49,11 @@ Nothing has been created yet.
 
 Select **Create issue**.
 
-Open the new Jira issue and expand **Template details**.
+Open the new Jira issue and confirm the selected child work was created.
 
-![Template details confirms the template, run, and child outcomes](./assets/provenance-panel.png)
+![The Release readiness starter created the root issue and selected subtasks](./assets/release-created.png)
+
+Then expand **Template details** to confirm the template revision and run status.
 
 Success looks like this:
 
