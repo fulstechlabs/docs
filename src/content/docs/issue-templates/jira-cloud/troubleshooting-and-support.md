@@ -97,9 +97,13 @@ not repeated.
 ## Native Create did not prefill
 
 Confirm that an administrator enabled a rule for the exact project and issue
-type. The app fills empty fields only. Group and Sprint are not available in
-this integration. Another UI Modifications app in the same context can also
-prevent the rule from running.
+type. The app fills empty fields only. Group and Sprint are not available to
+this app through this integration.
+
+If other UI Modifications apps are configured for the same project, issue type,
+and view, check for conflicts on the same field. Jira currently runs up to five
+such apps in one context asynchronously; when more than five are configured,
+some app changes are ignored.
 
 ## A workflow transition did not run the template
 
