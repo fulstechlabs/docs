@@ -10,10 +10,10 @@ a few values change each time.
 
 | Build the reusable process | Preview what will happen | See the final run |
 | --- | --- | --- |
-| ![Model reusable Jira work in the template editor](./assets/template-structure.jpg) | ![Review the root and child work before creating Jira issues](./assets/create-preview.png) | ![Template details records the run and created work](./assets/provenance-panel.png) |
+| ![Model reusable delivery work in the Structure editor](./assets/customer-structure.jpg) | ![Review selected release child work before creating Jira issues](./assets/release-preview.png) | ![See the created release root and selected subtasks](./assets/release-created.png) |
 
-The screenshots show the same product pattern from three angles: define the
-process once, preview the next run, then keep a visible record of what happened.
+These verified examples show the reusable pattern from three angles: define the
+structure, preview one run, then inspect the Jira work that was created.
 
 | Situation | Use | Result |
 | --- | --- | --- |

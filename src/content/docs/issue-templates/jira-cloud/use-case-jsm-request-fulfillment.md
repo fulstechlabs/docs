@@ -1,6 +1,6 @@
 ---
 title: "Use Case: JSM Request Fulfillment"
-description: "Let an authenticated JSM request start the right internal Jira fulfillment work."
+description: "Let an authenticated JSM customer choose a template that starts the right internal Jira fulfillment work."
 ---
 
 **Use this when:** customers submit a simple request, but agents need repeatable
@@ -23,10 +23,13 @@ Internal follow-up:
 
 **JSM Customer Portal Templates**
 
-![Template details gives agents a visible record of the portal-triggered run](./assets/provenance-panel.png)
+![An authenticated JSM customer sees No template plus the matching request-type template](./assets/jsm-template-selection.jpg)
 
-*Agents can inspect the template revision, run status, and created child work
-after the customer submits the request.*
+*The selector is filtered to the exact portal context. Anonymous portal access is not supported.*
+
+![Agents can see the completed template run and created child work on the Jira request](./assets/jsm-run-result.jpg)
+
+*This controlled verification fixture shows the matching template completed and created one child work item.*
 
 ### What this gives the team
 

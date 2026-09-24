@@ -23,10 +23,10 @@ Change each run:
 
 **Create from a template**
 
-![Define the values that change for each onboarding run](./assets/variables.png)
+![Fields and inputs can reuse a run-specific value inside Jira fields](./assets/customer-fields-inputs.jpg)
 
-*Variables keep the employee-specific values separate from the reusable
-onboarding process.*
+*This verified delivery example shows the same input mechanism. An onboarding
+template can use it for values such as employee name, team, manager, and start date.*
 
 ### What this gives the team
 
