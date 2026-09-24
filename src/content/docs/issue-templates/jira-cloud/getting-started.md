@@ -1,82 +1,75 @@
 ---
 title: "Getting Started"
-description: "Create your first useful Jira hierarchy from an editable starter template in a few minutes."
+description: "Create your first Jira issue hierarchy from an editable starter in about five minutes."
 ---
 
-This guide takes you from an installed app to one completed Jira hierarchy. The
-goal is a useful first result, not a tour of every feature.
+## Goal
+
+Create **one Jira root issue and one or more child work items** from a starter
+template.
+
+You only need to complete three steps.
 
 ## Before you begin
 
 You need:
 
-- A Jira Cloud site with the app installed and an active evaluation or
-  subscription.
-- Permission to create issues in the target project.
-- A Jira administrator for the one-time starter installation.
+- the app installed with an active evaluation or subscription;
+- permission to create Jira issues in the target project;
+- a Jira administrator for the one-time starter installation.
 
-## Step 1 — Install the editable starters
+## 1. Install the starters
 
-1. In Jira settings, open **Issue Templates & Hierarchy Builder**.
+1. Open **Jira settings → Issue Templates & Hierarchy Builder**.
 2. Open **Administration → Defaults & integrations**.
 3. Select **Install editable starters**.
-4. Enter an issue key from the project that should own the starters.
+4. Enter an issue key from the project you want to use.
 5. Confirm **Install editable starters**.
 
-The starter gallery contains normal editable templates for a bug report, user
-story, teammate onboarding, and release readiness. They are starting points, not
-locked demo content.
+You now have ready-to-use examples such as **Release readiness**.
 
-## Step 2 — Open Release readiness
+## 2. Preview Release readiness
 
-1. Return to **Templates**.
-2. Find **Release readiness**.
+1. Go back to **Templates**.
+2. Open **Release readiness**.
 3. Select **Use template**.
 4. Keep **Create new** selected.
+5. Select **Preview new issue**.
 
-You can edit the starter later. For the first run, use it as-is so you can verify
-the complete flow quickly.
+![The preview shows the root values and selected child work](./assets/create-preview.png)
 
-## Step 3 — Preview the new work
+Check only two things:
 
-1. Answer any required runtime inputs.
-2. Select **Preview new issue**.
-3. Review the root fields.
-4. Confirm the selected child work.
-5. Open **Details** on a child when you want to check its Jira parent or
-   additional issue-link direction.
+- the root values look right;
+- the child work you want is selected.
 
-Preview is the decision point. Jira has not been changed yet.
+Nothing has been created yet.
 
-## Step 4 — Create the hierarchy
+## 3. Create and verify
 
 Select **Create issue**.
 
-The root issue is created first. Parent work is created before its selected
-children. The run keeps an immutable plan, so retry can skip nodes and links
-that already succeeded.
+Open the new Jira issue and expand **Template details**.
 
-## Verify the result
+![Template details confirms the template, run, and child outcomes](./assets/provenance-panel.png)
 
-Open the new root issue and confirm:
+Success looks like this:
 
-- The expected root fields are present.
-- The selected child work exists with the expected Jira parent hierarchy.
-- **Template details** shows the template name and revision.
-- The run is **Completed**, or a partial result explains what needs attention.
+- the root issue exists;
+- the selected child work exists;
+- the run shows **Completed**.
 
-You have now completed the core product journey.
+That's it — you have completed the core product flow.
 
-## Next steps
+## What do you want to do next?
 
-Choose the next task that matches your goal:
+| Next goal | Guide |
+| --- | --- |
+| Change the starter or build your own template | [Templates and Supported Fields](../templates-and-fields/) |
+| Apply a template to an existing Jira issue | [Create, Apply, and Recreate](../create-apply-recreate/#apply-a-template-to-an-existing-issue) |
+| Ask for values that change every run | [Variables and Smart Values](../variables-and-smart-values/) |
+| Let JSM customers choose templates | [JSM Customer Portal Templates](../jsm-customer-portal/) |
+| Run templates from Jira workflow transitions | [Workflow Create](../workflow-create/) |
 
-- [Edit a template and supported fields](../templates-and-fields/).
-- [Apply a template to an existing issue](../create-apply-recreate/#apply-a-template-to-an-existing-issue).
-- [Add variables and Smart Values](../variables-and-smart-values/).
-- [Configure template availability and defaults](../administration/).
-- [Offer templates on a JSM customer request](../jsm-customer-portal/).
-- [Run a template after a workflow transition](../workflow-create/).
-
-If something does not match the preview, start with
+If the result does not match Preview, open
 [Troubleshooting and Support](../troubleshooting-and-support/).
