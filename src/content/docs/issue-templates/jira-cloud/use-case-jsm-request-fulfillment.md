@@ -23,6 +23,18 @@ Internal follow-up:
 
 **JSM Customer Portal Templates**
 
+![Template details gives agents a visible record of the portal-triggered run](./assets/provenance-panel.png)
+
+*Agents can inspect the template revision, run status, and created child work
+after the customer submits the request.*
+
+### What this gives the team
+
+- A simple customer-facing request experience.
+- Consistent internal follow-up work behind the request.
+- A supportable run record for agents without exposing internal template data to
+  the customer.
+
 The customer sees **No template** plus matching choices for the exact request
 type. Their populated Summary and Description stay unchanged.
 
