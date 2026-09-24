@@ -1,6 +1,6 @@
 # Fulstech Documentation Style Guide
 
-Last reviewed: 2026-09-23
+Last reviewed: 2026-09-24
 
 This is the repository-level source of truth for customer-facing documentation
 on `docs.fulstech.com`. It consolidates the Fulstech App Documentation
@@ -503,9 +503,10 @@ their own planned tasks.
 
 Use current Fulstech docs as implementation references, not copy sources:
 
-- **Issue Templates & Hierarchy Builder for Jira** demonstrates workflow
-  selection, task-oriented automation guides, FAQ, limitations, release notes,
-  and recovery-oriented support.
+- **Issue Templates & Hierarchy Builder for Jira** demonstrates visual-first
+  onboarding, use-case-led discovery, workflow selection, task-oriented
+  automation guides, FAQ, limitations, release notes, and recovery-oriented
+  support.
 - **Better Pages for Confluence** demonstrates outcome-first Overview,
   first-success Getting Started, nested information architecture, and
   symptom-first troubleshooting.
