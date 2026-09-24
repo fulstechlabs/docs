@@ -22,20 +22,21 @@ Forge SQL stores the app-owned data needed to deliver and support the product:
 - Project, issue-type, group, account, and request-context availability rules.
 - Defaults, durable runs, child outcomes, relations, and operational audit
   events used to explain and recover app actions.
-- Atlassian account-ID references selected for user-field values. Copied user
-  profile labels, email addresses, avatars, locale, and time-zone data are
-  removed before app storage and are not retained by the app.
+- Atlassian account-ID references selected for user-field values. When a
+  stored account reference contains an `accountId`, the app strips accompanying
+  profile fields such as display name, email/username, avatar URLs, locale, and
+  time zone before JSON is persisted.
 
 Jira issue provenance is also stored in an app-owned Jira entity property so
 the issue panel and JQL functions can explain the relationship.
 
 ## Authorization
 
-Most Jira operations run as the signed-in user and remain subject to normal
-Jira project, issue, field, and workflow permissions. Where a background
-trigger, workflow, queue, or UI Modification must use app authority, the app
-validates the trusted context and required Jira permission before accessing or
-changing customer data.
+The Jira API client defaults to the signed-in user for interactive requests.
+Background and integration paths can explicitly use app authority when the
+surface requires it. Those app-authority paths revalidate trusted Jira context,
+template access, and the applicable permission or preflight checks before
+accessing or changing customer data.
 
 Template availability is enforced by the backend. Client-side visibility is
 never treated as the permission check.
