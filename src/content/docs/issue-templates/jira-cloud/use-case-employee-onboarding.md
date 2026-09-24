@@ -23,10 +23,9 @@ Change each run:
 
 **Create from a template**
 
-The template author defines those values as runtime inputs, then reuses them in
-the root and child fields. A scenario-specific onboarding screenshot will be
-used only when the captured UI shows the actual onboarding variables rather than
-an unrelated example.
+Define those values as runtime inputs in **Fields & inputs**, then reuse the
+tokens in the root and child fields. Each run asks only for the values that
+change for that employee.
 
 ### What this gives the team
 
