@@ -14,9 +14,9 @@ time.
 2. Open **Release readiness** and select **Use template**.
 3. Preview the hierarchy, then select **Create issue**.
 
-[Start the 5-minute guide →](../getting-started/)
+[Start the quick-start guide →](../getting-started/)
 
-![Preview the root issue and selected child work before Jira is changed](./assets/create-preview.png)
+![Preview selected release child work before Jira is changed](./assets/release-preview.png)
 
 ## Pick the workflow you need
 
@@ -39,7 +39,7 @@ Jira is changed.
 - **Retry safely.** Partial hierarchy runs reuse completed work instead of
   creating duplicates.
 
-![Template details shows the run, created work, and recovery state](./assets/provenance-panel.png)
+![Template details records the template revision and run status](./assets/provenance-panel.png)
 
 ## See what teams can build
 
