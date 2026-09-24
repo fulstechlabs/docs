@@ -45,7 +45,10 @@ The selector shows **No template** plus only templates that match the exact
 service project, request type, and root work type. It shows friendly names and
 does not expose internal template IDs.
 
-![A controlled portal verification showing No template and one exact matching template](./assets/jsm-template-selection.jpg)
+The current public docs intentionally do not show a selector screenshot here
+until the screenshot is captured from the same authenticated customer context
+described by this procedure.
+
 
 ## What happens after submission
 

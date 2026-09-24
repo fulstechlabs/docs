@@ -50,7 +50,7 @@ by source, tests, or production evidence.
 | `backup-review.png` | Restore review shows affected templates/defaults, zero Jira issue changes, Native Create warning and explicit confirmation. | Pass. |
 | `smart-value-authoring.jpg` | Fields & inputs can insert a variable and use a relative-date token. | Pass. |
 | `runtime-inputs.jpg` | Use template collects a required runtime input before Preview. | Pass as a generic delivery example. |
-| `jsm-template-selection.jpg` | A controlled JSM request-form verification shows No template plus one friendly matching template. | Limited pass. The screenshot contains "Raise this request on behalf of" and therefore does **not** prove portal-only customer identity. Public captions must not claim that it does. |
+| `jsm-template-selection.jpg` | A controlled JSM request-form verification shows No template plus one friendly matching template. | Do not use on the authenticated-customer procedure: the screenshot contains "Raise this request on behalf of" and is the wrong actor context. Keep it only as historical evidence until replaced by the fresh portal-only capture from product issue #20. |
 | `jsm-run-result.jpg` | Jira agent view shows Template details, Completed status and one created child for the controlled JSM fixture. | Pass. |
 
 ## Corrections from this audit
@@ -64,9 +64,10 @@ by source, tests, or production evidence.
   `customer-fields-inputs.jpg` screenshot as if it were onboarding-specific.
   The text keeps the verified variables behavior without pretending the image is
   scenario-specific.
-- JSM captions remain explicitly bounded: selector behavior is shown by a
-  controlled request-form screenshot, while authenticated portal-only support is
-  a separate production-evidence claim.
+- The old JSM selector screenshot is removed from the authenticated-customer
+  public flow because it is an agent/on-behalf-of context. Portal-only support
+  remains a production-evidence claim until issue #20 supplies a matching
+  customer-context screenshot.
 
 ## Fresh production screenshot follow-up
 
