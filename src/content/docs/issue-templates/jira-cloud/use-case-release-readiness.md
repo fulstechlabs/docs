@@ -25,8 +25,8 @@ Change each run:
 
 ![Preview selected Release readiness child work before creating Jira issues](./assets/release-preview.png)
 
-*Preview lets the release owner confirm the root values and selected child work
-before Jira is changed.*
+*This view shows the selected child work before Jira is changed. The same
+Preview also contains the root values above this section.*
 
 ### What this gives the team
 
@@ -36,6 +36,8 @@ before Jira is changed.*
 
 The release owner enters the new values, previews the hierarchy, removes any
 unneeded child work, then creates it.
+
+![A verified Release readiness run created the root issue and selected subtasks](./assets/release-created.png)
 
 ## Also works for
 
