@@ -22,7 +22,7 @@ provenance.
    and optional integrations.
 6. Select **Save template**.
 
-![Choose the template identity and Jira context in Basics](./assets/template-editor.png)
+![Choose the template identity and Jira context in Basics](./assets/customer-basics.jpg)
 
 The app stores stable Jira field IDs and compact schema information. Field
 names remain readable labels and can change without becoming the field's
@@ -44,7 +44,7 @@ self, descendants, same-level work and other incompatible choices that would
 produce an invalid Jira hierarchy. A compatible work item added later in the
 template can still be selected as the parent.
 
-![Choose Jira parent hierarchy separately from an optional issue link](./assets/template-structure.jpg)
+![Choose the Jira parent and relationship separately in Structure and content](./assets/customer-structure.jpg)
 
 Review the visible tree after changing a work type or parent. If the new work
 type makes an existing parent invalid, the app clears that choice instead of
