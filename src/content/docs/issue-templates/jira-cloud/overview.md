@@ -41,12 +41,23 @@ Jira is changed.
 
 ![Template details shows the run, created work, and recovery state](./assets/provenance-panel.png)
 
-## Common uses
+## See what teams can build
 
-- Release readiness and recurring delivery checklists.
-- Employee or customer onboarding.
-- Bug, QA, and incident follow-up processes.
-- JSM operational requests with standard follow-up work.
+You may not be looking for an "issue template" product specifically. Start from
+the recurring process you want to make easier:
+
+- [Release readiness checklist](../use-case-release-readiness/) — create the
+  same release preparation work with a new version, date, and owner each time.
+- [Employee onboarding](../use-case-employee-onboarding/) — coordinate standard
+  setup work while changing the employee, team, and start date.
+- [Customer onboarding and implementation](../use-case-customer-onboarding/) —
+  reuse a delivery plan without cloning an entire Jira project.
+- [Incident follow-up](../use-case-incident-follow-up/) — apply a standard
+  post-incident process without replacing the incident details already entered.
+- [JSM request fulfillment](../use-case-jsm-request-fulfillment/) — let a portal
+  request start the right internal follow-up hierarchy.
+
+[Explore all use cases and more ideas →](../use-cases/)
 
 ## Go deeper when you need it
 
