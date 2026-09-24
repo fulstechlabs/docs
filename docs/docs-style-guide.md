@@ -394,6 +394,42 @@ Use calm, concise, professional English.
 - Prefer concrete examples over abstract descriptions.
 - Avoid hype, competitor comparisons, and unsupported superiority claims.
 
+## 14.1 Balance text with visual explanation
+
+Do not solve a text-heavy page only by deleting useful information.
+
+When a page contains several conceptual paragraphs, ask whether part of the
+explanation is better expressed as:
+
+- a current product screenshot;
+- a before/after comparison;
+- a small hierarchy or flow diagram;
+- a compact table;
+- a visual example of the resulting Jira/Confluence structure.
+
+The goal is **information balance**, not minimum word count.
+
+A strong page often alternates:
+
+```text
+short explanation
+→ visual
+→ short interpretation
+→ next decision/action
+```
+
+Use product screenshots when the reader benefits from seeing the actual UI or
+result. Use diagrams/examples when the mental model matters more than exact UI.
+
+Avoid both extremes:
+
+- long uninterrupted prose with no visual anchors;
+- decorative screenshots that add no explanatory value.
+
+For use-case pages, include at least one meaningful visual when a current
+product screenshot or simple product/result visual can explain the scenario
+better than another paragraph.
+
 ## 15. Screenshots
 
 Use screenshots when they reduce ambiguity, not as decoration.
