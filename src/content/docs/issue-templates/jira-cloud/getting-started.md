@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Create your first Jira issue hierarchy from an editable starter in under ten minutes."
+description: "Install an editable starter, preview its Jira hierarchy, and verify your first completed run."
 ---
 
 ## Goal
@@ -26,17 +26,29 @@ You need:
 4. Enter an issue key from the project you want to use.
 5. Confirm **Install editable starters**.
 
-You now have ready-to-use examples such as **Release readiness**.
+You now have editable examples such as **Release readiness**. This starter asks
+for one value, `version`, and defines three child work items.
+
+Before its first run, open **Release readiness → Details → Edit template →
+Structure**. Confirm that each child uses the actual subtask work type in your
+Jira project and has **Root issue** as its parent, then save the template. Jira
+sites can name that work type differently; on the example site it is
+**Sub-task**. If Preview reports that hierarchy metadata is unavailable, correct
+the work type here before creating an issue.
 
 ## 2. Preview Release readiness
 
 1. Go back to **Templates**.
-2. Open **Release readiness**.
-3. Select **Use template**.
-4. Keep **Create new** selected.
-5. Select **Preview new issue**.
+2. Select **Use template** beside **Release readiness**.
+3. Keep **Create new** selected and enter a version, for example `v2.5`.
+4. Select **Preview new issue**.
 
-![The Release readiness preview shows the selected child work for this run](./assets/release-preview.png)
+![Release readiness asks for the version before preview](./assets/customer-use-cases/getting-started-release-runtime.png)
+
+The review resolves the root Summary and Description and shows the three
+selected subtasks before any Jira work is created.
+
+![The actual Release readiness starter resolves v2.5 in the root fields and all three selected subtasks](./assets/customer-use-cases/getting-started-release-preview.png)
 
 Check only two things:
 
@@ -51,9 +63,19 @@ Select **Create issue**.
 
 Open the new Jira issue and confirm the selected child work was created.
 
-![The Release readiness starter created the root issue and selected subtasks](./assets/release-created.png)
+The run may briefly show **Pending** or **Running** while child work is
+processed. Select **Refresh status** until the run reaches **Completed**.
 
-Then expand **Template details** to confirm the template revision and run status.
+![The completed Create run lists the new root issue and three created children](./assets/customer-use-cases/getting-started-release-result.png)
+
+The Jira root has the resolved description and all three subtasks.
+
+![The new Jira issue contains the resolved description and the three subtasks](./assets/customer-use-cases/getting-started-release-jira.png)
+
+Open **Template details** on that issue to confirm the template revision and
+run status.
+
+![Template details records Created origin, Release readiness revision 2, Completed status, and three child outcomes in the verified example](./assets/customer-use-cases/getting-started-release-details.png)
 
 Success looks like this:
 

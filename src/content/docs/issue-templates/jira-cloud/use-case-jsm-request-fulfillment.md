@@ -6,7 +6,7 @@ description: "Let an authenticated JSM customer choose a template that starts th
 **Use this when:** customers submit a simple request, but agents need repeatable
 internal follow-up work.
 
-## Example
+## Example you can build
 
 ```text
 Customer request:
@@ -27,9 +27,15 @@ Production 4.0.0 verified that an authenticated portal-only customer sees
 **No template** plus only the exact matching friendly template for the request
 context. Anonymous portal access is not supported.
 
-![Agents can see the completed template run and created child work on the Jira request](./assets/jsm-run-result.jpg)
+![The production customer-portal selector offers No template and the matching Service request checklist](./assets/customer-use-cases/jsm-portal-selection.png)
 
-*This controlled verification fixture shows the matching template completed and created one child work item.*
+The verified request was **Access request for Acme Portal**. Its smaller
+**Service request checklist** template created one internal follow-up child.
+
+![The agent view shows Portal origin, a Completed run, and the created follow-up child](./assets/customer-use-cases/jsm-agent-run-result.png)
+
+*These images show the actual one-child fixture. The four-step Project Atlas
+outline above is an example of how the same workflow could be expanded.*
 
 ### What this gives the team
 

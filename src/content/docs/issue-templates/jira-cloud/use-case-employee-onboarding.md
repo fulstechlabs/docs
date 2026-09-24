@@ -27,6 +27,14 @@ Define those values as runtime inputs in **Fields & inputs**, then reuse the
 tokens in the root and child fields. Each run asks only for the values that
 change for that employee.
 
+![The Fields and inputs editor defines employeeName, team, and startDate as required variables](./assets/customer-use-cases/employee-variables.png)
+
+![A Create new run asks for the employee name, team, and start date before preview](./assets/customer-use-cases/employee-runtime-inputs.png)
+
+*These images show the input setup and runtime form of a smaller onboarding
+fixture. They do not show the four child items or `manager` from the expanded
+example above.*
+
 ### What this gives the team
 
 - The same setup flow for every new teammate.

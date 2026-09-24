@@ -5,7 +5,7 @@ description: "Reuse the same Jira release checklist while changing the version, 
 
 **Use this when:** every release needs nearly the same preparation work.
 
-## Example
+## Example you can build
 
 ```text
 Release {{version}} readiness
@@ -15,7 +15,7 @@ Release {{version}} readiness
 └─ Verify production
 ```
 
-Change each run:
+For this expanded template, change each run:
 
 `version` · `releaseDate` · `releaseOwner` · `environment`
 
@@ -23,10 +23,17 @@ Change each run:
 
 **Create from a template**
 
-![Preview selected Release readiness child work before creating Jira issues](./assets/release-preview.png)
+The installed **Release readiness** starter is smaller than the example above:
+it asks only for `version` and creates **Complete QA**, **Prepare release notes**,
+and **Confirm rollout plan** as subtasks. You can edit it to add dates, owners,
+environments, or more work.
 
-*This view shows the selected child work before Jira is changed. The same
-Preview also contains the root values above this section.*
+![The installed Release readiness starter asks for one version value](./assets/customer-use-cases/getting-started-release-runtime.png)
+
+![The starter preview shows the resolved root values and three selected subtasks](./assets/customer-use-cases/getting-started-release-preview.png)
+
+*The screenshots show the installed starter, not the expanded four-child
+example above. Nothing is created at the preview step.*
 
 ### What this gives the team
 
@@ -34,10 +41,10 @@ Preview also contains the root values above this section.*
 - New version/date/owner values for each run.
 - Recoverable child creation if Jira completes only part of the hierarchy.
 
-The release owner enters the new values, previews the hierarchy, removes any
-unneeded child work, then creates it.
+For an expanded template, the release owner enters its configured values,
+previews the hierarchy, removes any unneeded child work, then creates it.
 
-![A verified Release readiness run created the root issue and selected subtasks](./assets/release-created.png)
+![A completed run of the installed starter created the root and three children](./assets/customer-use-cases/getting-started-release-result.png)
 
 ## Also works for
 

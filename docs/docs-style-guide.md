@@ -478,27 +478,35 @@ path do **not** prove that the screenshot is semantically correct.
 
 Before publishing or materially reusing a screenshot:
 
-1. Open the image at readable resolution and inspect it visually.
-2. Verify the visible UI labels against the current product source or current
-   running product.
-3. Verify the screenshot's tenant/context and the behavior it demonstrates.
-4. Ensure the caption claims only what the image actually shows.
-5. Cross-check the behavior with current tests, release evidence, or production
-   evidence when the screenshot supports a release-sensitive claim.
-6. Prefer customer-shaped examples over dense QA fixtures when both demonstrate
-   the same behavior.
-7. If an image comes from a controlled development/E2E fixture and that context
-   matters, describe it as an example or controlled verification; never imply
-   that it is a production screenshot.
-8. Re-review screenshots when the relevant UI or behavior changes.
+1. Open the image at readable resolution. Record the app installation,
+   environment, version, fixture, and workflow state in the PR or issue evidence.
+2. Confirm the pictured UI is current for the documented release. Check every
+   visible product label against the running product and surrounding procedure.
+3. Match the image to the *adjacent* text: the same template or fixture, input
+   values, Create/Apply/portal context, child count, and preview/result state.
+   An illustrative example may be richer, but its caption must distinguish it
+   from the photographed fixture.
+4. Make the caption state only what the image proves. A preview does not prove
+   a completed write, and a later preview does not prove a repeated Apply.
+5. Check for customer data, secrets, unnecessary display names, internal IDs,
+   and unrelated browser or test clutter. Use safe fixture data and omit an
+   image when privacy-safe framing is not possible.
+6. Keep Dev, QA, and debug markers out of customer-facing images unless the
+   page explicitly explains those contexts. Do not publish artifacts caused by
+   multiple app installations on a test tenant as a normal customer flow.
+7. Crop to useful context without hiding a warning, disabled action,
+   incomplete result, or other limitation relevant to the claim.
+8. Cross-check release-sensitive behavior with current tests or live evidence,
+   and re-review the screenshot when that UI or behavior changes.
 
 Do not reuse a screenshot merely because it is visually similar to the intended
 scenario. For example, an Apply run must not be captioned as a portal-triggered
 run, and a generic QA input form must not be described as containing
 employee-onboarding variables unless those values are actually visible.
 
-For a release or substantial docs rewrite, review both **text correctness** and
-**screenshot correctness** as separate quality-gate items.
+For a release or substantial docs rewrite, review **text ↔ screenshot semantic
+alignment** as an explicit quality gate alongside text correctness, image
+currency, links, and build validity.
 
 ## 16. Navigation and links
 
@@ -545,6 +553,8 @@ Before publishing, verify:
 - Security/data claims come from the actual app.
 - Every reused screenshot has been opened and visually checked against its
   surrounding claim.
+- Adjacent text and screenshot agree on fixture, inputs, workflow state, and
+  actual result; their provenance and caveats are recorded for review.
 - Screenshot captions do not claim a different flow, tenant context, or result
   from what the image actually shows.
 

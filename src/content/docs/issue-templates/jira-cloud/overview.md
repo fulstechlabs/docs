@@ -10,13 +10,13 @@ time.
 
 **New to the app? Start here:**
 
-1. Install the editable starters.
-2. Open **Release readiness** and select **Use template**.
+1. Install the editable starters and check the child work types in your Jira project.
+2. Select **Use template** beside **Release readiness** and enter a version.
 3. Preview the hierarchy, then select **Create issue**.
 
 [Start the quick-start guide →](../getting-started/)
 
-![Preview selected release child work before Jira is changed](./assets/release-preview.png)
+![Preview the resolved release fields and three child work items before creating Jira work](./assets/customer-use-cases/getting-started-release-preview.png)
 
 ## Pick the workflow you need
 
@@ -39,7 +39,7 @@ Jira is changed.
 - **Retry safely.** Partial hierarchy runs reuse completed work instead of
   creating duplicates.
 
-![Template details records the template revision and run status](./assets/provenance-panel.png)
+![A completed Create run in Template details records its template revision and three child outcomes](./assets/customer-use-cases/getting-started-release-details.png)
 
 ## See what teams can build
 

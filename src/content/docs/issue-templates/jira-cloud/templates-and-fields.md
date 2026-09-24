@@ -44,7 +44,7 @@ self, descendants, same-level work and other incompatible choices that would
 produce an invalid Jira hierarchy. A compatible work item added later in the
 template can still be selected as the parent.
 
-![Choose the Jira parent and relationship separately in Structure and content](./assets/customer-structure.jpg)
+![The Customer rollout example shows three children and separate Jira Parent and Relationship controls in Structure](./assets/customer-use-cases/customer-structure.png)
 
 Review the visible tree after changing a work type or parent. If the new work
 type makes an existing parent invalid, the app clears that choice instead of

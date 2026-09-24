@@ -24,10 +24,11 @@ Change each run:
 
 **Create from a template**
 
-![Model a reusable delivery root and child work in the Structure editor](./assets/customer-structure.jpg)
+![The Structure editor shows a Customer rollout root, three child items, and the selected child's Work type, Parent, and Relationship controls](./assets/customer-use-cases/customer-structure.png)
 
-*The structure editor keeps the reusable delivery hierarchy visible before a
-customer rollout is created.*
+*This saved three-child fixture illustrates how to configure hierarchy. The
+expanded five-step example and customer-specific variables above are possible
+customizations; they are not shown in this image.*
 
 ### What this gives the team
 
