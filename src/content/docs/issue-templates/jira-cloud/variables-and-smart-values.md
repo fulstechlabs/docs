@@ -70,7 +70,7 @@ Variable names must start with a letter or underscore. The remaining
 characters can be letters, numbers, dots, dashes, or underscores. Names are
 case-sensitive and must be unique within the template.
 
-![Runtime inputs are collected before the app builds the preview](./assets/variables.png)
+![Runtime inputs are collected before the app builds the preview](./assets/runtime-inputs.jpg)
 
 ## Where tokens can be used
 
