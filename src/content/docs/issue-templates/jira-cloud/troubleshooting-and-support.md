@@ -82,9 +82,10 @@ the same run. Do not start a new run just to replay completed children.
 
 Open the affected work item and review its **Work type** and **Parent**. Jira
 allows only a compatible direct parent level; a subtask cannot be standalone.
-If Preview reports multiple compatible Jira subtask work types, choose the
-intended **Work type** for each affected child in **Structure**. The app will
-not infer which one your team wants.
+The app resolves a generic subtask automatically when the project has one
+compatible Jira subtask work type. If Preview reports multiple compatible
+types, choose the intended **Work type** for each affected child in
+**Structure**. The app will not infer which one your team wants.
 
 If the operation targets another project, confirm that project has matching work
 types at compatible hierarchy levels. Correct the template or destination, then
