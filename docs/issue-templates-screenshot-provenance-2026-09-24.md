@@ -15,7 +15,7 @@ alter app code, production deployment, Marketplace listing, or pricing.
 
 | Public docs asset under `assets/customer-use-cases/` | Fixture and version | Exact claim shown | Caveat |
 | --- | --- | --- | --- |
-| `getting-started-release-runtime.png` | Source-defined Release readiness starter, revision 2, production 4.0.0, ITHBE2E | Create new asks for required `version=v2.5` and offers Preview new issue. | The three child work types/parents were mapped to this Jira project's actual **Sub-task** type before the run. |
+| `getting-started-release-runtime.png` | Source-defined Release readiness starter, revision 2, production 4.0.0, ITHBE2E | Create new asks for required `version=v2.5` and offers Preview new issue. | The three child work types/parents were mapped to this Jira project's actual **Sub-task** type for this 4.0.0 capture; the image does not prove newer automatic resolution. |
 | `getting-started-release-preview.png` | Same starter and run | Proposed root values resolve `v2.5`; all three named subtasks are selected; Create issue is available. | This is a preview before mutation. |
 | `getting-started-release-result.png` | ITHBE2E-1084 with 1085–1087 | Create run reached Completed and lists three created child keys. | The result dialog shows keys, while the Jira screenshot shows their summaries. |
 | `getting-started-release-jira.png` | ITHBE2E-1084 with 1085–1087 | Jira root has the resolved description and three actual subtasks. | Left-side crop excludes unrelated account/field details. |
@@ -27,22 +27,34 @@ alter app code, production deployment, Marketplace listing, or pricing.
 | `jsm-portal-selection.png` | Authenticated portal-only customer, JSME2E matching request type | Production Issue template selector offers No template and a friendly matching template, without an internal template ID. | Focused selector crop; the dev2 site also has an unrelated development installation. |
 | `jsm-agent-run-result.png` | JSME2E-135 / Service request checklist | Agent view shows Portal origin, Completed, and one created child JSME2E-136. | It is an agent-side result, not a customer-facing portal result. |
 
-## Starter configuration finding
+## Capture-era starter behavior and next-release reconciliation
 
 The installed Release readiness starter was recreated from the source-defined
 template: one `version` input, the source Summary/Description, and the three
 source child summaries. A previous disposable fixture had the same name, so it
 was renamed **Release planning example** before installing the true starter.
 
-An unedited starter failed Create preview in ITHBE2E: its children specified
-work type name `Subtask`, while Jira exposes `Sub-task`. The app reported
-“Jira hierarchy metadata is unavailable for Subtask” and disabled Create.
-Changing each child's Work type to **Sub-task** and Parent to **Root issue** in
-the editable starter produced a successful Completed run. This is a product
-defect tracked in
-[product issue #23](https://github.com/fulstechlabs/issue-templates-for-jira-forge/issues/23),
-not a claim that the unedited starter works on every site. The Getting Started
-guide states the configuration check explicitly.
+In production 4.0.0, an unedited starter failed Create preview in ITHBE2E:
+its children specified work type name `Subtask`, while Jira exposes
+`Sub-task`. The app reported “Jira hierarchy metadata is unavailable for
+Subtask” and disabled Create. For the screenshots above, each child's Work
+type was changed to **Sub-task** and Parent to **Root issue** in the editable
+starter before a successful Completed run. These images prove the pictured
+input, preview, result, and Jira issue; they do **not** prove automatic
+work-type selection.
+
+The upcoming consolidated product candidate on `main` resolves
+[product issues #23](https://github.com/fulstechlabs/issue-templates-for-jira-forge/issues/23)
+and [#25](https://github.com/fulstechlabs/issue-templates-for-jira-forge/issues/25)
+through merged [PR #24](https://github.com/fulstechlabs/issue-templates-for-jira-forge/pull/24).
+When a project has exactly one compatible Jira subtask work type, installation
+binds the starter children to its canonical ID/name; live preflight also
+resolves older generic starters. When several compatible types exist without a
+valid explicit choice, Preview fails closed and asks the user to choose the
+intended type in **Structure**. A valid stored type ID remains authoritative.
+The customer guidance in this PR describes that candidate behavior, while the
+screenshots retain their production-4.0.0 provenance. This docs PR remains
+unmerged until the consolidated app release and docs publication are sequenced.
 
 ## Deliberate exclusions
 

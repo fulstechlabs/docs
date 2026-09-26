@@ -77,6 +77,13 @@ app validates the selected destination before mutation.
 JSM portal availability is intentionally stricter and requires an exact service
 project, request type, and root work type.
 
+## Do I need to configure the starter's subtask work type?
+
+Usually no. If the target project has one compatible subtask work type, the app
+resolves it for the built-in starters. If Jira offers several, choose the
+intended child **Work type** in **Structure** when Preview asks. See
+[Getting Started](../getting-started/) for the first-run flow.
+
 ## Does the app support Jira Assets, Rank, or opaque third-party fields?
 
 Not through the generic field adapter. Rank, Assets/Object fields, and opaque

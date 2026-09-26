@@ -107,10 +107,12 @@ context. Before writing, the app reloads the live Jira metadata. An unavailable
 field is warned and skipped; it does not silently invalidate the whole
 hierarchy.
 
-When Apply or Recreate targets another project, the app maps work types by name
-and subtask kind, then validates their hierarchy levels before changing Jira.
-If the destination cannot represent the selected structure, the preview stops
-the operation and identifies the incompatible work item.
+When Apply or Recreate targets another project, a valid selected Jira work-type
+ID remains the first choice. Otherwise, the app looks for a compatible named
+work type or the project's sole compatible subtask type, then validates the
+hierarchy before changing Jira. If several subtask types match only a generic
+`Subtask` choice, select the intended type in **Structure**; the app will not
+guess. Preview identifies any work item that the destination cannot represent.
 
 See [Known limitations](../known-limitations/) for Rank, Assets, third-party
 fields, and native Create-specific boundaries.

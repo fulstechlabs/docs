@@ -27,14 +27,9 @@ You need:
 5. Confirm **Install editable starters**.
 
 You now have editable examples such as **Release readiness**. This starter asks
-for one value, `version`, and defines three child work items.
-
-Before its first run, open **Release readiness → Details → Edit template →
-Structure**. Confirm that each child uses the actual subtask work type in your
-Jira project and has **Root issue** as its parent, then save the template. Jira
-sites can name that work type differently; on the example site it is
-**Sub-task**. If Preview reports that hierarchy metadata is unavailable, correct
-the work type here before creating an issue.
+for one value, `version`, and defines three child work items. When your project
+has one compatible Jira subtask work type, the app selects it for those children
+automatically. You can use the starter without editing its structure.
 
 ## 2. Preview Release readiness
 
@@ -56,6 +51,12 @@ Check only two things:
 - the child work you want is selected.
 
 Nothing has been created yet.
+
+If Preview says the project has **multiple Jira subtask work types**, the app
+cannot choose one for you. Open **Release readiness → Details → Edit template →
+Structure**, select the intended **Work type** for each affected child, save,
+and preview again. You do not need this step when Jira offers only one compatible
+subtask work type.
 
 ## 3. Create and verify
 

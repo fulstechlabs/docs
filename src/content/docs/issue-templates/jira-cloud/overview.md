@@ -10,7 +10,7 @@ time.
 
 **New to the app? Start here:**
 
-1. Install the editable starters and check the child work types in your Jira project.
+1. Install the editable starters for your Jira project.
 2. Select **Use template** beside **Release readiness** and enter a version.
 3. Preview the hierarchy, then select **Create issue**.
 
