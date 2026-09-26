@@ -19,10 +19,12 @@ INC-123 — Checkout outage
 
 **Apply to the existing incident**
 
-![Apply can preserve all root fields while still creating selected child work](./assets/apply-preserve.jpg)
+![A second Apply preview shows Keep decisions and one selected follow-up subtask](./assets/customer-use-cases/incident-kept-fields-child.png)
 
-*This verified Apply preview shows no root-field changes and one selected child.
-That is the pattern to use when the incident details should stay untouched.*
+*This is a second preview after an earlier Apply run. The root fields show
+**Keep** and one follow-up child is selected; **Apply changes** was not selected
+a second time. The four-item outline above is a possible expanded incident
+process, not the photographed fixture.*
 
 ### What this gives the team
 

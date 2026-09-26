@@ -23,6 +23,9 @@ from guessing Jira or third-party payloads that cannot be validated safely.
   parents and skipped levels are rejected.
 - A subtask cannot be standalone. It needs a compatible parent in the selected
   creation plan.
+- A generic subtask in a template needs an explicit **Work type** choice when
+  the target project has multiple compatible subtask types. Preview stops
+  before creation rather than choosing one by spelling or list order.
 - Parent hierarchy and issue links are separate. A valid link does not make an
   otherwise invalid parent hierarchy valid.
 - Capture and Recreate inspect at most 20 related work items in one operation.

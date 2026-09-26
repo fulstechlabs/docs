@@ -71,7 +71,10 @@ follow-up work.
 7. Include configured comments or attachments only when needed.
 8. Select **Apply changes**.
 
-![Apply preview showing unchanged root fields and selected child work](./assets/apply-preserve.jpg)
+![A second Apply preview shows a Keep decision and one selected child](./assets/customer-use-cases/incident-kept-fields-child.png)
+
+*This pictured state is a second preview after an earlier Apply completed. No
+second Apply was submitted.*
 
 The default **Only fill empty fields** rule preserves a populated Jira field.
 Every selected overwrite is visible before the final action.
@@ -107,7 +110,10 @@ The **Template details** issue panel shows:
 - One outcome for each child node.
 - The latest actionable error for a partial run.
 
-![Template provenance and completed run status](./assets/provenance-panel.png)
+![A completed Create example records Created origin, template revision, and three child outcomes](./assets/customer-use-cases/getting-started-release-details.png)
+
+*The pictured run is a Create example. Apply, Recreate, Portal, and Workflow
+origins appear for their corresponding runs.*
 
 Retry is available only for failed or partial work. Completed nodes are not
 replayed.

@@ -45,9 +45,10 @@ The selector shows **No template** plus only templates that match the exact
 service project, request type, and root work type. It shows friendly names and
 does not expose internal template IDs.
 
-The current public docs intentionally do not show a selector screenshot here
-until the screenshot is captured from the same authenticated customer context
-described by this procedure.
+![The production portal selector lists No template and the exact matching Service request checklist](./assets/customer-use-cases/jsm-portal-selection.png)
+
+*The image is cropped to the selector of an authenticated, portal-only test
+customer. It does not show an agent-side Jira form.*
 
 
 ## What happens after submission
@@ -65,7 +66,7 @@ Open the request in Jira and expand **Template details** to see the template
 revision, run status, created child work, and a safe retry action when work is
 partial or failed. Completed nodes are not created again during retry.
 
-![A controlled JSM verification showing the completed template run and created child work](./assets/jsm-run-result.jpg)
+![The Jira agent view shows the Portal-origin run completed with one created child](./assets/customer-use-cases/jsm-agent-run-result.png)
 
 ## Verify the setup
 

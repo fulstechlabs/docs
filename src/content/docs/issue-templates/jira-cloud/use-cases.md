@@ -8,12 +8,16 @@ a few values change each time.
 
 ## Find a familiar situation
 
-| Build the reusable process | Preview what will happen | See the final run |
-| --- | --- | --- |
-| ![Model reusable delivery work in the Structure editor](./assets/customer-structure.jpg) | ![Review selected release child work before creating Jira issues](./assets/release-preview.png) | ![See the created release root and selected subtasks](./assets/release-created.png) |
+**Enter a changing value → review the proposed work → create it.** For example,
+the installed Release readiness starter resolves one version into a root issue
+and three selected subtasks before Jira is changed.
 
-These verified examples show the reusable pattern from three angles: define the
-structure, preview one run, then inspect the Jira work that was created.
+![A Release readiness preview shows the resolved root values and three selected subtasks](./assets/customer-use-cases/getting-started-release-preview.png)
+
+[Follow the complete first-run flow →](../getting-started/)
+
+The scenarios below use the same product pattern with different templates and
+entry points.
 
 | Situation | Use | Result |
 | --- | --- | --- |

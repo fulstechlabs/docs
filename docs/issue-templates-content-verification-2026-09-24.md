@@ -1,5 +1,11 @@
 # Issue Templates documentation content verification — 2026-09-24
 
+> Historical audit of the earlier screenshot set. The later live production
+> starter test, exact-context screenshots, and placement decisions are recorded
+> in [Issue Templates customer screenshot provenance](issue-templates-screenshot-provenance-2026-09-24.md).
+> In particular, the unedited Release readiness starter needed its child work
+> types mapped to Jira's actual **Sub-task** type on the dev2 test project.
+
 This is an internal verification record for the public documentation under
 `src/content/docs/issue-templates/jira-cloud/`.
 

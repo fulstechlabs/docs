@@ -44,7 +44,7 @@ self, descendants, same-level work and other incompatible choices that would
 produce an invalid Jira hierarchy. A compatible work item added later in the
 template can still be selected as the parent.
 
-![Choose the Jira parent and relationship separately in Structure and content](./assets/customer-structure.jpg)
+![The Customer rollout example shows three children and separate Jira Parent and Relationship controls in Structure](./assets/customer-use-cases/customer-structure.png)
 
 Review the visible tree after changing a work type or parent. If the new work
 type makes an existing parent invalid, the app clears that choice instead of
@@ -107,10 +107,12 @@ context. Before writing, the app reloads the live Jira metadata. An unavailable
 field is warned and skipped; it does not silently invalidate the whole
 hierarchy.
 
-When Apply or Recreate targets another project, the app maps work types by name
-and subtask kind, then validates their hierarchy levels before changing Jira.
-If the destination cannot represent the selected structure, the preview stops
-the operation and identifies the incompatible work item.
+When Apply or Recreate targets another project, a valid selected Jira work-type
+ID remains the first choice. Otherwise, the app looks for a compatible named
+work type or the project's sole compatible subtask type, then validates the
+hierarchy before changing Jira. If several subtask types match only a generic
+`Subtask` choice, select the intended type in **Structure**; the app will not
+guess. Preview identifies any work item that the destination cannot represent.
 
 See [Known limitations](../known-limitations/) for Rank, Assets, third-party
 fields, and native Create-specific boundaries.
