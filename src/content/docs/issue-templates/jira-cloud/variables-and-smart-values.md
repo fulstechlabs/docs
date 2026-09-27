@@ -70,7 +70,11 @@ Variable names must start with a letter or underscore. The remaining
 characters can be letters, numbers, dots, dashes, or underscores. Names are
 case-sensitive and must be unique within the template.
 
-![Runtime inputs are collected before the app builds the preview](./assets/runtime-inputs.jpg)
+For example, the Employee onboarding template asks for an employee name, team,
+and start date before Preview. This pictured fixture creates a root issue; it
+does not show the larger onboarding hierarchy described in the use case.
+
+![Employee onboarding collects three runtime inputs before Preview](./assets/customer-use-cases/employee-runtime-inputs.png)
 
 ## Where tokens can be used
 

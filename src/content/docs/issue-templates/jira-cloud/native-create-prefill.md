@@ -34,7 +34,11 @@ match. Changing context causes app-owned values to be reevaluated.
 6. Open Jira's standard **Create** dialog and test the exact project and work
    type before rolling the rule out.
 
-![Native Create settings showing the app default and prefill controls](./assets/native-create-settings.png)
+![App default and native Create controls with a Sprint compatibility warning](./assets/native-create-settings.png)
+
+The screenshot shows the controls before enabling them. The Sprint warning
+appears because that field is available in explicit Create and Apply, but Jira
+does not expose it to this native Create integration.
 
 ## User-value protection
 
