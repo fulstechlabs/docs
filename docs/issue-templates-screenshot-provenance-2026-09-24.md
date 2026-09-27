@@ -52,9 +52,13 @@ binds the starter children to its canonical ID/name; live preflight also
 resolves older generic starters. When several compatible types exist without a
 valid explicit choice, Preview fails closed and asks the user to choose the
 intended type in **Structure**. A valid stored type ID remains authoritative.
-The customer guidance in this PR describes that candidate behavior, while the
-screenshots retain their production-4.0.0 provenance. This docs PR remains
-unmerged until the consolidated app release and docs publication are sequenced.
+The screenshots retain their production-4.0.0 provenance. By the owner's
+explicit release order, [docs PR #46](https://github.com/fulstechlabs/docs/pull/46)
+was merged and published before the consolidated app was promoted. The public
+Getting Started and FAQ now distinguish the upcoming automatic selection from
+the manual mapping that may still be needed in 4.0.0. See the
+[27 September release-gate audit](issue-templates-release-gate-2026-09-27.md)
+for the legacy screenshot replacements and full page/image review.
 
 ## Deliberate exclusions
 

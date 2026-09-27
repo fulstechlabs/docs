@@ -79,10 +79,12 @@ project, request type, and root work type.
 
 ## Do I need to configure the starter's subtask work type?
 
-Usually no. If the target project has one compatible subtask work type, the app
-resolves it for the built-in starters. If Jira offers several, choose the
-intended child **Work type** in **Structure** when Preview asks. See
-[Getting Started](../getting-started/) for the first-run flow.
+In the current 4.0.0 release, Preview may ask you to map a starter child from
+generic `Subtask` to your project's actual **Work type**. The upcoming release
+will do this automatically when the project offers exactly one compatible
+subtask type. If it offers several, choose the intended child **Work type** in
+**Structure**. See [Getting Started](../getting-started/) for the first-run
+flow and the current-version steps.
 
 ## Does the app support Jira Assets, Rank, or opaque third-party fields?
 

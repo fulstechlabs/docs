@@ -30,6 +30,8 @@ Create rules. It is not a Data Center migration package.
 
 ![Configuration backup and restore controls](./assets/backup-restore.png)
 
+**Validate file** becomes available after you choose a backup file.
+
 ## Validate before restoring
 
 Choose a version 2 JSON file and select **Validate file**, or paste its contents

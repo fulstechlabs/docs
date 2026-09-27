@@ -3,6 +3,19 @@ title: "Release Notes"
 description: "Customer-visible changes in Issue Templates & Hierarchy Builder for Jira Cloud."
 ---
 
+## Upcoming release
+
+- **Improved:** Built-in starter children select the project's subtask work
+  type automatically when Jira offers exactly one compatible choice. If several
+  types match, Preview stops and asks you to choose **Work type** in
+  **Structure** instead of guessing.
+- **Fixed and hardened:** Large non-JSON or HTML Jira errors now produce short
+  support details while retaining the status, endpoint, and Jira request ID
+  when available. Useful short JSON errors remain readable.
+
+These changes are not yet in Marketplace production 4.0.0. The version and
+release date will be added after the app is promoted.
+
 ## 4.0.0 — 22 September 2026
 
 ### New

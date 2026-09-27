@@ -16,7 +16,8 @@ You need:
 
 - the app installed with an active evaluation or subscription;
 - permission to create Jira issues in the target project;
-- a Jira administrator for the one-time starter installation.
+- a Jira administrator, or a project administrator for the target project, for
+  the one-time starter installation.
 
 ## 1. Install the starters
 
@@ -27,9 +28,13 @@ You need:
 5. Confirm **Install editable starters**.
 
 You now have editable examples such as **Release readiness**. This starter asks
-for one value, `version`, and defines three child work items. When your project
-has one compatible Jira subtask work type, the app selects it for those children
-automatically. You can use the starter without editing its structure.
+for one value, `version`, and defines three child work items.
+
+**Version note:** Automatic selection of the project's sole compatible subtask
+work type is part of the upcoming release. In the current 4.0.0 release, you
+may need to choose the project's actual **Work type** for each starter child
+before Preview succeeds. The [FAQ](../faq/#do-i-need-to-configure-the-starters-subtask-work-type)
+explains when this step is needed.
 
 ## 2. Preview Release readiness
 
@@ -52,11 +57,11 @@ Check only two things:
 
 Nothing has been created yet.
 
-If Preview says the project has **multiple Jira subtask work types**, the app
-cannot choose one for you. Open **Release readiness → Details → Edit template →
-Structure**, select the intended **Work type** for each affected child, save,
-and preview again. You do not need this step when Jira offers only one compatible
-subtask work type.
+If Preview reports unavailable `Subtask` metadata in 4.0.0, or several
+compatible Jira subtask work types in the upcoming release, open **Release
+readiness → Details → Edit template → Structure**. Select the project's intended
+**Work type** and **Parent** for each affected child, save, and preview again.
+The screenshots show a 4.0.0 starter after those choices were made.
 
 ## 3. Create and verify
 
