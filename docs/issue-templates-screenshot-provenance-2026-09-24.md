@@ -43,7 +43,7 @@ starter before a successful Completed run. These images prove the pictured
 input, preview, result, and Jira issue; they do **not** prove automatic
 work-type selection.
 
-The upcoming consolidated product candidate on `main` resolves
+The candidate that later became 4.1.0 resolves
 [product issues #23](https://github.com/fulstechlabs/issue-templates-for-jira-forge/issues/23)
 and [#25](https://github.com/fulstechlabs/issue-templates-for-jira-forge/issues/25)
 through merged [PR #24](https://github.com/fulstechlabs/issue-templates-for-jira-forge/pull/24).
@@ -54,9 +54,11 @@ valid explicit choice, Preview fails closed and asks the user to choose the
 intended type in **Structure**. A valid stored type ID remains authoritative.
 The screenshots retain their production-4.0.0 provenance. By the owner's
 explicit release order, [docs PR #46](https://github.com/fulstechlabs/docs/pull/46)
-was merged and published before the consolidated app was promoted. The public
-Getting Started and FAQ now distinguish the upcoming automatic selection from
-the manual mapping that may still be needed in 4.0.0. See the
+was merged and published before the consolidated app was promoted. At that
+time, the public Getting Started and FAQ distinguished the upcoming automatic
+selection from the manual mapping needed in 4.0.0. Marketplace 4.1.0 became
+public on 28 September 2026; the customer-facing guides were then updated to
+describe the automatic selection as current behavior. See the
 [27 September release-gate audit](issue-templates-release-gate-2026-09-27.md)
 for the legacy screenshot replacements and full page/image review.
 

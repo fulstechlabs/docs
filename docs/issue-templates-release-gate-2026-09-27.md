@@ -83,3 +83,10 @@ The product logo is a brand asset rather than an interaction screenshot and was 
 - The browser review tab was closed and the temporary viewport reset. Preview server was stopped. Unrelated user tabs were left open.
 
 CI and PR review are additional gates. Site publication and app promotion are separate later actions.
+
+## 28 September 2026 follow-up
+
+The 4.1.0 Forge production deployment and Marketplace build 3002060 are now
+public. The earlier 4.0.0 release-state statements above remain the historical
+state of this audit. The 4.1.0 docs update changes only release wording and
+starter guidance; the screenshots retain their 4.0.0 capture provenance.
