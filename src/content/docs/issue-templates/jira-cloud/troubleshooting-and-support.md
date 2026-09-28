@@ -82,13 +82,10 @@ the same run. Do not start a new run just to replay completed children.
 
 Open the affected work item and review its **Work type** and **Parent**. Jira
 allows only a compatible direct parent level; a subtask cannot be standalone.
-In production 4.0.0, an installed starter may report unavailable generic
-`Subtask` metadata even when the project has one actual subtask type. Select
-that type and the intended **Parent** for each affected child in **Structure**.
-The upcoming release resolves a sole compatible type automatically. If Preview
-reports multiple compatible types, choose the intended **Work type** yourself;
-the app will not guess. See [Getting Started](../getting-started/) for the
-current-version steps.
+For a starter child, the app selects a subtask **Work type** when the project
+has exactly one compatible type. If Preview reports multiple compatible types,
+choose the intended **Work type** and **Parent** in **Structure**; the app will
+not guess. See [Getting Started](../getting-started/) for the steps.
 
 If the operation targets another project, confirm that project has matching work
 types at compatible hierarchy levels. Correct the template or destination, then

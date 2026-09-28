@@ -30,11 +30,11 @@ You need:
 You now have editable examples such as **Release readiness**. This starter asks
 for one value, `version`, and defines three child work items.
 
-**Version note:** Automatic selection of the project's sole compatible subtask
-work type is part of the upcoming release. In the current 4.0.0 release, you
-may need to choose the project's actual **Work type** for each starter child
-before Preview succeeds. The [FAQ](../faq/#do-i-need-to-configure-the-starters-subtask-work-type)
-explains when this step is needed.
+The app selects the project's subtask **Work type** for starter children when
+Jira offers exactly one compatible type. If the project offers several, choose
+the intended type in **Structure** before Preview. The
+[FAQ](../faq/#do-i-need-to-configure-the-starters-subtask-work-type) explains
+this choice.
 
 ## 2. Preview Release readiness
 
@@ -57,11 +57,11 @@ Check only two things:
 
 Nothing has been created yet.
 
-If Preview reports unavailable `Subtask` metadata in 4.0.0, or several
-compatible Jira subtask work types in the upcoming release, open **Release
-readiness → Details → Edit template → Structure**. Select the project's intended
+If Preview reports several compatible Jira subtask work types, open **Release
+readiness → Details → Edit template → Structure**. Select the intended
 **Work type** and **Parent** for each affected child, save, and preview again.
-The screenshots show a 4.0.0 starter after those choices were made.
+The screenshots show a starter that was manually mapped for the earlier 4.0.0
+release; the current app can select the sole compatible type automatically.
 
 ## 3. Create and verify
 
