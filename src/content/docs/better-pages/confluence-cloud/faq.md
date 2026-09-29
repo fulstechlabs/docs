@@ -8,7 +8,15 @@ description: "Quick answers about Better Pages components, permissions, template
 No. It adds page-building components and reviewed workflows around normal
 Confluence content. Rich-body macros continue to use the Confluence editor.
 
-## Which macro should I use first?
+## Do I need to choose a macro before making a page?
+
+No. Start from [Better Pages Home](../templates-and-home/) and choose a
+template or private blank draft. [Composer](../smart-designer/) can build a
+section from one of 12 [Section Patterns](../section-patterns/) and lets you
+review it before writing. See [Getting Started](../getting-started/) for a
+complete first-page path.
+
+## Which macro should I use for one component?
 
 Start from the reader's task in the [Macro Catalog](../macros/). Use native
 headings and links when they are enough; use a Better Pages component when its
@@ -16,20 +24,27 @@ layout or interaction improves understanding.
 
 ## Can I use my organization's colors and assets?
 
-Yes. Administrators can publish global colors and Brand Kits. Authors can then
-select supported colors, images, and icons without copying values or URLs.
+Yes. Administrators can publish global colors, Brand Kits, and semantic Brand
+Styles. Authors can then select supported appearance choices without copying
+values or URLs. See [Brand Kits and Brand Styles](../brand-kits-and-colors/).
 
-## Does Smart Designer require AI?
+## Does Composer (Smart Designer) require AI?
 
-No. Formatting, component creation, native block editing, preview, draft, and
-publish workflows work without AI. AI rewrite is a separate administrator
-opt-in and author-triggered action.
+No. Section Patterns, formatting, component creation, native-block editing,
+preview, draft, and publish workflows work without AI. AI rewrite is a
+separate administrator opt-in and author-triggered action.
+
+## Does saving a draft publish it?
+
+No. **Save draft** keeps the new page private or the existing published
+version unchanged. Reopen the draft in Confluence, check its content and
+links, then publish when readers should see it. A **Delivery journey** is
+different: confirming it creates published linked pages.
 
 ## Can Better Pages change pages I cannot edit?
 
-No. Confluence permissions apply to searches, previews, and writes. Smart
-Designer, Space Manager, templates, and Numbered Headings run as the signed-in
-account.
+No. Confluence permissions apply to searches, previews, and writes. Composer,
+Space Manager, templates, and Numbered Headings run as the signed-in account.
 
 ## Does HTML JavaScript have access to Confluence or the network?
 

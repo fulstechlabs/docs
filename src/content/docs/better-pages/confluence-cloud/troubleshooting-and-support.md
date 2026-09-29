@@ -54,12 +54,14 @@ Test the published page, not only the Confluence editor placeholder. Reload the
 page, then try pointer and keyboard interaction. Confirm the app is enabled and
 that no browser content blocker is removing Atlassian Forge frames.
 
-## Smart Designer will not save
+## Composer will not save
 
-Open Smart Designer from the published page's byline. The editor launcher is a
-safe preview because Forge cannot replace the surrounding unsaved editor draft.
-If the source page changed, reload the source, rebuild the staged canvas, and
-apply it again.
+If you opened Composer from a private draft in Better Pages Home, confirm you
+can edit that draft and wait for a **Save draft** confirmation. For an existing
+published page, open Composer from its Better Pages byline. The in-editor
+launcher is a safe preview because it cannot replace the surrounding unsaved
+Confluence editor draft. If the source page changed, reload it, rebuild the
+staged canvas, and try the write again.
 
 ## Space Manager stopped partway
 

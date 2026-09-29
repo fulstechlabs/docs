@@ -13,7 +13,7 @@ change this page; the Forge backend checks every operation again.
 1. Review the site feature controls and keep optional AI, local forms, and HTML
    JavaScript disabled until your organization chooses to use them.
 2. Create a small shared color palette and, if needed, a
-   [Brand Kit](../brand-kits-and-colors/).
+   [Brand Kit with published Brand Styles](../brand-kits-and-colors/).
 3. Synchronize selected Better Pages page starters into Confluence's native
    template catalog.
 4. Confirm Numbered Headings, tab share links, welcome guidance, in-app help,
@@ -44,7 +44,8 @@ Delivery journey starters remain in Better Pages Home.
 
 Use Brand Kits for published collections of colors, images, and icons. Use the
 global color palette for reusable named colors without assets. See
-[Brand Kits and Colors](../brand-kits-and-colors/) for publication behavior.
+[Brand Kits and Brand Styles](../brand-kits-and-colors/) for publication
+behavior and author use.
 
 ## External content compatibility policy
 
