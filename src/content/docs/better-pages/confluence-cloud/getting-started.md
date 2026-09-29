@@ -113,3 +113,7 @@ editor: choose **Edit**, type `/better pages` or search **Insert elements**,
 select a component, configure it, save its configuration, then publish or
 update the page. The [Macro Catalog](../macros/) keeps the guides for all 19
 components.
+
+To adapt this first-page flow to a specific outcome, see the
+[Page Recipes](../guides/), especially the
+[Product launch page](../guides/product-launch-page/) recipe.
