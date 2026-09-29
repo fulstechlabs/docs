@@ -1,101 +1,81 @@
 ---
 title: "Better Pages for Confluence"
-description: "Create clear, engaging Confluence pages with interactive layouts, visual components, and reusable design tools."
+description: "Build editable Confluence Cloud pages with Better Pages Home, Composer, Section Patterns, and approved Brand Styles."
 ---
 
-Better Pages gives Confluence authors a practical set of visual and interactive
-building blocks. Use it to turn a long document into an easy-to-navigate page,
-create a polished space home, highlight an announcement, or present technical
-content without writing code.
+Better Pages 13.0 helps you build a complete Confluence Cloud page without
+assembling every element by hand. Start from **Better Pages Home**, choose a
+template or a private blank draft, and use **Composer** to arrange sections.
+Review the result before writing it, then **Save draft** or **Publish** when
+the page is ready for readers.
 
-The app is designed for everyday Confluence authors. Add a macro, configure it
-in a visual editor, preview the result, and publish it as part of a normal
-Confluence page.
+You can also improve a page you already have permission to edit. The familiar
+collection of 19 reader-facing Better Pages macros remains available when you
+only need one component.
 
-## Choose the right workflow
+![Better Pages Home groups page-building work into Build, Design system, Manage, and Explore](./images/13.0/01-home.jpg)
 
-| Your job | Use |
+*Better Pages 13.0 Home on a licensed development installation. The example
+screenshots in these guides use test content; your site's spaces and branding
+will differ.*
+
+## A page-building workflow
+
+| Stage | What you do | Result |
+| --- | --- | --- |
+| **Build** | Choose a template, start a private blank draft, or find a page you can edit in [Better Pages Home](../templates-and-home/) | A page and destination for your work |
+| **Design** | Use [Composer](../smart-designer/) and [Section Patterns](../section-patterns/) to configure, preview, and stage content | A canvas you can review before any page write |
+| **Standardize** | Apply administrator-published [Brand Kits and Brand Styles](../brand-kits-and-colors/) | Consistent appearance copied into supported components |
+| **Manage** | Use [Space Manager](../space-manager/) for reviewed multi-page operations | A clearer space structure |
+
+For a first useful result, follow [Getting Started](../getting-started/): create
+a private draft, add a **Find your way** section with links to the pages your
+team needs, save it, reopen it in Confluence, and publish only after checking
+the links. A template can provide the initial structure if you prefer not to
+start blank.
+
+## Choose the right entry point
+
+| Your job | Start here |
 | --- | --- |
-| Improve one page with a visual or interactive element | Insert a component from the [Macro Catalog](../macros/) |
-| Start a new page with a useful structure | Browse [Templates and Better Pages Home](../templates-and-home/) |
-| Reshape existing content or stage several coordinated changes | Open [Smart Designer](../smart-designer/) from the published page |
-| Review or change several pages across spaces | Use [Space Manager](../space-manager/) and confirm its plan |
-| Give authors approved colors, images, and icons | Publish [Brand Kits and Colors](../brand-kits-and-colors/) |
-| Apply consistent heading numbers | Use [Numbered Headings](../numbered-headings/) |
+| Create a project home, resource hub, or status page | [Better Pages Home](../templates-and-home/) → **Continue designing** → [Composer](../smart-designer/) |
+| Improve an existing page | Find a page you can edit from Home, or open Composer from its published-page Better Pages byline |
+| Add one visual or interactive element | Insert a component from the [Macro Catalog](../macros/) in the normal Confluence editor |
+| Apply approved visual choices | Ask an administrator to publish a [Brand Kit or Brand Style](../brand-kits-and-colors/), then choose it while authoring |
+| Review changes across several pages | Use [Space Manager](../space-manager/) and confirm its plan |
+| Number a page outline | Use [Numbered Headings](../numbered-headings/) |
 
-These paths complement the normal Confluence editor. Use a page macro for a
-reader-facing component and an app tool for a page-level or space-level task.
+Composer offers 12 guided Section Patterns, direct components, formatting for
+selected content, and supported native-block editing. Staging or previewing
+does not write the page. After you save or publish, generated content is still
+ordinary editable Confluence content and supported Better Pages macros—not a
+locked page image. Edit the page or reopen a macro's configuration as your
+content changes.
 
-## What can you build?
+## The 19 building blocks are still here
 
-| If you want to… | Start with… |
-| --- | --- |
-| Organize a long page into focused sections | [Tabs](../macros/tabs/) |
-| Create a visual directory or resource hub | [Advanced Cards](../macros/advanced-cards/) |
-| Guide readers to a page, website, anchor, or email address | [Button](../macros/button/) |
-| Highlight an update or show an important page-load notice | [Alert](../macros/alert/) |
-| Present a process or journey | [Progress Bar](../macros/progress-bar/) |
-| Build a visual hero area | [Background](../macros/background/) or [Interactive Banner](../macros/interactive-banner/) |
-| Keep supporting detail out of the main reading flow | [Advanced Expand](../macros/advanced-expand/), [Tooltip](../macros/tooltip/), or [Pop-up Dialog](../macros/pop-up-dialog/) |
-| Present equations, references, or structured data | [LaTeX Builder](../macros/latex-builder/), [Footnotes](../macros/footnote/), [BibTeX](../macros/bibtex-reference/), [HTML](../macros/html/), or [Table](../macros/table/) |
+Better Pages includes 19 reader-facing macros for layout, navigation, actions,
+messages, and technical content. For example, use **Advanced Cards** for a
+directory, **Tabs** for related detail, **Alert** for an important update, or
+**LaTeX Builder** for equations. Browse the [Macro Catalog](../macros/) for all
+19 and their individual guides. Existing macros remain editable in Confluence
+after upgrading to 13.0; you do not have to rebuild pages in Composer.
 
-## The component collection
-
-Better Pages currently includes 19 reader-facing page-building macros:
-
-- **Layout and visual design:** Background, Advanced Cards, Interactive Banner.
-- **Navigation and actions:** Tabs, Button, Button Group, Progress Bar.
-- **Messages and supporting detail:** Alert, Advanced Expand, Pop-up Dialog,
-  Tooltip.
-- **Technical and research content:** LaTeX Builder, LaTeX Inline, Footnote,
-  Footnote Summary, BibTeX Reference, BibTeX Summary, HTML, Table.
-
-Browse the [macro catalog](../macros/) to choose the right component for your
-page.
-
-Smart Designer also has an editor launcher, but it is a page-design workflow
-rather than a twentieth reader-facing component. Existing hidden compatibility
-macros are not offered for new authoring.
-
-## More than macros
-
-Better Pages also includes workflows for larger page-building tasks:
-
-- [Templates and Better Pages Home](../templates-and-home/) provide 49 editable
-  starters and an optional multi-page delivery journey.
-- [Smart Designer](../smart-designer/) formats selected content, stages any of
-  the 19 components, and edits supported native blocks.
-- [Space Manager](../space-manager/) inventories accessible content and previews
-  permission-checked page operations.
-- [Numbered Headings](../numbered-headings/) applies a maintained numbering
-  scheme to a page outline.
-- [Brand Kits and Colors](../brand-kits-and-colors/) give authors reusable,
-  administrator-published visual choices.
-
-## Designed to work with Confluence
-
-Better Pages macros live inside Confluence pages and follow the permissions of
-the signed-in user. They do not bypass page or space restrictions. Rich-body
-macros continue to use the Confluence editor for their content, while visual
-settings are managed in the Better Pages configuration panel.
-
-Interactive controls are keyboard accessible and adapt to narrow screens.
-
-## A good first page
-
-For your first Better Pages page, try this simple structure:
-
-1. Add an **Alert** for the most important update.
-2. Add **Advanced Cards** for the main destinations or owners.
-3. Add **Tabs** to divide detailed content into a few clear sections.
-4. Add one **Button** for the primary next action.
-
-Continue with [Getting started](../getting-started/) to build it step by step.
+Better Pages follows the signed-in user's Confluence page and space
+permissions. Rich-body macros use the Confluence editor for their content,
+while visual settings are configured in Better Pages. See
+[Administration](../administration/) for site controls and
+[Security and Privacy](../security-and-privacy/) for the product-specific data
+explanation.
 
 ## Availability and migration
 
 Better Pages is a paid Marketplace app for Confluence Cloud. Installation,
-evaluation, subscription, and billing are managed by Atlassian Marketplace.
-It does not
-automatically read or convert content owned by third-party Data Center apps.
-Data Center migration is not part of the current app experience.
+evaluation, subscription, and billing are managed through the
+[Better Pages Marketplace listing](https://marketplace.atlassian.com/apps/157694075/better-pages-tabs-formatting-macros-for-confluence).
+It does not automatically read or convert content owned by third-party Data
+Center apps; Data Center migration is not part of the current app experience.
+
+For help or policy details, use the [Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals),
+the [Better Pages Privacy Policy](../privacy-policy/), and the
+[End User License Agreement](/end-user-license-agreement/).

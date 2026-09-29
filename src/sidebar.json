@@ -18,6 +18,36 @@
             "slug": "better-pages/confluence-cloud/getting-started"
           },
           {
+            "label": "Build and design pages",
+            "items": [
+              {
+                "label": "Templates and Better Pages Home",
+                "slug": "better-pages/confluence-cloud/templates-and-home"
+              },
+              {
+                "label": "Composer (Smart Designer)",
+                "slug": "better-pages/confluence-cloud/smart-designer"
+              },
+              {
+                "label": "Section Patterns",
+                "slug": "better-pages/confluence-cloud/section-patterns"
+              },
+              {
+                "label": "Brand Kits and Brand Styles",
+                "slug": "better-pages/confluence-cloud/brand-kits-and-colors"
+              },
+              {
+                "label": "Space Manager",
+                "slug": "better-pages/confluence-cloud/space-manager"
+              },
+              {
+                "label": "Numbered Headings",
+                "slug": "better-pages/confluence-cloud/numbered-headings"
+              }
+            ],
+            "collapsed": false
+          },
+          {
             "label": "Macro Catalog",
             "slug": "better-pages/confluence-cloud/macros"
           },
@@ -99,32 +129,6 @@
               {
                 "label": "Tooltip",
                 "slug": "better-pages/confluence-cloud/macros/tooltip"
-              }
-            ],
-            "collapsed": true
-          },
-          {
-            "label": "Page-building Tools",
-            "items": [
-              {
-                "label": "Templates and Home",
-                "slug": "better-pages/confluence-cloud/templates-and-home"
-              },
-              {
-                "label": "Smart Designer",
-                "slug": "better-pages/confluence-cloud/smart-designer"
-              },
-              {
-                "label": "Space Manager",
-                "slug": "better-pages/confluence-cloud/space-manager"
-              },
-              {
-                "label": "Numbered Headings",
-                "slug": "better-pages/confluence-cloud/numbered-headings"
-              },
-              {
-                "label": "Brand Kits and Colors",
-                "slug": "better-pages/confluence-cloud/brand-kits-and-colors"
               }
             ],
             "collapsed": true

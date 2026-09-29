@@ -7,9 +7,10 @@ Better Pages provides 19 reader-facing macros for layout, navigation,
 communication, technical content, and structured data. Start with the reader's
 task, then choose the smallest component that supports it.
 
-Smart Designer, Space Manager, templates, Brand Kits, and Numbered Headings are
-app workflows rather than additional reader-facing macros. Hidden compatibility
-macros can render existing content but are not offered for new authoring.
+Composer (Smart Designer), Section Patterns, Space Manager, templates, Brand
+Kits, and Numbered Headings are app workflows rather than additional
+reader-facing macros. Hidden compatibility macros can render existing content
+but are not offered for new authoring.
 
 ## Layout and visual design
 
@@ -67,4 +68,4 @@ example, and practical design guidance.
 
 For a first complete page rather than an isolated component, follow
 [Getting Started](../getting-started/). For several coordinated changes to an
-existing page, use [Smart Designer](../smart-designer/).
+existing page, use [Composer](../smart-designer/).

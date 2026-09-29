@@ -1,134 +1,115 @@
 ---
 title: "Getting Started"
-description: "Add your first Better Pages macro and publish a useful Confluence page in a few minutes."
+description: "Create a private Confluence page, design a useful section in Composer, save it, reopen it, and publish when ready."
 ---
 
-This guide takes you from an empty Confluence page to a small, useful landing
-page. You do not need design or development experience.
+In this Better Pages 13.0 guide, you will make a small **Product Launch Hub**:
+a private Confluence draft with a **Find your way** section linking readers to
+the plan, launch status, and support. You will save and reopen the draft before
+deciding whether to publish it. Nothing in the preview or staged canvas
+publishes the page automatically.
 
 ## Before you begin
 
-You need:
+You need a Confluence Cloud site with Better Pages installed, an active
+Marketplace evaluation or subscription, and permission to create and edit a
+page in your chosen space. You do not need administrator access to use a
+published Brand Kit or Brand Style. If the app has not been installed, ask a
+Confluence administrator to install it from the Marketplace and review the
+Atlassian permission screens.
 
-- A Confluence Cloud site with Better Pages installed.
-- An active Marketplace evaluation or subscription.
-- Permission to create or edit a page.
-- A Confluence administrator only if the app still needs to be installed or
-  site-wide settings must be changed.
+The screenshots below show synthetic content on a licensed Better Pages 13.0
+development installation. Your site's spaces, user names, and branding will
+differ.
 
-If the app is not installed, a Confluence administrator opens the Better Pages
-Marketplace listing, selects **Try it free**, chooses the destination site, and
-reviews Atlassian's installation and permission screens. After installation,
-Better Pages appears in the Confluence macro browser and under **Apps**.
+## 1. Start a private page from Home
 
-## Find each Better Pages tool
+1. In Confluence, open **Apps → Better Pages home**. In **Build**, select
+   **Start with section patterns**. You can choose **Browse templates** instead
+   if you want an existing structure.
+2. Choose a destination space where you can create pages and enter a unique
+   title, such as `Product Launch Hub`.
+3. Select **Create blank draft for Composer**. Home creates one private draft;
+   it does not publish it.
+4. Select **Continue designing** to open that same draft in Composer.
 
-| Location | What you can do there |
-| --- | --- |
-| Confluence page editor | Insert and configure the 19 reader-facing macros |
-| **Apps → Better Pages** | Browse templates and start page-building journeys |
-| Published page byline | Open Smart Designer for a reviewed page-level change |
-| **Apps → Better Pages Space Manager** | Inventory pages and preview multi-page operations |
-| Confluence administration | Manage Brand Kits, colors, templates, feature controls, external policy, and diagnostics |
+![Better Pages Home offers templates and a section-pattern start](./images/13.0/01-home.jpg)
 
-## Add a macro
+*The **Build** choices on Better Pages Home.*
 
-The same workflow applies to every Better Pages component:
+![Template choice shows the destination, title, and Create blank draft for Composer action](./images/13.0/02-template-choice.jpg)
 
-1. Open a Confluence page and select **Edit**.
-2. Put the cursor where the component should appear.
-3. Type `/better pages`, or select **Insert elements** and search for
-   `Better Pages`.
-4. Choose a macro, such as **Better Pages Alert**.
-5. Configure the component and review its preview.
-6. Select **Save** in the macro configuration.
-7. Publish or update the Confluence page.
-8. Test the published interaction as a reader.
+*Choose the right space and title before creating a draft. The screenshot also
+shows the optional template path.*
 
-If a macro contains rich Confluence content, select its body on the page and
-edit that content with the normal Confluence editor.
+## 2. Compose and review a section
 
-## Build a starter landing page
+1. In **Better Pages Composer**, choose **Compose a section**.
+2. Select the **Find your way** Section Pattern. Replace its sample heading,
+   introduction, and destinations with your own facts and real links. For a
+   launch hub, use cards such as **Plan**, **Launch**, and **Support**.
+3. If your administrator has published a suitable Brand Kit or Brand Style,
+   select it for the supported role. This is optional; the section works
+   without a custom style.
+4. Select **Preview section**. Check the words, links, and appearance, then
+   select **Add to canvas**.
+5. In **Review canvas**, use **Edit section**, **Duplicate**, **Remove**, or
+   the move controls if you need to change the staged result. Select **Apply
+   to this page** as the output.
 
-Use the following four components to create a compact project or team landing
-page.
+![Composer offers four workflows, with Compose a section selected](./images/13.0/05-enter-composer.jpg)
 
-![A complete product-launch page built from Better Pages components](./images/product-launch-page.jpg)
+*Composer also supports formatting existing content, adding one component,
+and editing supported native blocks.*
 
-### 1. Lead with an Alert
+![The Section Pattern Library shows Find your way among 12 patterns](./images/13.0/06-pattern-library.jpg)
 
-Insert **Better Pages Alert** and choose **Message panel** for information that
-should remain in the page flow. Add a short title and one actionable sentence.
+*Choose a pattern by the question your readers need answered. See the
+[Section Patterns guide](../section-patterns/) for all 12.*
 
-Example:
+![Review canvas displays a staged section and Save draft and Publish controls](./images/13.0/08-review-before-write.jpg)
 
-> **Release readiness review**<br />
-> Confirm owners and open risks before Friday at 15:00.
+*Staging is a review step. The page has not changed until you choose **Save
+draft** or **Publish**.*
 
-See the [Alert guide](../macros/alert/) for page-load alerts, images, colors,
-and dismissal behavior.
+## 3. Save, reopen, and publish when ready
 
-### 2. Add the main destinations
+1. Select **Save draft**. Wait for the saved-draft confirmation before leaving
+   Composer.
+2. Close Composer and open the private draft in Confluence. Close the editor,
+   then reopen the draft to confirm the heading and cards are still there.
+3. Replace any remaining example wording or links. Check the result in the
+   normal Confluence editor. When it is ready for readers, **Publish** the
+   draft and test its destinations in reader view.
 
-Insert **Better Pages Advanced Cards**. Create one card for each important
-destination, such as the product plan, release checklist, support guide, and
-team directory. Use short descriptions so readers can choose without opening
-every link.
+![Composer confirms that the Product Launch Hub was saved as a draft](./images/13.0/11-draft-saved.jpg)
 
-See the [Advanced Cards guide](../macros/advanced-cards/) for images, layout,
-color, reordering, and destinations.
+*A save confirmation means the staged content was written to the private
+draft, not published.*
 
-### 3. Organize the details
+![Reopened Confluence draft retains the Product Launch Hub section and blue navigation cards](./images/13.0/12-draft-reopened.jpg)
 
-Insert one **Better Pages Tabs** macro and create three tabs such as
-**Overview**, **Readiness**, and **Decisions** in its group editor. After saving
-the macro, put the detailed Confluence content inside the matching heading
-section in the macro body.
+*This licensed development example was fully closed and reopened after
+saving. It is still marked as a draft.*
 
-See the [Tabs guide](../macros/tabs/) for styling, default tabs, shareable tab
-links, and keyboard behavior.
+If you choose a template instead, **Preview template** creates nothing;
+**Use template** creates a private single-page draft. Its **Continue
+designing** action leads into Composer, while **Edit in Confluence** lets you
+finish in the normal editor. Blog templates continue in the editor. A
+**Delivery journey** is different: confirming it creates published linked
+pages, so review the destination and hierarchy first. See
+[Templates and Better Pages Home](../templates-and-home/) for these paths.
 
-### 4. End with one clear action
+## After your first page
 
-Insert **Better Pages Button**. Link it to the next action readers should take,
-for example **Open the release checklist**. Choose a filled style for the
-primary action and keep the label specific.
+The generated section remains editable in Confluence. Edit its normal text
+blocks and reopen supported Better Pages macro configuration when you need to
+maintain cards or visual settings. See [Composer](../smart-designer/) for the
+staged-writing lifecycle and [Brand Kits and Brand Styles](../brand-kits-and-colors/)
+for shared appearance choices.
 
-See the [Button guide](../macros/button/) for page search, safe destinations,
-icons, colors, sizes, and new-tab behavior.
-
-## Preview, publish, and verify
-
-Before publishing, check that:
-
-- Every title and link is meaningful without surrounding explanation.
-- Images have useful alternative text, or are clearly decorative.
-- Colors have enough contrast in both light and dark Confluence themes.
-- The page has one obvious primary action rather than several competing ones.
-
-After publishing, click every action and test Tabs, Alerts, and Cards with both
-pointer and keyboard controls. Also narrow the browser window to confirm the
-layout remains readable.
-
-## Supported destinations
-
-Buttons and linked components accept:
-
-- A Confluence page selected with the built-in page search.
-- A relative Confluence path beginning with `/`.
-- A page anchor beginning with `#`.
-- An `https://` web address without embedded credentials.
-- A valid `mailto:` email address.
-
-Unsafe or unsupported destinations such as `javascript:`, `file:`, malformed
-email links, and protocol-relative URLs are rejected. The component remains on
-the page but its navigation action is not enabled until the destination is
-fixed.
-
-## Where to go next
-
-Use the [macro catalog](../macros/) to find the best component for your next
-page. Continue with [Templates and Better Pages Home](../templates-and-home/)
-for complete page starters. Site administrators can configure shared colors,
-Brand Kits, feature controls, and other site-wide behavior in
-[Better Pages administration](../administration/).
+If you only need one element on an existing page, use the normal Confluence
+editor: choose **Edit**, type `/better pages` or search **Insert elements**,
+select a component, configure it, save its configuration, then publish or
+update the page. The [Macro Catalog](../macros/) keeps the guides for all 19
+components.
