@@ -18,6 +18,20 @@
             "slug": "better-pages/confluence-cloud/getting-started"
           },
           {
+            "label": "Page Recipes",
+            "items": [
+              { "label": "Choose a recipe", "slug": "better-pages/confluence-cloud/guides" },
+              { "label": "Team homepage", "slug": "better-pages/confluence-cloud/guides/team-homepage" },
+              { "label": "Employee onboarding hub", "slug": "better-pages/confluence-cloud/guides/employee-onboarding-hub" },
+              { "label": "Product or project homepage", "slug": "better-pages/confluence-cloud/guides/product-or-project-homepage" },
+              { "label": "Product launch page", "slug": "better-pages/confluence-cloud/guides/product-launch-page" },
+              { "label": "Incident or operations hub", "slug": "better-pages/confluence-cloud/guides/incident-operations-hub" },
+              { "label": "Documentation landing page", "slug": "better-pages/confluence-cloud/guides/documentation-landing-page" },
+              { "label": "Research or technical page", "slug": "better-pages/confluence-cloud/guides/research-technical-page" }
+            ],
+            "collapsed": true
+          },
+          {
             "label": "Build and design pages",
             "items": [
               {
@@ -152,6 +166,14 @@
           {
             "label": "FAQ",
             "slug": "better-pages/confluence-cloud/faq"
+          },
+          {
+            "label": "Known Limitations",
+            "slug": "better-pages/confluence-cloud/known-limitations"
+          },
+          {
+            "label": "Release Notes",
+            "slug": "better-pages/confluence-cloud/release-notes"
           }
         ],
         "collapsed": true

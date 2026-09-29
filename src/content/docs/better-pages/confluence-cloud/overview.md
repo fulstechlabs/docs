@@ -34,6 +34,11 @@ team needs, save it, reopen it in Confluence, and publish only after checking
 the links. A template can provide the initial structure if you prefer not to
 start blank.
 
+Already have a page in mind? Choose a [Page Recipe](../guides/) for a team
+home, onboarding hub, product or project home, launch page, incident hub,
+documentation landing page, or research and technical page. Each recipe leads
+to the relevant feature guides.
+
 ## Choose the right entry point
 
 | Your job | Start here |
@@ -79,3 +84,6 @@ Center apps; Data Center migration is not part of the current app experience.
 For help or policy details, use the [Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals),
 the [Better Pages Privacy Policy](../privacy-policy/), and the
 [End User License Agreement](/end-user-license-agreement/).
+
+Review [Known Limitations](../known-limitations/) when planning migration or
+page operations, and [Release Notes](../release-notes/) for verified changes.

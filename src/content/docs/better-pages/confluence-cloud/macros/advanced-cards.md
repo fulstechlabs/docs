@@ -32,6 +32,13 @@ reader make a choice.
 6. Return to **Card grid** to add, copy, delete, or reorder cards.
 7. Choose the number of columns and image placement, then save and publish.
 
+![Better Pages 13.0 Advanced Cards editor showing the Card grid, Add card, reorder controls, and group layout fields](../images/13.0/18-macro-edit.jpg)
+
+*A licensed-development capture of a generated Advanced Cards macro reopened
+in the normal Confluence editor. The Card grid and layout fields are the same
+controls used when configuring a new group; this example was not saved while
+capturing it.*
+
 The editor preview is interactive. Select a preview card to edit it, drag cards
 to reorder them with a pointer, or use **Move up** and **Move down** for touch
 and keyboard workflows.
