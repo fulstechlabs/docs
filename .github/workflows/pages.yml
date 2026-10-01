@@ -1,10 +1,12 @@
 name: Deploy documentation to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+    inputs:
+      release_sha:
+        description: Reviewed full SHA at the current release tip
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -18,16 +20,32 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      source_sha: ${{ github.sha }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          ref: release
+          fetch-depth: 0
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
           node-version: "24"
           cache: npm
+      - name: Verify exact reviewed release source
+        run: node scripts/verify_publication_source.mjs
+        env:
+          DOCS_RELEASE_SHA: ${{ inputs.release_sha }}
+          DOCS_RUN_REF: ${{ github.ref }}
+          DOCS_RUN_SHA: ${{ github.sha }}
+          DOCS_EVENT_NAME: ${{ github.event_name }}
       - name: Install dependencies
         run: npm ci
+      - name: Test publication source guard
+        run: npm run test:publication
+      - name: Check content and configuration
+        run: npm run check
       - name: Build Starlight site
         run: npm run build
         env:
@@ -51,6 +69,22 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Check out verified artifact source
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.build.outputs.source_sha }}
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+      - name: Recheck release tip before public deployment
+        run: node scripts/verify_publication_source.mjs
+        env:
+          DOCS_RELEASE_SHA: ${{ inputs.release_sha }}
+          DOCS_RUN_REF: ${{ github.ref }}
+          DOCS_RUN_SHA: ${{ github.sha }}
+          DOCS_EVENT_NAME: ${{ github.event_name }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
