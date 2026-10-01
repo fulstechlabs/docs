@@ -1,9 +1,9 @@
 ---
 title: "Known Limitations"
-description: "Current Better Pages Release 13 boundaries to consider before creating or maintaining Confluence Cloud pages."
+description: "Current Better Pages Release 13.2 boundaries to consider before creating or maintaining Confluence Cloud pages."
 ---
 
-These are customer-relevant boundaries of Better Pages Release 13 for Confluence
+These are customer-relevant boundaries of Better Pages Release 13.2 for Confluence
 Cloud, not a list of every Confluence limitation. For a failed workflow, use
 [Troubleshooting and Support](../troubleshooting-and-support/).
 
@@ -18,17 +18,15 @@ and [FAQ](../faq/).
 
 ## Composer and published content
 
-### Publish new private drafts through the Confluence editor
+### Reopen a Home-created page after publishing
 
-Direct **Publish** from Composer on a new private draft can fail with
-Confluence HTTP 400 in Release 13. This is a current product defect, not the
-intended publishing behavior. The verified alternative is **Save draft**,
-wait for confirmation, close Composer, reopen the same draft in the normal
-Confluence editor, review the saved content, then use Confluence's **Publish**.
-Saving a draft alone does not publish it. This observation does not establish
-that all existing-page Composer writes fail. See the
-[Composer procedure](../smart-designer/#new-private-drafts-use-confluence-publish)
-and [Getting Started](../getting-started/).
+Direct Composer **Publish** on a new private draft is fixed and verified on
+production. After publishing, the original Home **Continue designing** result
+can still retain draft context and report that Confluence cannot read the page.
+Open the published page and select its **Smart Designer** byline instead;
+this loads the current published version. Do not create another page or
+repeat Publish to resolve a stale Home result. See
+[Composer](../smart-designer/#publish-directly-from-composer).
 
 ### Other content boundaries
 
@@ -49,20 +47,18 @@ and [Getting Started](../getting-started/).
 
 ## Page and space operations
 
-### New Tabs groups can reopen as one Overview tab
+### Previously affected Tabs groups
 
-In Release 13, a newly authored structured Tabs group can lose its separate
-tabs after saving and publishing. The verified example reopened as one
-**Overview** tab containing both the **Preparation** and **Launch** sections.
-This is a current product defect, not the intended grouping behavior. The
-initial editor preview is not evidence of a successful saved group.
+Release 13.1 fixes newly authored structured groups losing their separate tabs
+after save/publish/reopen. It does not automatically reconstruct groups already
+contaminated by the earlier bug, such as an old group collapsed into **Overview**.
 
-Use ordinary Confluence headings when separate sections must remain reliably
-accessible. Check the published reader view and reopened macro configuration
-before relying on a new group; do not delete content or repeatedly resave it
-to repair the grouping. This finding concerns the new-group round trip, not
-every existing legacy Tabs page. See
-[Tabs](../macros/tabs/#current-release-13-limitation).
+Release 13.2 separately fixes older Composer resource cards not loading inside
+Tabs at render time, without changing saved page content. This rendering repair
+is not a migration of previously damaged tab structure. Preserve affected
+content and contact support before attempting a structural repair; do not
+delete sections or repeatedly resave the group. See
+[Tabs](../macros/tabs/#saved-groups-in-release-132).
 
 ### Other operation boundaries
 

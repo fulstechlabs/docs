@@ -1,5 +1,52 @@
 # Better Pages Release 13 visual review — 2026-10-01
 
+## Release 13.2 reconciliation — 2026-10-02
+
+Product owner authorized release→update affected docs→safe publish→ChatGPT
+public-site review in product #58 and #46. The original accepted visual package
+below remains historical evidence; its old Tabs/HTTP400 warnings are superseded
+in the current customer pages, not erased from this audit.
+
+Release 13.2 exact source `36b49940322d66bfe7e0c19be7d7d56d662587b5`, annotated
+`release-13.2`, Forge/Marketplace 2.4.0, build 2001030 PUBLIC. Production deploy
+SUCCESS at 2026-10-01T19:32:20.403Z; authorized licensed FT dev4 Confluence
+installation `da649752-2e33-414f-b06f-ced9ff522134`, environment
+`a8cf910e-f0fd-4db1-a56f-7dc318bc4f13`, same app ID as below.
+
+Chrome DOM and native Chrome screenshots verified old malformed pages 53379073
+and 53641218 without page writes, fresh Resource hub 53673999 direct Composer
+V1/V2 with native history, group Save/Update/cold/reopen and independent private
+Save draft 53674030. Actual pixels were inspected and curated Drive metadata
+verified. Complete checkpoint:
+https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/issues/58#issuecomment-5939473127
+
+Two new screenshots in `images/release-13.2/`, with byte-identical public copies:
+
+- `composer-published-guides.jpg`: fresh page 53673999 cold reader at V2;
+  title, synthetic V2 marker, Guides/Support, Start guide and Working guide
+  visible. This is production on a Fulstech test tenant, not customer data.
+  It proves the depicted Guides result; separate Support/history evidence is
+  in the checkpoint, not inferred from this screenshot.
+- `tabs-support-default.jpg`: same page after group Save plus native Update
+  (V3) and cold reload; Support selected, Help center card visible. DOM reopen
+  separately confirms both names and second default. No claim of all keyboard,
+  export or device tests.
+
+Original 47 selected assets and Getting Started's coherent draft→native Publish
+example remain unchanged. Added two selected current-result assets, not a
+reconstructed UI. Published captions distinguish original Release 13 DEV
+authoring examples from Release 13.2 production-test results.
+
+Known Limitations now preserves two bounded cases: old contaminated tab
+structure is not auto-rebuilt; Home's original Continue designing result can
+retain stale draft context after Publish (HTTP404). Published reader Smart
+Designer loads the current version. No new runtime feature/fix was added.
+
+Shared docs infrastructure #59/#60 implements workflow_dispatch-only exact
+release SHA, no automatic push publication. Final build/layout/public receipt
+is recorded on product #46/#58 and shared #57; new ChatGPT rendered-site review
+must not be claimed until performed.
+
 Internal review package for [product issue #46](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/issues/46).
 This file is outside the public Astro content tree. Publication is **not
 authorized until this final package is reviewed and accepted on the product

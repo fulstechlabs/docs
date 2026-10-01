@@ -4,7 +4,7 @@ description: "Design and review Better Pages sections before writing them, then 
 ---
 
 **Better Pages Composer** is the Smart Designer page-building workflow in
-Better Pages Release 13. Open it with **Continue designing** after creating a
+Better Pages Release 13.2. Open it with **Continue designing** after creating a
 private page from [Better Pages Home](../templates-and-home/), choose **Open
 in Composer** for an editable existing page on Home, or use the Better Pages
 byline on a published page. You need permission to edit the target page.
@@ -62,20 +62,29 @@ Wait for the save confirmation, close Composer, and reopen the page in
 Confluence to check that the generated blocks are present. The normal editor
 can be used to finish wording and links before publication.
 
-### New private drafts: use Confluence Publish
+### Publish directly from Composer
 
-In Release 13, direct **Publish** from Composer on a newly created private
-draft can fail with Confluence HTTP 400. Use the verified route instead:
+Direct **Publish** on a new private page was fixed in Release 13.1 and remains
+verified in Release 13.2. Review the canvas, then select **Publish** when the
+content is ready for readers. Close Composer, open the published page and test
+its links and interactions.
 
-1. Select **Save draft** in Composer and wait for the save confirmation.
-2. Close Composer and open the same draft in the normal Confluence editor.
-3. Review the saved content, then select Confluence's **Publish**.
-4. Open reader view and test important links and interactions.
+[![Release 13.2 published Resource hub shows distinct Guides and Support panels with the Guides cards rendered](./images/release-13.2/composer-published-guides.jpg)](/assets/better-pages/release-13.2/composer-published-guides.jpg)
 
-**Save draft** does not make the page public. This limitation concerns direct
-Composer Publish on new private drafts, not every write on an existing page.
-See [Known Limitations](../known-limitations/#publish-new-private-drafts-through-the-confluence-editor)
-and the illustrated [Getting Started](../getting-started/) workflow.
+*Release 13.2 on a licensed production test site: a fresh Home draft was
+published directly, reopened from the published page, edited and published
+again. Cold reader view retained the Resource hub content; native history
+recorded both Composer publications.*
+
+**Save draft** remains a separate choice and does not publish the page.
+The illustrated [Getting Started](../getting-started/) workflow deliberately
+uses **Save draft → reopen in Confluence → Publish** for review before release.
+Both paths are supported; choose the one that matches your review needs.
+
+After publishing a Home-created draft, open **Smart Designer** from the
+published page to continue editing. The original Home **Continue designing**
+result can retain its old draft context and report that the page cannot be
+read. See [Known Limitations](../known-limitations/#reopen-a-home-created-page-after-publishing).
 
 For an existing page, select **Publish** only when the reviewed result is ready
 for readers, then inspect the published page.
