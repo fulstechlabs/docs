@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "test:publication": "node --test scripts/verify_publication_source.test.mjs",
     "audit:build": "python3 scripts/audit_built_site.py"
   },
   "dependencies": {
