@@ -8,7 +8,26 @@ sections and readers usually need one section at a time. Each tab keeps a rich
 Confluence body, so it can contain headings, lists, tables, media, and supported
 macros.
 
-![A published Better Pages Tabs group with Outcome and evidence selected](../images/tabs-published.png)
+[![New Tabs group configuration with Add tab, the Preparation label, alignment, and default-tab choice](../images/release-13/tabs-group-config.jpg)](/assets/better-pages/release-13/tabs-group-config.jpg)
+
+This Release 13 capture shows the group authoring controls before saving.
+The saved-state examples below were verified on Release 13.2.
+
+## Saved groups in Release 13.2
+
+Release 13.1 fixed the new-group save/reopen defect. Release 13.2 also fixes
+Composer-generated resource cards failing to render inside Tabs, including
+older affected Resource hub content, without rewriting the page.
+
+[![Release 13.2 published Resource hub keeps Guides and Support separate and opens Support by default](../images/release-13.2/tabs-support-default.jpg)](/assets/better-pages/release-13.2/tabs-support-default.jpg)
+
+*On a licensed Fulstech production test site, the saved group retained both
+names and its second-tab default after a cold reload and configuration reopen.
+The selected Support body contains its own Help center card.*
+
+Groups already contaminated by the earlier persistence defect are not
+automatically rebuilt. Do not repeatedly resave or delete sections as a repair.
+See [Known Limitations](../../known-limitations/#previously-affected-tabs-groups).
 
 ## When Tabs are a good fit
 
@@ -40,8 +59,8 @@ One new Tabs macro owns the complete group and its rich heading sections.
 
 Deleting a tab in the group editor also deletes that tab's owned rich-content
 section. Review its content before confirming the macro update. Existing legacy
-adjacent-tab content can continue to render, but use the single-macro group
-editor for new pages.
+adjacent-tab content can continue to render. After publishing a new group,
+check each reader panel and reopen the configuration to confirm names and default.
 
 ## Configuration
 

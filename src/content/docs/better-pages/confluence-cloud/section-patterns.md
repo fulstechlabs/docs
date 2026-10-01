@@ -6,10 +6,10 @@ description: "Choose one of 12 guided Better Pages sections, fill in your conten
 **Section Patterns** are guided starting points for a complete page section.
 Use them when readers need an answer or action—such as finding related pages,
 understanding status, or reviewing a decision—without assembling every block
-and macro separately. In Better Pages 13.0, the [Composer](../smart-designer/)
+and macro separately. In Better Pages Release 13, the [Composer](../smart-designer/)
 includes 12 patterns.
 
-![The Better Pages 13.0 Section Pattern Library with Find your way selected](./images/13.0/06-pattern-library.jpg)
+[![The Better Pages Release 13 Section Pattern Library with Find your way selected](./images/release-13/clean-pattern-library.jpg)](/assets/better-pages/release-13/clean-pattern-library.jpg)
 
 *A licensed-development capture of the pattern picker. Search by outcome or
 name, or filter by category; your page content and destinations will differ.*

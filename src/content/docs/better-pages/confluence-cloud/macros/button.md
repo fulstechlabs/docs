@@ -6,7 +6,10 @@ description: "Add a clear, accessible call to action that links to Confluence co
 Use **Better Pages Button** for a clear next action: open a checklist, visit a
 dashboard, contact an owner, or jump to another section of the page.
 
-![A published Better Pages Button labeled Open recovery guide](../images/button-published.png)
+[![Published synthetic recovery example with a Read exercise notes button below its visible status and current step](../images/release-13/recipe-incident-reader.jpg)](/assets/better-pages/release-13/recipe-incident-reader.jpg)
+
+Release 13 example: a focused action sits below the status information. The
+exercise and owner are fictional; this is not a live incident notice.
 
 ## When a Button is a good fit
 
