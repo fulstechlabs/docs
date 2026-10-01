@@ -13,6 +13,11 @@ the Footnotes that precede it.
 3. Enter an accessible heading such as `Notes` or `Sources`.
 4. Publish the page and activate links in both directions.
 
+[![Review notes collecting the preceding readiness-review Footnote as numbered entry 1](../images/release-13/footnote-pair-reader.jpg)](/assets/better-pages/release-13/footnote-pair-reader.jpg)
+
+Here, **Review notes** collects the preceding Footnote after publication. The
+marker and summary use the same number.
+
 The summary uses published page order. A second summary starts a new collection,
 so it does not repeat notes already collected by the earlier summary.
 

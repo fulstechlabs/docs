@@ -6,7 +6,7 @@ description: "Connect launch status, readiness evidence, owners, and next action
 **Outcome:** Launch participants can see the latest readiness state and follow
 the right action or reference without guessing which page is current.
 
-![A published Better Pages development example with launch-readiness alert, action buttons, and navigation cards](../images/product-launch-page.jpg)
+[![A published Better Pages development example with launch-readiness alert, action buttons, and navigation cards](../images/release-13/product-launch-reader.jpg)](/assets/better-pages/release-13/product-launch-reader.jpg)
 
 *Example of a published launch page on a development Confluence site, using
 test content. It illustrates the finished reader view, not the exact template

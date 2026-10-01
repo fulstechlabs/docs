@@ -1,9 +1,9 @@
 ---
 title: "Known Limitations"
-description: "Current Better Pages 13.0 boundaries to consider before creating or maintaining Confluence Cloud pages."
+description: "Current Better Pages Release 13.2 boundaries to consider before creating or maintaining Confluence Cloud pages."
 ---
 
-These are customer-relevant boundaries of Better Pages 13.0 for Confluence
+These are customer-relevant boundaries of Better Pages Release 13.2 for Confluence
 Cloud, not a list of every Confluence limitation. For a failed workflow, use
 [Troubleshooting and Support](../troubleshooting-and-support/).
 
@@ -12,11 +12,23 @@ Cloud, not a list of every Confluence limitation. For a failed workflow, use
 Better Pages does not automatically read or convert another vendor's private
 Data Center app data or macros. Plan a manual content review for a Data Center
 migration rather than expecting the Cloud app to transform those pages. The
-13.0 existing-installation upgrade check concerns this Better Pages Cloud app,
+Release 13 existing-installation upgrade check concerns this Better Pages Cloud app,
 not third-party Data Center conversion. See the [Overview](../overview/#availability-and-migration)
 and [FAQ](../faq/).
 
 ## Composer and published content
+
+### Reopen a Home-created page after publishing
+
+Direct Composer **Publish** on a new private draft is fixed and verified on
+production. After publishing, the original Home **Continue designing** result
+can still retain draft context and report that Confluence cannot read the page.
+Open the published page and select its **Smart Designer** byline instead;
+this loads the current published version. Do not create another page or
+repeat Publish to resolve a stale Home result. See
+[Composer](../smart-designer/#publish-directly-from-composer).
+
+### Other content boundaries
 
 - Composer can preview the *current Confluence editor draft* from its
   in-editor launcher, but cannot apply a page-level change over that unsaved
@@ -34,6 +46,21 @@ and [FAQ](../faq/).
   [Brand Kits and Brand Styles](../brand-kits-and-colors/#for-authors-choose-a-published-look).
 
 ## Page and space operations
+
+### Previously affected Tabs groups
+
+Release 13.1 fixes newly authored structured groups losing their separate tabs
+after save/publish/reopen. It does not automatically reconstruct groups already
+contaminated by the earlier bug, such as an old group collapsed into **Overview**.
+
+Release 13.2 separately fixes older Composer resource cards not loading inside
+Tabs at render time, without changing saved page content. This rendering repair
+is not a migration of previously damaged tab structure. Preserve affected
+content and contact support before attempting a structural repair; do not
+delete sections or repeatedly resave the group. See
+[Tabs](../macros/tabs/#saved-groups-in-release-132).
+
+### Other operation boundaries
 
 - A **Delivery journey** creates published linked pages after confirmation;
   it is not the private single-page draft used by other page templates. Check

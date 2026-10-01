@@ -4,9 +4,46 @@ description: "Verified Better Pages for Confluence Cloud release changes and dep
 ---
 
 This page records verified public Better Pages releases. **Better Pages Release
-13** is the customer-facing release identity. Forge and Marketplace version
+13.2** is the current customer-facing release identity. Forge and Marketplace version
 numbers are Atlassian-managed deployment identifiers mapped to that release;
 use them when checking an installation in Atlassian administration.
+
+## Better Pages Release 13.2 — October 1, 2026
+
+**Release record:** [Release 13.2 source and deployment mapping](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/blob/main/releases/13.2.json).
+**Atlassian deployment identifier:** Forge/Marketplace `2.4.0`, Marketplace build `2001030`.
+**Repository release:** [release-13.2](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/releases/tag/release-13.2).
+
+### Fixed and hardened
+
+- Resource hub and Composer-generated resource cards now render inside Tabs.
+- Older affected Composer content is repaired when displayed, without rewriting
+  the page. This does not rebuild tab structure damaged by the earlier save bug.
+- The Release 13.1 Tabs persistence and direct Composer publishing fixes remain
+  verified, along with independent private **Save draft**.
+
+Production checks used a licensed Fulstech test site: old pages were read
+without editing, fresh Resource hub panels survived a cold reload, Tabs retained
+both names and a second-tab default, and Composer history recorded V1 → V2.
+Scopes, licensing, pricing and permissions are unchanged. See
+[Known Limitations](../known-limitations/) for the remaining bounded cases.
+
+## Better Pages Release 13.1 — October 1, 2026
+
+**Release record:** [Historical Release 13.1 record](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/blob/main/releases/13.1.json).
+**Atlassian deployment identifier:** Forge/Marketplace `2.3.0`, Marketplace build `2001020`.
+**Repository release:** [release-13.1](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/releases/tag/release-13.1).
+
+### Fixed and hardened
+
+- New structured Tabs groups retain names, rich sections and the selected
+  default through save, publish and reopen.
+- Composer can publish a new private page directly and publish a later edit;
+  **Save draft** remains independent.
+
+Production acceptance exposed a separate Resource hub rendering problem inside
+Tabs. Release 13.2 fixes that issue; the 13.1 tag and its partial historical
+acceptance record are preserved.
 
 ## Better Pages Release 13 — September 28, 2026
 

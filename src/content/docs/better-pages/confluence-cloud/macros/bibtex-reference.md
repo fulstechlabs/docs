@@ -18,6 +18,12 @@ stored as one complete BibTeX entry.
 The entry must include an author and the fields required by its reference type.
 The preview shows the reader marker before you save.
 
+[![A published numbered BibTeX citation followed by its Example bibliography entry](../images/release-13/bibtex-pair-reader.jpg)](/assets/better-pages/release-13/bibtex-pair-reader.jpg)
+
+This synthetic citation appears as marker **1** and as a row in the following
+bibliography. It demonstrates the relationship between the two macros, not a
+reference to a real publication.
+
 ## Good practice
 
 - Keep one reference per macro.

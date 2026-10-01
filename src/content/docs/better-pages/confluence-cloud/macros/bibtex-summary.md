@@ -17,6 +17,12 @@ Readers can search and sort the published list. The summary collects references
 above it within the same page scope and avoids entries assigned to an earlier
 summary.
 
+[![Example bibliography with search, Newest first sorting, and a collected synthetic citation row](../images/release-13/bibtex-pair-reader.jpg)](/assets/better-pages/release-13/bibtex-pair-reader.jpg)
+
+The published summary shows the preceding citation's author, title, year, type,
+and BibTeX source control. **Search references** and **Sort** stay beside the
+collected entries.
+
 ## Good practice
 
 - Fix reference validation before publishing.

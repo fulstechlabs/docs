@@ -6,7 +6,12 @@ description: "Create an accessible hero carousel with linked messages and contro
 Use **Better Pages Interactive Banner** for a small set of prominent messages,
 campaigns, or featured destinations. A banner can contain up to 25 slides.
 
-![A published Interactive Banner with direct slide controls and an auto-scroll pause action](../images/interactive-banner-published.png)
+[![Published two-slide banner showing Prepare the launch, direct slide selectors, navigation arrows, and the resume control](../images/release-13/banner-reader.jpg)](/assets/better-pages/release-13/banner-reader.jpg)
+
+This Release 13 example uses built-in artwork and fictional launch guidance.
+Auto-scroll was paused for the capture; the play control resumes it. Both
+**Prepare the launch** and **Support the team** were selected in the published
+reader.
 
 ## Build a banner
 

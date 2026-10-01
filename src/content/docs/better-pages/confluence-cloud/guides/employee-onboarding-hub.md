@@ -6,6 +6,12 @@ description: "Guide a new colleague through first steps, people, access, and fol
 **Outcome:** A new colleague can see what to do first, who can help, and where
 the next stage of onboarding lives.
 
+[![Published onboarding page welcomes a fictional colleague and shows three first-day checklist actions](../images/release-13/recipe-onboarding-reader.jpg)](/assets/better-pages/release-13/recipe-onboarding-reader.jpg)
+
+*A completed Employee onboarding template on the development site. The
+welcome leads into an actionable first-day checklist; the names and access
+instructions are synthetic examples, not real personnel information.*
+
 Use the shipped **Employee onboarding** template for welcome, first-day
 checklist, people, systems and access, first 30 days, and support. The
 **Process or journey** [Section Pattern](../../section-patterns/) can show

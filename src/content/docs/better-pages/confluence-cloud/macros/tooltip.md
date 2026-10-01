@@ -12,6 +12,11 @@ interrupt the main sentence. New tooltips render as a compact information icon.
 2. Enter concise tooltip text.
 3. Save the macro and publish the page.
 
+[![Tooltip text configuration and preview defining the release owner](../images/release-13/tooltip-config.jpg)](/assets/better-pages/release-13/tooltip-config.jpg)
+
+*Enter the explanation as plain text. New tooltips supply their own
+information-icon trigger.*
+
 ## Reader interaction
 
 Pointer users see the explanation after a short hover. Keyboard users receive
@@ -20,6 +25,11 @@ in a Confluence-hosted dialog, making it usable on touch devices.
 
 The tooltip does not target or modify another page element. Place it directly
 beside the content it explains.
+
+[![Keyboard-focused information icon revealing the saved release owner definition](../images/release-13/tooltip-focus.jpg)](/assets/better-pages/release-13/tooltip-focus.jpg)
+
+*Keyboard focus reveals the same saved explanation without opening the dialog.
+Keep any mandatory instruction in the surrounding page content.*
 
 ## Good practice
 

@@ -7,7 +7,11 @@ Use **Better Pages Alert** to emphasize information readers should notice. It
 supports two presentations: a message panel inside the page flow and a page
 alert shown when the page loads.
 
-![A published inline Alert message panel showing a launch-readiness update](../images/alert-published.png)
+[![Published page-load Alert for a synthetic service-recovery exercise, with its dismiss control visible](../images/release-13/recipe-incident-alert.jpg)](/assets/better-pages/release-13/recipe-incident-alert.jpg)
+
+Release 13 example: this is a dismissible page alert, not an inline message
+panel. The fictional exercise status also appears in the page body so readers
+can find it after dismissing the alert.
 
 ## Choose the presentation
 

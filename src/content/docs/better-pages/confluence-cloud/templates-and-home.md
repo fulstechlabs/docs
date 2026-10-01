@@ -11,9 +11,9 @@ published Brand Kits and Brand Styles; **Manage** opens Space Manager; and
 **Explore** lists the available components. You do not need to use every area
 to make a page.
 
-![Better Pages Home shows Build, Design system, Manage, and Explore](./images/13.0/01-home.jpg)
+[![Better Pages Home shows Build, Design system, Manage, and Explore](./images/release-13/clean-home.jpg)](/assets/better-pages/release-13/clean-home.jpg)
 
-*Better Pages 13.0 on a licensed development installation with synthetic
+*Better Pages Release 13 on a licensed development installation with synthetic
 example content.*
 
 ## Start from a template
@@ -32,12 +32,12 @@ research, homepages, documentation, meetings, decisions, and operations.
    [Composer](../smart-designer/), or **Edit in Confluence** to work directly
    in the normal editor. Replace sample prompts before publishing.
 
-![Home shows a selected Product or service homepage template, space, title, and blank-draft option](./images/13.0/02-template-choice.jpg)
+[![Home shows a selected Product or service homepage template, space, title, and blank-draft option](./images/13.0/02-template-choice.jpg)](/assets/better-pages/release-13/02-template-choice.jpg)
 
 *The space and title determine where the draft is created. The blank-draft
 action is separate from the selected template.*
 
-![Home confirms a private draft and offers Continue designing and Edit in Confluence](./images/13.0/04-private-draft-created.jpg)
+[![Home confirms a private draft and offers Continue designing and Edit in Confluence](./images/13.0/04-private-draft-created.jpg)](/assets/better-pages/release-13/04-private-draft-created.jpg)
 
 *A template-created page remains private until you publish it. This image is
 from a separate licensed-development draft from the blank-draft save/reopen
