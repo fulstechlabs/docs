@@ -62,8 +62,23 @@ Wait for the save confirmation, close Composer, and reopen the page in
 Confluence to check that the generated blocks are present. The normal editor
 can be used to finish wording and links before publication.
 
-Select **Publish** only when the reviewed result is ready for readers.
-After publishing, open reader view and test important links and interactions.
+### New private drafts: use Confluence Publish
+
+In Release 13, direct **Publish** from Composer on a newly created private
+draft can fail with Confluence HTTP 400. Use the verified route instead:
+
+1. Select **Save draft** in Composer and wait for the save confirmation.
+2. Close Composer and open the same draft in the normal Confluence editor.
+3. Review the saved content, then select Confluence's **Publish**.
+4. Open reader view and test important links and interactions.
+
+**Save draft** does not make the page public. This limitation concerns direct
+Composer Publish on new private drafts, not every write on an existing page.
+See [Known Limitations](../known-limitations/#publish-new-private-drafts-through-the-confluence-editor)
+and the illustrated [Getting Started](../getting-started/) workflow.
+
+For an existing page, select **Publish** only when the reviewed result is ready
+for readers, then inspect the published page.
 If Composer reports that the source page changed while you were working,
 reload it and rebuild the staged canvas before saving or publishing.
 

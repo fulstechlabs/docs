@@ -201,6 +201,39 @@ Other pages:
 
 ## Validation and handoff
 
+### Review revision — 1 October 2026
+
+[ChatGPT accepted the visual package](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/issues/46#issuecomment-5927261590)
+and requested two explicit customer limitations before publication. The Tabs
+guide and Known Limitations now state the observed new-group round-trip
+failure and recommend ordinary Confluence headings where separate sections
+must remain accessible. Composer and Known Limitations qualify direct Publish
+on new private drafts and give the verified Save draft → reopen in Confluence
+→ normal Publish route. Getting Started already teaches that accepted route.
+
+The captures above remain unchanged; this revision does not recapture or claim
+a product correction. Separate product follow-ups are
+[Tabs #48](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/issues/48)
+and [Composer #49](https://github.com/fulstechlabs/confluence-cloud-mosaic-forge/issues/49).
+If a fix ships before docs publication, recapture and adjust/remove the affected
+temporary limitation. Shared docs
+[#57](https://github.com/fulstechlabs/docs/issues/57) remains a hard publication
+prerequisite. PR #58 stays draft/unmerged; no publication is performed.
+
+Revision validation: `npm run check` passed (13 files, zero diagnostics),
+`npm run build` passed (175 pages / 215 HTML), `npm run audit:build` passed
+(33,514 local href/src references), and `git diff --check` passed. The existing
+generated-404 warning is unchanged. Chrome manually reviewed all three changed
+customer pages at 1440×659 and 390×844, including both new warning sections and
+the four guide/limitation cross-links. Text is readable at both widths; all six
+image placements loaded at each width, and document width matched the viewport
+without horizontal overflow. No product retest or product fix is claimed.
+Temporary viewport was reset and the revision tab was closed; fresh inventory
+preserved only the unrelated JEditor issue tab. The local preview server was
+stopped after review.
+
+### Original visual package validation
+
 Required local gates: `npm run check`, `npm run build`, `npm run audit:build`,
 and `git diff --check` all passed for the final content. Astro check: 13 files,
 zero errors/warnings/hints. Build: 175 pages and 215 HTML files. Audit:

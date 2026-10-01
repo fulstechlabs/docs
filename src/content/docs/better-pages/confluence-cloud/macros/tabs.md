@@ -14,6 +14,20 @@ This Release 13 capture shows the new-group authoring controls before saving,
 not a verified published multi-tab result. Always inspect the saved page and
 reopen its configuration before relying on a new group.
 
+## Current Release 13 limitation
+
+A newly authored tab group can lose its separate-tab structure after saving
+and publishing. In the verified Release 13 example, **Preparation** and
+**Launch** reopened as one **Overview** tab containing both sections. The
+interactive editor preview is not proof that the group will survive a save,
+publish, and reopen cycle.
+
+Until this is corrected, use ordinary Confluence headings when readers need
+reliable access to separate sections. If you try a new group, check both the
+published reader view and the reopened configuration before relying on it.
+Do not repeatedly resave or delete sections to repair the grouping. See
+[Known Limitations](../../known-limitations/#new-tabs-groups-can-reopen-as-one-overview-tab).
+
 ## When Tabs are a good fit
 
 Tabs work well for:
@@ -44,8 +58,8 @@ One new Tabs macro owns the complete group and its rich heading sections.
 
 Deleting a tab in the group editor also deletes that tab's owned rich-content
 section. Review its content before confirming the macro update. Existing legacy
-adjacent-tab content can continue to render, but use the single-macro group
-editor for new pages.
+adjacent-tab content can continue to render; new single-macro groups are subject
+to the Release 13 limitation above.
 
 ## Configuration
 

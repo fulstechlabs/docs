@@ -18,6 +18,20 @@ and [FAQ](../faq/).
 
 ## Composer and published content
 
+### Publish new private drafts through the Confluence editor
+
+Direct **Publish** from Composer on a new private draft can fail with
+Confluence HTTP 400 in Release 13. This is a current product defect, not the
+intended publishing behavior. The verified alternative is **Save draft**,
+wait for confirmation, close Composer, reopen the same draft in the normal
+Confluence editor, review the saved content, then use Confluence's **Publish**.
+Saving a draft alone does not publish it. This observation does not establish
+that all existing-page Composer writes fail. See the
+[Composer procedure](../smart-designer/#new-private-drafts-use-confluence-publish)
+and [Getting Started](../getting-started/).
+
+### Other content boundaries
+
 - Composer can preview the *current Confluence editor draft* from its
   in-editor launcher, but cannot apply a page-level change over that unsaved
   editor work. Save or close the editor, then open Composer from the published
@@ -34,6 +48,23 @@ and [FAQ](../faq/).
   [Brand Kits and Brand Styles](../brand-kits-and-colors/#for-authors-choose-a-published-look).
 
 ## Page and space operations
+
+### New Tabs groups can reopen as one Overview tab
+
+In Release 13, a newly authored structured Tabs group can lose its separate
+tabs after saving and publishing. The verified example reopened as one
+**Overview** tab containing both the **Preparation** and **Launch** sections.
+This is a current product defect, not the intended grouping behavior. The
+initial editor preview is not evidence of a successful saved group.
+
+Use ordinary Confluence headings when separate sections must remain reliably
+accessible. Check the published reader view and reopened macro configuration
+before relying on a new group; do not delete content or repeatedly resave it
+to repair the grouping. This finding concerns the new-group round trip, not
+every existing legacy Tabs page. See
+[Tabs](../macros/tabs/#current-release-13-limitation).
+
+### Other operation boundaries
 
 - A **Delivery journey** creates published linked pages after confirmation;
   it is not the private single-page draft used by other page templates. Check
