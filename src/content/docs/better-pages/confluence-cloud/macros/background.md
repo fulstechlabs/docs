@@ -7,7 +7,10 @@ Use **Better Pages Background** to give a section a clear visual boundary withou
 turning its content into an image. The macro body remains normal Confluence
 content and stays readable, editable, and searchable.
 
-![A published Background section with a colored surface, rounded corners, and rich Confluence content](../images/background-published.png)
+[![Published Product Launch Hub section with a light surface, rounded corners, heading, introductory text, and three cards](../images/release-13/getting-started-reader.jpg)](/assets/better-pages/release-13/getting-started-reader.jpg)
+
+Release 13 example: the Background provides a shared surface for editable rich
+content and the Plan, Launch, and Support navigation cards.
 
 ## Add a Background
 

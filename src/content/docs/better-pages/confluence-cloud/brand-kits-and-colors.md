@@ -24,9 +24,9 @@ optional way to standardize appearance.
 4. Review the canvas before **Save draft** or **Publish**. Reopen the page
    after writing to confirm the appearance and links.
 
-![Composer offers published styles for primary action, navigation card, and section surface roles](./images/13.0/09-styles-in-composer.jpg)
+[![Composer offers published styles for primary action, navigation card, and section surface roles](./images/release-13/clean-styles-in-composer.jpg)](/assets/better-pages/release-13/clean-styles-in-composer.jpg)
 
-*In this Better Pages 13.0 licensed-development example, the navigation-card
+*In this Better Pages Release 13 licensed-development example, the navigation-card
 and section-surface roles use published styles. The primary-action role keeps
 its default because the section has no standalone action button.*
 
@@ -51,7 +51,7 @@ when you have access.
 4. Verify that the kit and style appear in the author picker and on a test
    page before recommending them to other authors.
 
-![Better Pages administration shows a published Button-family Brand Style](./images/13.0/14-primary-style.jpg)
+[![Better Pages administration shows a published Button-family Brand Style](./images/13.0/14-primary-style.jpg)](/assets/better-pages/release-13/14-primary-style.jpg)
 
 *The test kit includes a published “Launch primary action” style. A style
 names a reusable purpose and appearance; it is not a live rule attached to

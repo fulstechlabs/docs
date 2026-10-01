@@ -7,7 +7,11 @@ Use **Better Pages Advanced Cards** to help readers choose among several related
 destinations. Each card combines a title, short description, color, optional
 image, and optional link in one accessible action.
 
-![A published Advanced Card linking to a recovery playbook](../images/advanced-cards-published.png)
+[![Published Plan, Launch, and Support cards with short destination descriptions](../images/release-13/getting-started-reader.jpg)](/assets/better-pages/release-13/getting-started-reader.jpg)
+
+The Release 13 example provides three distinct choices. Activating **Plan**
+opened the synthetic team homepage; this image does not verify every other
+destination or device interaction.
 
 ## When Advanced Cards are a good fit
 
@@ -32,12 +36,10 @@ reader make a choice.
 6. Return to **Card grid** to add, copy, delete, or reorder cards.
 7. Choose the number of columns and image placement, then save and publish.
 
-![Better Pages 13.0 Advanced Cards editor showing the Card grid, Add card, reorder controls, and group layout fields](../images/13.0/18-macro-edit.jpg)
+[![Better Pages Release 13 Advanced Cards editor showing Plan, Launch, and Support cards, reorder controls, and three-column layout](../images/release-13/advanced-cards-config.jpg)](/assets/better-pages/release-13/advanced-cards-config.jpg)
 
-*A licensed-development capture of a generated Advanced Cards macro reopened
-in the normal Confluence editor. The Card grid and layout fields are the same
-controls used when configuring a new group; this example was not saved while
-capturing it.*
+*In **Card grid**, review the card order and shared layout before saving. This
+example uses three columns, left-aligned text, and no applied style preset.*
 
 The editor preview is interactive. Select a preview card to edit it, drag cards
 to reorder them with a pointer, or use **Move up** and **Move down** for touch

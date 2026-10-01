@@ -8,7 +8,11 @@ sections and readers usually need one section at a time. Each tab keeps a rich
 Confluence body, so it can contain headings, lists, tables, media, and supported
 macros.
 
-![A published Better Pages Tabs group with Outcome and evidence selected](../images/tabs-published.png)
+[![New Tabs group configuration with Add tab, the Preparation label, alignment, and default-tab choice](../images/release-13/tabs-group-config.jpg)](/assets/better-pages/release-13/tabs-group-config.jpg)
+
+This Release 13 capture shows the new-group authoring controls before saving,
+not a verified published multi-tab result. Always inspect the saved page and
+reopen its configuration before relying on a new group.
 
 ## When Tabs are a good fit
 

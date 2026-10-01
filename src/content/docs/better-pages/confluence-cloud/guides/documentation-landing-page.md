@@ -6,6 +6,13 @@ description: "Help readers choose the right guide, task, or support path."
 **Outcome:** A new reader can get started, browse by topic, and find help
 without reading a long undifferentiated index.
 
+[![Published documentation directory offers Getting started, Team handbook, and Worked examples cards](../images/release-13/recipe-docs-reader.jpg)](/assets/better-pages/release-13/recipe-docs-reader.jpg)
+
+*A completed **Navigation directory** section on the development site, using
+synthetic content and real guide/example destinations. It was built in a
+blank private draft, saved, reviewed in Confluence, then explicitly published;
+it is not a screenshot of the Knowledge base homepage template.*
+
 Use the shipped **Knowledge base homepage** template for a docs home, or
 **Documentation page** for one guide. **Navigation directory** suits a larger
 set of links; **Resource hub** groups resources into tabbed categories. Both

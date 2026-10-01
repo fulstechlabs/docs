@@ -13,6 +13,11 @@ distract from the main sentence.
 3. Add a [Footnote Summary](../footnote-summary/) later on the page.
 4. Publish and check the assigned number and summary link.
 
+[![A published readiness-review sentence with Footnote 1 and its collected Review notes entry](../images/release-13/footnote-pair-reader.jpg)](/assets/better-pages/release-13/footnote-pair-reader.jpg)
+
+The same published page shows the inline marker and its note below. This example
+uses synthetic documentation content.
+
 Numbers are assigned from the order of published Footnotes. A marker shows a
 preview on hover or keyboard focus and links to the collected note.
 

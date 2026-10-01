@@ -7,7 +7,10 @@ Use **Better Pages Progress Bar** to show where a reader is in a journey. Each
 macro represents one step; Better Pages combines the steps on the published
 page into one ordered progress experience.
 
-![A published four-step Progress Bar with Validate marked as the current step](../images/progress-bar-published.png)
+[![Published four-step journey: Plan and Build complete, Validate current, and Launch upcoming](../images/release-13/progress-reader.jpg)](/assets/better-pages/release-13/progress-reader.jpg)
+
+This Release 13 example combines four saved step macros. It is a synthetic
+delivery journey, not the status of a live release.
 
 ## Build a progress journey
 

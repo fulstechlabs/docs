@@ -6,6 +6,13 @@ description: "Give stakeholders one maintained entry point for status, plans, an
 **Outcome:** A reader can identify the purpose, current state, owner, and next
 useful destination of a product or project.
 
+[![Published Product Launch Hub introduction offers Plan, Launch, and Support destinations](../images/release-13/getting-started-reader.jpg)](/assets/better-pages/release-13/getting-started-reader.jpg)
+
+*A finished **Find your way** section, built from a blank private draft and
+explicitly published on the development site. This illustrates the navigation
+part of a homepage, not the entire Product or service homepage template.
+[Getting Started](../../getting-started/) follows this same example.*
+
 Choose the shipped **Product or service homepage** template for a product, or
 **Project brief** for a bounded project. The **Project status** and **Find your
 way** [Section Patterns](../../section-patterns/) can add a current update

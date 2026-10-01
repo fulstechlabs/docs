@@ -1,9 +1,9 @@
 ---
 title: "Known Limitations"
-description: "Current Better Pages 13.0 boundaries to consider before creating or maintaining Confluence Cloud pages."
+description: "Current Better Pages Release 13 boundaries to consider before creating or maintaining Confluence Cloud pages."
 ---
 
-These are customer-relevant boundaries of Better Pages 13.0 for Confluence
+These are customer-relevant boundaries of Better Pages Release 13 for Confluence
 Cloud, not a list of every Confluence limitation. For a failed workflow, use
 [Troubleshooting and Support](../troubleshooting-and-support/).
 
@@ -12,7 +12,7 @@ Cloud, not a list of every Confluence limitation. For a failed workflow, use
 Better Pages does not automatically read or convert another vendor's private
 Data Center app data or macros. Plan a manual content review for a Data Center
 migration rather than expecting the Cloud app to transform those pages. The
-13.0 existing-installation upgrade check concerns this Better Pages Cloud app,
+Release 13 existing-installation upgrade check concerns this Better Pages Cloud app,
 not third-party Data Center conversion. See the [Overview](../overview/#availability-and-migration)
 and [FAQ](../faq/).
 

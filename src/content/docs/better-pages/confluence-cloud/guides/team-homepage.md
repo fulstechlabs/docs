@@ -6,6 +6,12 @@ description: "Make a team's purpose, people, current work, and contact paths eas
 **Outcome:** A visitor can understand what the team does, find the right owner,
 and reach its current priorities without searching several spaces.
 
+[![Published Northstar team home introduces the fictional team and records its audience, owner, and review date](../images/release-13/recipe-team-reader.jpg)](/assets/better-pages/release-13/recipe-team-reader.jpg)
+
+*A completed Team homepage template on the development site, using synthetic
+people and work. This first section identifies the audience and maintenance
+owner; replace them with your own facts before publishing.*
+
 Start with the shipped **Team homepage** template. Its sections cover mission,
 people and roles, work, priorities, ways of working, and contact. Add the
 **Find your way** or **Owners and responsibilities** [Section Pattern](../../section-patterns/)

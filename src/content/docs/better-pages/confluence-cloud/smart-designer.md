@@ -4,7 +4,7 @@ description: "Design and review Better Pages sections before writing them, then 
 ---
 
 **Better Pages Composer** is the Smart Designer page-building workflow in
-Better Pages 13.0. Open it with **Continue designing** after creating a
+Better Pages Release 13. Open it with **Continue designing** after creating a
 private page from [Better Pages Home](../templates-and-home/), choose **Open
 in Composer** for an editable existing page on Home, or use the Better Pages
 byline on a published page. You need permission to edit the target page.
@@ -14,10 +14,11 @@ You can preview sections, change their order, and inspect generated content
 before selecting **Save draft** or **Publish**. Merely opening Composer or
 adding something to its canvas does not change a Confluence page.
 
-![Better Pages Composer with Compose a section selected among four workflows](./images/13.0/05-enter-composer.jpg)
+[![Better Pages Composer with Compose a section selected among four workflows](./images/release-13/getting-started-workflows.jpg)](/assets/better-pages/release-13/getting-started-workflows.jpg)
 
-*The Better Pages 13.0 Composer on a licensed development installation. The
-example content and Brand Kit are test data.*
+*Better Pages Release 13 Composer on a licensed development installation.
+No Brand Kit is selected, and the site's administrator has disabled AI; the
+non-AI workflows remain available.*
 
 ## Choose an authoring path
 
@@ -47,7 +48,7 @@ wording before staging it.
 5. Choose **Apply to this page** or **Create one child page**. Confirm the
    destination before the final action.
 
-![Composer shows the staged Find your way section, output choice, and final write controls](./images/13.0/08-review-before-write.jpg)
+[![Composer shows the staged Find your way section, output choice, and final write controls](./images/release-13/getting-started-review.jpg)](/assets/better-pages/release-13/getting-started-review.jpg)
 
 *The page has not changed at this point. The canvas is a proposal until you
 choose a final write action.*
@@ -66,12 +67,12 @@ After publishing, open reader view and test important links and interactions.
 If Composer reports that the source page changed while you were working,
 reload it and rebuild the staged canvas before saving or publishing.
 
-![Composer confirms the Product Launch Hub has been saved as a draft](./images/13.0/11-draft-saved.jpg)
+[![Composer confirms the Product Launch Hub has been saved as a draft](./images/release-13/getting-started-draft-saved.jpg)](/assets/better-pages/release-13/getting-started-draft-saved.jpg)
 
 *The licensed-development example received a save confirmation before
 Composer was closed.*
 
-![A reopened private Confluence draft retains the Product Launch Hub section](./images/13.0/12-draft-reopened.jpg)
+[![A reopened Confluence editor retains the Product Launch Hub heading and three navigation cards](./images/release-13/getting-started-reopened.jpg)](/assets/better-pages/release-13/getting-started-reopened.jpg)
 
 *The same private draft still had its heading and navigation cards after a
 full close and reopen.*
@@ -89,11 +90,11 @@ text in Confluence and reopen a generated macro's configuration to update
 its content or appearance. A published Brand Style copies its current values
 when applied; later changes to the preset do not silently restyle the page.
 
-![An Advanced Cards macro created for a Better Pages section opens in ordinary Confluence macro configuration](./images/13.0/18-macro-edit.jpg)
+[![Advanced Cards configuration shows three columns, left alignment, and the Plan, Launch, and Support card fields](./images/release-13/advanced-cards-config.jpg)](/assets/better-pages/release-13/advanced-cards-config.jpg)
 
-*This separate, already-published licensed-development example shows a
-generated Advanced Cards macro reopened in the normal Confluence editor.
-No change was saved while capturing it.*
+*A separate synthetic development page shows generated Advanced Cards
+reopened in the normal Confluence editor. Its native configuration is distinct
+from the Composer pattern form.*
 
 For a first page, follow [Getting Started](../getting-started/). For the full
 set of guided sections, see [Section Patterns](../section-patterns/). For

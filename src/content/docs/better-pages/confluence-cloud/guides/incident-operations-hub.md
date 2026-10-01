@@ -6,6 +6,18 @@ description: "Keep impact, response ownership, updates, and recovery links toget
 **Outcome:** Responders and stakeholders can find the current impact, owner,
 next update, and recovery playbook from one page.
 
+[![Published synthetic recovery section states the status, owner, next update, current stage, and an action](../images/release-13/recipe-incident-reader.jpg)](/assets/better-pages/release-13/recipe-incident-reader.jpg)
+
+*A finished **Project status** section with an additional native-text summary,
+on the development site. It is a synthetic exercise, not a real incident or
+the complete Incident management template. Essential status remains visible
+after closing the optional alert dialog.*
+
+[![The synthetic recovery alert opens in a dialog and repeats the owner and next update](../images/release-13/recipe-incident-alert.jpg)](/assets/better-pages/release-13/recipe-incident-alert.jpg)
+
+*The example's Alert is configured to appear in a reader dialog. Do not rely
+on a dismissible dialog alone for information every responder must see.*
+
 Start with the shipped **Incident management** template. Its sections include
 impact and status, timeline, response roles, communications, and follow-up.
 **Project status** or **Announcement and actions** [Section Patterns](../../section-patterns/)

@@ -3,7 +3,7 @@ title: "Better Pages for Confluence"
 description: "Build editable Confluence Cloud pages with Better Pages Home, Composer, Section Patterns, and approved Brand Styles."
 ---
 
-Better Pages 13.0 helps you build a complete Confluence Cloud page without
+Better Pages Release 13 helps you build a complete Confluence Cloud page without
 assembling every element by hand. Start from **Better Pages Home**, choose a
 template or a private blank draft, and use **Composer** to arrange sections.
 Review the result before writing it, then **Save draft** or **Publish** when
@@ -13,9 +13,9 @@ You can also improve a page you already have permission to edit. The familiar
 collection of 19 reader-facing Better Pages macros remains available when you
 only need one component.
 
-![Better Pages Home groups page-building work into Build, Design system, Manage, and Explore](./images/13.0/01-home.jpg)
+[![Better Pages Home presents Create new page and Improve existing page choices](./images/release-13/clean-home.jpg)](/assets/better-pages/release-13/clean-home.jpg)
 
-*Better Pages 13.0 Home on a licensed development installation. The example
+*Better Pages Release 13 Home on a licensed development installation. The example
 screenshots in these guides use test content; your site's spaces and branding
 will differ.*
 
@@ -57,6 +57,17 @@ ordinary editable Confluence content and supported Better Pages macros—not a
 locked page image. Edit the page or reopen a macro's configuration as your
 content changes.
 
+[![Composer review canvas holds the staged Product Launch Hub before a page write](./images/release-13/getting-started-review.jpg)](/assets/better-pages/release-13/getting-started-review.jpg)
+
+*Review the section and output destination before choosing **Save draft** or
+**Publish**. Adding to the canvas alone does not write the page.*
+
+[![Finished Product Launch Hub combines an introduction with Plan, Launch, and Support navigation cards](./images/release-13/getting-started-reader.jpg)](/assets/better-pages/release-13/getting-started-reader.jpg)
+
+*The same synthetic example after explicit publication on the development
+site. Follow [Getting Started](../getting-started/) to build, save, reopen,
+and check your own version.*
+
 ## The 19 building blocks are still here
 
 Better Pages includes 19 reader-facing macros for layout, navigation, actions,
@@ -64,7 +75,7 @@ messages, and technical content. For example, use **Advanced Cards** for a
 directory, **Tabs** for related detail, **Alert** for an important update, or
 **LaTeX Builder** for equations. Browse the [Macro Catalog](../macros/) for all
 19 and their individual guides. Existing macros remain editable in Confluence
-after upgrading to 13.0; you do not have to rebuild pages in Composer.
+after upgrading to Release 13; you do not have to rebuild pages in Composer.
 
 Better Pages follows the signed-in user's Confluence page and space
 permissions. Rich-body macros use the Confluence editor for their content,
