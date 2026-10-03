@@ -903,6 +903,18 @@
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/migrate-to-jira-cloud"
               },
               {
+                "label": "Forge successor evaluation",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/forge-successor"
+              },
+              {
+                "label": "Forge security and data",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/security-and-data"
+              },
+              {
+                "label": "Forge privacy notice (draft)",
+                "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/privacy-policy"
+              },
+              {
                 "label": "Support",
                 "slug": "custom-fields/jeditor-compatible-custom-field-for-jira-cloud/jira-cloud/support"
               }
