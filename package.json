@@ -9,11 +9,12 @@
     "preview": "astro preview",
     "check": "astro check",
     "test:publication": "node --test scripts/verify_publication_source.test.mjs",
-    "audit:build": "python3 scripts/audit_built_site.py"
+    "test:dependency-security": "node --test scripts/dependency_security.test.mjs",
+    "audit:build": "python3 scripts/audit_built_site.py && npm run test:dependency-security"
   },
   "dependencies": {
     "@astrojs/starlight": "0.41.6",
-    "astro": "7.1.6"
+    "astro": "7.2.8"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.6",
