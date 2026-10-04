@@ -3,8 +3,73 @@
 Relates to [JEditor194](https://github.com/fulstechlabs/jira-cloud-jeditor-forge/issues/194)
 and its [independent reassignment](https://github.com/fulstechlabs/jira-cloud-jeditor-forge/issues/194#issuecomment-5969891046).
 Baseline docs main: `10eacf5ae164ac2cc2ddc8c58905186f542ff652`.
-Assessment date:2026-10-03. This is internal platform evidence, not public legal
+Initial assessment date:2026-10-03; focused cache follow-up:2026-10-04.
+This is internal platform evidence, not public legal
 documentation, a customer release, or security certification.
+
+## Current cache follow-up — 2026-10-04
+
+Base docs main: `50f0bbe65e14d7b2240b38d3691e2bcbaf3f0920`, normal merge of
+independently accepted privacy PR64. Its complete tree exactly equals accepted
+`edc2948602fb1f77463b08b4b7add4c544e363ca`; narrow policy/publication integrity
+was rechecked. This follow-up changes only the transitive cache lock entry,
+this internal report and additive dependency guards. Customer copy, Astro,
+Sharp, other packages, package.json, config, workflows and product release stay
+unchanged. There is no direct dependency, override or vendor patch.
+
+`http-cache-semantics` **4.2.0 → 4.3.0** is compatible with Astro7.2.8's
+existing `^4.2.0` range. Only lock version/resolved/integrity change; no extra
+dependency closure was needed. Registry publication was
+2026-10-04T02:56:05.593Z, gitHead
+`b1d4bd682fbab0252985de45219f4e7497c0067c`, tarball SHA-1
+`09eead3b16c6d85552857cc3fbd888d8353a2aaf` and integrity
+`sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==`.
+
+The [upstream fix](https://github.com/kornelski/http-cache-semantics/commit/9fb520be70eff3ff502fe965d9c3265ca2c64e26)
+explicitly addresses **CVE-2026-93750**, Vary wildcard/inherited-header handling.
+The published code also includes the later
+[simplification](https://github.com/kornelski/http-cache-semantics/commit/b5dfe0c8):
+Vary wildcards fail even with whitespace or additional fields; matching reads
+only own request-header values. Absence on both sides may match, unlike the
+initial commit's subsequently removed prototype-name rejection test. Guards
+exercise actual installed code with seven wildcard cases, both directions of
+own-versus-inherited negatives for constructor/__proto__/weather, and own-value
+matching/mismatch and absence positive controls. They do not assume the initial
+security commit's tests still describe the final published implementation.
+
+**GHSA-ch52-4w7c-c8xp / CVE-2026-93748 remains UNPATCHED IN SOURCE.** The current
+[reviewed advisory](https://github.com/advisories/GHSA-ch52-4w7c-c8xp) lists
+affected ≤4.2.0 and patched versions None. Published4.2.0/4.3.0 retain identical
+`evaluateRequest`, `maxAge` and `satisfiesWithoutRevalidation` method bodies.
+Local synthetic execution in both versions demonstrates that a shared
+Set-Cookie response with security-zeroed maxAge can still be returned when
+the caller supplies a large max-stale. No real credential, network request,
+customer data or exploit against a service is involved. The new characterization
+guard preserves that explicit residual assessment; a behavior change requires
+reassessment, not silent reuse of this report.
+
+The lock-only update reports zero audit findings because4.3.0 is outside the
+advisory's database range. **Audit-clean is not evidence of a GHSA-ch52 source
+fix.** The previously independently accepted static/no-adapter/anonymous-build/
+no-authenticated-cache/no-remote-image-allowlist/dist-only model below still
+applies, and all nine original fail-closed guard cases are unchanged. Public
+dev/SSR, authenticated assets/session caches, new allowlists or expanded upstream
+cache use remain outside that acceptance and require independent reassessment.
+The four additive cache cases bring the security suite to13 tests; existing
+manual publication/link-security gate remains wired to it.
+
+The complete frozen-head locked install/full audit/publication/check/production
+build/link-security/render gate and source integrity receipts are recorded on
+the focused PR and product194 before handoff. No docs promotion/public deploy,
+Sharing, Marketplace write, JEditor retag/redeploy or legal-role change occurs
+in this follow-up. If public publication slips past October4, the privacy date
+must be corrected through a reviewed exact head before publication.
+
+## Historical 2026-10-03 assessment
+
+The remainder records the original PR63 assessment and its then-current audit,
+registry and draft-policy state. Counts, “no newer patch” statements and pending
+PR62/draft references below are historical, not current4.3.0/publication facts.
 
 ## Outcome and smallest safe scope
 
