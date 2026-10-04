@@ -16,9 +16,8 @@ for recovery; this can temporarily include rich content and personal data.
 There is no Fulstech-hosted product backend, Forge Remote, product-analytics
 service, or automatic external log exporter in this release.
 
-See the [draft privacy notice](../privacy-policy/) for data categories,
-retention boundaries, external providers, and privacy contacts. It is not yet
-an effective legal policy.
+See the [privacy policy](../privacy-policy/) for data categories,
+retention boundaries, external providers, and privacy contacts.
 
 ## Permissions and access
 
