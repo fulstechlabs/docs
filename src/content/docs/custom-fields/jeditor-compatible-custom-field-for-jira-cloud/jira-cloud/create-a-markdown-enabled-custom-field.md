@@ -2,10 +2,16 @@
 title: "Create a JEditor-compatible Custom Field"
 ---
 
-Since it is impossible for a Jira Cloud's app to create its own custom field type, this app provides JEditor-compatible Editor for fields of Jira Cloud’s built-in types. This gives you important benefits:
+This guide applies to the **legacy Connect app**, which provides a
+JEditor-compatible editor for Jira's built-in text fields. The Forge successor
+also defines an app-owned field type; see [the separate Forge guide](../forge-successor/).
+Do not use these legacy screenshots as Forge configuration instructions.
+
+For the legacy built-in-field path:
 
 * All JEditor-compatible data is stored securely in your Jira Cloud the same way other Jira data is stored. **Your data will never be stored on our site.**
-* Search, JQL, export, API, email notifications, and other field-related utilities will work the same way other fields work.
+* Jira's search, API, and export features use the underlying built-in field.
+  Do not assume they display the same rich formatting as the JEditor panel.
 
 Please follow the instructions below to create a JEditor-compatible custom field.
 
