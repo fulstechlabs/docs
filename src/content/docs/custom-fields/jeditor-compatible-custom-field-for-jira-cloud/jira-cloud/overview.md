@@ -13,7 +13,7 @@ not automatically update your Jira installation.
 
 For an explicitly enabled Forge evaluation, see [Use the Forge successor](../forge-successor/).
 Review its [security and data handling](../security-and-data/) and
-[draft privacy notice](../privacy-policy/) before planning adoption.
+[privacy policy](../privacy-policy/) before planning adoption.
 These pages do not instruct existing customers to uninstall or replace their app.
 
 > **info**

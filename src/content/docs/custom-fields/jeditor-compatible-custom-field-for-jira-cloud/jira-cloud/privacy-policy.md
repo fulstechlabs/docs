@@ -1,16 +1,18 @@
 ---
-title: "Forge successor privacy notice — draft"
-description: "Review draft of JEditor Release 1.1 data handling; not an effective privacy policy."
+title: "Forge successor privacy policy"
+description: "How JEditor Release 1.1 on Forge processes, stores, and retains data."
 ---
 
-**Review draft, not an effective privacy policy.** This notice describes the
-Forge successor, JEditor Release 1.1, which is not yet approved as a Marketplace
-successor. Legal review and a separate publication decision are required before
-this URL can be used as the app's effective privacy policy.
+**Effective date:** October 4, 2026
+
+This policy explains how **Fulstech, Inc.** processes information through
+**JEditor Release 1.1 on Forge**. It describes the Forge successor, not the
+legacy Connect app. The Forge successor is not yet approved or available on
+Marketplace; this policy does not announce a Marketplace release.
 
 JEditor edits configured rich Jira issue content and project templates. This
-notice does not replace your organization's Jira policies or cover Fulstech's
-separate website, billing, or support-business activities.
+policy does not replace your organization's Jira policies or cover Fulstech's
+separate website or billing activities.
 
 ## Data used by the app
 
@@ -26,7 +28,9 @@ separate website, billing, or support-business activities.
 You control content entered into issues and templates; it may contain personal
 or sensitive information. Do not enter passwords, API tokens, or unnecessary
 sensitive content. This release has no Fulstech-hosted product backend,
-Forge Remote, or product-analytics service. It still makes external browser requests.
+Forge Remote, product-analytics service, advertising, or AI processing.
+Fulstech does not sell data collected through this app. The app still makes
+external browser requests.
 
 ## Save recovery and retention
 
@@ -56,23 +60,38 @@ storage by this feature. A URL's path or query can disclose sensitive informatio
 Use trusted HTTPS image providers. No-referrer reduces referrer disclosure;
 it does not hide your IP address or the requested URL.
 
-## Storage location and support
+External destinations have their own processing, logging, and retention
+practices. Their requests are not covered by your Atlassian data-residency
+choice, and they may process network information outside your selected
+Atlassian region or outside the EEA. Use destinations whose policies and
+transfer conditions meet your organization's requirements. This policy does
+not claim that Fulstech has a DPA or approved transfer mechanism with those
+providers.
+
+## Storage location
 
 Jira fields/properties follow Jira controls. Forge KVS uses
 [Atlassian's hosted-storage data-residency support](https://developer.atlassian.com/platform/forge/data-residency/)
 for eligible locations and migrations. JEditor does not promise region pinning
 for logs, execution, browser state, or external requests.
 
-Fulstech may receive diagnostics you choose to send to support. Use sanitized
-screenshots and the minimum reproducible detail; do not send credentials or
-unnecessary customer content. Contact [support@fulstech.com](mailto:support@fulstech.com)
-or the [support portal](https://fulstech.atlassian.net/servicedesk/customer/portals)
-for questions or data requests. Your Jira administrator controls customer content
-and permissions; app support does not promise direct deletion of Atlassian backups.
+## Customer Data Processing Agreement
 
-## Before this draft becomes effective
+Fulstech does not currently provide a separate customer Data Processing
+Agreement (DPA) for this app. This statement does not remove obligations under
+applicable data-protection laws. Atlassian's Forge developer DPA is not a
+Fulstech-to-customer DPA.
 
-The policy reviewer must approve the applicable legal entity/contact details,
-processor/controller and service-provider/business roles, DPA, provider/transfer
-treatment, and support retention. Those commitments are not established by
-this technical draft. See also [Security and data](../security-and-data/).
+## Support and privacy requests
+
+For support or privacy requests, contact
+[support@fulstech.com](mailto:support@fulstech.com) or the
+[Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals).
+Provide only the minimum information necessary and do not include passwords,
+API tokens, or unnecessary customer content. Your Jira administrator controls
+customer content and permissions; app support does not promise direct deletion
+of Atlassian backups.
+
+See [Security and data](../security-and-data/) for release-specific permissions,
+logging, external requests, and security limitations. Material changes to this
+policy will be published at this URL with an updated effective date.
