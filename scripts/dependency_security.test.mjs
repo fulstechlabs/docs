@@ -17,6 +17,7 @@ const { loadRemoteImage, revalidateRemoteImage } = await import(
 const { astroConfig: config } = await resolveConfig({ root }, 'build');
 const lock = JSON.parse(await readFile(join(root, 'package-lock.json'), 'utf8'));
 const semver = require('semver');
+const CachePolicy = require('http-cache-semantics');
 const imageUrl = 'https://assets.example.test/public.png';
 
 async function files(directory) {
@@ -42,6 +43,63 @@ test('all seven patchable baseline package findings have patched installed/locke
       assert.equal(require(join(root, path, 'package.json')).version, entry.version);
     }
   }
+});
+
+test('installed and locked cache library includes the 4.3.0 Vary/header fix, not a max-stale fix', () => {
+  const entries = Object.entries(lock.packages).filter(([path]) =>
+    path === 'node_modules/http-cache-semantics' || path.endsWith('/node_modules/http-cache-semantics'));
+  assert.ok(entries.length > 0, 'cache dependency must remain inventoried');
+  for (const [path, entry] of entries) {
+    assert.ok(semver.gte(entry.version, '4.3.0'), `${path} lacks CVE-2026-93750 fix`);
+    assert.equal(require(join(root, path, 'package.json')).version, entry.version);
+  }
+});
+
+test('actual cache rejects Vary wildcards with whitespace or additional fields', () => {
+  for (const vary of ['*', '* ', ' *', ' * ', '*,', '*, weather', 'weather, *']) {
+    const policy = new CachePolicy(
+      { headers: { weather: 'ok' } },
+      { headers: { 'cache-control': 'max-age=5', vary } },
+    );
+    assert.equal(policy.satisfiesWithoutRevalidation({ headers: { weather: 'ok' } }), false,
+      `Vary ${JSON.stringify(vary)} must never match`);
+  }
+});
+
+test('actual Vary matching ignores inherited values while preserving own-header positive controls', () => {
+  // Published 4.3.0 follows the later upstream simplification: absent on both
+  // sides may match, but an inherited value cannot impersonate an own header.
+  for (const name of ['constructor', '__proto__', 'weather']) {
+    const own = { [name]: 'nice' };
+    const inherited = Object.create(own);
+    const response = { headers: { 'cache-control': 'max-age=5', vary: name } };
+    const ownPolicy = new CachePolicy({ headers: own }, response);
+    assert.equal(ownPolicy.satisfiesWithoutRevalidation({ headers: { [name]: 'nice' } }), true);
+    assert.equal(ownPolicy.satisfiesWithoutRevalidation({ headers: { [name]: 'bad' } }), false);
+    assert.equal(ownPolicy.satisfiesWithoutRevalidation({ headers: inherited }), false);
+    const inheritedPolicy = new CachePolicy({ headers: inherited }, response);
+    assert.equal(inheritedPolicy.satisfiesWithoutRevalidation({ headers: own }), false);
+    assert.equal(inheritedPolicy.satisfiesWithoutRevalidation({ headers: {} }), true);
+  }
+});
+
+test('GHSA-ch52 remains unpatched in assessed cache source; bounded Astro guards are still required', () => {
+  // Characterize the residual flaw with only local synthetic data. This is NOT
+  // desired application behavior or a waiver. If upstream fixes it, fail here
+  // so the disposition is reassessed rather than silently claiming remediation.
+  const url = 'https://cache.example.test/synthetic';
+  const policy = new CachePolicy({ url, headers: {} }, {
+    status: 200,
+    headers: { 'cache-control': 'max-age=60', 'set-cookie': 'synthetic=not-a-credential' },
+  });
+  policy.now = () => policy._responseTime + 1000;
+  assert.equal(policy.maxAge(), 0, 'shared response with cookie has security-zeroed freshness');
+  assert.equal(policy.stale(), true);
+  const result = policy.evaluateRequest({ url, headers: { 'cache-control': 'max-stale=999999' } });
+  assert.equal(result.revalidation, undefined,
+    'upstream behavior changed; independently reassess GHSA-ch52 disposition');
+  assert.equal(result.response?.headers['set-cookie'], 'synthetic=not-a-credential',
+    'upstream behavior changed; do not carry the old unpatched assessment forward');
 });
 
 test('effective production config stays static, without adapter or authenticated runtime', () => {
