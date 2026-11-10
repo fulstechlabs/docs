@@ -1,0 +1,75 @@
+[
+  {
+    "name": "clean-install",
+    "command": [
+      "npm",
+      "ci"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "check",
+    "command": [
+      "npm",
+      "run",
+      "check"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "publication-tests",
+    "command": [
+      "npm",
+      "run",
+      "test:publication"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "audit-build",
+    "command": [
+      "npm",
+      "run",
+      "audit:build"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "audit-all",
+    "command": [
+      "npm",
+      "audit",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "audit-production",
+    "command": [
+      "npm",
+      "audit",
+      "--omit=dev",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "new-behavioral-security-regressions",
+    "command": [
+      "npm",
+      "run",
+      "test:dependency-security"
+    ],
+    "exitCode": 0,
+    "tests": 15
+  }
+]
