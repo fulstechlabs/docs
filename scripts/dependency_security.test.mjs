@@ -30,10 +30,12 @@ async function files(directory) {
   return result;
 }
 
-test('all seven patchable baseline package findings have patched installed/locked versions', () => {
+test('assessed patchable dependency findings have patched installed/locked versions', () => {
   for (const [name, minimum] of Object.entries({
-    astro: '7.2.8', sharp: '0.35.4', devalue: '5.9.3', 'fast-uri': '3.1.8',
+    astro: '7.3.3', sharp: '0.35.4', devalue: '5.9.3', 'fast-uri': '3.1.9',
     'js-yaml': '4.3.2', nanoid: '3.3.18', svgo: '4.1.0',
+    'postcss-selector-parser': '6.1.5', 'smol-toml': '1.9.1',
+    'source-map-js': '1.2.2', undici: '8.12.2', vite: '8.2.4', zod: '4.6.6',
   })) {
     const entries = Object.entries(lock.packages).filter(([path]) =>
       path === `node_modules/${name}` || path.endsWith(`/node_modules/${name}`));
@@ -43,6 +45,30 @@ test('all seven patchable baseline package findings have patched installed/locke
       assert.equal(require(join(root, path, 'package.json')).version, entry.version);
     }
   }
+});
+
+test('actual JSX renderer keeps dynamic script/style strings inside their elements', async () => {
+  const { jsx } = await import(pathToFileURL(join(astroRoot, 'dist/jsx-runtime/index.js')));
+  const { renderJSX } = await import(pathToFileURL(join(astroRoot, 'dist/runtime/server/jsx.js')));
+  for (const tag of ['script', 'style']) {
+    const payload = `</${tag}><img src=x onerror=alert(1)>`;
+    const rendered = String(await renderJSX({}, jsx(tag, { children: payload })));
+    assert.equal(rendered.indexOf(`</${tag}>`), rendered.length - `</${tag}>`.length);
+    assert.doesNotMatch(rendered, /<img/i);
+  }
+  const literal = 'const comparison = 1 < 2;';
+  assert.equal(String(await renderJSX({}, jsx('script', { 'set:html': literal }))),
+    `<script>${literal}</script>`, 'trusted compiler/literal HTML remains supported');
+});
+
+test('actual transition serializer confines CSS delimiters and preserves ordinary functions', async () => {
+  const { stringifyAnimation } = await import(
+    pathToFileURL(join(astroRoot, 'dist/runtime/server/transition.js')));
+  const css = stringifyAnimation({ name: 'fade', duration: '1s; } body { color:red', easing: 'linear' });
+  assert.equal((css.match(/;/g) ?? []).length, 3, 'only the three generated declarations may terminate');
+  assert.doesNotMatch(css, /[{}]/, 'value cannot create a new CSS rule');
+  const valid = stringifyAnimation({ name: 'fade', duration: 'calc(1s + var(--delay))', easing: 'linear' });
+  assert.match(valid, /animation-duration: calc\(1s \+ var\(--delay\)\);/);
 });
 
 test('installed and locked cache library includes the 4.3.0 Vary/header fix, not a max-stale fix', () => {
