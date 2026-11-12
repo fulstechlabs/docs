@@ -76,7 +76,7 @@ images, sanitization and output differences.
 3. Reload the published page. Check the table, the inline `F = ma`, and the
    displayed `F = 2 × 3 = 6 N`.
 
-![The saved engineering-note macro with Download Markdown, a table and two rendered formulas](/assets/markdown/release-2/published-example.png)
+![The saved engineering-note macro with a table and two rendered formulas](/assets/markdown/release-2/published-example.png)
 
 *The same synthetic example after publishing and reloading on the development
 site. This is the page result, rather than the editor preview.*
@@ -104,6 +104,6 @@ storage for sensitive content.
 
 ## Next steps
 
-- [Download source and check export compatibility](../compatibility-and-exports/).
+- [Copy source and check export compatibility](../compatibility-and-exports/).
 - [Validate existing content after a Connect update](../migration/).
 - [Resolve preview, license or save problems](../support/).

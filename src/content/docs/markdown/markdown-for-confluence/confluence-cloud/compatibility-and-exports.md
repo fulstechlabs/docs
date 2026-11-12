@@ -1,6 +1,6 @@
 ---
 title: "Compatibility and exports"
-description: "Understand Forge Markdown rendering, image handling, source download and Confluence export boundaries."
+description: "Understand Markdown rendering, image handling and Confluence exports."
 ---
 
 Use this reference to choose how to keep source or share rendered content from
@@ -28,20 +28,11 @@ External images may not load for every reader or exporter. Use hosts approved
 by your organization; [Privacy and data handling](../privacy-policy/) explains
 the resulting external requests.
 
-## Download Markdown source
+## Keep a copy of the Markdown source
 
-On a rendered, licensed macro, select **Download Markdown** and save the file.
-The browser may ask where to save it; its suggested filename is `markdown.md`.
-This download contains that macro's saved source, including LaTeX. It does not
-include other macros, the whole Confluence page, remote image files, or an
-unfinished draft in another editor.
-
-An empty macro has no rendered download control. To keep an empty source or
-inspect a failed render, open the editor and copy the available source.
-Keep downloaded files under your organization's normal retention controls.
-
-Confluence's whole-page Markdown conversion can omit macro contents. Use the
-macro's source-download action when the Markdown itself is what you need to keep.
+Open the macro editor and copy the source to a local text file. This preserves
+the Markdown and LaTeX you see in the editor. Confluence's **Export to Markdown**
+action converts the page and can omit the contents of the macro.
 
 ## PDF, Word and page history
 

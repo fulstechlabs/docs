@@ -10,8 +10,8 @@ which editor you have.
 ## The macro says an active license is required
 
 Ask your Confluence administrator to check the app's evaluation or subscription
-in Atlassian's app management. An inactive license blocks rendering, source
-download and editing. Do not uninstall the app as a license troubleshooting step.
+in Atlassian's app management. An inactive license blocks rendering and
+editing. Do not uninstall the app as a license troubleshooting step.
 Your page content and the billing entitlement are different things.
 
 ## I saved the macro but readers see the old content
@@ -50,9 +50,9 @@ app license. The error message can report that a browser draft was retained
 when storage was available; do not assume it exists on another device.
 Escape in the source editor is a save-and-close shortcut, not a discard command.
 
-## A download or export is incomplete
+## A page export is incomplete
 
-For Markdown source, use **Download Markdown** on the intended rendered macro.
+To keep the Markdown source, open the macro editor and copy it to a text file.
 For PDF/Word, inspect the actual downloaded file and record the viewer used.
 A whole-page Markdown conversion can omit macro content. The current Forge
 candidate's native PDF/Word layout gate remains open; see

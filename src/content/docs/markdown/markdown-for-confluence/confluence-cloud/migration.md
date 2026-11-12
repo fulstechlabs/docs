@@ -15,9 +15,8 @@ macros as a migration step.
 
 1. Choose representative pages: ordinary Markdown, tables, inline and block
    mathematics, images, and pages with more than one macro.
-2. Record the visible result and keep a copy of each macro's source. If the old
-   editor has no source-download action, open it and copy the source to a local
-   text file without changing the page.
+2. Record the visible result. Open each macro in the Connect editor and copy
+   its source to a local text file without changing the page.
 3. Include a page with restrictions. Record which test users should be able to
    read and edit it; app installation does not override Confluence permissions.
 4. Retain the page's normal version history and your organization's backups.

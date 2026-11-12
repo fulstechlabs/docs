@@ -4,7 +4,7 @@ description: "Write technical notes, tables and mathematical expressions as Mark
 ---
 
 Write Markdown and LaTeX in a Confluence macro, review the formatted result,
-and keep the source available for later editing or download.
+and keep the source available for later editing.
 
 **Start here:** [Create your first Markdown macro](../usage/). Write source,
 select **Save and close**, then publish or update the Confluence page.
@@ -28,7 +28,7 @@ Select the image to open it at full size.*
 | --- | --- |
 | Write or edit a macro, use preview, or recover unfinished editing | [Write and edit Markdown](../usage/) |
 | Check an existing Connect macro after a Forge update | [Move from the Connect editor](../migration/) |
-| Download the source or understand rendering and export limits | [Compatibility and exports](../compatibility-and-exports/) |
+| Copy the source or check rendering and export limits | [Compatibility and exports](../compatibility-and-exports/) |
 | Understand browser drafts, images and data handling | [Privacy and data handling](../privacy-policy/) |
 | Resolve a license, preview or save problem | [Help and troubleshooting](../support/) |
 
