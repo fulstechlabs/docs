@@ -449,12 +449,28 @@
                 "slug": "markdown/markdown-for-confluence/confluence-cloud/overview"
               },
               {
-                "label": "Usage",
+                "label": "Write and edit Markdown",
                 "slug": "markdown/markdown-for-confluence/confluence-cloud/usage"
               },
               {
-                "label": "Support",
+                "label": "Move from Connect",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/migration"
+              },
+              {
+                "label": "Compatibility and exports",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/compatibility-and-exports"
+              },
+              {
+                "label": "Privacy and data handling",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/privacy-policy"
+              },
+              {
+                "label": "Help and troubleshooting",
                 "slug": "markdown/markdown-for-confluence/confluence-cloud/support"
+              },
+              {
+                "label": "Connect editor (legacy)",
+                "slug": "markdown/markdown-for-confluence/confluence-cloud/connect-editor"
               }
             ],
             "collapsed": true
