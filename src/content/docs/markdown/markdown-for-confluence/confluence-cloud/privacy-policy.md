@@ -1,125 +1,92 @@
 ---
-title: "Privacy and data handling"
-description: "How the Forge edition of Markdown Macro with LaTeX for Confluence Cloud handles content, browser drafts, images, exports and diagnostics."
+title: "App privacy statement"
+description: "How the Connect and Forge editions of Markdown Macro with LaTeX for Confluence Cloud handle content, browser data, images and diagnostics."
 ---
 
-This notice describes **Markdown Macro with LaTeX for Confluence Cloud, Forge
-edition**. It does not describe the older Connect runtime or other Fulstech
-apps. Fulstech provides the app. Contact
-[support@fulstech.com](mailto:support@fulstech.com) with questions about this
-notice or your information.
+Fulstech provides **Markdown Macro with LaTeX for Confluence Cloud**. This
+statement covers the legacy Connect app and its Forge successor. The
+[editor guide](../overview/) helps you identify which
+edition your site uses.
 
-## Content and information used
+## What both editions use
 
-You choose what to write in a Markdown macro. That content may include personal
-or confidential information. The app uses it to show formatted content and
-mathematical expressions, provide an editing preview, and save the configuration
-you submit to Confluence.
+You choose what to write in a Markdown macro. The source can include personal
+or confidential information. The app uses that source and its configuration to
+edit and preview the macro, render Markdown and mathematical expressions, and
+display the saved content. Saved source belongs to the macro on your
+Confluence page. Confluence manages who can view or edit that page and
+maintains page drafts and version history. The app receives license or
+installation context to determine whether the macro is available.
 
-| Information | Purpose and location |
+## Legacy Connect edition
+
+Confluence sends the macro body and the request context needed for
+authentication and licensing to Fulstech's Connect service. That service
+processes the Markdown to produce the rendered macro. The Connect service
+uses registration information, including the site identifier and
+authentication material, to recognize the installation. Rendered responses
+can be cached. The app serves its legacy StackEdit-based editor from the Connect
+service. The editor loads the existing Markdown in your browser and saves your
+changes back to the macro through Confluence.
+
+The legacy editor may leave data or settings in your browser. Its browser
+diagnostics can include the Markdown being edited. Connect service diagnostics
+can contain request or processing errors. Use the browser's site-data controls
+for the legacy editor origin if you need to clear local data.
+
+## Forge edition
+
+The app's editor and renderer are packaged with Forge. Preview runs in the
+browser. The macro uses Confluence and Forge for saved content, licensing and
+any authorized page reads. The Forge edition uses no Fulstech-operated
+application database or external service to render Markdown or formulas.
+
+| Information | How the Forge edition uses it |
 | --- | --- |
-| Markdown and macro configuration, including supported legacy macro content | Render and edit the macro; saved with your Confluence page |
-| Page and macro identifiers | Select the correct saved macro when a page read is needed for export or history |
-| Account, site, module, macro and available page identifiers | Keep recovery drafts separate in your browser |
-| Unpublished Markdown and a draft timestamp | Recover unfinished editing from browser local storage |
-| App license status | Determine whether the macro can be used |
-| Bounded operational details, such as content identifier, export type and response status | Diagnose a failed page read using Atlassian Forge logs |
+| Markdown and macro configuration, including supported Connect-authored content | Render and edit the macro, and save the configuration with your Confluence page |
+| Page and macro identifiers | Locate the saved macro if a supported Word or history export needs to read the page |
+| Account, site, module, macro and available page identifiers | Keep browser recovery drafts separate |
+| Unpublished Markdown and a draft timestamp | Recover unfinished editing in the same browser profile |
+| Content identifier, export type or response status | Diagnose issues through Atlassian Forge logs |
 
-The app does not ask you to enter an Atlassian password, personal access token
-or API token. Information you choose to send to support is a separate
-interaction; include only what is needed to explain the problem.
-
-## Confluence, Forge and the editor
-
-Saved Markdown belongs to the macro configuration on your Confluence page.
-Confluence manages page access, drafts and version history. **Save and close**
-saves the macro configuration; publishing or updating the page is a separate
-Confluence action.
-
-The editor is packaged with the app's Forge Custom UI resources. Preview and
-published content use rendering libraries packaged with Forge. The current
-integration does not open the external StackEdit editor or pass your macro
-source to that service. There is no Fulstech-operated application database or
-external formula-rendering service for this edition.
-
-When an export needs to read the stored page, the app checks the invoking
-user's read permission before using its app permission for that read. The app
-requests Confluence permissions to read the page and check access to content.
-Installing the app does not grant a user access to restricted pages.
+When a supported export needs a stored page read, the app checks the requesting
+user's read permission before using its app permission to read the page. Read
+access to Confluence pages and permission information supports this check.
+The Forge app's diagnostics use operational identifiers and statuses. Forge
+logs are managed by Atlassian.
 
 ## Images and external destinations
 
-An author can include an HTTPS image URL in Markdown. The reader's browser can
-request that image from the selected host; Confluence's export renderer may
-also load it. HTTP images are shown as links instead of being loaded as mixed
-content.
-
-An image host receives the requested URL and normal request information, which
-can include an IP address and user agent. The URL itself may contain information
-in its path or query. The live macro applies a no-referrer policy to its image
-elements; this does not conceal the requested URL or all network metadata.
-
-Choose image hosts suitable for your organization's requirements. Fulstech does
-not control an author-selected host's processing locations, retention, deletion
-or privacy terms. Following an external link is also a separate interaction
+When a macro contains an external image, your browser or a renderer may request
+that image from its host. The host receives the requested URL and normal
+request information, which can include an IP address and user agent. The URL
+itself can carry information in its path or query. The Forge editor loads
+author-selected HTTPS images and applies a no-referrer policy when it renders
+them in the live macro. Following an external link is a separate interaction
 with its destination.
 
-## Recovery drafts and browser data
+Choose hosts that meet your organization's needs. An image request can cross
+your organization's selected Atlassian data residency boundary. The image
+host's privacy terms govern what it does with that request.
 
-The app stores an unpublished recovery draft in browser local storage. Its key
-separates the current account, site, module and macro, and includes the page
-identifier when available. If required identity information is missing, local
-draft recovery is unavailable. Old drafts without an account association are
-not automatically restored.
+## Recovery drafts, retention and deletion
 
-A successful macro configuration save clears that macro's current draft for
-the account. Other drafts can remain until a later successful save or browser
-site-data cleanup. The app does not provide a fixed draft expiry period.
-Browser local storage is not an encrypted vault supplied by the app: someone
-with access to your browser profile or device may be able to inspect it.
+A successful save in the Forge editor clears the current recovery draft for
+that macro in your browser. Other drafts can remain until you save them or
+clear the browser's site data. Recovery drafts have no fixed expiry set by the
+app. Upgrading to Forge leaves browser data from older editor integrations in
+place.
 
-Data or settings left by older editor integrations or independent StackEdit
-use are not automatically removed by this edition. Use the appropriate
-browser site-data controls for those locations when cleanup is needed.
+Use your organization's Confluence controls to retain or delete saved content,
+versions and page drafts. Uninstalling the app leaves saved page content in
+Confluence. Copies you download stay wherever you save them and follow your
+device and organization controls.
 
-## Retention, deletion and downloads
+## Questions and requests
 
-Saved macro configuration, page drafts and history follow your organization's
-Confluence administration and content lifecycle. Use Confluence's content
-controls to change or remove saved content. Removing a macro, deleting a page
-or uninstalling the app does not automatically erase all page history or
-browser-local data.
-
-Files you download remain where you save them and in any copies you make. Use
-your device and organization controls to retain or delete those copies. The app
-does not manage their lifetime after download.
-
-For an information request you cannot complete through Confluence or browser
-controls, contact [support@fulstech.com](mailto:support@fulstech.com) or the
-[Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals).
-Include the app name, relevant site and the request. Do not send passwords,
-tokens or unnecessary page content.
-
-## Diagnostics and platform services
-
-The app's diagnostic statements use bounded operational details rather than
-intentionally logging full Markdown, credentials or raw Confluence responses.
-There is no app-configured external logging destination. Atlassian manages
-Forge logging; this notice does not promise a fixed retention period for
-platform logs.
-
-Atlassian services and SDKs, and customer-selected image hosts, can operate
-their own diagnostic systems. Removing an external editor is not a guarantee
-that every platform or SDK makes no network requests or processes no telemetry.
-
-## Locations and security limits
-
-Saved content remains with Confluence; recovery drafts remain in the browser
-profile where they were created. External image requests can cross an
-organization's selected Atlassian residency boundary. This app does not offer
-a region selector or a pinning guarantee for all of those flows.
-
-The app uses permission checks, trusted licensing, HTML sanitization and URL
-filtering. These controls do not establish a compliance certification or a
-promise of complete security. Report suspected privacy or security problems to
-[support@fulstech.com](mailto:support@fulstech.com).
+Contact [support@fulstech.com](mailto:support@fulstech.com) or use the
+[Fulstech support portal](https://fulstech.atlassian.net/servicedesk/customer/portals)
+if you have a question or need help accessing or deleting information. Provide
+the app name, your site and the relevant request. Share only the details
+needed to investigate. See the [Fulstech security policy](/security-policy/)
+for security reporting.

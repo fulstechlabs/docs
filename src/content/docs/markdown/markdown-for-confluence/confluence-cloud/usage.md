@@ -45,22 +45,22 @@ F = 2 \times 3 = 6\,\mathrm{N}
 $$
 ```
 
-[![The engineering-note source and its live preview, including a table and two formulas](/assets/markdown/release-2/editor-preview.png)](/assets/markdown/release-2/editor-preview.png)
+[![Markdown source and formatted preview aligned to the same heading](/assets/markdown/release-2/editor-preview.png)](/assets/markdown/release-2/editor-preview.png)
 
-*The same example on a Forge development installation. **Up to date** confirms
-that the preview has finished; this is still an unsaved macro configuration.
+*The two panes follow the same heading in this longer Markdown example.
 Select the image to open it at full size.*
 
 Use the formatting toolbar for headings, emphasis, lists, quotes, code, tables,
-links and images. Select text before applying a format. **Markdown help**
-explains syntax; **Keyboard shortcuts** lists the editor's shortcuts.
+links and images. Select text before applying a format. Open **Markdown help**
+(the question mark) for syntax examples, then expand **Keyboard shortcuts**
+to see the available shortcuts.
 
 | Control | Use it to… |
 | --- | --- |
 | **Side preview** | Show source and formatted output together, or return to source alone |
-| **Reader mode** | Review formatted output without the source pane |
+| **Reader mode** | Review formatted output. Select **Edit file** to restore the previous layout |
 | **Focus mode** | Dim source lines outside the current editing line |
-| **Scroll sync** | Move the source and preview proportionally together |
+| **Scroll sync** | Keep source and preview aligned by Markdown heading as you scroll |
 | Pane divider | Drag to resize the panes; use arrow keys when the divider has focus |
 
 Use `$...$` for inline mathematics and separate `$$` lines for a displayed
@@ -69,7 +69,7 @@ images, sanitization and output differences.
 
 ## 3. Save the macro and publish the page
 
-1. Select **Save and close**. This saves the macro configuration to the Confluence
+1. Select the checkmark (**Save and close**). This saves the macro configuration to the Confluence
    draft and closes the macro editor.
 2. In Confluence, **Publish** a new page or **Update** an existing page to share
    the change. A new page may show **Publish…** followed by a confirmation.
@@ -78,8 +78,7 @@ images, sanitization and output differences.
 
 ![The saved engineering-note macro with a table and two rendered formulas](/assets/markdown/release-2/published-example.png)
 
-*The same synthetic example after publishing and reloading on the development
-site. This is the page result, rather than the editor preview.*
+*The engineering notes example after publishing and reloading the page.*
 
 Edit the page and reopen the macro to check that its Markdown source remains
 available. Each macro has its own source; edit the intended macro when a page

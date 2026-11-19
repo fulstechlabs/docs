@@ -16,10 +16,9 @@ If your macro still opens the older editor with a check icon, use the
 are controlled through Atlassian Marketplace and your Confluence administrator.
 :::
 
-[![Markdown source, table and LaTeX formulas beside their formatted preview](/assets/markdown/release-2/editor-preview.png)](/assets/markdown/release-2/editor-preview.png)
+[![Markdown source and formatted preview aligned to the same heading](/assets/markdown/release-2/editor-preview.png)](/assets/markdown/release-2/editor-preview.png)
 
-*The Forge editor on a development site, using synthetic engineering notes.
-The preview is visible before the macro is saved or the page is published.
+*The Forge editor with source and formatted preview visible side by side.
 Select the image to open it at full size.*
 
 ## Choose your next task
@@ -29,7 +28,7 @@ Select the image to open it at full size.*
 | Write or edit a macro, use preview, or recover unfinished editing | [Write and edit Markdown](../usage/) |
 | Check an existing Connect macro after a Forge update | [Move from the Connect editor](../migration/) |
 | Copy the source or check rendering and export limits | [Compatibility and exports](../compatibility-and-exports/) |
-| Understand browser drafts, images and data handling | [Privacy and data handling](../privacy-policy/) |
+| Understand how Connect and Forge handle data | [App privacy statement](../privacy-policy/) |
 | Resolve a license, preview or save problem | [Help and troubleshooting](../support/) |
 
 ## Where it fits
